@@ -1,0 +1,2051 @@
+[
+  {
+    "title": "CourseGraph: Finding overlaps and differences in Computer Science courses across universities",
+    "url": "https://arxiv.org/abs/2608.05910v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-06",
+    "summary": "Student mobility programs such as Erasmus+ enable students to take courses at other universities, broadening their academic and cultural horizons. However, this flexibility also leads to a practical challenge: ensuring that students do not take courses elsewhere that substantially overlap with courses in their home curriculum. In this work, we propose CourseGraph, a methodology that automates the evaluation of external courses based on insights obtained from the process followed by curriculum administrators when assessing courses for inclusion in a degree program. Course- Graph extracts information such as course titles, descriptions, and learning outcomes from the course webpage. Then, this information is represented semantically using a BERT-based language model, after which the pair-wise similarity between courses can be computed. This information is then used by a Random Forest classifier to determine whether a candidate course abroad overlaps with a course already contained in the student's curriculum. We evaluate CourseGraph using (1) the Computer Science program at Eindhoven University of Technology, which contains information about courses with substantial overlap, and (2) six approved international programs from students enrolled in the Computer Science program at Lund University, including the corresponding decisions made by a curriculum administrator. The experimental results indicate that CourseGraph provides an effective approach for identifying overlapping courses and supporting curriculum alignment across universities.",
+    "authors": [
+      "Arthur Nijdam",
+      "Paul Stankovski Wagner",
+      "Sara Ramezanian"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "The ethics of artificial intelligence in the life sciences: Universality, cultural diversity and an architecture of care",
+    "url": "https://arxiv.org/abs/2608.05436v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-05",
+    "summary": "The life sciences and health research have started to benefit from artificial intelligence, which raises ethical concerns that are real but, we argue, not special. Any science should be governed by values that rest on how the human brain is built and socialised rather than anything distinct to artificial intelligence. Importantly, the human brain has a different, much less costly computational architecture than these machines. This is achieved through the orchestration of a global neuronal workspace, and through reward best described not as a quantity to be maximised but as a continuous cycle of wanting, liking and satiety. As such, this creates the deep tension running through the ethics of the human person, between the universality of ethical judgement and the diversity of morals. The brain networks of the global workspace and emotion are universally shared, but the diversity of content is shaped by epigenetic appropriation of the particulars of the physical, social and cultural world, which makes every person unique. Still, if we were to build machines on these principles rather than the present unaffordable reward maximisers, the question of their governance would change from restraint to upbringing. We set out the institutions such a future would require, together with the questions that remain open.",
+    "authors": [
+      "Jean-Pierre Changeux",
+      "Gustavo Deco",
+      "Morten L. Kringelbach"
+    ],
+    "tags": [
+      {
+        "term": "q-bio.NC",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Hierarchical Server Architecture for Agentic Science",
+    "url": "https://arxiv.org/abs/2608.05332v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-05",
+    "summary": "Agentic science is transforming the landscape of computational work, extending to scientific pipelines and workload managers. The workloads require specialized hardware within and across institutions. If assessing workload needs against environments is required for scheduling, automated discovery of resources is an essential step. In this paper, we present a hierarchical, dynamic architecture and software to discover resources across diverse cloud, edge, and HPC systems. The design enables concurrent, asynchronous negotiation, selection, and dispatch of requests for work using secretary agents. The agents probe and discover 51 real and simulated providers across 7 categories. We perform 19,973 negotiation and 6,952 selection simulations to assess reliability of decisions, demonstrating high (87.71\\%) negotiation accuracy and selection costs comparable to more traditional strategies. Designed for extensibility and currently supporting the Genesis Mission, this architecture exemplifies the importance of careful coordination between agents, discovery tools, and infrastructure for agentic science.",
+    "authors": [
+      "Vanessa Sochat",
+      "Daniel Milroy"
+    ],
+    "tags": [
+      {
+        "term": "cs.DC",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Towards a satellite image manipulation and deepfake localization benchmark dataset",
+    "url": "https://arxiv.org/abs/2608.04840v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-05",
+    "summary": "Verifying the authenticity of satellite imagery has become increasingly critical given advances in generative artificial intelligence. Highly realistic synthetic imagery produced for malicious purposes (deepfakes) can have major consequences in the remote sensing domain, where this data is a fundamental source of information for science applications, planning, logistics, and monitoring. The remote sensing community lacks high-quality, fine-grained manipulation datasets suitable for training and evaluating detection and image forensics algorithms. Existing datasets are lacking and those that do exist either provide no ground truth masks for evaluating manipulation localization, or consist of entire images generated by GANs or diffusion models, which are inadequate for measuring localization performance. To address this gap, we describe a preliminary dataset construction process and prototype benchmark dataset for satellite image manipulation detection and localization. The dataset contains 60 images total, with 30 images carefully manipulated using three manipulation types including copy-paste splicing and diffusion model inpainting, and 30 authentic images. Each image is accompanied by a ground-truth mask and acquisition metadata, enabling both pixel-level localization metrics, image metadata studies, and analyses of how manipulation detection performance relates to image collection parameters. We describe the dataset construction process and present this initial release to support further research in image forensics and geospatial deepfake detection. The prototype dataset can be downloaded at https://huggingface.co/datasets/geodf/fmow-fake-small.",
+    "authors": [
+      "Jacob Arndt",
+      "Debvrat Varshney",
+      "Philipe Dias",
+      "Nivedita Nukavarapu"
+    ],
+    "tags": [
+      {
+        "term": "cs.CV",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Eigenius: A Typed Knowledge-Graph DBMS with Epistemic Stratification and Institution-Mediated Reasoning",
+    "url": "https://arxiv.org/abs/2608.04457v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-05",
+    "summary": "As \"AI Scientists\" emerge to drive research via the Model Context Protocol (MCP), systems relying on ephemeral scripts will fail. The sheer scale of stateful, interconnected evidence requires a machine-walkable warranty grounded in a purpose-built database architecture. Eigenius is an open-source, typed knowledge-graph DBMS built on a single premise: answering the audit question (\"what do you know, and what is your warranty?\") requires a unified kernel. By tightly coupling the type system, storage engine, and integration protocol, Eigenius turns data provenance into a structural invariant rather than a property reconstructed across subsystem boundaries. The kernel rests on three pillars: a dependent type theory woven through the core, institutions acting as strongly typed integration boundaries, and a content-addressed immutable storage layer. On this foundation, epistemic status (declared/observed/derived/verified) is enforced as a strict commit-time invariant. Cross-system translations (comorphisms) are checked at commit and materialized directly into the graph as durable, first-class resources. To eliminate O(N^2) polystore bottlenecks, shared on-chain intermediate representations (IRs) collapse multi-system translations to identity. Crucially, this architecture unifies both domains of scientific epistemology: it relies on justification logic for empirical science, while embedding a fast, in-process term checker to safely evaluate formal mathematical proofs (via Lean 4) without IPC overhead. In an end-to-end recomputation of a published Nature study from fragile scripts to a materialized evidence graph, all 52 derived conclusions hold from pinned data, surfacing four machine-checked discrepancies in the original study.",
+    "authors": [
+      "Hans-Martin Will",
+      "Allen L. Brown",
+      "Matthew Fuchs"
+    ],
+    "tags": [
+      {
+        "term": "cs.DB",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LO",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Visualizing Graph-to-Answer Mechanism Recovery in Materials-Science Hypothesis Generation",
+    "url": "https://arxiv.org/abs/2608.04170v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-04",
+    "summary": "AI co-scientists can generate fluent materials-science hypotheses, but fluency does not show that an answer preserves a scientifically meaningful mechanism. We present a graph-to-answer mechanism-tracing case study for Graph-PRefLexOR-8B, a Qwen3-8B model adapted to expose distinct stages for brainstorming, graph construction, pattern extraction, and synthesis. We organize semantic backtracking, graph corruption, activation-based recovery measurements, and layer-by-token-region grids into a visual diagnostic workflow for inspecting this pathway. Across 100 open-ended materials-science questions, final answers remain closest to the model's own structured stages, especially synthesis. Under graph corruption, a full sweep over 37 residual-stream checkpoints, the embedding output and 36 transformer blocks, shows little mechanism recovery in the earlier transition region at layers 7--10, recovery instead concentrates in late synthesis and answer-start regions around layers 30 and 36. The workflow is intended to help scientists and model developers identify where a generated hypothesis loses or regains mechanism support before it is passed to downstream experimental planning.",
+    "authors": [
+      "Shashwat Sourav",
+      "Subhadeep Pal",
+      "Markus J. Buehler",
+      "Sanjay Das",
+      "Fiona Y. Wang",
+      "Dominik Soos",
+      "Tirthankar Ghosal"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Out-Of-The-Loop Multi-Fidelity Bayesian Optimization",
+    "url": "https://arxiv.org/abs/2608.04113v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-04",
+    "summary": "Black-box optimization is a ubiquitous problem in science and engineering, often dealing with expensive objective functions with cheaper lower-fidelity proxies available. Multi-fidelity Bayesian optimization (MF-BO) is a principled approach to this problem, leveraging correlations across different fidelities when querying the objective. However, for many important MF-BO tasks, the true highest-fidelity function is prohibitively expensive to be part of the optimization loop. Nevertheless, practitioners often have gold standard data (observations of the highest-fidelity function) obtained from previous experiments that might provide information for the current task. For instance, in molecular optimization, chemists often pick the top-$k$ candidate molecules using various computer simulations, and later reveal their true objective function values. In this work, we demonstrate the suboptimality of standard MF-BO algorithms in the real-world scenarios above, even under ideal assumptions. Next, we mitigate this problem by incorporating historical high-fidelity data accompanied by task descriptors---which can be explicitly given or extracted from unstructured metadata. We demonstrate the effectiveness of our methods on synthetic functions, as well as real-world problems in chemistry and hyperparameter optimization.",
+    "authors": [
+      "Gustavo Sutter",
+      "Hao Wang",
+      "Luis Ricardez-Sandoval",
+      "Pascal Poupart",
+      "Agustinus Kristiadi"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "The LLM Proposes, the Executive Disposes: A Self-Verifying Agent Instrument that Dissociates Commitment Drift from Binding Drift in Long-Horizon Agents",
+    "url": "https://arxiv.org/abs/2608.04066v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-04",
+    "summary": "How do you verify a long-horizon agent when its own state and self-reports are exactly what you cannot trust? We present an agent instrument built so that verification is structural rather than post-hoc. A deterministic Executive owns all belief; a language model may only file typed proposals, and a claim is admitted only when a prediction pre-registered before acting is matched against observation by code. Two properties make the instrument a verifier of its own science, not just of the agent: every run invalidates itself when per-organ write-error, render-size, or salted-canary-echo floors are breached (four of the first eight architecture runs were invalidated, each localizing a real defect); and a render-invisible shadow reference compiles the plan the full system would have committed in every ablation cell, so drift metrics are defined even where the mechanism under test has been removed. Using this instrument we report a clean, single-variable result on a failure every long-horizon agent suffers: ablating the commitment mechanism flips goal-abandonment from 0.00 to 1.00 while binding error stays flat at 0.00 (three seeds per cell, up to 394 reference beats per run, every run gated valid). The binding channel, by contrast, does not reappear as per-beat drift when its repair is ablated -- because binding is code-owned, the failure class is structurally absorbed, its only residue appearing one layer upstream as a collapse in hypothesis formation. We report these under full disclosure that task efficacy is null (zero level completions across 52 gated runs on ARC-AGI-3), pre-registered as a structural defeater. The contribution is a verification methodology for agent development and the drift decomposition it makes measurable.",
+    "authors": [
+      "Mohsen Arjmandi"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Large language models for partial differential equation workflows",
+    "url": "https://arxiv.org/abs/2608.03600v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-04",
+    "summary": "Partial differential equations (PDEs) become actionable in science and engineering not as isolated formulae, but as executable workflows that connect modelling assumptions, governing equations, numerical solvers, diagnostics, and decisions. Large language models (LLMs) are beginning to support such workflows by linking natural language, symbolic mathematics, code, solver outputs, and feedback. Here we examine recent advances in LLM-assisted PDE research across three stages: the discovery and formulation of governing models, the generation and revision of executable numerical solvers, and the use of simulation feedback to support control, design, and optimization. Across these stages, current systems act primarily as workflow-level interfaces. Despite this progress, the field remains limited by the scarcity of high-quality datasets and benchmarks, especially for knowledge discovery and real-world applications, where expert annotation, executable problem construction, and task-level feedback require substantial domain effort. A further challenge is the persistent gap between simulation-based results and real-world scientific and engineering systems, which limits the direct transfer of numerical simulations, control policies, and optimized designs to practical settings. These challenges make LLM-assisted PDE workflows a critical testbed for developing scientific AI systems that can connect language, computation, physical constraints, and real-world decision-making.",
+    "authors": [
+      "Han Wan",
+      "Rui Zhang",
+      "Hao Sun"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Rubrics as Privileged Information for Open-Ended Generation",
+    "url": "https://arxiv.org/abs/2608.02948v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-03",
+    "summary": "On-policy self-distillation (OPSD), where a single model acts as both student and teacher with different contexts, has shown promise in verifiable domains like math, where hard privileged information (PI) in the form of ground-truth answers structurally constrains valid continuations. We extend OPSD to open-ended generation using soft PI in the form of rubrics that guide preferences but admit many valid responses. Rubrics have served as scalar rewards for reinforcement learning (RL); we show that they provide substantially richer signal as dense PI for distillation, and contrary to intuition, soft rubric PI provides a larger and more effective training signal on student roll-outs than hard reference completion PI in this regime. A reference completion is one point in a set of valid responses, so distilling towards it over-constrains the student, while rubrics specify the preference structure shared across the set of valid responses. We show the effectiveness of using rubrics as PI for open-ended generation across Qwen and Llama model families and show that it outperforms rubric-as-reward (RaR) RL using HealthBench, a benchmark that grades open-ended health responses against physician-created rubrics, providing dense token-level supervision for open-ended tasks; RuPI beats RaR RL by up to +0.10 absolute score and, under matched recipe and KL direction, beats reference-PI by +0.034 to +0.079 absolute score across three models. We further show that these findings generalize to training on the RubricHub Science corpus and evaluating on ResearchQA: soft rubric PI outperforms both reference-PI distillation and RaR RL (66.6% vs. 64.2% and 57.6%).",
+    "authors": [
+      "Deepika Bablani",
+      "Ajay Gupta",
+      "Wanming Chen"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Towards a new paradigm of scientific discovery with socialized artificial intelligence",
+    "url": "https://arxiv.org/abs/2608.02775v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-03",
+    "summary": "Scientific discovery has advanced through successive transformations in the organization of knowledge. Observation and experimentation established the empirical foundations of science. Theory made it possible to derive general principles from particular phenomena. Computation extended inquiry into systems beyond direct observation, while data-intensive methods opened new spaces of pattern and prediction. Science now confronts a different frontier. The central challenge is no longer simply to produce more information, but to organize expanding knowledge, reasoning, and evidence into a coherent process of discovery. Here, we introduce Bridging Literature, Agents, and Zero-gap Experimentation (BLAZE), a paradigm of socialized scientific intelligence. BLAZE conceives AI not as an assistant for isolated research tasks, but as an organizational infrastructure for scientific discovery. It connects persistent knowledge, collective reasoning, empirical validation, and human judgment within a continuous research lifecycle, transforming fragmented activities into a cumulative process of inquiry, criticism, and revision. The central premise of BLAZE is that scientific intelligence does not arise from computation alone. It emerges from the sustained interaction among knowledge, hypotheses, experiments, and collective verification. By organizing humans and machines within a shared scientific process, BLAZE makes discovery more traceable, reproducible, and cumulative while preserving human creativity, judgment, and responsibility. Socialized scientific intelligence may provide a foundation for the next era of science. Its purpose is not to replace human discovery, but to extend the scale, depth, and continuity of collective scientific inquiry.",
+    "authors": [
+      "Xinjie Yao",
+      "Xingxin Xu",
+      "Xiyuan Gao",
+      "Zhoupeng Guo",
+      "Kunlong Yang",
+      "Dengyu Zhao",
+      "Siqi Zhao",
+      "Zhihe Fan"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Abduction Without a Body? Representational Grounding and the Abduction Loop for Scientific Hypothesis Generation",
+    "url": "https://arxiv.org/abs/2608.02505v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-03",
+    "summary": "Can scientific abduction occur without continuous sensorimotor embodiment? Recent arguments in AI and philosophy of science hold that genuine hypothesis generation requires an agent continuously coupled to the physical world. We defend a narrower claim: online embodiment is not necessary for every abductive scientific act. Our focus is identity abduction: the inference that two independently developed structures are one object under an explicit correspondence, reached through representational grounding rather than bodily interaction. An agent may acquire new inferential affordances not through physical interaction but through transformations into representations that expose latent invariants. Scientific diagrams are a practical substrate because they embody independently evolved conventions that partially canonicalize symmetry, topology, and operator structure across disciplines - a property we develop as convention space, which answers a hard retrieval problem: finding mathematically related work when two fields share no discriminating vocabulary. We operationalize the mechanism as an architecture, the Abduction Loop: representation generation, motif extraction, convention-space canonicalization, cross-domain retrieval, identity-hypothesis generation, and adversarial verification, with abstention as the designed default. A documented episode, in which a multimodal model given a figure of a gravitational-memory transport model generated and then verified the hypothesis that its central differential complex is equivalent to the spherical Kaiser-Squires mass-mapping complex of weak-lensing cosmology, serves as a motivating possibility witness from which the architecture is abstracted, not as evidence of general capability. We close with a falsifiable evaluation program, the DAB-30 benchmark. The contribution is a mechanistic proposal, an architecture, and a test program.",
+    "authors": [
+      "Michael Farmer"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CV",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.IR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Long-term Measurements: Towards a Longitudinal Understanding of Human-AI Interactions",
+    "url": "https://arxiv.org/abs/2608.02491v2",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-03",
+    "summary": "Language models have taken on the role of a very new type of technology, by virtue of their \"human-ness\" and rapid integration into users' daily lives. This combination of features can introduce longitudinal risks---cognitive, developmental and socio-affective changes in humans---that might not surface during a short-term interaction, but can have lasting long-term effects on users. This forms the basis of a critical new mission for NLP: to pivot from static, short-term evaluations of text generations to long-term measurements of behavioral changes, towards a diachronic understanding of human-model interactions. In this work, we draw from measurements used in social science fields that are crucial to understand emergent phenomena in longitudinal data. We discuss how computational methods in the field of NLP need to be combined with such measurements, not only to understand long-term safety risks of human-model interactions, but to help steer model development towards positive rather than negative outcomes for users. This ability to model human behavioral shifts as a function of model interactions can facilitate online rather than post-hoc detection of problematic behaviors, and should be leveraged in alignment frameworks to mitigate long-term risks in users.",
+    "authors": [
+      "Nicole Mitchell",
+      "Dhruv Agarwal",
+      "Maty Bohacek",
+      "Remi Denton",
+      "Roma Patel"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Predictive Set Theory: A Generative Framework for Cognitive Architecture with Operationalized Core Mechanisms",
+    "url": "https://arxiv.org/abs/2608.02704v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-03",
+    "summary": "Predictive processing theories portray the brain as a hierarchical prediction engine that minimizes prediction error, yet they lack operational definitions for the structure of a \"prediction,\" the standardized response to a prediction error, and the mechanism that maintains consistency across successive updates. Bayesian cognitive science attempts to subsume all uncertainty under probabilistic belief updating, but it presupposes a closed hypothesis space and provides no generative account of how the objects over which probabilities are distributed become discrete, identifiable referents in the first place. This paper introduces Predictive Set Theory (PST), a formal generative framework that reconstructs cognitive architecture from first principles. PST anchors cognition in a minimal set of operations---a sensor formalized as an identity function, set-theoretic state refresh, and three fundamental forms of reference chains (reference, counter-reference, and semi-reference)---and rigorously derives core cognitive functions including state sequences, demand, comparison, efficiency, and finite-horizon probabilistic planning. Rather than modeling neural mechanisms, PST constitutes a design specification for any system that must maintain internal consistency while acting under incomplete information and irreversible risk. The framework offers novel resolutions to classical problems such as Russell's paradox, the cognitive status of Gödelian incompleteness, the grounding of negative feedback, and the comprehension of film editing. The primary purpose of this paper is to establish, through the public academic record, the originality and completeness of the Predictive Set Theory framework.",
+    "authors": [
+      "Yiyang Yu"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LO",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "q-bio.NC",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "FastGFDs: Efficient Validation of Graph Functional Dependencies with Desbordante",
+    "url": "https://arxiv.org/abs/2608.02321v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.AI)",
+    "published": "2026-08-03",
+    "summary": "Graph functional dependencies (GFD) are a recently-developed concept aimed at capturing both topological structures in graphs and functional dependencies between attributes. The process of verifying whether a given GFD holds over a particular graph is referred to as GFD validation. In this very computationally expensive problem, locating suitable subgraphs accounts for about 99% of the total run time. The concept's authors originally proposed a parallel scheme (algorithm), targeting specifically clusters of high-performance servers.   The goal of this study is to open GFD validation to a broader public by making it possible to run it on a consumer class PC. Our initial experiments demonstrated that the existing algorithm may not be optimal for these purposes. Therefore, we propose FastGFDs - a GFD validation algorithm that employs a recently developed graph matching technique. In contrast to the parallel scheme, it is sequential and operates on the entire graph. Its novelty lies in the use of Core-First Decomposition and the Compact Path Index (CPI). We compare it with the naive sequential algorithm and the parallel scheme, evaluating run times and memory consumption. The current study is the first step towards designing an efficient algorithm for GFD validation in low-end single-node environments.   We also provide an open-source implementation of GFD validation over large data graphs. To the best of our knowledge, this is the only publicly available implementation of an algorithm for this problem. It is developed in Desbordante - an open-source high-performance data profiler aimed at science-intensive tasks.   Finally, our experiments on a real-life graph demonstrated up to three times performance (2.6x on average) improvement over the parallel scheme. Employing the new subgraph matching algorithm also reduced memory consumption by five times.",
+    "authors": [
+      "Anton Chernikov",
+      "Yurii Litvinov",
+      "Kirill Smirnov",
+      "George Chernishev"
+    ],
+    "tags": [
+      {
+        "term": "cs.DB",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.PF",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Stochastic Dynamics on Persistence Diagram Space via Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2608.06276v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-06",
+    "summary": "Persistence diagrams (PDs) provide stable and interpretable summaries of multiscale topological structure. While substantial progress has been made in the statistical analysis of PDs, existing literature often treats diagrams as static objects and provide limited frameworks for probabilistic modeling and stochastic evolution on PD space. We introduce a reinforcement learning framework for stochastic dynamics on PD space, where diagrams evolve through topology aware local edit operations. The dynamics define controlled Markov processes on spaces of finite PDs with variable cardinality. We establish conditions under which the induced Markov chains are irreducible, aperiodic, and geometrically ergodic, implying the existence of unique stationary probability laws on PD space. To guide the dynamics toward scientifically relevant topological targets, we formulate objectives that encompass distribution matching, task specific topological statistics, and structure-preserving compression. The resulting rewards balance task specific distributional targets, diagram fidelity, and complexity reduction, and yield a framework for adaptive topological simplification and probabilistic modeling. Experiments on synthetic and neuroimaging PDs demonstrate that the proposed framework can preserve dominant topological structure while reducing diagram complexity.",
+    "authors": [
+      "Farzana Nasrin"
+    ],
+    "tags": [
+      {
+        "term": "stat.ML",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "math.AT",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Muon on the Stiefel Manifold Admits an Exact Closed-Form Update",
+    "url": "https://arxiv.org/abs/2608.06218v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-06",
+    "summary": "We study Muon, a recently proposed matrix-aware optimization method, in the context of the Stiefel manifold. This manifold consists of matrices with orthonormal columns and is ubiquitous in machine learning and scientific computing. Existing extensions of Muon to this manifold rely on heuristic, approximate, or iterative updates with varying computational efficiency. We show that the corresponding Stiefel Muon update admits an exact closed-form solution and use this result to develop Skewon, a practical algorithm for orthogonality-constrained optimization with an efficient implementation. We further establish first-order convergence guarantees for Skewon in the smooth non-convex setting.",
+    "authors": [
+      "Mikhail Solonko",
+      "Molozhavenko Alexander",
+      "Maxim Rakhuba"
+    ],
+    "tags": [
+      {
+        "term": "math.OC",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "math.NA",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "SEAM: Global consistency beyond local accuracy in scientific machine learning",
+    "url": "https://arxiv.org/abs/2608.05702v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-06",
+    "summary": "Scientific machine learning commonly validates models at the level of a subdomain, a benchmark split, or an explanation for one prediction. Yet such local checks cannot establish whether the resulting explanations can be assembled into one globally admissible explanation. We introduce Scientific Explanation-Admissibility Machines (SEAM), a generator-agnostic framework that makes this local-to-global consistency question computable across regions, sensors, regimes, and model components. The finite explanation-sheaf instantiation SEAM-$Ω$ represents each region by a structured explanation with state, closure, and observation channels together with optional contract metadata; compares neighboring explanations on their overlaps; and converts disagreement into a channel-resolved obstruction. This obstruction locates inconsistency and tests competing declared accounts by restricting each repair to the revisions that one account permits. Exact feasibility refutes or retains an account; when exact repair is unavailable, residual-aware regularized records provide a separately labeled empirical attribution. The framework also separates inconsistency from non-identifiability and monitors learned generators under distribution shift. We establish theorems for minimum-cost intervention and conservation-contract detectability, together with companion results for identifiability and closure recoverability. Across nineteen experiments involving synthetic partial differential equation systems and out-of-distribution Fourier neural operator (FNO) monitoring, SEAM detects incompatible explanations even when local predictions are accurate, and attributes failures to specific channels and overlaps. SEAM adds a global explanation-consistency audit to existing solvers and learning models, testing whether their local explanations form a coherent scientific account.",
+    "authors": [
+      "Gnankan Landry Regis N'guessan",
+      "Bum Jun Kim"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CE",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "When Does Consensus Mean Correctness? Measuring the Agreement-Accuracy Coupling with Semantics-Preserving Re-Rendering",
+    "url": "https://arxiv.org/abs/2608.05670v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-06",
+    "summary": "A model's agreement across perturbed inputs is used both as a label-free reliability signal and as a self-training target, on the premise that agreement tracks correctness. That coupling is rarely measured directly: natural-image perturbations preserve meaning only by assumption, and no exact answer key localizes errors. Scientific figures remove both obstacles, a figure is drawn from data by a program, so redrawing it yields images that are semantically equivalent by construction and share a programmatically exact answer. We build RENDEQ, a generator of such render-equivalence sets, and measure the coupling on three open-weight VLMs, checking every finding across three independent instantiations. Re-rendering beats resampling on both accuracy and reliability. Agreement beats an evidence-carrying baseline, mean token log-probability, on two of three models and ties on the third, reversing an intermediate, buggy replication traced to a rendering-pipeline failure. The dispersion behind this is concentrated in one style factor, the plotting library, more than double the next-largest factor and an order of magnitude above the noise floor. Fine-tuning on the model's own cross-render consensus inverts: accuracy falls in every one of five replication runs, the opposite sign to published results on natural images. Agreement certifies correctness only above a threshold set by how diffuse a model's errors are, and an objective that rewards agreement destroys exactly that diffuseness.",
+    "authors": [
+      "Rasul Khanbayov",
+      "Hasan Kurban"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Enhancing Anomaly Resilience in Research Networks: A Large-Scale Forecasting Benchmark for Dynamic Security Baselining",
+    "url": "https://arxiv.org/abs/2608.05605v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-06",
+    "summary": "Research and Education Networks (RENs) serve as critical infrastructure for scientific discovery, yet they face a unique security paradox: their normal traffic patterns which are characterized by massive, bursty \"elephant flows\" are statistically indistinguishable from volumetric attacks such as DDoS to conventional monitoring systems. This similarity leads to high false-positive rates in anomaly detection, blinding security operators to genuine threats. In this paper, we propose and evaluate a high-fidelity traffic forecasting framework designed to establish dynamic security baselines for RENs. Leveraging an exclusive 57-day Internet2 dataset spanning ten backbone routers (13.7 billion packets), we perform the first large-scale benchmark of anomaly-aware forecasting models in this domain. We systematically evaluate six model families, from SARIMA to state-of-the-art long-sequence architectures (TiDE, PatchTST), across 960 experimental configurations. Our results demonstrate that these advanced architectures, particularly TiDE, reduce baseline prediction error by 30-42% compared to traditional methods ($p < 0.001$), significantly improving the distinction between legitimate scientific bursts and potential anomalies. Furthermore, we introduce a novel anomaly-integration strategy that improves model robustness by 3.3% in the presence of noise. This work provides the first statistically validated framework for distinguishing scientific workflows from network attacks, enabling more autonomous and resilient network security operations.",
+    "authors": [
+      "Mohammad Arafath Uddin Shariff",
+      "Byrav Ramamurthy"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.NI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "GenGA: Editable and Data-Grounded Graphical Abstract Generation for Academic Papers",
+    "url": "https://arxiv.org/abs/2608.05478v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-05",
+    "summary": "Graphical Abstracts (GAs) visually summarize the key findings of academic papers, playing a crucial role in facilitating the understanding of research content. Recently, advancements in vision-language models and image generation models have enabled the automatic generation of scientific figures based on paper content. However, most conventional methods output the generated results as raster graphics, making post-editing (e.g., text modification and layout changes) highly difficult. This poses a significant challenge, as they are unsuitable for the iterative figure revision process inherent in paper writing and peer review. To tackle these challenges, we define the novel task of generating editable GAs from paper content and propose GenGA, a new GA generation framework that directly produces figures in vector format. By generating figures as a collection of vector elements with a hierarchical structure, GenGA produces outputs that can be seamlessly imported into existing drawing tools for intuitive, element-level editing. Furthermore, we introduce the Structural Independence Coefficient (SIC), a metric that quantifies the editing simplicity of a figure based on the degree to which local modifications propagate to other elements. Experimental results show that GenGA achieves superior editing simplicity compared to conventional methods, and even surpasses human-authored GAs in conciseness and semantic alignment. We also validate SIC as an effective metric correlated with manual editing costs. This study fundamentally redefines GA generation as an editable vector graphic generation problem grounded in the practical workflows of researchers, significantly promoting effective scientific communication.",
+    "authors": [
+      "Takuro Kawada",
+      "Shunsuke Kitada",
+      "Hitoshi Iyatomi"
+    ],
+    "tags": [
+      {
+        "term": "cs.GR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CV",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.HC",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.MM",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Agentic self-driving microscopy benchmarks support qualification but do not necessarily generalize to unseen tasks",
+    "url": "https://arxiv.org/abs/2608.05266v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-05",
+    "summary": "Large language model agents are increasingly being developed to control a wide range of scientific characterization tools including microscopes and synchrotron beamlines. Research into agentic control of physical infrastructure is nascent and there are few well-established paradigms for how to engineer an agentic system. There are many choices to make when designing a microscopy agent, including the choice of LLM, the number of agents to use, agent responsibilities and delegation rules, retrieval-augmented generation parameters, and more. When designing and optimizing an agentic microscope controller, researchers not only want to ensure that the agent can correctly perform known tasks but also that the agent can generalize to new tasks that it has not encountered before. In this study, we develop a benchmark and trace-logging framework that reveals a) how different choices of agent architecture impact performance at microscopy tasks and b) the limitations of benchmarks for predicting if a particular agent will perform well on unseen microscopy tasks. The framework was used to evaluate one-, two-, and three-agent graph topologies, five LLMs, RAG and context parameters, and operational constraints across 53 microscopy benchmark tests. In total, 105 agent configurations, 1,949 individual test runs, and 49,109 RAG retrievals were recorded. Direct comparisons showed clear differences in latency, token use, cost, and failure mode between configurations. However, surrogate models trained on agent architecture and test results did not reliably predict an agent's performance on new, unseen tasks. These results show that these benchmarks are useful for qualification, regression testing, diagnosis, and direct comparison, but the current heterogeneous test suite does not support a task-independent global configuration model.",
+    "authors": [
+      "Nathan S Johnson",
+      "Ian Abshire"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "DASyR-LLM: Domain-Aware Symbolic Regression with LLMs for Kinetic Model Discovery",
+    "url": "https://arxiv.org/abs/2608.05120v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-05",
+    "summary": "Kinetic model discovery is a central challenge in chemical engineering, as accurate rate expressions are essential for understanding and controlling chemical and biological processes. Symbolic regression (SR) has emerged as a powerful data-driven approach for identifying interpretable kinetic models, but usually operates without domain knowledge, often exploring physicochemically implausible models. Large language models (LLMs) offer a promising avenue for injecting domain expertise into this search. Here, we introduce an LLM-guided SR framework, embedding an LLM module within an iterative SR algorithm for automated kinetic model discovery. The LLM performs two roles at each iteration: (1) a qualitative physicochemical critique of the best SR candidates, and (2) the proposal of new candidate rate expressions guided by the SR-generated models and embedded chemical knowledge. Our framework is evaluated on four in silico case studies of increasing complexity, spanning heterogeneous catalysis and bioprocess systems. Results show the LLM-guided framework reduces iterations to identify the ground-truth model by $41.7-79.3\\%$ versus a state-of-the-art SR framework, with the LLM directly proposing the correct model structure in over half of the guided runs. In practical settings, where each iteration typically requires a new wet-lab experiment, this translates into a substantial reduction in experimental effort. Predictive performance on an independent validation set is equivalent between both approaches, with $R^2>0.98$ in all case studies. Ablation studies indicate that both the SR component and the LLM scale contribute to this performance, with a reduced-size LLM largely retaining discovery efficiency. These findings demonstrate that LLMs can effectively inject domain knowledge into scientific model discovery, paving the way toward fully automated, domain-aware kinetic modelling pipelines.",
+    "authors": [
+      "Roberto Aliaga Medina",
+      "Paulina Quintanilla",
+      "Antonio del Rio Chanona"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CE",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.SC",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Capability-Gated Planning: Cost-to-Goal Discovery and the Limits of Myopic Experiment Selection",
+    "url": "https://arxiv.org/abs/2608.05085v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-05",
+    "summary": "Systems that automate scientific discovery must repeatedly decide which experiment to run, which hypothesis to test, which tool to build, and when to stop. Many systems make these decisions by maximizing a myopic score such as expected information gain per unit cost or a learned plausibility score. We identify a structural limitation of this approach. Some actions are constructive: they acquire an epistemic capability (an instrument, assay, pipeline, simulator, or abstraction) whose value lies not in the information returned immediately but in the future actions it makes available. When the least-cost route to a confident answer requires a chain of such constructions, a planner that scores actions only by information obtainable within a bounded horizon cannot value the first construction: it yields no information within the horizon and is dominated by any measurement with positive information, however small. We formulate goal-directed discovery as a stochastic shortest-path problem in belief space in which constructive experiments change the downstream action graph, and prove that for every lookahead depth d there is an instance on which every myopic information-maximizing planner has an unbounded approximation ratio, and a related instance on which it never reaches the goal. The mechanism is a capability-indistinguishability lemma: within the horizon, acquiring a capability can be observationally indistinguishable from paying for a null action. This establishes capability gating as a reachability axis of difficulty distinct from curvature (submodularity) and information order (adaptivity gaps). We introduce CG-Plan, an incremental replanner with a capability-aware cost-to-go heuristic h = h_cap + h_exp. In a controlled testbed, the performance gap appears only under gating, persists for every fixed horizon, and arises when near-miss hypotheses come from a data-consistent proposer.",
+    "authors": [
+      "Ahmed Hassoon",
+      "Mark Dredze"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "SparseDitto: Customizing GPU Kernels for Different Sparsity Patterns with LLM-Based Agentic System",
+    "url": "https://arxiv.org/abs/2608.05033v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-05",
+    "summary": "Sparse matrix kernels are fundamental to scientific computing, graph analytics, and machine learning. Their GPU performance depends strongly on the input sparsity pattern and execution strategy. For the same SpMM on the same matrix, cuSPARSE exhibits a 350x performance gap between CSR and Blocked-ELL. Our study of multiple data formats, specialized systems, and sparse compilers shows that no single implementation consistently dominates across sparsity patterns and operators. This motivates a system that can adapt its representation, execution strategy, and hardware mapping to each workload and target GPU.   We present SparseDitto, an LLM-based system that constructs a GPU kernel for each matrix, operator, and target GPU. SparseDitto supports SpMV, SpMM, and SpGEMM within a unified design framework. A lightweight additive model ranks established strategies using structural features of the input matrix. An architecture-aware planner then proposes several candidate designs. Coding and verification agents implement and refine them using measurements from the target GPU. Across three sparse operators and a diverse set of matrices, SparseDitto achieves a geometric-mean speedup of 2.68x over cuSPARSE on an NVIDIA RTX PRO 6000 GPU, with a maximum of 146.61x. On an NVIDIA H200 GPU, it achieves 2.79x, with a maximum of 78.5x. Its generated SpMM kernels also accelerate full-batch GCN training by up to 3.39x.",
+    "authors": [
+      "Shiyang Li",
+      "Guangyan Sun",
+      "Jinwei Tang",
+      "Yanzhi Wang",
+      "Mingyi Hong",
+      "Caiwen Ding"
+    ],
+    "tags": [
+      {
+        "term": "cs.DC",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "CheMLFlow: An Open-Source Platform for Cheminformatics and Materials Informatics Applications",
+    "url": "https://arxiv.org/abs/2608.04942v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-05",
+    "summary": "CheMLFlow is an open-source platform for building and executing end-to-end, high-throughput, and agentic workflows for scientific and technological applications. CheMLFlow targets a common bottleneck in scientific machine learning development, where researchers often need to assemble data acquisition, curation, representation, model training, validation, screening, interpretation, and reporting into a reproducible pipeline, even when their primary research contribution concerns only one stage. CheMLFlow provides modular workflow components, ready-to-run reference pipelines, standardized artifacts, and evaluation outputs that reduce orchestration overhead and support benchmarking across methods and datasets. The platform is designed to be extensible, reproducible, and automation friendly, with pluggable representations and models, deterministic splits, explicit run artifacts, batch execution, and report generation. As scientific software increasingly moves toward agent assisted experimentation, CheMLFlow's configuration driven workflows and structured outputs also provide a practical interface for coding agents to help users construct experiments, inspect results, and summarize findings under human supervision. This article describes the system architecture, core workflows, and benchmarks that reach literature performance for quantum mechanical, physicochemical and bioactivity property prediction, and use cases involving time series datasets demonstrating applications beyond molecular chemistry datasets.",
+    "authors": [
+      "Brendan Smith",
+      "Susana Lopez-Moreno",
+      "Eric Dolores-Cuenca",
+      "Sangil Kim",
+      "Jose L. Mendoza-Cortes",
+      "Nijamudheen Abdulrahiman"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cond-mat.other",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "physics.chem-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "A-SR: Self-Evolving Agentic LLMs for Symbolic Regression via Hierarchical Coordination",
+    "url": "https://arxiv.org/abs/2608.04872v2",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-05",
+    "summary": "Symbolic regression aims to discover closed-form equations from data, but existing LLM-guided methods often rely on a unified proposal loop that compresses heterogeneous search failures into a scalar score and a single prompt. We propose A-SR, a self-evolving agentic framework that shifts the control unit from expression edits to role-conditioned evidence views. A-SR coordinates formula discovery through routing among coordination protocols, an online evaluator-reward role policy, and state-routed process memory. During search, evaluator feedback characterizes reliability and productivity, updates role-level utilities, and routes elite motifs, failure traces, and validity diagnostics to different agents. The framework self-evolves at two timescales: within a run, it adapts the search process without updating LLM parameters; across runs, recorded trajectories can be distilled into open-source LLMs as role-conditioned proposal priors. Averaged over the four LSR-Synth scientific domains in LLM-SRBench, A-SR improves Acc@0.01 over baselines from 25.79% to 48.30% with Llama3.1-8B, while A-SR-LoRA improves the corresponding Qwen3-4B result from 24.58% to 38.29%. On four real-world scientific discovery tasks, A-SR obtains the best in-distribution or out-of-distribution normalized mean squared error on 7 of 8 reported metrics.",
+    "authors": [
+      "Wenxiao Zhao",
+      "Dong Liu",
+      "Kaiyi Xu",
+      "Feng Liu",
+      "Zhen Zhao",
+      "Fei Ben",
+      "Shu Wang",
+      "Wenhao Li"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "When Proxy Prediction Becomes Equation Reconstruction: Diagnostics and Residual Learning for Factor-Derived Proxy Supervision",
+    "url": "https://arxiv.org/abs/2608.04393v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-05",
+    "summary": "Scientific machine learning often relies on proxy targets computed from known domain factors when direct observations are limited. When those same factors are used as model inputs, however, high predictive accuracy may reflect reconstruction of the proxy-generating equation rather than robustness to degraded factor information. We study this problem in RUSLE-derived soil-loss proxy prediction under controlled degradation of the soil-erodibility factor $K$. We introduce a diagnostic framework that combines degraded-formula references, classical tree-based baselines, matched direct and formula-feature predictors, contextual ablations, tail-error analysis, and degradation robustness scoring. We then propose RASPL, a formula-preserving residual framework that retains the degraded formula estimate as the prediction anchor and learns an adaptively gated contextual correction. RASPL substantially outperforms matched direct prediction and provides stronger degradation and tail robustness than treating the formula estimate as an ordinary input feature. Within RASPL, a compact statistical encoder achieves the highest macro-averaged $R^2$ and lowest computational cost, whereas a convolutional encoder achieves the strongest degradation robustness and lowest Tail95 mean absolute error (MAE). These results establish formula preservation as the central design principle for robust learning from factor-derived proxy targets.",
+    "authors": [
+      "Chayan Lahiri",
+      "Ahmed Shafee",
+      "Cody Fehringer"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Transferable Dual-Stream Representations for Mesoscale-Preserving Sea Surface Temperature Downscaling",
+    "url": "https://arxiv.org/abs/2608.04230v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-04",
+    "summary": "Deep learning models for scientific spatio-temporal downscaling often minimize reconstruction error while failing to preserve physically meaningful multi-scale structure. For sea surface temperature prediction, this can yield outputs that are numerically plausible yet overly smooth, missing mesoscale variability critical to regional ocean dynamics. Existing methods often focus on pixel-wise objectives or single-context conditioning, which limits their ability to preserve spectral fidelity and generalize across regions. To address this, we propose EddyFlow, a representation learning framework for kilometer-scale sea surface temperature downscaling that balances predictive accuracy, scale-dependent structure, and regional generalization. EddyFlow is trained on the Gulf of St.~Lawrence and evaluated in zero-shot and few-shot settings on the Bay of Fundy and the Gulf of Mexico. EddyFlow demonstrates that physics-informed representation learning reduces zero-shot RMSE by 21%, achieves up to 85.6% skill relative to persistence on unseen domains, and maintains near-ideal spectral fidelity with a PSD ratio of $\\approx 1.00$.",
+    "authors": [
+      "Parth Doshi",
+      "Priyanka Aravindan",
+      "Vaishnav Vaidheeswaran",
+      "Md Mahbub Alam",
+      "Gabriel Spadon"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CV",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "BrainBench: Benchmarking Large Language Models for Comprehensive EEG Understanding",
+    "url": "https://arxiv.org/abs/2608.04156v1",
+    "source": "arxiv",
+    "source_name": "AI for Science (cs.LG)",
+    "published": "2026-08-04",
+    "summary": "Electroencephalography (EEG) analysis extends beyond assigning predefined labels to recordings; it requires workflows connecting natural-language instructions, signal processing, quantitative evidence, and scientific interpretation. We term this capability \\emph{comprehensive EEG understanding}. Existing evaluations, however, primarily target isolated decoding tasks or system-specific demonstrations, leaving the competence of large language models (LLMs) insufficiently quantified. We introduce \\benchmarkname{}, a unified benchmark for comprehensive, instruction-conditioned EEG understanding. It comprises four subsets---Foundational Analysis, Sleep Assessment, Neurocognitive Assessment, and Physiological Integration---covering 17 datasets, \\numcases{} tasks, and over \\numinstances{} real-data instances. Given an instruction and EEG recordings with optional physiological signals, a system must perform the analysis and produce a scientifically grounded report and, when required, artifacts. Outputs are assessed through numerical, categorical, set, sequence, semantic, and artifact validation. We evaluate \\nummodels{} representative LLMs across more than 100K executions under two paradigms: autonomous code execution with CodeAct and structured agentic analysis with BrainAgent. Results vary substantially across models, subsets, difficulty levels, and execution paradigms, showing that EEG competence depends on the model and its operationalization. \\benchmarkname{} provides a reproducible testbed for advancing LLM-based EEG understanding. The code and benchmark will be released soon, with evaluation results continuously updated.",
+    "authors": [
+      "Yangxuan Zhou",
+      "Sha Zhao",
+      "Yuning Chen",
+      "Chen Wu",
+      "Jiquan Wang",
+      "Shijian Li",
+      "Gang Pan"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Expanding Protein Structure Prediction into Conformational State Space",
+    "url": "https://arxiv.org/abs/2608.02866v1",
+    "source": "arxiv",
+    "source_name": "计算生物学 (q-bio)",
+    "published": "2026-08-03",
+    "summary": "Recent AI advances have enabled protein structure prediction at near-experimental accuracy, largely solving the problem of identifying a dominant conformation from sequence. Many proteins, however, function as dynamic systems populating multiple conformational states with activity emerging from shifts in relative occupancy--an incomplete picture when reduced to one structure. Here, we argue that structure prediction should be reformulated as a state-space inference problem: recovering not one conformation's coordinates but accessible states, their energetic and kinetic relationships, context dependence, and responses to perturbations. We review emerging strategies--deep learning ensemble generators, physics-based simulations, and experimental constraints--and outline a roadmap toward state-space prediction.",
+    "authors": [
+      "Devlina Chakravarty",
+      "Justin J. Miller",
+      "Da Teng",
+      "Yousuf O. Ramahi",
+      "Patrick Bryant",
+      "Camila Neira-Mahuzier",
+      "César A. Ramírez-Sarmiento",
+      "Sarah Rauscher"
+    ],
+    "tags": [
+      {
+        "term": "q-bio.BM",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Calculations of the Krypton Phase Diagram and Novel Plasticity",
+    "url": "https://arxiv.org/abs/2608.06118v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-06",
+    "summary": "The phase diagram for Kr, as represented by the Tadah! two-body potential is shown to have face-centred cubic (fcc), hexahonal close packed (hcp), and body centred cubic (bcc) regions. It has been assembled by combining several methods: direct liquid--solid coexistence for the melt lines, Gibbs--Helmholtz integration and Clapeyron slopes for the bcc--fcc line, slab coexistence for the liquid--gas line, static zero-temperature relaxations for the crystals, and the quasiharmonic approximation for the low-temperature fcc--hcp windows. The bcc phase contains highly mobile ``greedy snake\" defects, which suggests a reinterpretation of the melt-curve data: the anomaly observed may be due to the speckle method detecting the bcc-fcc boundary, not the melt curve. While pair potentials have limitations, comparison with a foundation MACE model shows that a more flexible machine-learned model does not necessarily improve matters if inappropriately trained.",
+    "authors": [
+      "Marcin Kirsz",
+      "Asuka Iwasaki",
+      "Graeme John Ackland"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Agentic self-driving microscopy benchmarks support qualification but do not necessarily generalize to unseen tasks",
+    "url": "https://arxiv.org/abs/2608.05266v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-05",
+    "summary": "Large language model agents are increasingly being developed to control a wide range of scientific characterization tools including microscopes and synchrotron beamlines. Research into agentic control of physical infrastructure is nascent and there are few well-established paradigms for how to engineer an agentic system. There are many choices to make when designing a microscopy agent, including the choice of LLM, the number of agents to use, agent responsibilities and delegation rules, retrieval-augmented generation parameters, and more. When designing and optimizing an agentic microscope controller, researchers not only want to ensure that the agent can correctly perform known tasks but also that the agent can generalize to new tasks that it has not encountered before. In this study, we develop a benchmark and trace-logging framework that reveals a) how different choices of agent architecture impact performance at microscopy tasks and b) the limitations of benchmarks for predicting if a particular agent will perform well on unseen microscopy tasks. The framework was used to evaluate one-, two-, and three-agent graph topologies, five LLMs, RAG and context parameters, and operational constraints across 53 microscopy benchmark tests. In total, 105 agent configurations, 1,949 individual test runs, and 49,109 RAG retrievals were recorded. Direct comparisons showed clear differences in latency, token use, cost, and failure mode between configurations. However, surrogate models trained on agent architecture and test results did not reliably predict an agent's performance on new, unseen tasks. These results show that these benchmarks are useful for qualification, regression testing, diagnosis, and direct comparison, but the current heterogeneous test suite does not support a task-independent global configuration model.",
+    "authors": [
+      "Nathan S Johnson",
+      "Ian Abshire"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "CheMLFlow: An Open-Source Platform for Cheminformatics and Materials Informatics Applications",
+    "url": "https://arxiv.org/abs/2608.04942v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-05",
+    "summary": "CheMLFlow is an open-source platform for building and executing end-to-end, high-throughput, and agentic workflows for scientific and technological applications. CheMLFlow targets a common bottleneck in scientific machine learning development, where researchers often need to assemble data acquisition, curation, representation, model training, validation, screening, interpretation, and reporting into a reproducible pipeline, even when their primary research contribution concerns only one stage. CheMLFlow provides modular workflow components, ready-to-run reference pipelines, standardized artifacts, and evaluation outputs that reduce orchestration overhead and support benchmarking across methods and datasets. The platform is designed to be extensible, reproducible, and automation friendly, with pluggable representations and models, deterministic splits, explicit run artifacts, batch execution, and report generation. As scientific software increasingly moves toward agent assisted experimentation, CheMLFlow's configuration driven workflows and structured outputs also provide a practical interface for coding agents to help users construct experiments, inspect results, and summarize findings under human supervision. This article describes the system architecture, core workflows, and benchmarks that reach literature performance for quantum mechanical, physicochemical and bioactivity property prediction, and use cases involving time series datasets demonstrating applications beyond molecular chemistry datasets.",
+    "authors": [
+      "Brendan Smith",
+      "Susana Lopez-Moreno",
+      "Eric Dolores-Cuenca",
+      "Sangil Kim",
+      "Jose L. Mendoza-Cortes",
+      "Nijamudheen Abdulrahiman"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cond-mat.other",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "physics.chem-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "An Exchange-Correlation Functional for Fast and Accurate Modeling of Ferroelectric Perovskites",
+    "url": "https://arxiv.org/abs/2608.04806v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-05",
+    "summary": "We present a novel exchange correlation functional, C09x-PBEc, which combines C09 exchange with PBE correlation, to accurately model the ferroelectric properties of perovskites while retaining the computational efficiency of GGA functionals. With a growing interest in developing machine learning interatomic potentials (MLIPs) to model large-scale ferroelectric systems of technological relevance, it is important to scrutinise the density functional theory exchange-correlation functionals which are used to compute the forces, energies and stresses the MLIP is trained on. Using the example of the prototypical ferroelectrics lead titanate, PbTiO3, and barium titanate, BaTiO3 we show that many widely used functionals tend to overestimate their lattice constants and spontaneous polarization. Conversely, non-local van der Waals functionals with C09 exchange accurately capture these properties compared to experiment, but with a larger computational overhead than, for example, GGA. We show that C09x-PBEc combines the accuracy provided by the C09 exchange with the computational affordability of GGA, making it an excellent candidate to be used in the training of MLIPs for ferroelectric perovskites. We also demonstrate that an MLIP trained using C09x-PBEc accurately reproduces the ferroelectric-to-paraelectric phase transition temperature of PbTiO3 with respect to experiment, showing a marked improvement on MLIPs trained using GGA.",
+    "authors": [
+      "Owain T. Beynon",
+      "Chiara Gattinoni"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Raman Signatures of Lithium Ion Dynamics in LLZO Garnet Electrolytes: Atomistic Insights from MD-Raman Calculations",
+    "url": "https://arxiv.org/abs/2608.04690v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-05",
+    "summary": "Lithium lanthanum zirconate (LLZO) garnets are among the most promising solid electrolytes for next-generation batteries owing to their high ionic conductivity, chemical stability, and compatibility with lithium metal. Raman spectroscopy is commonly employed to distinguish the highly conductive cubic phase from the poorly conductive tetragonal phase of LLZO, yet the atomistic origin of these spectral differences and their direct connection to Li-ion transport remain unresolved. Here, we close this gap by comparing computed and experimental Raman spectra for the tetragonal, cubic, and Ta-doped variants of LLZO, with the computed spectra obtained from the MD-Raman approach that combines machine-learning molecular dynamics with first-principles polarizability calculations. We show that the contrasting ionic transport behavior across these LLZO variants is encoded in the vibrational dynamics of the lithium sublattice and gives rise to distinct features in their Raman spectra. A symmetry-resolved analysis further reveals that experimentally observed Raman peaks do not correspond to individual normal modes, but instead arise from overlapping contributions of multiple symmetry-allowed vibrations, challenging conventional peak-assignment approaches. By explicitly connecting experimentally accessible Raman signatures to the underlying atomic-scale dynamics, our results show how Raman spectroscopy can move beyond empirical phase identification toward a microscopic probe of Li-ion dynamics in lithium garnet electrolytes.",
+    "authors": [
+      "Takeru Miyagawa",
+      "Willis O'Leary",
+      "Manuel Grumet",
+      "Hyunwon Chu",
+      "Jennifer L. M. Rupp",
+      "Waldemar Kaiser",
+      "David A. Egger"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Active Learning Guided Design Space Refinement for Scalable Multi-Objective Bayesian Optimization in Materials Discovery",
+    "url": "https://arxiv.org/abs/2608.04651v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-05",
+    "summary": "Advanced materials discovery increasingly relies on machine learning and Bayesian optimization to explore large discrete design spaces under limited evaluation budgets. However, conventional Bayesian optimization (BO) can become inefficient as candidate spaces grow, often evaluating low-value regions before reaching informative areas. We propose an active-learning (AL)-guided adaptive search-space refinement framework combined with multi-objective BO to accelerate materials optimization while preserving Pareto-relevant regions. We evaluate the approach on CH4/N2 separation in covalent-organic frameworks and pressure-vessel design with material-direction stress components and thickness objectives. Results show that the AL-guided refinement reduces the candidate space by approximately half while preserving more than 99 percent of the original hypervolume. The reduced-space strategy improves early convergence and cumulative Pareto-front discovery from the BO, demonstrating efficient large-scale materials optimization across constrained autonomous materials discovery settings.",
+    "authors": [
+      "Alexandros Ntagiantas",
+      "Panagiotis Tsilimidos",
+      "George Giannakopoulos",
+      "Christoforos Rekatsinas",
+      "Panagiotis Krokidas"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Electron correlation in semiconductors and insulators via symbolic regression",
+    "url": "https://arxiv.org/abs/2608.04291v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-04",
+    "summary": "Predicting quasiparticle energies in materials requires expensive numerical evaluations of the electron self-energy. This limits calculations to ordered systems with small unit cells. Here, using symbolic regression, we show that the GW self-energy can be accurately approximated with compact analytical functions of physically motivated Kohn-Sham descriptors. These expressions can be learned from a single GW calculation in the ordered phase and remain accurate under symmetry breaking induced by quantum and thermal fluctuations, elastic deformations, and amorphous disorder. This development enables routine GW calculations of complex materials with thousands of atoms at a computational cost comparable to semi-local density functional theory. We demonstrate the accuracy of this approach for covalent semiconductors, ionic insulators, and two-dimensional materials. These results establish symbolic regression as a viable route to predictive, interpretable, and transferable many-body electronic structure models.",
+    "authors": [
+      "Nick Pant",
+      "Viet-Anh Ha",
+      "Donghwan Kim",
+      "Feliciano Giustino"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Computational Microstructure Analysis of Sintered Ceramics",
+    "url": "https://arxiv.org/abs/2608.04216v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-04",
+    "summary": "Characterizing materials through manual extraction of physical properties from microstructure images is a laborious process. This work presents a workflow to extract porosity, solid fraction, grain size distribution, and pore size distribution from scanning electron microscopy (SEM) images of sintered ceramic samples using an automated pipeline. The primary challenge for extracting physical properties from SEM images is the presence of unimodal histograms in SEM images as a result of the overlapping intensity ranges for the grain and pore phases. We evaluated several different methods for noise reduction and local thresholding of SEM images. We find that topological filtering in combination with Sauvola thresholding enables segmentation and extraction of physical property data from SEM images. We validated the automated pipeline by comparing our results with the results of manual analyses performed for samples sintered at 1200$^o$C and 1400$^o$C and achieved an Intersection over Union (IoU) score of 95.14% and 99.85%, respectively. The workflow provides an efficient means to automatically extract microstructure properties from SEM images as a crucial step in generating materials datasets for machine learning.",
+    "authors": [
+      "Nikhil Dhanankam",
+      "Deeksha Kodangal",
+      "Rajendra K. Bordia",
+      "Ulf D. Schiller"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CE",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Physics-Informed Machine Learning for Refractory Alloy Design",
+    "url": "https://arxiv.org/abs/2608.03805v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-04",
+    "summary": "Refractory complex concentrated alloys (CCAs) exhibit exceptional mechanical properties at elevated temperatures, but their vast compositional space (approximately 10^15 possible combinations) poses significant challenges for experimental exploration. We develop a physics-informed machine learning framework combining quantile gradient boosting with Born stability constraints to predict eight mechanical properties (bulk modulus B, shear modulus G, Vickers hardness Hv, elastic constants C11, C12, C44, Young's modulus E, and Poisson's ratio nu) of refractory CCAs. Using 393 density functional theory (DFT)-computed alloys from a 10-element design space (Cr, Hf, Mo, Nb, Re, Ta, Ti, V, W, Zr), we achieve coefficient of determination (R^2) values of 0.89 to 0.97 with mean absolute errors of 0.85 to 14.74 GPa across six properties on a held-out test set (n = 59). Remarkably, all test predictions satisfy the Born stability criteria (100% compliance), demonstrating the efficacy of physics-informed constraints. Compositional screening in valence electron concentration (VEC)-atomic size mismatch (delta) space identifies high-performance candidates, with MoReW exhibiting the highest predicted shear rigidity (C44 = 139 GPa). Elemental analysis reveals that rhenium appears in 100% of the top-performing alloys, molybdenum in 90%, and chromium in 80%, establishing quantitative design rules: VEC = 6.0 to 6.4, delta < 10%, and Re-Mo-Cr ternary systems maximize shear resistance. This physics-informed screening framework enables accelerated discovery of mechanically stable, high-performance refractory alloys from the trillion-scale compositional space.",
+    "authors": [
+      "Blaise Awola Ayirizia",
+      "Bimal K C",
+      "Jorge A. Munoz San Martin"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Guided Synthesis of EMT Zeolites by Machine Learning",
+    "url": "https://arxiv.org/abs/2608.03760v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-04",
+    "summary": "Zeolites are microporous crystalline materials with diverse frameworks, widely used in industrial applications such as petroleum refining and molecular separation. Unlike most zeolites, EMT can be synthesized under mild conditions (at low temperatures and without the use of organic structure-directing agents), making it attractive for cost-effective and environmentally sustainable production. However, the specific synthesis conditions that selectively produce EMT rather than similar frameworks like FAU are not yet well established. In this work, we develop machine learning (ML) models to guide the discovery of synthesis conditions for EMT zeolites. Our dataset comprises 174 experimental synthesis attempts, recording reaction time, temperature, silica and alumina sources, Si/Al stoichiometric ratio, and other synthesis parameters. We apply both classical ML methods and pretrained foundation models to predict zeolite framework outcomes from these synthesis parameters. Feature importance analysis identifies critical parameters for EMT formation, validating known synthesis principles. Leveraging the ML models, we explore the synthesis space and identify six promising new conditions for EMT formation. Experimental validation confirms EMT crystallization in five cases, including two with Si/Al stoichiometric ratios outside the training dataset's range. Evaluation on independent literature-reported synthesis conditions further demonstrates the generalizability of the model. This work demonstrates a data-driven approach to accelerating zeolite synthesis, closing the loop between ML prediction and experimental validation.",
+    "authors": [
+      "Emmanuel A. Olanrewaju",
+      "Santosh Adhikari",
+      "Zhiyin Niu",
+      "Michael Nikolaou",
+      "Jeremy C. Palmer",
+      "Jeffrey D. Rimer",
+      "Mingjian Wen"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Machine Learning-Guided Screening of Advantageous Solvents for Solid Polymer Electrolytes in Lithium Metal Batteries",
+    "url": "https://arxiv.org/abs/2608.03688v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-04",
+    "summary": "Trace residual solvents in solid polymer electrolytes (SPEs) significantly affect electrolyte and interface properties, where optimal selection enhances ionic conductivity and transference numbers. However, solvent complexity hinders general screening methods. We establish a universal criterion linking electronic (HOMO, LUMO) and macroscopic properties (dielectric constant, dipole moment, polarizability) via machine learning on an approximately 10,000-solvent dataset from high-throughput DFT. Two solvents, N-methoxy-N-methyl-2,2,2-trifluoroacetamide and 2,2,2-trifluoro-N,N-dimethylacetamide, were identified. Experimental incorporation of trace N-methoxy-N-methyl-2,2,2-trifluoroacetamide into a poly(vinylidene fluoride-co-hexafluoropropylene) matrix achieves a 4.5 V window, 5.5x10^-4 S cm^-1 conductivity (30 C), and 0.78 Li+ transference number. The cell retains 86.7% capacity over 500 cycles (LiFePO4) and 98.7% after 200 cycles at 2C (LiNi0.9Co0.05Mn0.05O2), outperforming 2,2,2-trifluoro-N,N-dimethylacetamide, dimethylformamide, N-methyl-2-pyrrolidone, and dimethyl sulfoxide. This synergy enables balanced ion transport, wide stability, and cycling durability, advancing safer, high-energy lithium metal batteries. Our integrated approach establishes a solvent screening paradigm for rational SPE design, accelerating next-generation battery development.",
+    "authors": [
+      "Jiadong Shen",
+      "Junjie Chen",
+      "Xiaosa Xu",
+      "Jin Li",
+      "Zhenyu Wang",
+      "Pengzhu Lin",
+      "Zixiao Guo",
+      "Yu Wang"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "A Physics-Informed Hybrid Neural Operator for Transient Magnetization Prediction in Power Magnetics",
+    "url": "https://arxiv.org/abs/2608.02965v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-03",
+    "summary": "Magnetic components in high-frequency, high-power-density converters are increasingly driven by non-sinusoidal flux-density waveforms with fast transitions, minor-loop operation, dc bias, and temperature variation. Under these conditions, steady-state core-loss formulas and single-valued material curves cannot fully capture transient magnetization responses. This work proposes the Physics-Informed Hybrid Neural Operator (PI-HNO), a compact material-specific neural model with B-H energy-consistency regularization for core-loss-oriented transient magnetization prediction. Given the measured B(t)-H(t) history, the input B(t) series over the prediction interval and operating-condition information, PI-HNO predicts the H(t) series and the corresponding reconstructed B-H trajectory. The model integrates a local recurrent branch for boundary-state representation and rate-dependent response evolution with a Preisach-inspired global branch that extracts waveform-level hysteresis context. Evaluation on the MagNetX transient database using material-specific models for 14 ferrite materials demonstrates that PI-HNO achieves a compact trade-off between sequence accuracy and B(t)-H(t) energy consistency, with the mean and 95th percentile B(t)-H(t) energy consistency errors of 1.92% and 7.60%, respectively, using only 4777 trainable parameters per model. Ablation studies further demonstrate that the local, global, and energy-aware regularized components provide distinct contributions to transient magnetization prediction.",
+    "authors": [
+      "Yachao Zhu",
+      "Qiujie Huang",
+      "Sinan Li",
+      "Yang Li",
+      "Gang Lei",
+      "Jianguo Zhu"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "eess.SY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Real-time dynamics of the two-step charge-density-wave transition in bulk 1T-TaS$_2$",
+    "url": "https://arxiv.org/abs/2608.02456v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-03",
+    "summary": "The charge-density wave (CDW) of bulk 1T-TaS2 is built from Star-of-David (SoD) clusters tiling a sqrt{13} x sqrt{13} superlattice, and it melts through a two-step sequence accompanied by order-of-magnitude changes in resistivity. Whether these steps proceed by collapse of the SoD amplitude or by rearrangement of the SoD lattice has remained unresolved, because the relevant dynamics occur on length and time scales beyond the reach of ab initio molecular dynamics. Here we follow the CDW transitions in real time using a machine-learning force field trained on first-principles data, giving access to 1404-atom supercells over 5 ns. The two steps are mechanistically distinct. Above 200 K, SoD clusters translate coherently by transiently dissolving and re-forming about shifted centers, a deformation-formation process that preserves the local SoD amplitude while randomizing the interlayer stacking order and nucleating domain walls. Only near 350 K does the SoD distortion itself collapse. These results provide microscopic support for the recently proposed two-step model of the CDW transition and offer a framework for interpreting light-induced hidden phases and cavity-modified transition temperatures in 1T-TaS2.",
+    "authors": [
+      "Daeheon Kim",
+      "Jinseok Oh",
+      "Kahyeon Koh",
+      "Yejun Cho",
+      "Angel Rubio",
+      "Noejung Park",
+      "Dongbin Shin"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Machine Learning Assisted Design of Complex and High Entropy Alloys by Hybrid HiPIMS/Pulsed-DC PVD Process for Low Carbon Energy Applications in Extreme Environments",
+    "url": "https://arxiv.org/abs/2608.01903v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-03",
+    "summary": "Complex and high entropy alloys are attracting much attention currently thanks to their mechanical and corrosion resistance properties in harsh environments, in particular needed for carbon-free energy applications. However, their elaboration in bulk and in thin film form in a trial-and-error approach is impractical due to their complexity and the cocktail effect. The recent development of artificial intelligence brings a new possibility for their elaboration and adjustment of their properties.   Firstly, we present an overview of Materials and data science research. Then we describe how DIADEM - French initiative for Materials and Data science convergence - tackles the development of innovative coatings for carbon-free energy applications (nuclear, high temperature electrolysis, ...) thanks to the development of a nationwide network of synthesis and characterization platforms - the DIADEM discovery hub. We describe in particular DIADEM-2D, an AI-driven Hybrid HiPIMS/Pulsed-DC PVD process using 4 cathodes in confocal combinatorial configuration. We present the high entropy alloy determination using data from the literature for corrosion resistance in molten salt media and nuclear accidental conditions. An element-independent model gathering deposition parameters and coating properties has been implemented allowing the design of protective coatings with a particular composition. We demonstrate the feasibility of this process and its accuracy.",
+    "authors": [
+      "Paul Foulquier",
+      "Ryma Haddad",
+      "Ali Mahmoud",
+      "Eric Monsifrot",
+      "Fanny Balbaud-Celerier",
+      "Jean-Philippe Poli",
+      "Frederic Schuster"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Machine-Learning-Accelerated Metallene Stabilization from High-Throughput Sandwich Modeling",
+    "url": "https://arxiv.org/abs/2608.01779v1",
+    "source": "arxiv",
+    "source_name": "凝聚态与材料 (cond-mat)",
+    "published": "2026-08-03",
+    "summary": "Metallenes have appealing properties, but stabilizing them in a monolayer phase poses challenges for their synthesis. A recent experiment showed that the van der Waals squeezing method can stabilize certain metallenes in a MoS2 sandwich. This pioneering work motivates systematic studies, but such studies are experimentally impractical, while first-principles modeling remains prohibitive. Here, armed with universal machine-learning interatomic potentials, we constructed 1620 metallene sandwich heterostructures containing 6 different sandwich layers and 45 metals. We performed phonon calculations, which revealed 1208 dynamically stable structures. We found that transition-metal dichalcogenides, particularly MoSe2, are highly effective in stabilizing metallenes. Specifically, buckled hexagonal and honeycomb crystal lattices exhibit the greatest stability. We further evaluated the thermal stability of selected heterostructures with density-functional theory molecular dynamics simulations at room temperature. By uncovering the physical and chemical factors governing the stabilization of metallenes, our results provide systematic insights to guide and accelerate synthesis for future applications.",
+    "authors": [
+      "Mohammad Bagheri",
+      "Pekka Koskinen"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "physics.comp-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Millisecond-Scale Neural Operator Surrogates for Double-Null Free-Boundary Grad-Shafranov Equilibria",
+    "url": "https://arxiv.org/abs/2608.05555v1",
+    "source": "arxiv",
+    "source_name": "计算物理 (physics.comp-ph)",
+    "published": "2026-08-06",
+    "summary": "The Grad-Shafranov (GS) equation governs ideal magnetohydrodynamic equilibrium in tokamak plasmas. Free-boundary GS solvers are central to diverted-equilibrium modeling, but nonlinear Picard iteration introduces computational cost and sample-dependent latency that can become prohibitive in optimization, modeling, and control-oriented loops. Here we train a geometrically conditioned Fourier Neural Operator (FNO) to learn a constrained forward map from spatial coordinates, scalar operating parameters $(P_{\\mathrm{axis}}, I_p, f_{\\mathrm{vac}})$, and prescribed X-point locations to the poloidal-flux field $ψ(R,Z)$. The model is trained on a controlled family of constrained double-null free-boundary equilibria generated with \\textsc{FreeGS} for a single fixed machine geometry and prescribed topology. The best model achieves a mean relative $L^2$ error of $0.05\\%$, with test error following an empirical $N^{-0.68}$ power law over $N_{\\mathrm{train}}\\in\\{500,1000,2000,5000\\}$. It recovers both X-points to within $0.2$ cm and localizes the O-point to $0.03$ cm. As a physics-consistency diagnostic, the predicted fields satisfy an external finite-difference GS residual evaluation at the same level as the ground-truth fields, with mean normalized residual $2.29$, indistinguishable from the $2.29\\pm0.06$ \\textsc{FreeGS} baseline using the same diagnostic. The trained FNO evaluates one equilibrium in $2.77$ ms on GPU and $25.6$ ms on CPU, corresponding to speedups of ${\\sim}640\\times$ and ${\\sim}69\\times$ relative to \\textsc{FreeGS} as configured here, with near-deterministic latency (p95/median $=1.01$). These results show that neural-operator surrogates can provide accurate, geometrically precise, millisecond-scale equilibrium evaluations for magnetic-confinement fusion workflows within a prescribed topology and machine geometry.",
+    "authors": [
+      "Plamen G. Krastev"
+    ],
+    "tags": [
+      {
+        "term": "physics.plasm-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "nucl-ex",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "physics.comp-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Data-driven reconstruction of dynamical systems using Takens' Theorem, manifold learning, and universal function approximators",
+    "url": "https://arxiv.org/abs/2608.05477v1",
+    "source": "arxiv",
+    "source_name": "计算物理 (physics.comp-ph)",
+    "published": "2026-08-05",
+    "summary": "Embedding theorems can be used to provide theoretical guarantees about the relation between low-dimensional observations of a system and its full-dimensional state and dynamics. Such theorems do not, however, provide guidance on observable choice, embedding construction, or methodologies to learn the mapping between the embedding and full-dimensional state. In this work, we develop an algorithmic framework, TAkens Reconstruction (TAR), to analyze and reconstruct arbitrary dynamical systems from low-dimensional time series using an integration of Takens' Delay Embedding Theorem, manifold learning techniques, and universal function approximators. We validate TAR in applications to a variety of simulated and observed dynamical systems and use it to investigate how delay vector structure impacts reconstruction accuracy. In an ecological system, we show that simple predator-prey dynamics can be reconstructed with observations taken over a wide variety of embedding time scales. In molecular dynamics simulations of the protein Villin, we demonstrate how including multiple time delays of the same observable series can be used to improve reconstruction of systems with multiple characteristic time scales. In the trade record of Vanguard S&P 500, we show how the approach exposes underlying dynamical phenomenologies in the data and accurate return predictions over short time horizons without access to full-dimensional market observations. We develop and release an open-source software package to enable the application of TAR to arbitrary dynamical systems.",
+    "authors": [
+      "Maximilian Topel",
+      "Andrew L. Ferguson"
+    ],
+    "tags": [
+      {
+        "term": "physics.comp-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "A commutant gate for spectral fitting through symmetry forced degeneracy",
+    "url": "https://arxiv.org/abs/2608.04903v1",
+    "source": "arxiv",
+    "source_name": "计算物理 (physics.comp-ph)",
+    "published": "2026-08-05",
+    "summary": "Learned spectral models fail at symmetry forced degenerate sectors for two distinct reasons. Where symmetry forces levels to coincide exactly, the per level observable one would normally fit is not well defined, since every unit vector of that shared space is an eigenvector; and near a symmetry protected crossing, the eigenvector observable gradient carries a factor 1/(lambda_i - lambda_j) that is genuinely singular as the gap closes. The usual response is to regularize the divergence or threshold the gap, and both carry a real cost: a fixed gap cannot both protect a forced multiplet and keep two genuinely distinct levels apart. We show a different fix, on synthetic operator families with a known symmetry answer key. A gate reads the symmetry structure directly from the observed operators, as the linear commutant of the family, one singular value decomposition nullspace, following the simultaneous block diagonalization of Maehara and Murota. Block identity is read from the centre of that commutant rather than from eigenvalue clustering, which makes the forced versus accidental distinction structural rather than metric, and the objective switches between a projector trace through forced blocks and a per level target elsewhere. Under operator estimation noise the gate classifies correctly to epsilon of about 0.3, where energy clustering already fails by 0.02. Gated fitting reaches the truth at machine precision in both the symmetric and the symmetry breaking regime, in the latter converging to a truth that is a singularity of the ungated objective, and observable bias sits at the noise floor. Validation off the regular representation, where multiplicity and dimension separate, eliminated two defective estimators that all regular representation tests had passed. The demonstrated object is a gated estimator; a full parametric matrix model, with the matrices learned, is the next experiment.",
+    "authors": [
+      "Stelios Savva"
+    ],
+    "tags": [
+      {
+        "term": "math.NA",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "nucl-th",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "physics.comp-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "A Unified Graph Neural Network Framework for Non-Equilibrium Carrier and Lattice Dynamics Driven by Electric Fields",
+    "url": "https://arxiv.org/abs/2608.03287v1",
+    "source": "arxiv",
+    "source_name": "计算物理 (physics.comp-ph)",
+    "published": "2026-08-04",
+    "summary": "Finite-temperature simulations of electric-field-driven dynamics need a unified description of interatomic interactions, local electronic states, and configuration-dependent electric responses. First-principles simulations remain scale-limited, whereas conventional machine-learning potentials lack electric-field effects. Recent machine-learning frameworks have incorporated electric-field response or atom-resolved electronic-state information, but rarely both within a single framework. Here, we develop an electric-field-response graph neural network (EFR-GNN) that predicts energies, forces, Born effective charge tensors, atom-resolved charges and magnetic moments, and supports long-time field-driven molecular dynamics with atom-resolved tracking of localized electronic states. In hole-doped MgO, static fields rectify thermally activated hole-polaron hopping through a forward--backward asymmetry quantified by a nearest-neighbor model. In GaAs, resonant terahertz excitation generates a coherent $Γ$-point transverse-optical phonon with dephasing consistent with experiment, while opposite helicities reverse its rotation. In superionic $α$-AgI, it reproduces temperature-dependent Ag$^+$ mobility and collective field-driven ionic drift. Together, EFR-GNN offers an approach to finite-temperature simulations of field-driven atomic and localized-carrier dynamics.",
+    "authors": [
+      "Jia-Wen Li",
+      "Sheng Meng",
+      "Xinghua Shi",
+      "Jin Zhang",
+      "Wei-Hai Fang"
+    ],
+    "tags": [
+      {
+        "term": "physics.comp-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "ScoreField: Neural Inverse Scattering with Score-Based Generative Priors",
+    "url": "https://arxiv.org/abs/2608.02937v1",
+    "source": "arxiv",
+    "source_name": "计算物理 (physics.comp-ph)",
+    "published": "2026-08-03",
+    "summary": "Designing an effective electromagnetic inverse-scattering solver requires faithful enforcement of nonlinear full-wave physics together with an expressive prior on the unknown permittivity contrast. We propose ScoreField, a neural inverse scattering framework that integrates coupled implicit neural representations (INRs) with a pretrained score-based generative prior. ScoreField employs two INRs to parameterize the permittivity contrast and the induced current fields, and jointly optimize them under the Lippmann-Schwinger equations. In addition to the implicit regularization by the INR architecture, the score model provides a learned prior gradient on the contrast, which is propagated to the contrast INR through the chain rule. This formulation enables ScoreField to effectively handle strong multiple scattering, where nonlinear wave interactions require accurate modeling of the coupled full-wave physics. We evaluate ScoreField on simulated weak- and strong-scattering benchmarks, the canonical Austria phantom, and experimental Fresnel measurements. We note that ScoreField significantly improves reconstruction fidelity and suppresses artifacts relative to classical full-wave methods and deep learning baselines, achieving an average PSNR improvement of $1.8 \\, \\mathrm{dB}$ over the best competing method on real Fresnel data.",
+    "authors": [
+      "Wenhan Guo",
+      "Yuan Gao",
+      "Yu Sun"
+    ],
+    "tags": [
+      {
+        "term": "eess.IV",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "physics.comp-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Machine-Learning-Accelerated Metallene Stabilization from High-Throughput Sandwich Modeling",
+    "url": "https://arxiv.org/abs/2608.01779v1",
+    "source": "arxiv",
+    "source_name": "计算物理 (physics.comp-ph)",
+    "published": "2026-08-03",
+    "summary": "Metallenes have appealing properties, but stabilizing them in a monolayer phase poses challenges for their synthesis. A recent experiment showed that the van der Waals squeezing method can stabilize certain metallenes in a MoS2 sandwich. This pioneering work motivates systematic studies, but such studies are experimentally impractical, while first-principles modeling remains prohibitive. Here, armed with universal machine-learning interatomic potentials, we constructed 1620 metallene sandwich heterostructures containing 6 different sandwich layers and 45 metals. We performed phonon calculations, which revealed 1208 dynamically stable structures. We found that transition-metal dichalcogenides, particularly MoSe2, are highly effective in stabilizing metallenes. Specifically, buckled hexagonal and honeycomb crystal lattices exhibit the greatest stability. We further evaluated the thermal stability of selected heterostructures with density-functional theory molecular dynamics simulations at room temperature. By uncovering the physical and chemical factors governing the stabilization of metallenes, our results provide systematic insights to guide and accelerate synthesis for future applications.",
+    "authors": [
+      "Mohammad Bagheri",
+      "Pekka Koskinen"
+    ],
+    "tags": [
+      {
+        "term": "cond-mat.mtrl-sci",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "physics.comp-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "FESOM2-JAX v1.0: a differentiable shadow of the ocean-sea-ice model FESOM2, cast onto GPUs",
+    "url": "https://arxiv.org/abs/2608.01546v1",
+    "source": "arxiv",
+    "source_name": "计算物理 (physics.comp-ph)",
+    "published": "2026-08-02",
+    "summary": "We present FESOM2-JAX, a Python re-implementation of the Finite-volumE Sea ice-Ocean Model (FESOM2) in JAX. The model retains the unstructured-mesh, cell-vertex finite-volume formulation of the original, runs unchanged from a laptop CPU to 256 GPUs, and is end-to-end differentiable. FESOM2-JAX is a code shadow of the Fortran model: a projection onto the Python ecosystem, translated with large language models and verified kernel by kernel against the original. It is built to lower the barrier to experimentation, from new numerics and parameterizations to gradient-based calibration and hybrid physics-machine-learning components, while remaining close enough to the original so that what is developed in the shadow can be transferred back. In a 1958-2019 hindcast at 1$^{\\circ}$ equivalent resolution with identical physics and forcing, the mean states of the JAX and Fortran versions differ from each other by two orders of magnitude less than either differs from observations, and the two runs agree for six decades in global temperature, salinity, heat content, and sea ice. The complete 1$^{\\circ}$ configuration fits on a single GPU, a node of four GH200 superchips integrates $\\sim$113 simulated years per wall-clock day, and meshes of up to 7.4 million surface vertices ($\\sim$5 km) scale to 128 GPUs. What limits the model is communication rather than arithmetic. What the shadow adds to the original is the gradient: a single reverse-mode pass through the full time loop returns the sensitivity of a model diagnostic to a parameter at every mesh vertex, verified against finite differences. To our knowledge, FESOM2-JAX is the first global ocean-sea-ice model of CMIP-class complexity written natively in a differentiable framework, and the first on an unstructured mesh.",
+    "authors": [
+      "Nikolay V. Koldunov",
+      "Sergey Danilov",
+      "Suvarchal Cheedela",
+      "Dmitry Sidorenko",
+      "Sebastian Beyer",
+      "Patrick Scholz",
+      "Ivan Kuznetsov",
+      "Jan Streffing"
+    ],
+    "tags": [
+      {
+        "term": "physics.ao-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.SE",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "physics.comp-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "physics.flu-dyn",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "2026国际基础科学大会在京开幕 - 科学网—新闻",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE12QjRxc0Rmcks0eFBrNVp0ZnBmcVBJSUJrZklnNFpnd2lLdmcyOUxFdEs5T3FHQy0teGJvRTNwSkN5aHhqcTNfVzlEUk9ycjA3cHRmUk1rMXBEYW0zbnN6UGthaHk?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI for Science",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE12QjRxc0Rmcks0eFBrNVp0ZnBmcVBJSUJrZklnNFpnd2lLdmcyOUxFdEs5T3FHQy0teGJvRTNwSkN5aHhqcTNfVzlEUk9ycjA3cHRmUk1rMXBEYW0zbnN6UGthaHk?oc=5\" target=\"_blank\">2026国际基础科学大会在京开幕</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">科学网—新闻</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "如何看待AI生成的病毒模型可能带来的生物安全风险？ - 新浪网",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPNXNtc2RlRlp1d1dZUTNYMHJ0MTlndXE1WU9yUHFzVUw0WnFTTzN0UUdYbUZzTnJwd1pGR3kzUTIyb0JFYWx5TTQ3TGFMb3FmNDljU2ZENlNPbzFtcUYwSFR1eFBvOWxEbDg2Q0NsSHBGandHR3B1Y0YyajVFcl9PdjgzWQ?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI for Science",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPNXNtc2RlRlp1d1dZUTNYMHJ0MTlndXE1WU9yUHFzVUw0WnFTTzN0UUdYbUZzTnJwd1pGR3kzUTIyb0JFYWx5TTQ3TGFMb3FmNDljU2ZENlNPbzFtcUYwSFR1eFBvOWxEbDg2Q0NsSHBGandHR3B1Y0YyajVFcl9PdjgzWQ?oc=5\" target=\"_blank\">如何看待AI生成的病毒模型可能带来的生物安全风险？</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "马克谈天下(641) 聊聊美国政府的创世纪计划Genesis Mission - 文学城",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1pQUFMbWxBbGxwWjVfaFpyR3RsRVFVWjl5MUZhSlI5RTdxaWRPSV9zN0FocmpHSVl4TnZHUjhzbk5qb0d4NjAtRG5lTGRxUDF1QVNOUnlMZmhGNnVNeXRMSkM5M1g?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI for Science",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE1pQUFMbWxBbGxwWjVfaFpyR3RsRVFVWjl5MUZhSlI5RTdxaWRPSV9zN0FocmpHSVl4TnZHUjhzbk5qb0d4NjAtRG5lTGRxUDF1QVNOUnlMZmhGNnVNeXRMSkM5M1g?oc=5\" target=\"_blank\">马克谈天下(641) 聊聊美国政府的创世纪计划Genesis Mission</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">文学城</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "华为助力上海体育大学落成全国首个体育全站智能平台“澳门游戏厅电玩城” - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5sQ3NoeFEzaHdXcVdBNC1YR00xQTktVG1teGJtNXVqVUhadlI1dnZLcHktYWFaLVBFQXEtNlhEcG5fMDNlSGY3bGNZbGRoRWh0dG5wbGc0SGJsd0p0NlNycFN0UmxSdkNL?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI for Science",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE5sQ3NoeFEzaHdXcVdBNC1YR00xQTktVG1teGJtNXVqVUhadlI1dnZLcHktYWFaLVBFQXEtNlhEcG5fMDNlSGY3bGNZbGRoRWh0dG5wbGc0SGJsd0p0NlNycFN0UmxSdkNL?oc=5\" target=\"_blank\">华为助力上海体育大学落成全国首个体育全站智能平台“澳门游戏厅电玩城”</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "AI推动天文观测向“智能分析与自主发现”演进 - 新浪网",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPM3Q5OC11SHhfRWF3Z2VRZ3pwakJWSHByaGRnS1ZldVFMcjdMU2lTNXQtU3pndU1WQ3FQZThTRjlodHB6WW9Sa2dCckUzcHVtWVMwSi1HMVFXWHIwOEl2WkYwOEI4bHNYWVptX0FnRGJBRV9mSnNpc1h6MVMtMzRVX1lR?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI for Science",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxPM3Q5OC11SHhfRWF3Z2VRZ3pwakJWSHByaGRnS1ZldVFMcjdMU2lTNXQtU3pndU1WQ3FQZThTRjlodHB6WW9Sa2dCckUzcHVtWVMwSi1HMVFXWHIwOEl2WkYwOEI4bHNYWVptX0FnRGJBRV9mSnNpc1h6MVMtMzRVX1lR?oc=5\" target=\"_blank\">AI推动天文观测向“智能分析与自主发现”演进</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "韩国科技信息通信部科技创新本部长Park In-gyu赴美出席UKC 2026 聚焦AI、航天和量子合作 - 디지털투데이",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPSWY4aE9jZl9mb2h0UWZwdEhmLW5XUHQ1bTc5UjlGZ2k3OUtMUkVRckptV1JwQW1aOUxvcDZRRVV5QUREUXMzeDJ5LUpoWEo3anlsbVVJUXJGTUNPdjFRQjNPSm0xemN6TXQ0U2JYQmpkNl9BaXZjb0VBdExuNy1SbUR5djdLMGx2dFRZaUFXNkwyLUVvR0doc0hUZ1JoY0FaNUVYdUt3c1l1MFlINHZfTzRncGQwTUJKbFVhazFtTHJ0bkVxVXEzOUx3?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI for Science",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPSWY4aE9jZl9mb2h0UWZwdEhmLW5XUHQ1bTc5UjlGZ2k3OUtMUkVRckptV1JwQW1aOUxvcDZRRVV5QUREUXMzeDJ5LUpoWEo3anlsbVVJUXJGTUNPdjFRQjNPSm0xemN6TXQ0U2JYQmpkNl9BaXZjb0VBdExuNy1SbUR5djdLMGx2dFRZaUFXNkwyLUVvR0doc0hUZ1JoY0FaNUVYdUt3c1l1MFlINHZfTzRncGQwTUJKbFVhazFtTHJ0bkVxVXEzOUx3?oc=5\" target=\"_blank\">韩国科技信息通信部科技创新本部长Park In-gyu赴美出席UKC 2026 聚焦AI、航天和量子合作</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">디지털투데이</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "华为助力浙江大学落成全国高校规模最大智算平台‘赏金女王app下载入口官方版’ - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ZT3BWQmVXY1BVV29FYlYwNFhIOFhOcU0tcWpBTEpnUEROQUU3Tk9velFCSWJBcHBUZHZtek5fOTRnc0tjVlFwdTNiWUYwc2ZQU28xLWF3?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI for Science",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ZT3BWQmVXY1BVV29FYlYwNFhIOFhOcU0tcWpBTEpnUEROQUU3Tk9velFCSWJBcHBUZHZtek5fOTRnc0tjVlFwdTNiWUYwc2ZQU28xLWF3?oc=5\" target=\"_blank\">华为助力浙江大学落成全国高校规模最大智算平台‘赏金女王app下载入口官方版’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "AI设计出的全新病毒会对人类健康构成直接威胁吗？ - 新浪网",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQVzBERFkyWFlfbVhnRWR4QVM2UWY0R3BMS2pSODJyTG02WFZkbERQVUhjWEtwNWxuSTQyMGN0MXRFaFdhS2VkaVpqWWlBRVpGcmtHWHlGWWZCR0tmQk5lVVZvMF8xcExXVE96aTQ5eE9lcjFZU2RRNzdnQ19ienZBTXpnYw?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI for Science",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxQVzBERFkyWFlfbVhnRWR4QVM2UWY0R3BMS2pSODJyTG02WFZkbERQVUhjWEtwNWxuSTQyMGN0MXRFaFdhS2VkaVpqWWlBRVpGcmtHWHlGWWZCR0tmQk5lVVZvMF8xcExXVE96aTQ5eE9lcjFZU2RRNzdnQ19ienZBTXpnYw?oc=5\" target=\"_blank\">AI设计出的全新病毒会对人类健康构成直接威胁吗？</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "如何确保AI设计病毒的研究符合伦理和法律规范？ - 新浪网",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPeEw5dFpOdy05N0FUeFh6ejFoTUlsZ3M1bUJwZ3ZTSElEMDlCM1RjTGM3WW5XbVlFZVVGcUZGazd4UWtSbTRiRjBNblRlN29BOTVPbjZROVpuMUdmcEFiQjJqNFdaQ3VGeDZJZ3NWZ1RXTTM3Y3dvTFZyVWQyRXR5alBjMA?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI for Science",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPeEw5dFpOdy05N0FUeFh6ejFoTUlsZ3M1bUJwZ3ZTSElEMDlCM1RjTGM3WW5XbVlFZVVGcUZGazd4UWtSbTRiRjBNblRlN29BOTVPbjZROVpuMUdmcEFiQjJqNFdaQ3VGeDZJZ3NWZ1RXTTM3Y3dvTFZyVWQyRXR5alBjMA?oc=5\" target=\"_blank\">如何确保AI设计病毒的研究符合伦理和法律规范？</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "浦江淮、赵小龙：迈向认识论奇点：人工智能、不透明性与科学发现的新规范 - 搜狐网",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOcDdzY29hRVVmaW9wcWZUZWw5cUxvaGUybDBUNUVUX0FVc3dNaWNXczV3LXVFZWwxN1lKOE5fdGpFSndvWl9yVkRpUXRaYXNJOUFJcXhfY1FCdWJvb1RDVkRiMU9kV2ZWbURvNnRjdXdPVFRGUE9iVWJtUmNMOHZfbGVJNWRUX2JNYjNYQg?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxOcDdzY29hRVVmaW9wcWZUZWw5cUxvaGUybDBUNUVUX0FVc3dNaWNXczV3LXVFZWwxN1lKOE5fdGpFSndvWl9yVkRpUXRaYXNJOUFJcXhfY1FCdWJvb1RDVkRiMU9kV2ZWbURvNnRjdXdPVFRGUE9iVWJtUmNMOHZfbGVJNWRUX2JNYjNYQg?oc=5\" target=\"_blank\">浦江淮、赵小龙：迈向认识论奇点：人工智能、不透明性与科学发现的新规范</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">搜狐网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "锚定“人工智能+”，北京海淀发布“智谷中试港”规划 - 新浪财经",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOd2YxTjVSdHhSQjlWM2I2SmEwaUVBQ0VJUTc1SHI1dExmWFQ2RGJTQXRCMW1rcXl1a3NzMDRleDZwN0NqNW1BQThiTXgybjZrdEJRbUw1eDBoQXdOVEVMak1RLS1LWU5sMnByS1p0Y1FsaHBWM0toeDQzOWZsSEFmZzlEakp1TG16Q0plMTRmbFdDcklUbTBXQg?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOd2YxTjVSdHhSQjlWM2I2SmEwaUVBQ0VJUTc1SHI1dExmWFQ2RGJTQXRCMW1rcXl1a3NzMDRleDZwN0NqNW1BQThiTXgybjZrdEJRbUw1eDBoQXdOVEVMak1RLS1LWU5sMnByS1p0Y1FsaHBWM0toeDQzOWZsSEFmZzlEakp1TG16Q0plMTRmbFdDcklUbTBXQg?oc=5\" target=\"_blank\">锚定“人工智能+”，北京海淀发布“智谷中试港”规划</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪财经</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "北京海淀发布“智谷中试港”规划 将建设AI全栈式中试平台集群 - 新浪财经",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9DQUVkV0RFcWxsVjZEbUU4ejdVOXpnNWtvcU1DcFh5T1VxSFRsY1VRUFlUdjVCWTFHT3VoUW16eFYxOC1nUjRCWmRKSjdXdkJqYjR2Tkk5dVFEV0lBWk5sMERfWjJYM0dQck4tMVltUVJ6cDlsQ2pNOQ?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE9DQUVkV0RFcWxsVjZEbUU4ejdVOXpnNWtvcU1DcFh5T1VxSFRsY1VRUFlUdjVCWTFHT3VoUW16eFYxOC1nUjRCWmRKSjdXdkJqYjR2Tkk5dVFEV0lBWk5sMERfWjJYM0dQck4tMVltUVJ6cDlsQ2pNOQ?oc=5\" target=\"_blank\">北京海淀发布“智谷中试港”规划 将建设AI全栈式中试平台集群</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪财经</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "谷歌DeepMind四位顶级AI科学家离职创业，成立Discovery Loop - thepaper.cn",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8zMjRRRmlwUnBDUGNLSGZXc1hWUVFYQThpZGJvUkxraEpFUWx0dVpIWEhGYjZEajRnOG9xU2d4d0VZVHd5NENRSG1oX3RwNmVGaUpTSU9QR3lqYUpzbUE?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE8zMjRRRmlwUnBDUGNLSGZXc1hWUVFYQThpZGJvUkxraEpFUWx0dVpIWEhGYjZEajRnOG9xU2d4d0VZVHd5NENRSG1oX3RwNmVGaUpTSU9QR3lqYUpzbUE?oc=5\" target=\"_blank\">谷歌DeepMind四位顶级AI科学家离职创业，成立Discovery Loop</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thepaper.cn</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Jeff Dean谈AI的下一次范式升级 - blog.csdn.net",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBMUXFUcENPeDNxdjdINHJCSjZoazZfQjlxbmRRM3hYTnBMSGdkVGM0UDQwaGhJUlh3eDRiZnpGbjctZ3Fzem9sZkZITVFTanFhOFJRMmJueVVLRWd6SHFIaVFmRlEyX1RfQVduMXFR?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTFBMUXFUcENPeDNxdjdINHJCSjZoazZfQjlxbmRRM3hYTnBMSGdkVGM0UDQwaGhJUlh3eDRiZnpGbjctZ3Fzem9sZkZITVFTanFhOFJRMmJueVVLRWd6SHFIaVFmRlEyX1RfQVduMXFR?oc=5\" target=\"_blank\">Jeff Dean谈AI的下一次范式升级</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">blog.csdn.net</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Science | 利用基因组语言模型进行噬菌体从头生成设计 - 智源社区",
+    "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE41dUoxaWtDZ3JnTUZqQzVIOW9rOUxxWTVwTmZvdE1IYUVTWE9ITGZnMG9INEdUaHF0eEIwSy0ybTEyeTFUOWtiRg?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE41dUoxaWtDZ3JnTUZqQzVIOW9rOUxxWTVwTmZvdE1IYUVTWE9ITGZnMG9INEdUaHF0eEIwSy0ybTEyeTFUOWtiRg?oc=5\" target=\"_blank\">Science | 利用基因组语言模型进行噬菌体从头生成设计</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">智源社区</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "今年韩美科学家大会(UKC)最关心的当然是\"科学人工智能(AI)\" 在过去的一年里,美国推出了捷恩斯任务,韩国则发射了K-Moonshot项目。 全部都是\"用AI加速科学发现的速度\"的基本要点。 在此.. - 매일경제",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9QUDJwNHNJbVJSTjFzWmw5eE5OaWlHemtPZktrN3lhZEl4eE9wTnVNNXN4cTZZSmM5ZHQ1ZjhHRG1GVEpKekFXazFyVQ?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTE9QUDJwNHNJbVJSTjFzWmw5eE5OaWlHemtPZktrN3lhZEl4eE9wTnVNNXN4cTZZSmM5ZHQ1ZjhHRG1GVEpKekFXazFyVQ?oc=5\" target=\"_blank\">今年韩美科学家大会(UKC)最关心的当然是\"科学人工智能(AI)\" 在过去的一年里,美国推出了捷恩斯任务,韩国则发射了K-Moonshot项目。 全部都是\"用AI加速科学发现的速度\"的基本要点。 在此..</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">매일경제</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "DeepMind飓风预测模型为预报员争取到额外一天预警时间-人工智能 - 至顶网",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE04Q2VuODdzbThuUG5YeHdtcWQyX0dxdTVCSzNaZDJjYlR6ZUpOUy1ETE5PV3Y5RjYtT0d3U0F4WkhoaTREemtJS1pobTZhWUc4WmRfWUQ3bzhUek1qeEE?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE04Q2VuODdzbThuUG5YeHdtcWQyX0dxdTVCSzNaZDJjYlR6ZUpOUy1ETE5PV3Y5RjYtT0d3U0F4WkhoaTREemtJS1pobTZhWUc4WmRfWUQ3bzhUek1qeEE?oc=5\" target=\"_blank\">DeepMind飓风预测模型为预报员争取到额外一天预警时间-人工智能</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">至顶网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "AI倒查论文100年，99.2%的顶刊都有问题 - 36 Kr",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBqSEhPUGFuVDZtRUZyQ2hHQ1Z4QUxCU0NrZ3g2WHl6N3l2bDdRMGc3eWJCdnpmbmZOWHVZR05oTVZzdDYwWkZ5ekNUUmg2Zw?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTFBqSEhPUGFuVDZtRUZyQ2hHQ1Z4QUxCU0NrZ3g2WHl6N3l2bDdRMGc3eWJCdnpmbmZOWHVZR05oTVZzdDYwWkZ5ekNUUmg2Zw?oc=5\" target=\"_blank\">AI倒查论文100年，99.2%的顶刊都有问题</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">36 Kr</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Jeff Dean挥别谷歌48小时首秀：我眼中AI的下一个十年 - 潮起网",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFA2YS1HU09BbXJjSVpNTzRXMS01RFNSa2hvbkgxZkVwRnRRT0Y2ZlpnamtqODNQNElra09uVXl5dFZlQ2Z6VDBYd3VSMFNjQkVvdHpVOVJKcFNIc0RMdVVyVG1QSQ?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTFA2YS1HU09BbXJjSVpNTzRXMS01RFNSa2hvbkgxZkVwRnRRT0Y2ZlpnamtqODNQNElra09uVXl5dFZlQ2Z6VDBYd3VSMFNjQkVvdHpVOVJKcFNIc0RMdVVyVG1QSQ?oc=5\" target=\"_blank\">Jeff Dean挥别谷歌48小时首秀：我眼中AI的下一个十年</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">潮起网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "AI推动天文观测向“智能分析与自主发现”演进 - 新浪网",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPM3Q5OC11SHhfRWF3Z2VRZ3pwakJWSHByaGRnS1ZldVFMcjdMU2lTNXQtU3pndU1WQ3FQZThTRjlodHB6WW9Sa2dCckUzcHVtWVMwSi1HMVFXWHIwOEl2WkYwOEI4bHNYWVptX0FnRGJBRV9mSnNpc1h6MVMtMzRVX1lR?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxPM3Q5OC11SHhfRWF3Z2VRZ3pwakJWSHByaGRnS1ZldVFMcjdMU2lTNXQtU3pndU1WQ3FQZThTRjlodHB6WW9Sa2dCckUzcHVtWVMwSi1HMVFXWHIwOEl2WkYwOEI4bHNYWVptX0FnRGJBRV9mSnNpc1h6MVMtMzRVX1lR?oc=5\" target=\"_blank\">AI推动天文观测向“智能分析与自主发现”演进</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "研究发现人工智能故事更受欢迎，特别是如果它被认为是人类写的 - VOI.ID",
+    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA4Vl9JY01EYnJKV3k1RUVkRWIwbzk4OGlFLThidEhkRS1jMXo0aE5uODd5RDVSSzltQVdrbHdxUUxPVkZUNkxHZVgtYVZBQmfSAUJBVV95cUxQRTZnVy1SMi1zcmFqWmtiSDhCT2xEUUdwdmFGa3BtbzVHSWUwajBvWlRjeEtkUXBMSjVqdGRCd2x6Nnc?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiT0FVX3lxTFA4Vl9JY01EYnJKV3k1RUVkRWIwbzk4OGlFLThidEhkRS1jMXo0aE5uODd5RDVSSzltQVdrbHdxUUxPVkZUNkxHZVgtYVZBQmfSAUJBVV95cUxQRTZnVy1SMi1zcmFqWmtiSDhCT2xEUUdwdmFGa3BtbzVHSWUwajBvWlRjeEtkUXBMSjVqdGRCd2x6Nnc?oc=5\" target=\"_blank\">研究发现人工智能故事更受欢迎，特别是如果它被认为是人类写的</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">VOI.ID</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "马克谈天下(641) 聊聊美国政府的创世纪计划Genesis Mission - 文学城",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1pQUFMbWxBbGxwWjVfaFpyR3RsRVFVWjl5MUZhSlI5RTdxaWRPSV9zN0FocmpHSVl4TnZHUjhzbk5qb0d4NjAtRG5lTGRxUDF1QVNOUnlMZmhGNnVNeXRMSkM5M1g?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE1pQUFMbWxBbGxwWjVfaFpyR3RsRVFVWjl5MUZhSlI5RTdxaWRPSV9zN0FocmpHSVl4TnZHUjhzbk5qb0d4NjAtRG5lTGRxUDF1QVNOUnlMZmhGNnVNeXRMSkM5M1g?oc=5\" target=\"_blank\">马克谈天下(641) 聊聊美国政府的创世纪计划Genesis Mission</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">文学城</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Meta：代理贝叶斯优化新范式 - blog.csdn.net",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5sb2lfeXBpOE8xV0Nkc3R3LVU0YXZnTFFNb3A2VzhwSnYySXVZRVpnc3RQMFUyd2lJNF9pSnA1TTRNUXM4ODdVVWZlclV0dnU3dldJc1M2MGFMZGZyUzFDTlZjNUZMejdHZklUUWsxYm0?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5sb2lfeXBpOE8xV0Nkc3R3LVU0YXZnTFFNb3A2VzhwSnYySXVZRVpnc3RQMFUyd2lJNF9pSnA1TTRNUXM4ODdVVWZlclV0dnU3dldJc1M2MGFMZGZyUzFDTlZjNUZMejdHZklUUWsxYm0?oc=5\" target=\"_blank\">Meta：代理贝叶斯优化新范式</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">blog.csdn.net</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "betway88西汉姆联称通用人工智能将在2028年实现 可用于自动化科研 - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1vZ01tOFAzRzI1Z2pEbFUwXzhaN18yR1dGSWpKVkJrVXNxYVgwX3I1d2ZSazNQLThHbEg4TEMzQ2NYaFNCRHJiNTRWWFNLX3FxVHEzZU1oWExRWTg1N2hYVHJB?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE1vZ01tOFAzRzI1Z2pEbFUwXzhaN18yR1dGSWpKVkJrVXNxYVgwX3I1d2ZSazNQLThHbEg4TEMzQ2NYaFNCRHJiNTRWWFNLX3FxVHEzZU1oWExRWTg1N2hYVHJB?oc=5\" target=\"_blank\">betway88西汉姆联称通用人工智能将在2028年实现 可用于自动化科研</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "东莞市加快建设“人工智能+”城市实施方案（2026—2030年）：到2028年集聚相关企业不少于800家，推出不少于300个“人工智能+”标杆应用场景，产业规模突破1000亿元– 智慧城市行业分析 - 智慧城市行业分析",
+    "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOcEpIenpoZlB1b0JXX25kLTFyb2JCNDNvem83SXRqR1lObkZXc1BQX19zUHBuTTNKSFNSN1l5V0dRb3VaaXI3WUZnQ3JUQllrOG52a2w0QkQtWVJDSVdmRDdBMWcyR0dFRmtJT193V2NrYVcyd21wVnZMNnNHVDN5cTVLMUpra0lybUFBbEdFTjladS1rNHpNRUxGbUdCVDNLOGJ4QVRwN3RWOEg5akF6eXB0dWwyQjZjWS1KZjNvdHJoclk2SjZ0TkpGbllSQkp5Sl8zZEZpVGVOaUU2QlFxVVVlc2hlWEhDR3M4UDZEd2NIS3EwclFpa1R4VnhnOUVfbFJ3?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 新材料",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwJBVV95cUxOcEpIenpoZlB1b0JXX25kLTFyb2JCNDNvem83SXRqR1lObkZXc1BQX19zUHBuTTNKSFNSN1l5V0dRb3VaaXI3WUZnQ3JUQllrOG52a2w0QkQtWVJDSVdmRDdBMWcyR0dFRmtJT193V2NrYVcyd21wVnZMNnNHVDN5cTVLMUpra0lybUFBbEdFTjladS1rNHpNRUxGbUdCVDNLOGJ4QVRwN3RWOEg5akF6eXB0dWwyQjZjWS1KZjNvdHJoclk2SjZ0TkpGbllSQkp5Sl8zZEZpVGVOaUU2QlFxVVVlc2hlWEhDR3M4UDZEd2NIS3EwclFpa1R4VnhnOUVfbFJ3?oc=5\" target=\"_blank\">东莞市加快建设“人工智能+”城市实施方案（2026—2030年）：到2028年集聚相关企业不少于800家，推出不少于300个“人工智能+”标杆应用场景，产业规模突破1000亿元– 智慧城市行业分析</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">智慧城市行业分析</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "15股获买入评级 最新:药明康德 - 中财网",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5INHdBakp3emJRWXdIQ3EwS1ZtcElROGQ2SG1tQ0Y3bUJSX0wzaGtwVVE3cXVlSnhkTkVVWkgwYmVacUtIcTgwWGRkd0ZEY0JqUGV5MGZ3?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 新材料",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5INHdBakp3emJRWXdIQ3EwS1ZtcElROGQ2SG1tQ0Y3bUJSX0wzaGtwVVE3cXVlSnhkTkVVWkgwYmVacUtIcTgwWGRkd0ZEY0JqUGV5MGZ3?oc=5\" target=\"_blank\">15股获买入评级 最新:药明康德</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">中财网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "AI芯片功耗飙升为何让风冷散热失效？ - 新浪网",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE80aTgtQTk2MUpyel9yRWlEYmFLdFlIX09FYUR3dHlrNk11MUhoV28xMklUX01nQVFiYzhoUUp3MjA4cERFOTdlTS1CM0QxZFhWRWt4eHo1Z2ttVHZaZTIzNzlOT2EwMG94c2k1NGMyQzdCR2E0NnpmYnBGZ2hxVlU?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 新材料",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE80aTgtQTk2MUpyel9yRWlEYmFLdFlIX09FYUR3dHlrNk11MUhoV28xMklUX01nQVFiYzhoUUp3MjA4cERFOTdlTS1CM0QxZFhWRWt4eHo1Z2ttVHZaZTIzNzlOT2EwMG94c2k1NGMyQzdCR2E0NnpmYnBGZ2hxVlU?oc=5\" target=\"_blank\">AI芯片功耗飙升为何让风冷散热失效？</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "诺奖得主Hassabis，也要走了！ - 新浪财经",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNb09oUHRsbDlzZFpxU25uLURfenlkZU9COXJLMkllLTVGMXNSTWFvakxGMEtlZ1ZFZF93X3RYVUFrTVNBQWM3Y2FfbDI0cGlDdzBmMmhuOGI1bHVfS1JKcnhGWUpWUThhLVZWa2xvOTRndWpZUTNKeWdNNW5BelByMUJiZFFCaXRsLTRYVk9GQlliejBnZVlITDZ6RC14UGpvaHhvYlJjTQ?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 新材料",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNb09oUHRsbDlzZFpxU25uLURfenlkZU9COXJLMkllLTVGMXNSTWFvakxGMEtlZ1ZFZF93X3RYVUFrTVNBQWM3Y2FfbDI0cGlDdzBmMmhuOGI1bHVfS1JKcnhGWUpWUThhLVZWa2xvOTRndWpZUTNKeWdNNW5BelByMUJiZFFCaXRsLTRYVk9GQlliejBnZVlITDZ6RC14UGpvaHhvYlJjTQ?oc=5\" target=\"_blank\">诺奖得主Hassabis，也要走了！</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪财经</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "爱游戏app官方网站手机版新平台准确率突破98%：首席科学家称“AI预测已超越人类直觉” - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5uVzNGVTZtQnFOOS1veGxwSFNUTk1JRFdVY3Vpdi1NdnZXTEJTWTg3bS1PWlZGRkp4aXhHbjVxLWhySXJxdm5vOEFpME5NMGQzaWRsclBnMlM3NkZ2ZXNzOUt1elc0M21WOWtzWUpCcVhhNU0?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 新材料",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE5uVzNGVTZtQnFOOS1veGxwSFNUTk1JRFdVY3Vpdi1NdnZXTEJTWTg3bS1PWlZGRkp4aXhHbjVxLWhySXJxdm5vOEFpME5NMGQzaWRsclBnMlM3NkZ2ZXNzOUt1elc0M21WOWtzWUpCcVhhNU0?oc=5\" target=\"_blank\">爱游戏app官方网站手机版新平台准确率突破98%：首席科学家称“AI预测已超越人类直觉”</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "10股获买入评级 最新:英科医疗 - 中财网",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE01RVdlMmFfbWMyRHlVMTJyb2FOOEh1eVA1ZDFpUkJBejl6a3luT2JiMkZoaUNJaXVVRnBSalJLV0UxQ1hlZHV1emI4SlpHRGdOVFhLODdraGpweE1RWEpyRWhab2s3aHhzb3U5LVNOTmdkUXU2Umc?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 新材料",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE01RVdlMmFfbWMyRHlVMTJyb2FOOEh1eVA1ZDFpUkJBejl6a3luT2JiMkZoaUNJaXVVRnBSalJLV0UxQ1hlZHV1emI4SlpHRGdOVFhLODdraGpweE1RWEpyRWhab2s3aHhzb3U5LVNOTmdkUXU2Umc?oc=5\" target=\"_blank\">10股获买入评级 最新:英科医疗</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">中财网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "云智科技与数联未来深化合作，共筑bst365·体育官网智能制造新标杆 - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9fV3dqVXl1SFpNdEZYTlBfMmtsdDNzQ2MtNHlaMno1ay1HYzRUQzd2clc3b3JTMnd3NWViOXRJTmNhWVBGZFZvVHdhZzJNZDNIQi1F?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 新材料",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE9fV3dqVXl1SFpNdEZYTlBfMmtsdDNzQ2MtNHlaMno1ay1HYzRUQzd2clc3b3JTMnd3NWViOXRJTmNhWVBGZFZvVHdhZzJNZDNIQi1F?oc=5\" target=\"_blank\">云智科技与数联未来深化合作，共筑bst365·体育官网智能制造新标杆</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "2026年红蓝体育app官方下载全新升级：智能赛事预测与社区互动引领体育潮流 - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5kQU1FX3lyYUhhaWtWRk5FeGNkV0IzQmg2cGZJSHBMOXlMd1RoX0NITzF1WGZYRFVURzRYZEpFZTBrcVlpZmpJbnBScFlmZThkRGFWbFhDVEZiWndiNTVlVV9qdzktaXRacWc?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 新材料",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE5kQU1FX3lyYUhhaWtWRk5FeGNkV0IzQmg2cGZJSHBMOXlMd1RoX0NITzF1WGZYRFVURzRYZEpFZTBrcVlpZmpJbnBScFlmZThkRGFWbFhDVEZiWndiNTVlVV9qdzktaXRacWc?oc=5\" target=\"_blank\">2026年红蓝体育app官方下载全新升级：智能赛事预测与社区互动引领体育潮流</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "“到底真的还是假的”，一位哈佛博士穿越“死亡谷” - 凤凰网",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE4yOUxZSGxTTEJDdGVZX0FmVkg5cFlNY292alh5QlQ2SlBnVXY4VWVGdGk5WEtXTmxrT1VxNXVWTTFOczBJZlZNaUpNVTc?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE4yOUxZSGxTTEJDdGVZX0FmVkg5cFlNY292alh5QlQ2SlBnVXY4VWVGdGk5WEtXTmxrT1VxNXVWTTFOczBJZlZNaUpNVTc?oc=5\" target=\"_blank\">“到底真的还是假的”，一位哈佛博士穿越“死亡谷”</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">凤凰网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "剂泰科技-P(07666)股票股价_股价行情_讨论_资讯_财报_数据报告 - xueqiu.com",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBTRm9IWXlMeHZBQVVDWndqcHpCa2pkMVR2NG1qeXJRZnlFSF92MVA3WDIxb3c2QktHdkdKM1Bid1Z4LWZYSjVKQTJ3b21hQ2VaZEtGczdFN2gxY2FHbG1N?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTFBTRm9IWXlMeHZBQVVDWndqcHpCa2pkMVR2NG1qeXJRZnlFSF92MVA3WDIxb3c2QktHdkdKM1Bid1Z4LWZYSjVKQTJ3b21hQ2VaZEtGczdFN2gxY2FHbG1N?oc=5\" target=\"_blank\">剂泰科技-P(07666)股票股价_股价行情_讨论_资讯_财报_数据报告</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">xueqiu.com</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "谷歌AI之脑不管事了，Gemini这次真要支棱起来？ - 新浪财经",
+    "url": "https://news.google.com/rss/articles/CBMiywRBVV95cUxQdDBwc09VS29XSkFMbDZnX0JSTEROYjlweUlzT0VibGRGalZpeFBaQTNtSWw3aXR5Sm9ucFJYQXlVUWtfOHZxRjBJb1lORHh0Zkl3M1dlMzF0UXRHSDE5X1hHTnFMTVFZM3BKc3g1aFltUjlQQzZpNVZUSHppdk82MFRyTFNLSUt0QWkxS3R6VUNlZFpZZ2ZPN0pUVUR6NHMzWlZCWWJNOUhnbDEzdERJSlFvSGN0MzgyZEFFMEFQS2M4b0hjTlNIZmd2RUVxcXVOMFZyMFVYTlBiTV9ObTd6cmZfWVNBUWhNa3l2RnVlVFpXR2FJaXJaVnBwVUczQXVPY3NweERvWGRnS25hdWVabzFHZ2JITGVTVmFaNE9EbGs2QU4xZy1qZEkzR3kycS1rRFpCMXpyZlVNaHIwbldrbDd0TlBpeUF4MEpWN3FKZUlQMGd4TWxQZnR5VXpCcjdKRU5EbXNzM1ZldU5kVV9nWjI4OVN4WEdTdjVzT1pwN3p2dGFqTTJ5a0tBcmM1aklfejdCVTFSR2Nrd0hOcVp5blBfZllQX25wQlNRTWhaS093VUZBVnZmRjJaVDNDYzE3NDBHT0RxYVpZU1VPS3BHcVRuR1lXbk5qa0NvRXA4cTZKd2tyWW9HQms3cUdtNDBRYmNxX3FnWW9vbWRwd2lzM3BsMG9sZnZDcUdmb3NlWDZmcjRPWGRqeTFfSHZNemN2N0NWcnhrdnFMWlEzeWZOX3gxcXFUWjFzZFE3THpCa01ZLVFxazRranRUaw?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiywRBVV95cUxQdDBwc09VS29XSkFMbDZnX0JSTEROYjlweUlzT0VibGRGalZpeFBaQTNtSWw3aXR5Sm9ucFJYQXlVUWtfOHZxRjBJb1lORHh0Zkl3M1dlMzF0UXRHSDE5X1hHTnFMTVFZM3BKc3g1aFltUjlQQzZpNVZUSHppdk82MFRyTFNLSUt0QWkxS3R6VUNlZFpZZ2ZPN0pUVUR6NHMzWlZCWWJNOUhnbDEzdERJSlFvSGN0MzgyZEFFMEFQS2M4b0hjTlNIZmd2RUVxcXVOMFZyMFVYTlBiTV9ObTd6cmZfWVNBUWhNa3l2RnVlVFpXR2FJaXJaVnBwVUczQXVPY3NweERvWGRnS25hdWVabzFHZ2JITGVTVmFaNE9EbGs2QU4xZy1qZEkzR3kycS1rRFpCMXpyZlVNaHIwbldrbDd0TlBpeUF4MEpWN3FKZUlQMGd4TWxQZnR5VXpCcjdKRU5EbXNzM1ZldU5kVV9nWjI4OVN4WEdTdjVzT1pwN3p2dGFqTTJ5a0tBcmM1aklfejdCVTFSR2Nrd0hOcVp5blBfZllQX25wQlNRTWhaS093VUZBVnZmRjJaVDNDYzE3NDBHT0RxYVpZU1VPS3BHcVRuR1lXbk5qa0NvRXA4cTZKd2tyWW9HQms3cUdtNDBRYmNxX3FnWW9vbWRwd2lzM3BsMG9sZnZDcUdmb3NlWDZmcjRPWGRqeTFfSHZNemN2N0NWcnhrdnFMWlEzeWZOX3gxcXFUWjFzZFE3THpCa01ZLVFxazRranRUaw?oc=5\" target=\"_blank\">谷歌AI之脑不管事了，Gemini这次真要支棱起来？</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪财经</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "千亿研发订单共振，CRO板块集体涨停 - 财富号",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBaMW1aVVBZclYtQktUcEFuVXVKYWRWSjhwUTNrMGp5V2RGMnFkd2NGQ0xwQlRkTjd6UXlvS1Q1S3lYWlZfWk1KU1RsYm5ycVd5NDBmZ0pzWGk3TnQyb3AxbXRTa2YwMF9XTHlz?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTFBaMW1aVVBZclYtQktUcEFuVXVKYWRWSjhwUTNrMGp5V2RGMnFkd2NGQ0xwQlRkTjd6UXlvS1Q1S3lYWlZfWk1KU1RsYm5ycVd5NDBmZ0pzWGk3TnQyb3AxbXRTa2YwMF9XTHlz?oc=5\" target=\"_blank\">千亿研发订单共振，CRO板块集体涨停</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">财富号</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Anthropic创始人的“抽象”B面：拍墓碑广告、研究AI末日、对赚钱毫无兴趣- 人物 - cnBeta.COM",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE04LVdJVTZ3bVB2a3FSakNONnl3MTlzUkhXdkNuYVhUNGpzNENWWjNOZXBTdk11V0pMM2ZORkg4d2E2RmM2VklEQzNEUXNSQW9FODRSSEFLcC1QTXQ5OWJPbw?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE04LVdJVTZ3bVB2a3FSakNONnl3MTlzUkhXdkNuYVhUNGpzNENWWjNOZXBTdk11V0pMM2ZORkg4d2E2RmM2VklEQzNEUXNSQW9FODRSSEFLcC1QTXQ5OWJPbw?oc=5\" target=\"_blank\">Anthropic创始人的“抽象”B面：拍墓碑广告、研究AI末日、对赚钱毫无兴趣- 人物</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">cnBeta.COM</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "pg模拟器在线试玩发布新一代量子计算芯片，开启算力新纪元 驱动中国昨夜今晨简报 - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8wcFF4RGVfS202ZVdJdmlkTnZKaTZzOEhYNXdaczk5dGNaa3B6dFRxaGlQSDJLNlRKR1ZJbnh4NzZjVVdnRnZlUWZsUXQxTTZWSFlwbUtZMA?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE8wcFF4RGVfS202ZVdJdmlkTnZKaTZzOEhYNXdaczk5dGNaa3B6dFRxaGlQSDJLNlRKR1ZJbnh4NzZjVVdnRnZlUWZsUXQxTTZWSFlwbUtZMA?oc=5\" target=\"_blank\">pg模拟器在线试玩发布新一代量子计算芯片，开启算力新纪元 驱动中国昨夜今晨简报</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "曙光8000投用后，普通人能用到哪些AI服务？ - 新浪网",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9rclBweDNQNGItVExvbDk2QnFFVzcybHZ0NWw2aUcyNHlTTmNHYzNWdnJMcUVqQnJWbVJmTDJ0NHJfT1NGdkVvNVh4WDdFeFB4ejNHTUxKbFlKcXhyWHN3NlZXOFh2WXFhTXVHQ1dyTEo1eUZTSjdaMTdiN1djUVU?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE9rclBweDNQNGItVExvbDk2QnFFVzcybHZ0NWw2aUcyNHlTTmNHYzNWdnJMcUVqQnJWbVJmTDJ0NHJfT1NGdkVvNVh4WDdFeFB4ejNHTUxKbFlKcXhyWHN3NlZXOFh2WXFhTXVHQ1dyTEo1eUZTSjdaMTdiN1djUVU?oc=5\" target=\"_blank\">曙光8000投用后，普通人能用到哪些AI服务？</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "谷歌AI重组：创始人布林亲自盯Gemini，哈萨比斯交权 - 新浪财经",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOamZZT3FfTUlEbUc0X2tMZkp2eEtKTDU5ZWx3bVg2dFFxS0h5R3FrSzVDdDVJTjlHbW9uYVZOaHVFREx6TlR4bW1UVVUxRjFhQUJMWEpBU0RjUkkzck5fR1E2Qk1aV0dSZmYxQnVTY1RucEsxOFpVSzN1cUFuTzBIQWVOWWgtcW5sT0tOdUNveXdDYjdtbktjbnc3SFFDbUw3QU44dS1tZ3FkT01kV25Iak53?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOamZZT3FfTUlEbUc0X2tMZkp2eEtKTDU5ZWx3bVg2dFFxS0h5R3FrSzVDdDVJTjlHbW9uYVZOaHVFREx6TlR4bW1UVVUxRjFhQUJMWEpBU0RjUkkzck5fR1E2Qk1aV0dSZmYxQnVTY1RucEsxOFpVSzN1cUFuTzBIQWVOWWgtcW5sT0tOdUNveXdDYjdtbktjbnc3SFFDbUw3QU44dS1tZ3FkT01kV25Iak53?oc=5\" target=\"_blank\">谷歌AI重组：创始人布林亲自盯Gemini，哈萨比斯交权</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪财经</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "福兮祸兮？美国科学家首次用AI设计出新病毒 - 新浪财经",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOZ2ZmaXlZNzBsR3kwMnl3cUVKemZsNE9CY1RWSWk3eFpCM2RwWTVUUV8yeXZRUmdkV2RJdG14RFJ4QlkwWG8wam43Vlo3NWUteXlOakk3cTlUN25zbmxDakF4bGtPRzVXVVFiYzlaNUR2TnY5MlZUWFJhYUZwQW1ETVR3bkJpVDF1T1oxZHhqTUI0di1HS08yRlNHS09ieXNITnJoS0lSaw?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOZ2ZmaXlZNzBsR3kwMnl3cUVKemZsNE9CY1RWSWk3eFpCM2RwWTVUUV8yeXZRUmdkV2RJdG14RFJ4QlkwWG8wam43Vlo3NWUteXlOakk3cTlUN25zbmxDakF4bGtPRzVXVVFiYzlaNUR2TnY5MlZUWFJhYUZwQW1ETVR3bkJpVDF1T1oxZHhqTUI0di1HS08yRlNHS09ieXNITnJoS0lSaw?oc=5\" target=\"_blank\">福兮祸兮？美国科学家首次用AI设计出新病毒</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪财经</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "NG平台下载链接发布新一代量子机器学习框架，重塑AI计算范式 - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE52aXUyLWZsUmFMVDVFdFVWanEtTVhmQks1bC0xeWJWOF95MVFiVnV2REhMT3IzSmE4V0ZNTG1tc1VsMHNHYkNrUEh3QkgtY2N1UDlXVFdjV19mWDZHOHJFR2N0SEczaWVLMHc?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE52aXUyLWZsUmFMVDVFdFVWanEtTVhmQks1bC0xeWJWOF95MVFiVnV2REhMT3IzSmE4V0ZNTG1tc1VsMHNHYkNrUEh3QkgtY2N1UDlXVFdjV19mWDZHOHJFR2N0SEczaWVLMHc?oc=5\" target=\"_blank\">NG平台下载链接发布新一代量子机器学习框架，重塑AI计算范式</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "这些AI设计的病毒会感染人类吗？ - 新浪网",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZnJ1RDk1Y2FkRFE5bHNBUWpfQzFPU2NoNWtMNW9FX2dQX1owVWMzT2I1bE5rRlZjZjJTeEVocXMzSmM4M3BfMEgxSUlYelhyZFdPMFZIRFBjSnZwU1RPQm95dEE0c3dVdjQ4UU5rUl9oQWQ4b2xZQURvY2xIZU9KT3dUbw?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-09",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxNZnJ1RDk1Y2FkRFE5bHNBUWpfQzFPU2NoNWtMNW9FX2dQX1owVWMzT2I1bE5rRlZjZjJTeEVocXMzSmM4M3BfMEgxSUlYelhyZFdPMFZIRFBjSnZwU1RPQm95dEE0c3dVdjQ4UU5rUl9oQWQ4b2xZQURvY2xIZU9KT3dUbw?oc=5\" target=\"_blank\">这些AI设计的病毒会感染人类吗？</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "预告！2026pg.168模拟器官网现场同期论坛一览 - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE84cm5TaGlSZ3Zzdy1UcFp3d2dvUE1MYzJDamEzX05GRjlTTTBSUTN3U2dXU2Z1NE9PUUtLbkY4Q0V6eGxONDZKYXlJTVNKMzRiYWtydU5faUN1S2ZxY0VodUtpa1U?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE84cm5TaGlSZ3Zzdy1UcFp3d2dvUE1MYzJDamEzX05GRjlTTTBSUTN3U2dXU2Z1NE9PUUtLbkY4Q0V6eGxONDZKYXlJTVNKMzRiYWtydU5faUN1S2ZxY0VodUtpa1U?oc=5\" target=\"_blank\">预告！2026pg.168模拟器官网现场同期论坛一览</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "8868登录网页版：AI新锐创业者获10亿美元融资，发布下一代量子混合计算平台 - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9BN0toMU5SQ3FVcVdpZ0lTbFpwTHh5NVl3dVpFNUdURVJaWWJKRnJUamU2TmlGX0NsMXB0V09OUGlWTnppZC1LYlJFajBrcG55dUZ5VUx4ckc?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE9BN0toMU5SQ3FVcVdpZ0lTbFpwTHh5NVl3dVpFNUdURVJaWWJKRnJUamU2TmlGX0NsMXB0V09OUGlWTnppZC1LYlJFajBrcG55dUZ5VUx4ckc?oc=5\" target=\"_blank\">8868登录网页版：AI新锐创业者获10亿美元融资，发布下一代量子混合计算平台</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "绿茵体育app：新一代高性能计算平台正式发布 - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA2MU40SjA2NXZZMDVpV3QwYlpIdlpiSnFPNXNWek0xdGZPTUNpdDliTmVmREVYMFhsWFlPalpvSERMa1pqa0xsbHI0Q1oydWFZUnFxcTFTai1SZw?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTFA2MU40SjA2NXZZMDVpV3QwYlpIdlpiSnFPNXNWek0xdGZPTUNpdDliTmVmREVYMFhsWFlPalpvSERMa1pqa0xsbHI0Q1oydWFZUnFxcTFTai1SZw?oc=5\" target=\"_blank\">绿茵体育app：新一代高性能计算平台正式发布</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "云开·app登录在线入口迎来系统升级，性能与体验全面提升 - 电玩巴士",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9oRGhkRjQxUWEzd0xRcFVwLXc2X2tjTmZLTVVKTXJCSTRvTk5HbnM5bHhzeHd4bmpZNGMwVUJ5SzU3aEhkeDRvSHRNUERfamU2dU1GY2E0WHJPb1d6Z0hF?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-08-08",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE9oRGhkRjQxUWEzd0xRcFVwLXc2X2tjTmZLTVVKTXJCSTRvTk5HbnM5bHhzeHd4bmpZNGMwVUJ5SzU3aEhkeDRvSHRNUERfamU2dU1GY2E0WHJPb1d6Z0hF?oc=5\" target=\"_blank\">云开·app登录在线入口迎来系统升级，性能与体验全面提升</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">电玩巴士</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "strawberryroboticsinc/act_aligned_c5_lr3e5_kl001_dudgv7tj",
+    "url": "https://huggingface.co/strawberryroboticsinc/act_aligned_c5_lr3e5_kl001_dudgv7tj",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Mergeability/zoo-language-beetle-monolingual-fineweb-100m-ell__beetle-monolingual-fineweb-100m-isl__ties__tra",
+    "url": "https://huggingface.co/Mergeability/zoo-language-beetle-monolingual-fineweb-100m-ell__beetle-monolingual-fineweb-100m-isl__ties__tra",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "linxin02/drift",
+    "url": "https://huggingface.co/linxin02/drift",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Miiche/visualrl-gad-pure-v3",
+    "url": "https://huggingface.co/Miiche/visualrl-gad-pure-v3",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Miiche/visualrl-opd-gkd",
+    "url": "https://huggingface.co/Miiche/visualrl-opd-gkd",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Mergeability/zoo-language-beetle-monolingual-fineweb-100m-ell__beetle-monolingual-fineweb-100m-fin__qmd_guide",
+    "url": "https://huggingface.co/Mergeability/zoo-language-beetle-monolingual-fineweb-100m-ell__beetle-monolingual-fineweb-100m-fin__qmd_guide",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": [
+      "text-generation"
+    ]
+  },
+  {
+    "title": "Mergeability/zoo-language-beetle-monolingual-fineweb-100m-deu__beetle-monolingual-fineweb-100m-pol__ties__nai",
+    "url": "https://huggingface.co/Mergeability/zoo-language-beetle-monolingual-fineweb-100m-deu__beetle-monolingual-fineweb-100m-pol__ties__nai",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "YuvrajGujari/wav2vec2-balti-specaugment",
+    "url": "https://huggingface.co/YuvrajGujari/wav2vec2-balti-specaugment",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Miiche/visualrl-agopd-v3",
+    "url": "https://huggingface.co/Miiche/visualrl-agopd-v3",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "layaiyer/glueconceptFT-hyp-news-all-dict-lora",
+    "url": "https://huggingface.co/layaiyer/glueconceptFT-hyp-news-all-dict-lora",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "floriskummer/poca-SoccerTwos",
+    "url": "https://huggingface.co/floriskummer/poca-SoccerTwos",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "kmpartner/bk15tadmm25-test",
+    "url": "https://huggingface.co/kmpartner/bk15tadmm25-test",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "open-athena/marinfold-exp199",
+    "url": "https://huggingface.co/open-athena/marinfold-exp199",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "unknownBrain/chest-xray-pneumonia-sssm",
+    "url": "https://huggingface.co/unknownBrain/chest-xray-pneumonia-sssm",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Miiche/visualrl-opd-v3",
+    "url": "https://huggingface.co/Miiche/visualrl-opd-v3",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-08-09",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  }
+]

@@ -1,0 +1,9 @@
+feedparser>=6.0.11
+httpx>=0.27.0
+PyYAML>=6.0.1
+python-dotenv>=1.0.1
+
+# MCP Server（可选，用不到可注释）
+mcp[cli]==1.29.0
+uvicorn[standard]
+starlette

@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+site/*
+!site/.gitkeep
+data/*
+!data/.gitkeep
+.venv/
+venv/
+
+# 知识库与看板存档：需要随仓库保存以便 Actions 累积历史，故不入 gitignore
+# 如需不入库，取消下面注释：
+# kb/
+# archive/

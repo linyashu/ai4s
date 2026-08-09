@@ -1,0 +1,103 @@
+# ===== AI4S 每日进展看板 =====
+#
+# LLM 摘要配置（OpenAI 兼容接口，如 DeepSeek / OpenAI / 本地 vLLM）
+# LLM 配置见 .env：LLM_BASE_URL / LLM_API_KEY / LLM_MODEL
+#
+# 信源配置：四类信源各为一个列表。
+# - 每项至少包含 name（展示名），来源类型不同字段也不同，见各注释。
+#
+# 抓取窗口：只看最近 N 天的内容
+lookback_days: 1
+
+# 每类信源最多保留条数
+per_source_limit: 15
+
+# arXiv 抓取：query 为 arXiv API 查询串（可参考 https://arxiv.org/help/api/user-manual）
+# 注意：复杂布尔查询（多 OR / 引号词组）响应慢且易触发 429，建议用简单分类查询
+# 注意：arXiv 论文从投稿到 API 可见有索引延迟（通常 1-3 天），
+#       且 submittedDate 是首次提交日期，因此推荐 days 设为 7 覆盖一周
+#       （每日刷新时按日期聚合展示，不会重复告警）
+arxiv:
+  - name: "AI for Science (cs.AI)"
+    query: "cat:cs.AI AND abs:science"
+    days: 7
+  - name: "AI for Science (cs.LG)"
+    query: "cat:cs.LG AND abs:scientific"
+    days: 7
+  - name: "计算生物学 (q-bio)"
+    query: "cat:q-bio.BM AND abs:machine learning"
+    days: 7
+  - name: "凝聚态与材料 (cond-mat)"
+    query: "cat:cond-mat.mtrl-sci AND abs:machine learning"
+    days: 7
+  - name: "计算物理 (physics.comp-ph)"
+    query: "cat:physics.comp-ph AND abs:machine learning"
+    days: 7
+
+# 期刊与机构博客：标准 RSS/Atom 源
+rss:
+  - name: "Nature"
+    url: "https://www.nature.com/nature.rss"
+  - name: "Science"
+    url: "https://www.science.org/rss/news_current.xml"
+  - name: "Nature Machine Intelligence"
+    url: "https://www.nature.com/natmachintell.rss"
+  - name: "DeepMind Blog"
+    url: "https://deepmind.google/blog/rss.xml"
+
+# 中文科技媒体与公众号：Google News RSS（中文），q 为搜索词
+# 备用源：https://news.google.com/rss/search?q=XXX&hl=zh-CN&gl=CN&ceid=CN:zh-Hans
+google_news:
+  - name: "中文·AI for Science"
+    q: "AI for Science 科研"
+  - name: "中文·人工智能科学发现"
+    q: "人工智能 科学发现"
+  - name: "中文·AI 新材料"
+    q: "AI 新材料 预测"
+  - name: "中文·AI 药物研发"
+    q: "AI 药物研发"
+
+# HuggingFace 社区：按时间排序的热门模型/数据集/论文。
+# daily 页可配置模型分类；此处用 HF 公开 API 按 lastModified 排序抓取。
+huggingface:
+  enabled: true
+  limit_per_page: 20
+  # 关注的组织（可选，作为额外过滤）
+  orgs: []
+
+# X/Twitter：不提供直接 API。可选方案：
+# 1) RSS 桥（如 nitter / twiiit）——不稳定，默认关闭
+# 2) 通过 HF / 期刊官方账号的 RSS 间接覆盖
+twitter:
+  enabled: false
+  rss_urls: []
+
+# ===== AI 大模型测评看板 =====
+# 单独页面 site/eval/index.html，跟踪最新模型测评
+eval:
+  enabled: true
+  # 启用哪些排行榜（可增删：lmarena / aa_index / livebench / open_llm / opencompass）
+  leaderboards:
+    - lmarena
+    - aa_index
+    - livebench
+    - open_llm
+    - opencompass
+  # LMArena 文本竞技场排行榜前 N 名（经 Jina Reader 抓取）
+  lmarena_top_n: 10
+  # Artificial Analysis changelog/articles 动态条数
+  artificial_analysis: true
+  aa_limit: 12
+  # 测评新闻 RSS 回看窗口（天）与每源条数
+  lookback_days: 7
+  news_per_source: 8
+  # 自定义测评 RSS 源（可增删）
+  news_rss:
+    "Epoch AI": "https://epochai.substack.com/feed"
+    "MIT Technology Review": "https://www.technologyreview.com/feed/"
+    "The Verge AI": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+  # 中文测评/科技新闻源
+  cn_news_rss:
+    "量子位": "https://www.qbitai.com/feed"
+    "IT之家 AI": "https://www.ithome.com/rss/"
+

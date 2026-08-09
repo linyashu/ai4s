@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI4S 每日进展看板</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin:0; background:#f6f7f9; color:#222; line-height:1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+header { text-align:center; padding: 32px 0 12px; }
+h1 { margin:0; font-size:1.9em; }
+.sub { color:#666; font-size:.92em; }
+.nav { margin-top:10px; }
+.nav a { color:#1a73e8; text-decoration:none; font-size:.9em; }
+.nav a:hover { text-decoration:underline; }
+.digest { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:20px 24px; margin:20px 0; }
+.digest h2 { margin:0 0 4px; font-size:1.25em; }
+.digest-date { color:#888; font-size:.85em; margin-bottom:16px; }
+.digest-item { border-top:1px solid #eef0f3; padding:14px 0; }
+.digest-item-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.digest-rank { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#1a73e8; color:#fff; font-size:.78em; font-weight:700; flex:none; }
+.digest-source { color:#666; font-size:.82em; }
+.digest-title { margin:0 0 6px; font-size:1.02em; line-height:1.45; }
+.digest-title a { color:#1a0dab; text-decoration:none; }
+.digest-title a:hover { text-decoration:underline; }
+.digest-impact, .digest-why { margin:3px 0; color:#333; font-size:.92em; }
+.digest-why { color:#555; }
+.digest-impact strong, .digest-why strong { color:#1a73e8; font-weight:600; margin-right:2px; }
+.digest-trend { border-top:2px solid #eef0f3; margin-top:10px; padding-top:14px; }
+.digest-trend h3 { margin:0 0 6px; font-size:1em; color:#b26a00; }
+.digest-trend p { margin:0; color:#555; font-size:.94em; }
+.section-title { display:flex; align-items:center; gap:10px; margin:32px 0 12px; }
+.count { color:#888; font-size:.85em; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:14px; }
+.card { background:#fff; border:1px solid #e3e6ea; border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; }
+.card h3 { margin:8px 0 6px; font-size:1em; }
+.card h3 a { color:#1a0dab; text-decoration:none; }
+.card h3 a:hover { text-decoration:underline; }
+.card-head { display:flex; align-items:center; gap:8px; font-size:.8em; }
+.badge { color:#fff; padding:2px 8px; border-radius:999px; font-size:.75em; font-weight:600; white-space:nowrap; }
+.date { color:#888; }
+.source { color:#666; }
+.summary { color:#444; font-size:.86em; margin:4px 0; overflow-wrap:anywhere; }
+.card-foot { margin-top:auto; padding-top:8px; display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+.authors { color:#888; font-size:.8em; flex:1; min-width:100px; }
+.tag { background:#eef1f5; border-radius:4px; padding:2px 6px; font-size:.72em; color:#555; }
+footer { text-align:center; color:#999; font-size:.8em; margin-top:32px; }
+@media (prefers-color-scheme: dark) {
+  body { background:#14171c; color:#e8eaed; }
+  .digest, .card { background:#1e232b; border-color:#2b313b; }
+  .summary { color:#c9cdd3; }
+  .card h3 a { color:#8ab4f8; }
+  .tag { background:#2b313b; color:#b8bec8; }
+  .sub { color:#9aa0a6; }
+  .digest-date { color:#9aa0a6; }
+  .digest-item { border-top-color:#2b313b; }
+  .digest-impact { color:#e0e3e8; }
+  .digest-why { color:#c0c4cc; }
+  .digest-trend { border-top-color:#2b313b; }
+  .digest-trend p { color:#c0c4cc; }
+  .digest-title a { color:#8ab4f8; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🧪 AI4S 每日进展看板</h1>
+    <div class="sub">AI for Science 每日聚合 · arXiv / 期刊 / 中文媒体 / HuggingFace</div>
+    <div class="nav"><a href="eval.html">📊 AI 大模型测评看板 →</a></div>
+  </header>
+  <div class="digest">
+  <h2>今日 AI4S 简报</h2>
+  <div class="digest-date">2026-08-09</div>
+  <div class="digest-item">
+  <div class="digest-item-head"><span class="digest-rank">1</span><span class="digest-source">智源社区</span></div>
+  <h3 class="digest-title"><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE41dUoxaWtDZ3JnTUZqQzVIOW9rOUxxWTVwTmZvdE1IYUVTWE9ITGZnMG9INEdUaHF0eEIwSy0ybTEyeTFUOWtiRg?oc=5" target="_blank" rel="noopener" title="（智源社区）打开原文">Science | 利用基因组语言模型进行噬菌体从头生成设计 - 智源社区</a></h3>
+  <p class="digest-impact"><strong>点评</strong> 首个利用基因组语言模型从头设计出功能性噬菌体的突破，验证了AI生成完整生命系统的可能性。</p>
+  <p class="digest-why"><strong>值得关注</strong> 研究基于Evo 1/2微调，生成数千个ΦX174样基因组，近300个经合成测试，最终16个具感染活性，且包含自然界未见基因组合，混合体系还能克服耐受菌株。</p>
+</div><div class="digest-item">
+  <div class="digest-item-head"><span class="digest-rank">2</span><span class="digest-source">arXiv</span></div>
+  <h3 class="digest-title"><a href="https://arxiv.org/abs/2608.01546v1" target="_blank" rel="noopener" title="（arXiv）打开原文">FESOM2-JAX v1.0: a differentiable shadow of the ocean-sea-ice model FESOM2, cast onto GPUs</a></h3>
+  <p class="digest-impact"><strong>点评</strong> 全球首个原生可微分的CMIP级海洋-海冰模型，将地球系统模拟带入GPU与梯度优化时代。</p>
+  <p class="digest-why"><strong>值得关注</strong> 模型在1°分辨率下与Fortran原版62年态差异比观测误差低两个数量级，单GPU可跑完整配置，反向模式可求每个网格顶点参数敏感性。</p>
+</div><div class="digest-item">
+  <div class="digest-item-head"><span class="digest-rank">3</span><span class="digest-source">arXiv</span></div>
+  <h3 class="digest-title"><a href="https://arxiv.org/abs/2608.05120v1" target="_blank" rel="noopener" title="（arXiv）打开原文">DASyR-LLM: Domain-Aware Symbolic Regression with LLMs for Kinetic Model Discovery</a></h3>
+  <p class="digest-impact"><strong>点评</strong> LLM引导的符号回归将动力学模型发现所需湿实验迭代减少41.7%-79.3%，展示领域知识注入的实用价值。</p>
+  <p class="digest-why"><strong>值得关注</strong> LLM在每轮同时做物理化学评审和提出候选速率表达式，在过半数引导运行中直接给出正确模型结构，验证集R²&gt;0.98。</p>
+</div><div class="digest-item">
+  <div class="digest-item-head"><span class="digest-rank">4</span><span class="digest-source">arXiv</span></div>
+  <h3 class="digest-title"><a href="https://arxiv.org/abs/2608.04291v1" target="_blank" rel="noopener" title="（arXiv）打开原文">Electron correlation in semiconductors and insulators via symbolic regression</a></h3>
+  <p class="digest-impact"><strong>点评</strong> 用符号回归将GW自能近似为Kohn-Sham描述符的紧致解析函数，使含数千原子复杂材料的准粒子计算降到半局域DFT成本。</p>
+  <p class="digest-why"><strong>值得关注</strong> 从单次有序相GW计算学到的表达式在量子/热涨落、弹性形变和非晶无序下仍准确，已在共价半导体、离子绝缘体和二维材料上验证。</p>
+</div><div class="digest-item">
+  <div class="digest-item-head"><span class="digest-rank">5</span><span class="digest-source">arXiv</span></div>
+  <h3 class="digest-title"><a href="https://arxiv.org/abs/2608.02866v1" target="_blank" rel="noopener" title="（arXiv）打开原文">Expanding Protein Structure Prediction into Conformational State Space</a></h3>
+  <p class="digest-impact"><strong>点评</strong> 呼吁将蛋白质结构预测从单结构扩展到构象状态空间推断，可能重塑结构生物学与药物发现。</p>
+  <p class="digest-why"><strong>值得关注</strong> 多位领域专家联合撰文，指出众多蛋白功能依赖多构象及其相对占据度，提出融合深度学习集合生成、物理模拟和实验约束的路线图。</p>
+</div><div class="digest-item">
+  <div class="digest-item-head"><span class="digest-rank">6</span><span class="digest-source">arXiv</span></div>
+  <h3 class="digest-title"><a href="https://arxiv.org/abs/2608.02775v1" target="_blank" rel="noopener" title="（arXiv）打开原文">Towards a new paradigm of scientific discovery with socialized artificial intelligence</a></h3>
+  <p class="digest-impact"><strong>点评</strong> 提出&#x27;社会化科学智能&#x27;范式，把AI定位为连接知识、推理、实验和人类判断的组织性基础设施。</p>
+  <p class="digest-why"><strong>值得关注</strong> 区别于孤立任务助手，BLAZE强调持续研究生命周期中的集体验证，目标是让科学发现更可追踪、可复现和累积。</p>
+</div><div class="digest-item">
+  <div class="digest-item-head"><span class="digest-rank">7</span><span class="digest-source">arXiv</span></div>
+  <h3 class="digest-title"><a href="https://arxiv.org/abs/2608.05266v1" target="_blank" rel="noopener" title="（arXiv）打开原文">Agentic self-driving microscopy benchmarks support qualification but do not necessarily generalize to unseen tasks</a></h3>
+  <p class="digest-impact"><strong>点评</strong> 大规模系统评估揭示：当前自驱动显微镜智能体基准只适合资格测试，不能可靠预测未见过任务的表现。</p>
+  <p class="digest-why"><strong>值得关注</strong> 研究记录105种智能体配置、1949次测试和49109次RAG检索，发现架构选择带来延迟、成本与失败模式差异，但代理模型无法外推到新任务。</p>
+</div><div class="digest-item">
+  <div class="digest-item-head"><span class="digest-rank">8</span><span class="digest-source">thepaper.cn</span></div>
+  <h3 class="digest-title"><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE8zMjRRRmlwUnBDUGNLSGZXc1hWUVFYQThpZGJvUkxraEpFUWx0dVpIWEhGYjZEajRnOG9xU2d4d0VZVHd5NENRSG1oX3RwNmVGaUpTSU9QR3lqYUpzbUE?oc=5" target="_blank" rel="noopener" title="（thepaper.cn）打开原文">谷歌DeepMind四位顶级AI科学家离职创业，成立Discovery Loop - thepaper.cn</a></h3>
+  <p class="digest-impact"><strong>点评</strong> 四位DeepMind顶级AI科学家离职创立Discovery Loop，标志AI4S领域高端人才向创业公司流动。</p>
+  <p class="digest-why"><strong>值得关注</strong> 该团队在DeepMind期间深耕科学发现，新公司将聚焦AI驱动的科研自动化与发现闭环，可能加速AI4S产业化。</p>
+</div>
+  <div class="digest-trend">
+  <h3>今日趋势观察</h3>
+  <p>今日候选呈现两大趋势：一是生成式AI从分子/蛋白设计向完整基因组和智能体控制等更复杂系统延伸，并开始产出可验证的实验结果；二是可微分物理模型与LLM/符号回归结合，推动科学模拟从&#x27;预测&#x27;走向&#x27;可优化、可发现&#x27;。同时，对基准泛化能力的批判性研究提醒，AI4S工程化仍需严谨评估。</p>
+</div>
+</div>
+  <section class="section">
+  <h2 class="section-title"><span class="badge" style="background:#b31b1b">arXiv</span><span class="count">53 条</span></h2>
+  <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-06</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.06276v1" target="_blank" rel="noopener">Stochastic Dynamics on Persistence Diagram Space via Reinforcement Learning</a></h3>
+  <p class="summary">Persistence diagrams (PDs) provide stable and interpretable summaries of multiscale topological structure. While substantial progress has been made in the statistical analysis of PDs, existing literature often treats diagrams as static objects and provide limited frameworks for probabilistic modelin…</p>
+  <div class="card-foot">
+    <span class="authors">Farzana Nasrin</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;stat.ML&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;math.AT&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-06</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.06218v1" target="_blank" rel="noopener">Muon on the Stiefel Manifold Admits an Exact Closed-Form Update</a></h3>
+  <p class="summary">We study Muon, a recently proposed matrix-aware optimization method, in the context of the Stiefel manifold. This manifold consists of matrices with orthonormal columns and is ubiquitous in machine learning and scientific computing. Existing extensions of Muon to this manifold rely on heuristic, app…</p>
+  <div class="card-foot">
+    <span class="authors">Mikhail Solonko，Molozhavenko Alexander，Maxim Rakhuba</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;math.OC&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;math.NA&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-06</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.06118v1" target="_blank" rel="noopener">Calculations of the Krypton Phase Diagram and Novel Plasticity</a></h3>
+  <p class="summary">The phase diagram for Kr, as represented by the Tadah! two-body potential is shown to have face-centred cubic (fcc), hexahonal close packed (hcp), and body centred cubic (bcc) regions. It has been assembled by combining several methods: direct liquid--solid coexistence for the melt lines, Gibbs--Hel…</p>
+  <div class="card-foot">
+    <span class="authors">Marcin Kirsz，Asuka Iwasaki，Graeme John Ackland</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-06</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05910v1" target="_blank" rel="noopener">CourseGraph: Finding overlaps and differences in Computer Science courses across universities</a></h3>
+  <p class="summary">Student mobility programs such as Erasmus+ enable students to take courses at other universities, broadening their academic and cultural horizons. However, this flexibility also leads to a practical challenge: ensuring that students do not take courses elsewhere that substantially overlap with cours…</p>
+  <div class="card-foot">
+    <span class="authors">Arthur Nijdam，Paul Stankovski Wagner，Sara Ramezanian</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-06</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05702v1" target="_blank" rel="noopener">SEAM: Global consistency beyond local accuracy in scientific machine learning</a></h3>
+  <p class="summary">Scientific machine learning commonly validates models at the level of a subdomain, a benchmark split, or an explanation for one prediction. Yet such local checks cannot establish whether the resulting explanations can be assembled into one globally admissible explanation. We introduce Scientific Exp…</p>
+  <div class="card-foot">
+    <span class="authors">Gnankan Landry Regis N&#x27;guessan，Bum Jun Kim</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CE&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-06</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05670v1" target="_blank" rel="noopener">When Does Consensus Mean Correctness? Measuring the Agreement-Accuracy Coupling with Semantics-Preserving Re-Rendering</a></h3>
+  <p class="summary">A model&#x27;s agreement across perturbed inputs is used both as a label-free reliability signal and as a self-training target, on the premise that agreement tracks correctness. That coupling is rarely measured directly: natural-image perturbations preserve meaning only by assumption, and no exact answer…</p>
+  <div class="card-foot">
+    <span class="authors">Rasul Khanbayov，Hasan Kurban</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-06</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05605v1" target="_blank" rel="noopener">Enhancing Anomaly Resilience in Research Networks: A Large-Scale Forecasting Benchmark for Dynamic Security Baselining</a></h3>
+  <p class="summary">Research and Education Networks (RENs) serve as critical infrastructure for scientific discovery, yet they face a unique security paradox: their normal traffic patterns which are characterized by massive, bursty &quot;elephant flows&quot; are statistically indistinguishable from volumetric attacks such as DDo…</p>
+  <div class="card-foot">
+    <span class="authors">Mohammad Arafath Uddin Shariff，Byrav Ramamurthy</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.NI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-06</span>
+    <span class="source">计算物理 (physics.comp-ph)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05555v1" target="_blank" rel="noopener">Millisecond-Scale Neural Operator Surrogates for Double-Null Free-Boundary Grad-Shafranov Equilibria</a></h3>
+  <p class="summary">The Grad-Shafranov (GS) equation governs ideal magnetohydrodynamic equilibrium in tokamak plasmas. Free-boundary GS solvers are central to diverted-equilibrium modeling, but nonlinear Picard iteration introduces computational cost and sample-dependent latency that can become prohibitive in optimizat…</p>
+  <div class="card-foot">
+    <span class="authors">Plamen G. Krastev</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;physics.plasm-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;nucl-ex&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;physics.comp-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05478v1" target="_blank" rel="noopener">GenGA: Editable and Data-Grounded Graphical Abstract Generation for Academic Papers</a></h3>
+  <p class="summary">Graphical Abstracts (GAs) visually summarize the key findings of academic papers, playing a crucial role in facilitating the understanding of research content. Recently, advancements in vision-language models and image generation models have enabled the automatic generation of scientific figures bas…</p>
+  <div class="card-foot">
+    <span class="authors">Takuro Kawada，Shunsuke Kitada，Hitoshi Iyatomi</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.GR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CV&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.HC&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">计算物理 (physics.comp-ph)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05477v1" target="_blank" rel="noopener">Data-driven reconstruction of dynamical systems using Takens&#x27; Theorem, manifold learning, and universal function approximators</a></h3>
+  <p class="summary">Embedding theorems can be used to provide theoretical guarantees about the relation between low-dimensional observations of a system and its full-dimensional state and dynamics. Such theorems do not, however, provide guidance on observable choice, embedding construction, or methodologies to learn th…</p>
+  <div class="card-foot">
+    <span class="authors">Maximilian Topel，Andrew L. Ferguson</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;physics.comp-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05436v1" target="_blank" rel="noopener">The ethics of artificial intelligence in the life sciences: Universality, cultural diversity and an architecture of care</a></h3>
+  <p class="summary">The life sciences and health research have started to benefit from artificial intelligence, which raises ethical concerns that are real but, we argue, not special. Any science should be governed by values that rest on how the human brain is built and socialised rather than anything distinct to artif…</p>
+  <div class="card-foot">
+    <span class="authors">Jean-Pierre Changeux，Gustavo Deco，Morten L. Kringelbach</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;q-bio.NC&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05332v1" target="_blank" rel="noopener">Hierarchical Server Architecture for Agentic Science</a></h3>
+  <p class="summary">Agentic science is transforming the landscape of computational work, extending to scientific pipelines and workload managers. The workloads require specialized hardware within and across institutions. If assessing workload needs against environments is required for scheduling, automated discovery of…</p>
+  <div class="card-foot">
+    <span class="authors">Vanessa Sochat，Daniel Milroy</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.DC&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05266v1" target="_blank" rel="noopener">Agentic self-driving microscopy benchmarks support qualification but do not necessarily generalize to unseen tasks</a></h3>
+  <p class="summary">Large language model agents are increasingly being developed to control a wide range of scientific characterization tools including microscopes and synchrotron beamlines. Research into agentic control of physical infrastructure is nascent and there are few well-established paradigms for how to engin…</p>
+  <div class="card-foot">
+    <span class="authors">Nathan S Johnson，Ian Abshire</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05266v1" target="_blank" rel="noopener">Agentic self-driving microscopy benchmarks support qualification but do not necessarily generalize to unseen tasks</a></h3>
+  <p class="summary">Large language model agents are increasingly being developed to control a wide range of scientific characterization tools including microscopes and synchrotron beamlines. Research into agentic control of physical infrastructure is nascent and there are few well-established paradigms for how to engin…</p>
+  <div class="card-foot">
+    <span class="authors">Nathan S Johnson，Ian Abshire</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05120v1" target="_blank" rel="noopener">DASyR-LLM: Domain-Aware Symbolic Regression with LLMs for Kinetic Model Discovery</a></h3>
+  <p class="summary">Kinetic model discovery is a central challenge in chemical engineering, as accurate rate expressions are essential for understanding and controlling chemical and biological processes. Symbolic regression (SR) has emerged as a powerful data-driven approach for identifying interpretable kinetic models…</p>
+  <div class="card-foot">
+    <span class="authors">Roberto Aliaga Medina，Paulina Quintanilla，Antonio del Rio Chanona</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CE&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.SC&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05085v1" target="_blank" rel="noopener">Capability-Gated Planning: Cost-to-Goal Discovery and the Limits of Myopic Experiment Selection</a></h3>
+  <p class="summary">Systems that automate scientific discovery must repeatedly decide which experiment to run, which hypothesis to test, which tool to build, and when to stop. Many systems make these decisions by maximizing a myopic score such as expected information gain per unit cost or a learned plausibility score.…</p>
+  <div class="card-foot">
+    <span class="authors">Ahmed Hassoon，Mark Dredze</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.05033v1" target="_blank" rel="noopener">SparseDitto: Customizing GPU Kernels for Different Sparsity Patterns with LLM-Based Agentic System</a></h3>
+  <p class="summary">Sparse matrix kernels are fundamental to scientific computing, graph analytics, and machine learning. Their GPU performance depends strongly on the input sparsity pattern and execution strategy. For the same SpMM on the same matrix, cuSPARSE exhibits a 350x performance gap between CSR and Blocked-EL…</p>
+  <div class="card-foot">
+    <span class="authors">Shiyang Li，Guangyan Sun，Jinwei Tang，Yanzhi Wang</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.DC&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04942v1" target="_blank" rel="noopener">CheMLFlow: An Open-Source Platform for Cheminformatics and Materials Informatics Applications</a></h3>
+  <p class="summary">CheMLFlow is an open-source platform for building and executing end-to-end, high-throughput, and agentic workflows for scientific and technological applications. CheMLFlow targets a common bottleneck in scientific machine learning development, where researchers often need to assemble data acquisitio…</p>
+  <div class="card-foot">
+    <span class="authors">Brendan Smith，Susana Lopez-Moreno，Eric Dolores-Cuenca，Sangil Kim</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.other&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04942v1" target="_blank" rel="noopener">CheMLFlow: An Open-Source Platform for Cheminformatics and Materials Informatics Applications</a></h3>
+  <p class="summary">CheMLFlow is an open-source platform for building and executing end-to-end, high-throughput, and agentic workflows for scientific and technological applications. CheMLFlow targets a common bottleneck in scientific machine learning development, where researchers often need to assemble data acquisitio…</p>
+  <div class="card-foot">
+    <span class="authors">Brendan Smith，Susana Lopez-Moreno，Eric Dolores-Cuenca，Sangil Kim</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.other&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">计算物理 (physics.comp-ph)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04903v1" target="_blank" rel="noopener">A commutant gate for spectral fitting through symmetry forced degeneracy</a></h3>
+  <p class="summary">Learned spectral models fail at symmetry forced degenerate sectors for two distinct reasons. Where symmetry forces levels to coincide exactly, the per level observable one would normally fit is not well defined, since every unit vector of that shared space is an eigenvector; and near a symmetry prot…</p>
+  <div class="card-foot">
+    <span class="authors">Stelios Savva</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;math.NA&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;nucl-th&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;physics.comp-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04872v2" target="_blank" rel="noopener">A-SR: Self-Evolving Agentic LLMs for Symbolic Regression via Hierarchical Coordination</a></h3>
+  <p class="summary">Symbolic regression aims to discover closed-form equations from data, but existing LLM-guided methods often rely on a unified proposal loop that compresses heterogeneous search failures into a scalar score and a single prompt. We propose A-SR, a self-evolving agentic framework that shifts the contro…</p>
+  <div class="card-foot">
+    <span class="authors">Wenxiao Zhao，Dong Liu，Kaiyi Xu，Feng Liu</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04840v1" target="_blank" rel="noopener">Towards a satellite image manipulation and deepfake localization benchmark dataset</a></h3>
+  <p class="summary">Verifying the authenticity of satellite imagery has become increasingly critical given advances in generative artificial intelligence. Highly realistic synthetic imagery produced for malicious purposes (deepfakes) can have major consequences in the remote sensing domain, where this data is a fundame…</p>
+  <div class="card-foot">
+    <span class="authors">Jacob Arndt，Debvrat Varshney，Philipe Dias，Nivedita Nukavarapu</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CV&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04806v1" target="_blank" rel="noopener">An Exchange-Correlation Functional for Fast and Accurate Modeling of Ferroelectric Perovskites</a></h3>
+  <p class="summary">We present a novel exchange correlation functional, C09x-PBEc, which combines C09 exchange with PBE correlation, to accurately model the ferroelectric properties of perovskites while retaining the computational efficiency of GGA functionals. With a growing interest in developing machine learning int…</p>
+  <div class="card-foot">
+    <span class="authors">Owain T. Beynon，Chiara Gattinoni</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04690v1" target="_blank" rel="noopener">Raman Signatures of Lithium Ion Dynamics in LLZO Garnet Electrolytes: Atomistic Insights from MD-Raman Calculations</a></h3>
+  <p class="summary">Lithium lanthanum zirconate (LLZO) garnets are among the most promising solid electrolytes for next-generation batteries owing to their high ionic conductivity, chemical stability, and compatibility with lithium metal. Raman spectroscopy is commonly employed to distinguish the highly conductive cubi…</p>
+  <div class="card-foot">
+    <span class="authors">Takeru Miyagawa，Willis O&#x27;Leary，Manuel Grumet，Hyunwon Chu</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04651v1" target="_blank" rel="noopener">Active Learning Guided Design Space Refinement for Scalable Multi-Objective Bayesian Optimization in Materials Discovery</a></h3>
+  <p class="summary">Advanced materials discovery increasingly relies on machine learning and Bayesian optimization to explore large discrete design spaces under limited evaluation budgets. However, conventional Bayesian optimization (BO) can become inefficient as candidate spaces grow, often evaluating low-value region…</p>
+  <div class="card-foot">
+    <span class="authors">Alexandros Ntagiantas，Panagiotis Tsilimidos，George Giannakopoulos，Christoforos Rekatsinas</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04457v1" target="_blank" rel="noopener">Eigenius: A Typed Knowledge-Graph DBMS with Epistemic Stratification and Institution-Mediated Reasoning</a></h3>
+  <p class="summary">As &quot;AI Scientists&quot; emerge to drive research via the Model Context Protocol (MCP), systems relying on ephemeral scripts will fail. The sheer scale of stateful, interconnected evidence requires a machine-walkable warranty grounded in a purpose-built database architecture. Eigenius is an open-source, t…</p>
+  <div class="card-foot">
+    <span class="authors">Hans-Martin Will，Allen L. Brown，Matthew Fuchs</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.DB&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LO&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-05</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04393v1" target="_blank" rel="noopener">When Proxy Prediction Becomes Equation Reconstruction: Diagnostics and Residual Learning for Factor-Derived Proxy Supervision</a></h3>
+  <p class="summary">Scientific machine learning often relies on proxy targets computed from known domain factors when direct observations are limited. When those same factors are used as model inputs, however, high predictive accuracy may reflect reconstruction of the proxy-generating equation rather than robustness to…</p>
+  <div class="card-foot">
+    <span class="authors">Chayan Lahiri，Ahmed Shafee，Cody Fehringer</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04291v1" target="_blank" rel="noopener">Electron correlation in semiconductors and insulators via symbolic regression</a></h3>
+  <p class="summary">Predicting quasiparticle energies in materials requires expensive numerical evaluations of the electron self-energy. This limits calculations to ordered systems with small unit cells. Here, using symbolic regression, we show that the GW self-energy can be accurately approximated with compact analyti…</p>
+  <div class="card-foot">
+    <span class="authors">Nick Pant，Viet-Anh Ha，Donghwan Kim，Feliciano Giustino</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04230v1" target="_blank" rel="noopener">Transferable Dual-Stream Representations for Mesoscale-Preserving Sea Surface Temperature Downscaling</a></h3>
+  <p class="summary">Deep learning models for scientific spatio-temporal downscaling often minimize reconstruction error while failing to preserve physically meaningful multi-scale structure. For sea surface temperature prediction, this can yield outputs that are numerically plausible yet overly smooth, missing mesoscal…</p>
+  <div class="card-foot">
+    <span class="authors">Parth Doshi，Priyanka Aravindan，Vaishnav Vaidheeswaran，Md Mahbub Alam</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CV&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04216v1" target="_blank" rel="noopener">Computational Microstructure Analysis of Sintered Ceramics</a></h3>
+  <p class="summary">Characterizing materials through manual extraction of physical properties from microstructure images is a laborious process. This work presents a workflow to extract porosity, solid fraction, grain size distribution, and pore size distribution from scanning electron microscopy (SEM) images of sinter…</p>
+  <div class="card-foot">
+    <span class="authors">Nikhil Dhanankam，Deeksha Kodangal，Rajendra K. Bordia，Ulf D. Schiller</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CE&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04170v1" target="_blank" rel="noopener">Visualizing Graph-to-Answer Mechanism Recovery in Materials-Science Hypothesis Generation</a></h3>
+  <p class="summary">AI co-scientists can generate fluent materials-science hypotheses, but fluency does not show that an answer preserves a scientifically meaningful mechanism. We present a graph-to-answer mechanism-tracing case study for Graph-PRefLexOR-8B, a Qwen3-8B model adapted to expose distinct stages for brains…</p>
+  <div class="card-foot">
+    <span class="authors">Shashwat Sourav，Subhadeep Pal，Markus J. Buehler，Sanjay Das</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">AI for Science (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04156v1" target="_blank" rel="noopener">BrainBench: Benchmarking Large Language Models for Comprehensive EEG Understanding</a></h3>
+  <p class="summary">Electroencephalography (EEG) analysis extends beyond assigning predefined labels to recordings; it requires workflows connecting natural-language instructions, signal processing, quantitative evidence, and scientific interpretation. We term this capability \emph{comprehensive EEG understanding}. Exi…</p>
+  <div class="card-foot">
+    <span class="authors">Yangxuan Zhou，Sha Zhao，Yuning Chen，Chen Wu</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04113v1" target="_blank" rel="noopener">Out-Of-The-Loop Multi-Fidelity Bayesian Optimization</a></h3>
+  <p class="summary">Black-box optimization is a ubiquitous problem in science and engineering, often dealing with expensive objective functions with cheaper lower-fidelity proxies available. Multi-fidelity Bayesian optimization (MF-BO) is a principled approach to this problem, leveraging correlations across different f…</p>
+  <div class="card-foot">
+    <span class="authors">Gustavo Sutter，Hao Wang，Luis Ricardez-Sandoval，Pascal Poupart</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.03805v1" target="_blank" rel="noopener">Physics-Informed Machine Learning for Refractory Alloy Design</a></h3>
+  <p class="summary">Refractory complex concentrated alloys (CCAs) exhibit exceptional mechanical properties at elevated temperatures, but their vast compositional space (approximately 10^15 possible combinations) poses significant challenges for experimental exploration. We develop a physics-informed machine learning f…</p>
+  <div class="card-foot">
+    <span class="authors">Blaise Awola Ayirizia，Bimal K C，Jorge A. Munoz San Martin</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.04066v1" target="_blank" rel="noopener">The LLM Proposes, the Executive Disposes: A Self-Verifying Agent Instrument that Dissociates Commitment Drift from Binding Drift in Long-Horizon Agents</a></h3>
+  <p class="summary">How do you verify a long-horizon agent when its own state and self-reports are exactly what you cannot trust? We present an agent instrument built so that verification is structural rather than post-hoc. A deterministic Executive owns all belief; a language model may only file typed proposals, and a…</p>
+  <div class="card-foot">
+    <span class="authors">Mohsen Arjmandi</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.03760v1" target="_blank" rel="noopener">Guided Synthesis of EMT Zeolites by Machine Learning</a></h3>
+  <p class="summary">Zeolites are microporous crystalline materials with diverse frameworks, widely used in industrial applications such as petroleum refining and molecular separation. Unlike most zeolites, EMT can be synthesized under mild conditions (at low temperatures and without the use of organic structure-directi…</p>
+  <div class="card-foot">
+    <span class="authors">Emmanuel A. Olanrewaju，Santosh Adhikari，Zhiyin Niu，Michael Nikolaou</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.03688v1" target="_blank" rel="noopener">Machine Learning-Guided Screening of Advantageous Solvents for Solid Polymer Electrolytes in Lithium Metal Batteries</a></h3>
+  <p class="summary">Trace residual solvents in solid polymer electrolytes (SPEs) significantly affect electrolyte and interface properties, where optimal selection enhances ionic conductivity and transference numbers. However, solvent complexity hinders general screening methods. We establish a universal criterion link…</p>
+  <div class="card-foot">
+    <span class="authors">Jiadong Shen，Junjie Chen，Xiaosa Xu，Jin Li</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.03600v1" target="_blank" rel="noopener">Large language models for partial differential equation workflows</a></h3>
+  <p class="summary">Partial differential equations (PDEs) become actionable in science and engineering not as isolated formulae, but as executable workflows that connect modelling assumptions, governing equations, numerical solvers, diagnostics, and decisions. Large language models (LLMs) are beginning to support such…</p>
+  <div class="card-foot">
+    <span class="authors">Han Wan，Rui Zhang，Hao Sun</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-04</span>
+    <span class="source">计算物理 (physics.comp-ph)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.03287v1" target="_blank" rel="noopener">A Unified Graph Neural Network Framework for Non-Equilibrium Carrier and Lattice Dynamics Driven by Electric Fields</a></h3>
+  <p class="summary">Finite-temperature simulations of electric-field-driven dynamics need a unified description of interatomic interactions, local electronic states, and configuration-dependent electric responses. First-principles simulations remain scale-limited, whereas conventional machine-learning potentials lack e…</p>
+  <div class="card-foot">
+    <span class="authors">Jia-Wen Li，Sheng Meng，Xinghua Shi，Jin Zhang</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;physics.comp-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.02965v1" target="_blank" rel="noopener">A Physics-Informed Hybrid Neural Operator for Transient Magnetization Prediction in Power Magnetics</a></h3>
+  <p class="summary">Magnetic components in high-frequency, high-power-density converters are increasingly driven by non-sinusoidal flux-density waveforms with fast transitions, minor-loop operation, dc bias, and temperature variation. Under these conditions, steady-state core-loss formulas and single-valued material cu…</p>
+  <div class="card-foot">
+    <span class="authors">Yachao Zhu，Qiujie Huang，Sinan Li，Yang Li</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;eess.SY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.02948v1" target="_blank" rel="noopener">Rubrics as Privileged Information for Open-Ended Generation</a></h3>
+  <p class="summary">On-policy self-distillation (OPSD), where a single model acts as both student and teacher with different contexts, has shown promise in verifiable domains like math, where hard privileged information (PI) in the form of ground-truth answers structurally constrains valid continuations. We extend OPSD…</p>
+  <div class="card-foot">
+    <span class="authors">Deepika Bablani，Ajay Gupta，Wanming Chen</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">计算物理 (physics.comp-ph)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.02937v1" target="_blank" rel="noopener">ScoreField: Neural Inverse Scattering with Score-Based Generative Priors</a></h3>
+  <p class="summary">Designing an effective electromagnetic inverse-scattering solver requires faithful enforcement of nonlinear full-wave physics together with an expressive prior on the unknown permittivity contrast. We propose ScoreField, a neural inverse scattering framework that integrates coupled implicit neural r…</p>
+  <div class="card-foot">
+    <span class="authors">Wenhan Guo，Yuan Gao，Yu Sun</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;eess.IV&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;physics.comp-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">计算生物学 (q-bio)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.02866v1" target="_blank" rel="noopener">Expanding Protein Structure Prediction into Conformational State Space</a></h3>
+  <p class="summary">Recent AI advances have enabled protein structure prediction at near-experimental accuracy, largely solving the problem of identifying a dominant conformation from sequence. Many proteins, however, function as dynamic systems populating multiple conformational states with activity emerging from shif…</p>
+  <div class="card-foot">
+    <span class="authors">Devlina Chakravarty，Justin J. Miller，Da Teng，Yousuf O. Ramahi</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;q-bio.BM&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.02775v1" target="_blank" rel="noopener">Towards a new paradigm of scientific discovery with socialized artificial intelligence</a></h3>
+  <p class="summary">Scientific discovery has advanced through successive transformations in the organization of knowledge. Observation and experimentation established the empirical foundations of science. Theory made it possible to derive general principles from particular phenomena. Computation extended inquiry into s…</p>
+  <div class="card-foot">
+    <span class="authors">Xinjie Yao，Xingxin Xu，Xiyuan Gao，Zhoupeng Guo</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.02505v1" target="_blank" rel="noopener">Abduction Without a Body? Representational Grounding and the Abduction Loop for Scientific Hypothesis Generation</a></h3>
+  <p class="summary">Can scientific abduction occur without continuous sensorimotor embodiment? Recent arguments in AI and philosophy of science hold that genuine hypothesis generation requires an agent continuously coupled to the physical world. We defend a narrower claim: online embodiment is not necessary for every a…</p>
+  <div class="card-foot">
+    <span class="authors">Michael Farmer</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CV&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.IR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.02491v2" target="_blank" rel="noopener">Long-term Measurements: Towards a Longitudinal Understanding of Human-AI Interactions</a></h3>
+  <p class="summary">Language models have taken on the role of a very new type of technology, by virtue of their &quot;human-ness&quot; and rapid integration into users&#x27; daily lives. This combination of features can introduce longitudinal risks---cognitive, developmental and socio-affective changes in humans---that might not surf…</p>
+  <div class="card-foot">
+    <span class="authors">Nicole Mitchell，Dhruv Agarwal，Maty Bohacek，Remi Denton</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.02456v1" target="_blank" rel="noopener">Real-time dynamics of the two-step charge-density-wave transition in bulk 1T-TaS$_2$</a></h3>
+  <p class="summary">The charge-density wave (CDW) of bulk 1T-TaS2 is built from Star-of-David (SoD) clusters tiling a sqrt{13} x sqrt{13} superlattice, and it melts through a two-step sequence accompanied by order-of-magnitude changes in resistivity. Whether these steps proceed by collapse of the SoD amplitude or by re…</p>
+  <div class="card-foot">
+    <span class="authors">Daeheon Kim，Jinseok Oh，Kahyeon Koh，Yejun Cho</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.02704v1" target="_blank" rel="noopener">Predictive Set Theory: A Generative Framework for Cognitive Architecture with Operationalized Core Mechanisms</a></h3>
+  <p class="summary">Predictive processing theories portray the brain as a hierarchical prediction engine that minimizes prediction error, yet they lack operational definitions for the structure of a &quot;prediction,&quot; the standardized response to a prediction error, and the mechanism that maintains consistency across succes…</p>
+  <div class="card-foot">
+    <span class="authors">Yiyang Yu</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LO&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;q-bio.NC&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">AI for Science (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.02321v1" target="_blank" rel="noopener">FastGFDs: Efficient Validation of Graph Functional Dependencies with Desbordante</a></h3>
+  <p class="summary">Graph functional dependencies (GFD) are a recently-developed concept aimed at capturing both topological structures in graphs and functional dependencies between attributes. The process of verifying whether a given GFD holds over a particular graph is referred to as GFD validation. In this very comp…</p>
+  <div class="card-foot">
+    <span class="authors">Anton Chernikov，Yurii Litvinov，Kirill Smirnov，George Chernishev</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.DB&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.PF&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.01903v1" target="_blank" rel="noopener">Machine Learning Assisted Design of Complex and High Entropy Alloys by Hybrid HiPIMS/Pulsed-DC PVD Process for Low Carbon Energy Applications in Extreme Environments</a></h3>
+  <p class="summary">Complex and high entropy alloys are attracting much attention currently thanks to their mechanical and corrosion resistance properties in harsh environments, in particular needed for carbon-free energy applications. However, their elaboration in bulk and in thin film form in a trial-and-error approa…</p>
+  <div class="card-foot">
+    <span class="authors">Paul Foulquier，Ryma Haddad，Ali Mahmoud，Eric Monsifrot</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">凝聚态与材料 (cond-mat)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.01779v1" target="_blank" rel="noopener">Machine-Learning-Accelerated Metallene Stabilization from High-Throughput Sandwich Modeling</a></h3>
+  <p class="summary">Metallenes have appealing properties, but stabilizing them in a monolayer phase poses challenges for their synthesis. A recent experiment showed that the van der Waals squeezing method can stabilize certain metallenes in a MoS2 sandwich. This pioneering work motivates systematic studies, but such st…</p>
+  <div class="card-foot">
+    <span class="authors">Mohammad Bagheri，Pekka Koskinen</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;physics.comp-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-03</span>
+    <span class="source">计算物理 (physics.comp-ph)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.01779v1" target="_blank" rel="noopener">Machine-Learning-Accelerated Metallene Stabilization from High-Throughput Sandwich Modeling</a></h3>
+  <p class="summary">Metallenes have appealing properties, but stabilizing them in a monolayer phase poses challenges for their synthesis. A recent experiment showed that the van der Waals squeezing method can stabilize certain metallenes in a MoS2 sandwich. This pioneering work motivates systematic studies, but such st…</p>
+  <div class="card-foot">
+    <span class="authors">Mohammad Bagheri，Pekka Koskinen</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cond-mat.mtrl-sci&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;physics.comp-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-08-02</span>
+    <span class="source">计算物理 (physics.comp-ph)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2608.01546v1" target="_blank" rel="noopener">FESOM2-JAX v1.0: a differentiable shadow of the ocean-sea-ice model FESOM2, cast onto GPUs</a></h3>
+  <p class="summary">We present FESOM2-JAX, a Python re-implementation of the Finite-volumE Sea ice-Ocean Model (FESOM2) in JAX. The model retains the unstructured-mesh, cell-vertex finite-volume formulation of the original, runs unchanged from a laptop CPU to 256 GPUs, and is end-to-end differentiable. FESOM2-JAX is a…</p>
+  <div class="card-foot">
+    <span class="authors">Nikolay V. Koldunov，Sergey Danilov，Suvarchal Cheedela，Dmitry Sidorenko</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;physics.ao-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.SE&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;physics.comp-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;physics.flu-dyn&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article></div>
+</section><section class="section">
+  <h2 class="section-title"><span class="badge" style="background:#e65100">中文媒体</span><span class="count">46 条</span></h2>
+  <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOd2YxTjVSdHhSQjlWM2I2SmEwaUVBQ0VJUTc1SHI1dExmWFQ2RGJTQXRCMW1rcXl1a3NzMDRleDZwN0NqNW1BQThiTXgybjZrdEJRbUw1eDBoQXdOVEVMak1RLS1LWU5sMnByS1p0Y1FsaHBWM0toeDQzOWZsSEFmZzlEakp1TG16Q0plMTRmbFdDcklUbTBXQg?oc=5" target="_blank" rel="noopener">锚定“人工智能+”，北京海淀发布“智谷中试港”规划 - 新浪财经</a></h3>
+  <p class="summary">锚定“人工智能+”，北京海淀发布“智谷中试港”规划  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">中财网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5INHdBakp3emJRWXdIQ3EwS1ZtcElROGQ2SG1tQ0Y3bUJSX0wzaGtwVVE3cXVlSnhkTkVVWkgwYmVacUtIcTgwWGRkd0ZEY0JqUGV5MGZ3?oc=5" target="_blank" rel="noopener">15股获买入评级 最新:药明康德 - 中财网</a></h3>
+  <p class="summary">15股获买入评级 最新:药明康德  中财网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE9rclBweDNQNGItVExvbDk2QnFFVzcybHZ0NWw2aUcyNHlTTmNHYzNWdnJMcUVqQnJWbVJmTDJ0NHJfT1NGdkVvNVh4WDdFeFB4ejNHTUxKbFlKcXhyWHN3NlZXOFh2WXFhTXVHQ1dyTEo1eUZTSjdaMTdiN1djUVU?oc=5" target="_blank" rel="noopener">曙光8000投用后，普通人能用到哪些AI服务？ - 新浪网</a></h3>
+  <p class="summary">曙光8000投用后，普通人能用到哪些AI服务？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOamZZT3FfTUlEbUc0X2tMZkp2eEtKTDU5ZWx3bVg2dFFxS0h5R3FrSzVDdDVJTjlHbW9uYVZOaHVFREx6TlR4bW1UVVUxRjFhQUJMWEpBU0RjUkkzck5fR1E2Qk1aV0dSZmYxQnVTY1RucEsxOFpVSzN1cUFuTzBIQWVOWWgtcW5sT0tOdUNveXdDYjdtbktjbnc3SFFDbUw3QU44dS1tZ3FkT01kV25Iak53?oc=5" target="_blank" rel="noopener">谷歌AI重组：创始人布林亲自盯Gemini，哈萨比斯交权 - 新浪财经</a></h3>
+  <p class="summary">谷歌AI重组：创始人布林亲自盯Gemini，哈萨比斯交权  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">搜狐网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOcDdzY29hRVVmaW9wcWZUZWw5cUxvaGUybDBUNUVUX0FVc3dNaWNXczV3LXVFZWwxN1lKOE5fdGpFSndvWl9yVkRpUXRaYXNJOUFJcXhfY1FCdWJvb1RDVkRiMU9kV2ZWbURvNnRjdXdPVFRGUE9iVWJtUmNMOHZfbGVJNWRUX2JNYjNYQg?oc=5" target="_blank" rel="noopener">浦江淮、赵小龙：迈向认识论奇点：人工智能、不透明性与科学发现的新规范 - 搜狐网</a></h3>
+  <p class="summary">浦江淮、赵小龙：迈向认识论奇点：人工智能、不透明性与科学发现的新规范  搜狐网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">매일경제</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE9QUDJwNHNJbVJSTjFzWmw5eE5OaWlHemtPZktrN3lhZEl4eE9wTnVNNXN4cTZZSmM5ZHQ1ZjhHRG1GVEpKekFXazFyVQ?oc=5" target="_blank" rel="noopener">今年韩美科学家大会(UKC)最关心的当然是&quot;科学人工智能(AI)&quot; 在过去的一年里,美国推出了捷恩斯任务,韩国则发射了K-Moonshot项目。 全部都是&quot;用AI加速科学发现的速度&quot;的基本要点。 在此.. - 매일경제</a></h3>
+  <p class="summary">今年韩美科学家大会(UKC)最关心的当然是&quot;科学人工智能(AI)&quot; 在过去的一年里,美国推出了捷恩斯任务,韩国则发射了K-Moonshot项目。 全部都是&quot;用AI加速科学发现的速度&quot;的基本要点。 在此..  매일경제</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">科学网—新闻</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE12QjRxc0Rmcks0eFBrNVp0ZnBmcVBJSUJrZklnNFpnd2lLdmcyOUxFdEs5T3FHQy0teGJvRTNwSkN5aHhqcTNfVzlEUk9ycjA3cHRmUk1rMXBEYW0zbnN6UGthaHk?oc=5" target="_blank" rel="noopener">2026国际基础科学大会在京开幕 - 科学网—新闻</a></h3>
+  <p class="summary">2026国际基础科学大会在京开幕  科学网—新闻</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">智源社区</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE41dUoxaWtDZ3JnTUZqQzVIOW9rOUxxWTVwTmZvdE1IYUVTWE9ITGZnMG9INEdUaHF0eEIwSy0ybTEyeTFUOWtiRg?oc=5" target="_blank" rel="noopener">Science | 利用基因组语言模型进行噬菌体从头生成设计 - 智源社区</a></h3>
+  <p class="summary">Science | 利用基因组语言模型进行噬菌体从头生成设计  智源社区</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">至顶网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE04Q2VuODdzbThuUG5YeHdtcWQyX0dxdTVCSzNaZDJjYlR6ZUpOUy1ETE5PV3Y5RjYtT0d3U0F4WkhoaTREemtJS1pobTZhWUc4WmRfWUQ3bzhUek1qeEE?oc=5" target="_blank" rel="noopener">DeepMind飓风预测模型为预报员争取到额外一天预警时间-人工智能 - 至顶网</a></h3>
+  <p class="summary">DeepMind飓风预测模型为预报员争取到额外一天预警时间-人工智能  至顶网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE80aTgtQTk2MUpyel9yRWlEYmFLdFlIX09FYUR3dHlrNk11MUhoV28xMklUX01nQVFiYzhoUUp3MjA4cERFOTdlTS1CM0QxZFhWRWt4eHo1Z2ttVHZaZTIzNzlOT2EwMG94c2k1NGMyQzdCR2E0NnpmYnBGZ2hxVlU?oc=5" target="_blank" rel="noopener">AI芯片功耗飙升为何让风冷散热失效？ - 新浪网</a></h3>
+  <p class="summary">AI芯片功耗飙升为何让风冷散热失效？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9DQUVkV0RFcWxsVjZEbUU4ejdVOXpnNWtvcU1DcFh5T1VxSFRsY1VRUFlUdjVCWTFHT3VoUW16eFYxOC1nUjRCWmRKSjdXdkJqYjR2Tkk5dVFEV0lBWk5sMERfWjJYM0dQck4tMVltUVJ6cDlsQ2pNOQ?oc=5" target="_blank" rel="noopener">北京海淀发布“智谷中试港”规划 将建设AI全栈式中试平台集群 - 新浪财经</a></h3>
+  <p class="summary">北京海淀发布“智谷中试港”规划 将建设AI全栈式中试平台集群  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">潮起网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFA2YS1HU09BbXJjSVpNTzRXMS01RFNSa2hvbkgxZkVwRnRRT0Y2ZlpnamtqODNQNElra09uVXl5dFZlQ2Z6VDBYd3VSMFNjQkVvdHpVOVJKcFNIc0RMdVVyVG1QSQ?oc=5" target="_blank" rel="noopener">Jeff Dean挥别谷歌48小时首秀：我眼中AI的下一个十年 - 潮起网</a></h3>
+  <p class="summary">Jeff Dean挥别谷歌48小时首秀：我眼中AI的下一个十年  潮起网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">VOI.ID</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFA4Vl9JY01EYnJKV3k1RUVkRWIwbzk4OGlFLThidEhkRS1jMXo0aE5uODd5RDVSSzltQVdrbHdxUUxPVkZUNkxHZVgtYVZBQmfSAUJBVV95cUxQRTZnVy1SMi1zcmFqWmtiSDhCT2xEUUdwdmFGa3BtbzVHSWUwajBvWlRjeEtkUXBMSjVqdGRCd2x6Nnc?oc=5" target="_blank" rel="noopener">研究发现人工智能故事更受欢迎，特别是如果它被认为是人类写的 - VOI.ID</a></h3>
+  <p class="summary">研究发现人工智能故事更受欢迎，特别是如果它被认为是人类写的  VOI.ID</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">CSDN</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBMUXFUcENPeDNxdjdINHJCSjZoazZfQjlxbmRRM3hYTnBMSGdkVGM0UDQwaGhJUlh3eDRiZnpGbjctZ3Fzem9sZkZITVFTanFhOFJRMmJueVVLRWd6SHFIaVFmRlEyX1RfQVduMXFR?oc=5" target="_blank" rel="noopener">Jeff Dean谈AI的下一次范式升级 - blog.csdn.net</a></h3>
+  <p class="summary">Jeff Dean谈AI的下一次范式升级  blog.csdn.net</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">디지털투데이</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPSWY4aE9jZl9mb2h0UWZwdEhmLW5XUHQ1bTc5UjlGZ2k3OUtMUkVRckptV1JwQW1aOUxvcDZRRVV5QUREUXMzeDJ5LUpoWEo3anlsbVVJUXJGTUNPdjFRQjNPSm0xemN6TXQ0U2JYQmpkNl9BaXZjb0VBdExuNy1SbUR5djdLMGx2dFRZaUFXNkwyLUVvR0doc0hUZ1JoY0FaNUVYdUt3c1l1MFlINHZfTzRncGQwTUJKbFVhazFtTHJ0bkVxVXEzOUx3?oc=5" target="_blank" rel="noopener">韩国科技信息通信部科技创新本部长Park In-gyu赴美出席UKC 2026 聚焦AI、航天和量子合作 - 디지털투데이</a></h3>
+  <p class="summary">韩国科技信息通信部科技创新本部长Park In-gyu赴美出席UKC 2026 聚焦AI、航天和量子合作  디지털투데이</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNb09oUHRsbDlzZFpxU25uLURfenlkZU9COXJLMkllLTVGMXNSTWFvakxGMEtlZ1ZFZF93X3RYVUFrTVNBQWM3Y2FfbDI0cGlDdzBmMmhuOGI1bHVfS1JKcnhGWUpWUThhLVZWa2xvOTRndWpZUTNKeWdNNW5BelByMUJiZFFCaXRsLTRYVk9GQlliejBnZVlITDZ6RC14UGpvaHhvYlJjTQ?oc=5" target="_blank" rel="noopener">诺奖得主Hassabis，也要走了！ - 新浪财经</a></h3>
+  <p class="summary">诺奖得主Hassabis，也要走了！  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">cnBeta.COM</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE04LVdJVTZ3bVB2a3FSakNONnl3MTlzUkhXdkNuYVhUNGpzNENWWjNOZXBTdk11V0pMM2ZORkg4d2E2RmM2VklEQzNEUXNSQW9FODRSSEFLcC1QTXQ5OWJPbw?oc=5" target="_blank" rel="noopener">Anthropic创始人的“抽象”B面：拍墓碑广告、研究AI末日、对赚钱毫无兴趣- 人物 - cnBeta.COM</a></h3>
+  <p class="summary">Anthropic创始人的“抽象”B面：拍墓碑广告、研究AI末日、对赚钱毫无兴趣- 人物  cnBeta.COM</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNZnJ1RDk1Y2FkRFE5bHNBUWpfQzFPU2NoNWtMNW9FX2dQX1owVWMzT2I1bE5rRlZjZjJTeEVocXMzSmM4M3BfMEgxSUlYelhyZFdPMFZIRFBjSnZwU1RPQm95dEE0c3dVdjQ4UU5rUl9oQWQ4b2xZQURvY2xIZU9KT3dUbw?oc=5" target="_blank" rel="noopener">这些AI设计的病毒会感染人类吗？ - 新浪网</a></h3>
+  <p class="summary">这些AI设计的病毒会感染人类吗？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">CSDN</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5sb2lfeXBpOE8xV0Nkc3R3LVU0YXZnTFFNb3A2VzhwSnYySXVZRVpnc3RQMFUyd2lJNF9pSnA1TTRNUXM4ODdVVWZlclV0dnU3dldJc1M2MGFMZGZyUzFDTlZjNUZMejdHZklUUWsxYm0?oc=5" target="_blank" rel="noopener">Meta：代理贝叶斯优化新范式 - blog.csdn.net</a></h3>
+  <p class="summary">Meta：代理贝叶斯优化新范式  blog.csdn.net</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">thepaper.cn</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE8zMjRRRmlwUnBDUGNLSGZXc1hWUVFYQThpZGJvUkxraEpFUWx0dVpIWEhGYjZEajRnOG9xU2d4d0VZVHd5NENRSG1oX3RwNmVGaUpTSU9QR3lqYUpzbUE?oc=5" target="_blank" rel="noopener">谷歌DeepMind四位顶级AI科学家离职创业，成立Discovery Loop - thepaper.cn</a></h3>
+  <p class="summary">谷歌DeepMind四位顶级AI科学家离职创业，成立Discovery Loop  thepaper.cn</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOZ2ZmaXlZNzBsR3kwMnl3cUVKemZsNE9CY1RWSWk3eFpCM2RwWTVUUV8yeXZRUmdkV2RJdG14RFJ4QlkwWG8wam43Vlo3NWUteXlOakk3cTlUN25zbmxDakF4bGtPRzVXVVFiYzlaNUR2TnY5MlZUWFJhYUZwQW1ETVR3bkJpVDF1T1oxZHhqTUI0di1HS08yRlNHS09ieXNITnJoS0lSaw?oc=5" target="_blank" rel="noopener">福兮祸兮？美国科学家首次用AI设计出新病毒 - 新浪财经</a></h3>
+  <p class="summary">福兮祸兮？美国科学家首次用AI设计出新病毒  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">凤凰网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE4yOUxZSGxTTEJDdGVZX0FmVkg5cFlNY292alh5QlQ2SlBnVXY4VWVGdGk5WEtXTmxrT1VxNXVWTTFOczBJZlZNaUpNVTc?oc=5" target="_blank" rel="noopener">“到底真的还是假的”，一位哈佛博士穿越“死亡谷” - 凤凰网</a></h3>
+  <p class="summary">“到底真的还是假的”，一位哈佛博士穿越“死亡谷”  凤凰网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9UM25udm9pSktWMFVKZXJ3SXRyVGVieDVDYW9HVEs1OXN0dDBpd1JoMkppaDItdl9kajlERTNxSFJoNFI3VGxWMWVtSWRuYmhoMHZfZzA2NUJHRzBtR3dF?oc=5" target="_blank" rel="noopener">十大网投正规信誉官网下载与数字生态平台达成战略合作，加速AI驱动材料研发服务落地 - 电玩巴士</a></h3>
+  <p class="summary">十大网投正规信誉官网下载与数字生态平台达成战略合作，加速AI驱动材料研发服务落地  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiywRBVV95cUxQdDBwc09VS29XSkFMbDZnX0JSTEROYjlweUlzT0VibGRGalZpeFBaQTNtSWw3aXR5Sm9ucFJYQXlVUWtfOHZxRjBJb1lORHh0Zkl3M1dlMzF0UXRHSDE5X1hHTnFMTVFZM3BKc3g1aFltUjlQQzZpNVZUSHppdk82MFRyTFNLSUt0QWkxS3R6VUNlZFpZZ2ZPN0pUVUR6NHMzWlZCWWJNOUhnbDEzdERJSlFvSGN0MzgyZEFFMEFQS2M4b0hjTlNIZmd2RUVxcXVOMFZyMFVYTlBiTV9ObTd6cmZfWVNBUWhNa3l2RnVlVFpXR2FJaXJaVnBwVUczQXVPY3NweERvWGRnS25hdWVabzFHZ2JITGVTVmFaNE9EbGs2QU4xZy1qZEkzR3kycS1rRFpCMXpyZlVNaHIwbldrbDd0TlBpeUF4MEpWN3FKZUlQMGd4TWxQZnR5VXpCcjdKRU5EbXNzM1ZldU5kVV9nWjI4OVN4WEdTdjVzT1pwN3p2dGFqTTJ5a0tBcmM1aklfejdCVTFSR2Nrd0hOcVp5blBfZllQX25wQlNRTWhaS093VUZBVnZmRjJaVDNDYzE3NDBHT0RxYVpZU1VPS3BHcVRuR1lXbk5qa0NvRXA4cTZKd2tyWW9HQms3cUdtNDBRYmNxX3FnWW9vbWRwd2lzM3BsMG9sZnZDcUdmb3NlWDZmcjRPWGRqeTFfSHZNemN2N0NWcnhrdnFMWlEzeWZOX3gxcXFUWjFzZFE3THpCa01ZLVFxazRranRUaw?oc=5" target="_blank" rel="noopener">谷歌AI之脑不管事了，Gemini这次真要支棱起来？ - 新浪财经</a></h3>
+  <p class="summary">谷歌AI之脑不管事了，Gemini这次真要支棱起来？  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE52aXUyLWZsUmFMVDVFdFVWanEtTVhmQks1bC0xeWJWOF95MVFiVnV2REhMT3IzSmE4V0ZNTG1tc1VsMHNHYkNrUEh3QkgtY2N1UDlXVFdjV19mWDZHOHJFR2N0SEczaWVLMHc?oc=5" target="_blank" rel="noopener">NG平台下载链接发布新一代量子机器学习框架，重塑AI计算范式 - 电玩巴士</a></h3>
+  <p class="summary">NG平台下载链接发布新一代量子机器学习框架，重塑AI计算范式  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9pWHY1YkQyUm5RSHcySmNhRTdCZU9RZ3FSNXFsTjJndzdyZHpiR2U4NWM3M3h0S2laOVRZTnV0V21ySVU4WHdMa1pOWncwMHpBNmdZaTFrX2h6Q2lhVnM4MjBNdVVHWkU?oc=5" target="_blank" rel="noopener">开元ky888棋乐下载最新版正式发布：AI与区块链驱动的下一代智能竞猜平台 - 电玩巴士</a></h3>
+  <p class="summary">开元ky888棋乐下载最新版正式发布：AI与区块链驱动的下一代智能竞猜平台  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE84cm5TaGlSZ3Zzdy1UcFp3d2dvUE1MYzJDamEzX05GRjlTTTBSUTN3U2dXU2Z1NE9PUUtLbkY4Q0V6eGxONDZKYXlJTVNKMzRiYWtydU5faUN1S2ZxY0VodUtpa1U?oc=5" target="_blank" rel="noopener">预告！2026pg.168模拟器官网现场同期论坛一览 - 电玩巴士</a></h3>
+  <p class="summary">预告！2026pg.168模拟器官网现场同期论坛一览  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE8wcFF4RGVfS202ZVdJdmlkTnZKaTZzOEhYNXdaczk5dGNaa3B6dFRxaGlQSDJLNlRKR1ZJbnh4NzZjVVdnRnZlUWZsUXQxTTZWSFlwbUtZMA?oc=5" target="_blank" rel="noopener">pg模拟器在线试玩发布新一代量子计算芯片，开启算力新纪元 驱动中国昨夜今晨简报 - 电玩巴士</a></h3>
+  <p class="summary">pg模拟器在线试玩发布新一代量子计算芯片，开启算力新纪元 驱动中国昨夜今晨简报  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">文学城</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1pQUFMbWxBbGxwWjVfaFpyR3RsRVFVWjl5MUZhSlI5RTdxaWRPSV9zN0FocmpHSVl4TnZHUjhzbk5qb0d4NjAtRG5lTGRxUDF1QVNOUnlMZmhGNnVNeXRMSkM5M1g?oc=5" target="_blank" rel="noopener">马克谈天下(641) 聊聊美国政府的创世纪计划Genesis Mission - 文学城</a></h3>
+  <p class="summary">马克谈天下(641) 聊聊美国政府的创世纪计划Genesis Mission  文学城</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">文学城</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1pQUFMbWxBbGxwWjVfaFpyR3RsRVFVWjl5MUZhSlI5RTdxaWRPSV9zN0FocmpHSVl4TnZHUjhzbk5qb0d4NjAtRG5lTGRxUDF1QVNOUnlMZmhGNnVNeXRMSkM5M1g?oc=5" target="_blank" rel="noopener">马克谈天下(641) 聊聊美国政府的创世纪计划Genesis Mission - 文学城</a></h3>
+  <p class="summary">马克谈天下(641) 聊聊美国政府的创世纪计划Genesis Mission  文学城</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5sQ3NoeFEzaHdXcVdBNC1YR00xQTktVG1teGJtNXVqVUhadlI1dnZLcHktYWFaLVBFQXEtNlhEcG5fMDNlSGY3bGNZbGRoRWh0dG5wbGc0SGJsd0p0NlNycFN0UmxSdkNL?oc=5" target="_blank" rel="noopener">华为助力上海体育大学落成全国首个体育全站智能平台“澳门游戏厅电玩城” - 电玩巴士</a></h3>
+  <p class="summary">华为助力上海体育大学落成全国首个体育全站智能平台“澳门游戏厅电玩城”  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">xueqiu.com</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBTRm9IWXlMeHZBQVVDWndqcHpCa2pkMVR2NG1qeXJRZnlFSF92MVA3WDIxb3c2QktHdkdKM1Bid1Z4LWZYSjVKQTJ3b21hQ2VaZEtGczdFN2gxY2FHbG1N?oc=5" target="_blank" rel="noopener">剂泰科技-P(07666)股票股价_股价行情_讨论_资讯_财报_数据报告 - xueqiu.com</a></h3>
+  <p class="summary">剂泰科技-P(07666)股票股价_股价行情_讨论_资讯_财报_数据报告  xueqiu.com</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1NOTNIdEk0RG1WTVhxSkN0dnhLSTU0dmF5Z2RiSERBM3c1N2RKSTU0dWJrVEtQQ1NLVlFqc0ptUWdpYUpnTUZLaU5MeXdGcDZhWWRicDJtdmFqVWZETHJEd2x1MlFfSWM?oc=5" target="_blank" rel="noopener">2026鱼乐达人官方正版进入新阶段：多领域协同创新，生态体系加速成型，赋能产业数字化升级 - 电玩巴士</a></h3>
+  <p class="summary">2026鱼乐达人官方正版进入新阶段：多领域协同创新，生态体系加速成型，赋能产业数字化升级  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9BN0toMU5SQ3FVcVdpZ0lTbFpwTHh5NVl3dVpFNUdURVJaWWJKRnJUamU2TmlGX0NsMXB0V09OUGlWTnppZC1LYlJFajBrcG55dUZ5VUx4ckc?oc=5" target="_blank" rel="noopener">8868登录网页版：AI新锐创业者获10亿美元融资，发布下一代量子混合计算平台 - 电玩巴士</a></h3>
+  <p class="summary">8868登录网页版：AI新锐创业者获10亿美元融资，发布下一代量子混合计算平台  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9oRGhkRjQxUWEzd0xRcFVwLXc2X2tjTmZLTVVKTXJCSTRvTk5HbnM5bHhzeHd4bmpZNGMwVUJ5SzU3aEhkeDRvSHRNUERfamU2dU1GY2E0WHJPb1d6Z0hF?oc=5" target="_blank" rel="noopener">云开·app登录在线入口迎来系统升级，性能与体验全面提升 - 电玩巴士</a></h3>
+  <p class="summary">云开·app登录在线入口迎来系统升级，性能与体验全面提升  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">36 Kr</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTFBqSEhPUGFuVDZtRUZyQ2hHQ1Z4QUxCU0NrZ3g2WHl6N3l2bDdRMGc3eWJCdnpmbmZOWHVZR05oTVZzdDYwWkZ5ekNUUmg2Zw?oc=5" target="_blank" rel="noopener">AI倒查论文100年，99.2%的顶刊都有问题 - 36 Kr</a></h3>
+  <p class="summary">AI倒查论文100年，99.2%的顶刊都有问题  36 Kr</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ZT3BWQmVXY1BVV29FYlYwNFhIOFhOcU0tcWpBTEpnUEROQUU3Tk9velFCSWJBcHBUZHZtek5fOTRnc0tjVlFwdTNiWUYwc2ZQU28xLWF3?oc=5" target="_blank" rel="noopener">华为助力浙江大学落成全国高校规模最大智算平台‘赏金女王app下载入口官方版’ - 电玩巴士</a></h3>
+  <p class="summary">华为助力浙江大学落成全国高校规模最大智算平台‘赏金女王app下载入口官方版’  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPM3Q5OC11SHhfRWF3Z2VRZ3pwakJWSHByaGRnS1ZldVFMcjdMU2lTNXQtU3pndU1WQ3FQZThTRjlodHB6WW9Sa2dCckUzcHVtWVMwSi1HMVFXWHIwOEl2WkYwOEI4bHNYWVptX0FnRGJBRV9mSnNpc1h6MVMtMzRVX1lR?oc=5" target="_blank" rel="noopener">AI推动天文观测向“智能分析与自主发现”演进 - 新浪网</a></h3>
+  <p class="summary">AI推动天文观测向“智能分析与自主发现”演进  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPM3Q5OC11SHhfRWF3Z2VRZ3pwakJWSHByaGRnS1ZldVFMcjdMU2lTNXQtU3pndU1WQ3FQZThTRjlodHB6WW9Sa2dCckUzcHVtWVMwSi1HMVFXWHIwOEl2WkYwOEI4bHNYWVptX0FnRGJBRV9mSnNpc1h6MVMtMzRVX1lR?oc=5" target="_blank" rel="noopener">AI推动天文观测向“智能分析与自主发现”演进 - 新浪网</a></h3>
+  <p class="summary">AI推动天文观测向“智能分析与自主发现”演进  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE1vZ01tOFAzRzI1Z2pEbFUwXzhaN18yR1dGSWpKVkJrVXNxYVgwX3I1d2ZSazNQLThHbEg4TEMzQ2NYaFNCRHJiNTRWWFNLX3FxVHEzZU1oWExRWTg1N2hYVHJB?oc=5" target="_blank" rel="noopener">betway88西汉姆联称通用人工智能将在2028年实现 可用于自动化科研 - 电玩巴士</a></h3>
+  <p class="summary">betway88西汉姆联称通用人工智能将在2028年实现 可用于自动化科研  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">智慧城市行业分析</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxOcEpIenpoZlB1b0JXX25kLTFyb2JCNDNvem83SXRqR1lObkZXc1BQX19zUHBuTTNKSFNSN1l5V0dRb3VaaXI3WUZnQ3JUQllrOG52a2w0QkQtWVJDSVdmRDdBMWcyR0dFRmtJT193V2NrYVcyd21wVnZMNnNHVDN5cTVLMUpra0lybUFBbEdFTjladS1rNHpNRUxGbUdCVDNLOGJ4QVRwN3RWOEg5akF6eXB0dWwyQjZjWS1KZjNvdHJoclk2SjZ0TkpGbllSQkp5Sl8zZEZpVGVOaUU2QlFxVVVlc2hlWEhDR3M4UDZEd2NIS3EwclFpa1R4VnhnOUVfbFJ3?oc=5" target="_blank" rel="noopener">东莞市加快建设“人工智能+”城市实施方案（2026—2030年）：到2028年集聚相关企业不少于800家，推出不少于300个“人工智能+”标杆应用场景，产业规模突破1000亿元– 智慧城市行业分析 - 智慧城市行业分析</a></h3>
+  <p class="summary">东莞市加快建设“人工智能+”城市实施方案（2026—2030年）：到2028年集聚相关企业不少于800家，推出不少于300个“人工智能+”标杆应用场景，产业规模突破1000亿元– 智慧城市行业分析  智慧城市行业分析</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPeEw5dFpOdy05N0FUeFh6ejFoTUlsZ3M1bUJwZ3ZTSElEMDlCM1RjTGM3WW5XbVlFZVVGcUZGazd4UWtSbTRiRjBNblRlN29BOTVPbjZROVpuMUdmcEFiQjJqNFdaQ3VGeDZJZ3NWZ1RXTTM3Y3dvTFZyVWQyRXR5alBjMA?oc=5" target="_blank" rel="noopener">如何确保AI设计病毒的研究符合伦理和法律规范？ - 新浪网</a></h3>
+  <p class="summary">如何确保AI设计病毒的研究符合伦理和法律规范？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">财富号</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBaMW1aVVBZclYtQktUcEFuVXVKYWRWSjhwUTNrMGp5V2RGMnFkd2NGQ0xwQlRkTjd6UXlvS1Q1S3lYWlZfWk1KU1RsYm5ycVd5NDBmZ0pzWGk3TnQyb3AxbXRTa2YwMF9XTHlz?oc=5" target="_blank" rel="noopener">千亿研发订单共振，CRO板块集体涨停 - 财富号</a></h3>
+  <p class="summary">千亿研发订单共振，CRO板块集体涨停  财富号</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQVzBERFkyWFlfbVhnRWR4QVM2UWY0R3BMS2pSODJyTG02WFZkbERQVUhjWEtwNWxuSTQyMGN0MXRFaFdhS2VkaVpqWWlBRVpGcmtHWHlGWWZCR0tmQk5lVVZvMF8xcExXVE96aTQ5eE9lcjFZU2RRNzdnQ19ienZBTXpnYw?oc=5" target="_blank" rel="noopener">AI设计出的全新病毒会对人类健康构成直接威胁吗？ - 新浪网</a></h3>
+  <p class="summary">AI设计出的全新病毒会对人类健康构成直接威胁吗？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">中财网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE01RVdlMmFfbWMyRHlVMTJyb2FOOEh1eVA1ZDFpUkJBejl6a3luT2JiMkZoaUNJaXVVRnBSalJLV0UxQ1hlZHV1emI4SlpHRGdOVFhLODdraGpweE1RWEpyRWhab2s3aHhzb3U5LVNOTmdkUXU2Umc?oc=5" target="_blank" rel="noopener">10股获买入评级 最新:英科医疗 - 中财网</a></h3>
+  <p class="summary">10股获买入评级 最新:英科医疗  中财网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-08</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPNXNtc2RlRlp1d1dZUTNYMHJ0MTlndXE1WU9yUHFzVUw0WnFTTzN0UUdYbUZzTnJwd1pGR3kzUTIyb0JFYWx5TTQ3TGFMb3FmNDljU2ZENlNPbzFtcUYwSFR1eFBvOWxEbDg2Q0NsSHBGandHR3B1Y0YyajVFcl9PdjgzWQ?oc=5" target="_blank" rel="noopener">如何看待AI生成的病毒模型可能带来的生物安全风险？ - 新浪网</a></h3>
+  <p class="summary">如何看待AI生成的病毒模型可能带来的生物安全风险？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article></div>
+</section><section class="section">
+  <h2 class="section-title"><span class="badge" style="background:#ffd21e">HuggingFace</span><span class="count">15 条</span></h2>
+  <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/meridianal/FinAI" target="_blank" rel="noopener">meridianal/FinAI</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    <span class="tag">text-generation</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Miiche/visualrl-ral-long-10p0" target="_blank" rel="noopener">Miiche/visualrl-ral-long-10p0</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/power612/albedo-qwen3.6-35b-4fc3a837" target="_blank" rel="noopener">power612/albedo-qwen3.6-35b-4fc3a837</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/iamseungpil/metacot-h200-triobj-dcpo-v3" target="_blank" rel="noopener">iamseungpil/metacot-h200-triobj-dcpo-v3</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Miiche/visualrl-ral-c5p0" target="_blank" rel="noopener">Miiche/visualrl-ral-c5p0</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/KoKiA8807/10m" target="_blank" rel="noopener">KoKiA8807/10m</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/modilify/Modilify-Mk1-preview" target="_blank" rel="noopener">modilify/Modilify-Mk1-preview</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    <span class="tag">image-text-to-text</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Mergeability/zoo-language-beetle-monolingual-fineweb-100m-deu__beetle-monolingual-fineweb-100m-pol__qmd_guide" target="_blank" rel="noopener">Mergeability/zoo-language-beetle-monolingual-fineweb-100m-deu__beetle-monolingual-fineweb-100m-pol__qmd_guide</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    <span class="tag">text-generation</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Mergeability/zoo-language-beetle-monolingual-fineweb-100m-ell__beetle-monolingual-fineweb-100m-nld__average__" target="_blank" rel="noopener">Mergeability/zoo-language-beetle-monolingual-fineweb-100m-ell__beetle-monolingual-fineweb-100m-nld__average__</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    <span class="tag">text-generation</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/thirtyspokes/standings" target="_blank" rel="noopener">thirtyspokes/standings</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/EhtishamAhmed/gemma3-4b-8bit-paraphrased-bank-ds-95-5-lora" target="_blank" rel="noopener">EhtishamAhmed/gemma3-4b-8bit-paraphrased-bank-ds-95-5-lora</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Mergeability/zoo-language-beetle-monolingual-fineweb-100m-deu__beetle-monolingual-fineweb-100m-jpn__task_arit" target="_blank" rel="noopener">Mergeability/zoo-language-beetle-monolingual-fineweb-100m-deu__beetle-monolingual-fineweb-100m-jpn__task_arit</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    <span class="tag">text-generation</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/tanprodium/augseg-checkpoints" target="_blank" rel="noopener">tanprodium/augseg-checkpoints</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/sdsfsf56/MyAwesomeModel-TestRepo" target="_blank" rel="noopener">sdsfsf56/MyAwesomeModel-TestRepo</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/fpadovani/swa-latn-100mb-after-ppt-Dp-100mb-ckpt500_seed455" target="_blank" rel="noopener">fpadovani/swa-latn-100mb-after-ppt-Dp-100mb-ckpt500_seed455</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    <span class="tag">text-generation</span>
+  </div>
+</article></div>
+</section>
+  <footer>更新时间：2026-08-09 21:07 · 共 114 条</footer>
+</div>
+</body>
+</html>

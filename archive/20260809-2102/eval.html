@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 大模型测评看板</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin:0; background:#f6f7f9; color:#222; line-height:1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+header { text-align:center; padding: 28px 0 12px; }
+h1 { margin:0; font-size:1.8em; }
+.sub { color:#666; font-size:.92em; }
+.nav { text-align:center; margin:8px 0 16px; }
+.nav a { color:#1a73e8; text-decoration:none; font-size:.9em; }
+.nav a:hover { text-decoration:underline; }
+.section { margin-top:28px; }
+.section-title { display:flex; align-items:center; gap:10px; margin:0 0 12px; font-size:1.2em; }
+.table-wrap { overflow-x:auto; background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:8px 16px; }
+table { border-collapse:collapse; width:100%; font-size:.9em; }
+th, td { padding:9px 10px; text-align:left; border-bottom:1px solid #eef0f3; }
+th { color:#666; font-weight:600; font-size:.85em; }
+.rank { font-weight:700; color:#1a73e8; width:36px; }
+.model { font-weight:600; }
+.model a { color:#1a0dab; text-decoration:none; }
+.model a:hover { text-decoration:underline; }
+.org { display:block; color:#888; font-size:.78em; font-weight:400; }
+.score { font-weight:600; }
+.votes, .price, .ctx { color:#555; font-size:.88em; }
+.empty-cell { color:#999; text-align:center; padding:16px; }
+.table-note { color:#999; font-size:.8em; margin:8px 0 12px; }
+.source-link { color:#1a73e8; text-decoration:none; font-weight:600; }
+.source-link:hover { text-decoration:underline; }
+.tabs { margin-bottom:8px; }
+.tab-bar { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+.tab { background:#fff; border:1px solid #d5dbe2; border-radius:999px; padding:7px 16px; font-size:.88em; cursor:pointer; color:#444; transition:all .15s; }
+.tab:hover { border-color:#1a73e8; color:#1a73e8; }
+.tab.active { background:#1a73e8; border-color:#1a73e8; color:#fff; }
+.tab-count { opacity:.75; font-size:.82em; margin-left:4px; }
+.tab-panel { display:none; }
+.tab-panel.active { display:block; }
+.digest { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:20px 24px; margin:20px 0; }
+.digest h2 { margin:0 0 4px; font-size:1.25em; }
+.digest-date { color:#888; font-size:.85em; margin-bottom:16px; }
+.digest-item { border-top:1px solid #eef0f3; padding:14px 0; }
+.digest-item-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.digest-rank { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#1a73e8; color:#fff; font-size:.78em; font-weight:700; flex:none; }
+.digest-source { color:#666; font-size:.82em; }
+.digest-title { margin:0 0 6px; font-size:1.02em; line-height:1.45; }
+.digest-title a { color:#1a0dab; text-decoration:none; }
+.digest-title a:hover { text-decoration:underline; }
+.digest-impact, .digest-why { margin:3px 0; color:#333; font-size:.92em; }
+.digest-why { color:#555; }
+.digest-impact strong, .digest-why strong { color:#1a73e8; font-weight:600; margin-right:2px; }
+.digest-trend { border-top:2px solid #eef0f3; margin-top:10px; padding-top:14px; }
+.digest-trend h3 { margin:0 0 6px; font-size:1em; color:#b26a00; }
+.digest-trend p { margin:0; color:#555; font-size:.94em; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:14px; }
+.card { background:#fff; border:1px solid #e3e6ea; border-radius:10px; padding:14px 16px; }
+.card h3 { margin:8px 0 6px; font-size:.98em; }
+.card h3 a { color:#1a0dab; text-decoration:none; }
+.card h3 a:hover { text-decoration:underline; }
+.card-head { display:flex; align-items:center; gap:8px; font-size:.8em; }
+.badge { color:#fff; padding:2px 8px; border-radius:999px; font-size:.72em; font-weight:600; white-space:nowrap; }
+.date { color:#888; }
+.summary { color:#444; font-size:.86em; margin:4px 0; }
+.empty { color:#888; padding:20px; background:#fff; border:1px solid #e3e6ea; border-radius:10px; }
+footer { text-align:center; color:#999; font-size:.8em; margin-top:32px; }
+@media (prefers-color-scheme: dark) {
+  body { background:#14171c; color:#e8eaed; }
+  .table-wrap, .card, .empty, .digest { background:#1e232b; border-color:#2b313b; }
+  th, td { border-bottom-color:#2b313b; }
+  th, .org, .date, .table-note, .votes, .price, .ctx, .digest-date { color:#9aa0a6; }
+  .model a, .card h3 a, .digest-title a { color:#8ab4f8; }
+  .summary, .digest-impact { color:#c9cdd3; }
+  .digest-why, .digest-trend p { color:#c0c4cc; }
+  .digest-item, .digest-trend { border-top-color:#2b313b; }
+  .tab { background:#1e232b; border-color:#2b313b; color:#c9cdd3; }
+  .sub { color:#9aa0a6; }
+  .source-link { color:#8ab4f8; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📊 AI 大模型测评看板</h1>
+    <div class="sub">四大权威排行榜 · 全文深度分析 · 权威媒体测评新闻</div>
+    <div class="nav"><a href="index.html">← 返回 AI4S 进展看板</a></div>
+  </header>
+
+  
+
+  <section class="section">
+    <h2 class="section-title">🏆 权威基准排行榜（点击标签切换）</h2>
+    <div class="tabs">
+<div class="tab-bar" role="tablist">
+<button class="tab active" data-tab="0" role="tab" aria-selected="true">LMArena <span class="tab-count">10</span></button><button class="tab" data-tab="1" role="tab" aria-selected="false">Artificial Analysis <span class="tab-count">10</span></button><button class="tab" data-tab="2" role="tab" aria-selected="false">LiveBench <span class="tab-count">10</span></button><button class="tab" data-tab="3" role="tab" aria-selected="false">Open LLM Leaderboard <span class="tab-count">10</span></button><button class="tab" data-tab="4" role="tab" aria-selected="false">OpenCompass 司南 <span class="tab-count">10</span></button>
+</div>
+<div class="tab-panel active" id="panel-0" role="tabpanel">
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>模型</th><th>Score (Elo)</th><th>投票</th><th>价格 $/M</th><th>上下文</th></tr></thead>
+<tbody><tr>
+  <td class="rank">1</td>
+  <td class="model"><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">claude-fable-5</a><span class="org">Anthropic</span></td>
+  <td class="score">1507±6</td>
+  <td class="votes">19,390</td>
+  <td class="price">$10 / $50</td>
+  <td class="ctx">1M</td>
+</tr>
+<tr>
+  <td class="rank">2</td>
+  <td class="model"><a href="https://www.anthropic.com/news/claude-opus-4-6" target="_blank" rel="noopener">claude-opus-4-6-thinking</a><span class="org">Anthropic</span></td>
+  <td class="score">1505±4</td>
+  <td class="votes">69,336</td>
+  <td class="price">$2.50 / $12.50</td>
+  <td class="ctx">1M</td>
+</tr>
+<tr>
+  <td class="rank">3</td>
+  <td class="model"><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">claude-opus-4-7-thinking</a><span class="org">Anthropic</span></td>
+  <td class="score">1502±4</td>
+  <td class="votes">57,018</td>
+  <td class="price">$5 / $25</td>
+  <td class="ctx">1M</td>
+</tr>
+<tr>
+  <td class="rank">4</td>
+  <td class="model"><a href="https://developer.meta.com/ai/models/muse-spark/" target="_blank" rel="noopener">muse-spark-1.2 (xHigh)</a><span class="org">Meta</span></td>
+  <td class="score">1498±13</td>
+  <td class="votes">2,057</td>
+  <td class="price">$1.25 / $4.25</td>
+  <td class="ctx">N/A</td>
+</tr>
+<tr>
+  <td class="rank">5</td>
+  <td class="model"><a href="https://www.anthropic.com/news/claude-opus-4-6" target="_blank" rel="noopener">claude-opus-4-6</a><span class="org">Anthropic</span></td>
+  <td class="score">1497±3</td>
+  <td class="votes">73,158</td>
+  <td class="price">$2.50 / $12.50</td>
+  <td class="ctx">1M</td>
+</tr>
+<tr>
+  <td class="rank">6</td>
+  <td class="model"><a href="https://www.qwencloud.com/models/qwen3.8-max" target="_blank" rel="noopener">qwen3.8-max</a><span class="org"></span></td>
+  <td class="score">1497±9Preliminary</td>
+  <td class="votes">4,662</td>
+  <td class="price">$2 / $6</td>
+  <td class="ctx">1M</td>
+</tr>
+<tr>
+  <td class="rank">7</td>
+  <td class="model"><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">claude-opus-4-7</a><span class="org">Anthropic</span></td>
+  <td class="score">1493±4</td>
+  <td class="votes">58,135</td>
+  <td class="price">$5 / $25</td>
+  <td class="ctx">1M</td>
+</tr>
+<tr>
+  <td class="rank">8</td>
+  <td class="model"><a href="https://www.anthropic.com/news/claude-opus-5" target="_blank" rel="noopener">claude-opus-5-high</a><span class="org">Anthropic</span></td>
+  <td class="score">1493±6</td>
+  <td class="votes">14,902</td>
+  <td class="price">$5 / $25</td>
+  <td class="ctx">1M</td>
+</tr>
+<tr>
+  <td class="rank">9</td>
+  <td class="model"><a href="https://www.anthropic.com/news/claude-opus-5" target="_blank" rel="noopener">claude-opus-5-max</a><span class="org">Anthropic</span></td>
+  <td class="score">1488±8</td>
+  <td class="votes">7,137</td>
+  <td class="price">$5 / $25</td>
+  <td class="ctx">1M</td>
+</tr>
+<tr>
+  <td class="rank">10</td>
+  <td class="model"><a href="https://ai.meta.com/blog/introducing-muse-spark-msl/" target="_blank" rel="noopener">muse-spark</a><span class="org">Meta</span></td>
+  <td class="score">1488±6Preliminary</td>
+  <td class="votes">13,476</td>
+  <td class="price">N/A</td>
+  <td class="ctx">N/A</td>
+</tr></tbody>
+</table>
+<p class="table-note">数据来源：LMArena Text Arena · 人工盲测 Elo 排行榜 · <a href="https://lmarena.ai/leaderboard/text" target="_blank" rel="noopener" class="source-link">查看原始来源 ↗</a></p>
+</div>
+</div><div class="tab-panel" id="panel-1" role="tabpanel">
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>模型</th><th>Intelligence Index</th><th>Cost/Task</th></tr></thead>
+<tbody><tr>
+  <td class="rank">1</td>
+  <td class="model">Claude Opus 5 (max)<span class="org">Anthropic</span></td>
+  <td class="score">63</td>
+  <td class="price">$2.34</td>
+</tr>
+<tr>
+  <td class="rank">2</td>
+  <td class="model">Claude Opus 5 (xhigh)<span class="org">Anthropic</span></td>
+  <td class="score">63</td>
+  <td class="price">$1.80</td>
+</tr>
+<tr>
+  <td class="rank">3</td>
+  <td class="model">Claude Fable 5 (with fallback)<span class="org">Anthropic</span></td>
+  <td class="score">62</td>
+  <td class="price">$3.14</td>
+</tr>
+<tr>
+  <td class="rank">4</td>
+  <td class="model">Claude Opus 5 (high)<span class="org">Anthropic</span></td>
+  <td class="score">61</td>
+  <td class="price">$1.23</td>
+</tr>
+<tr>
+  <td class="rank">5</td>
+  <td class="model">GPT-5.6 Sol (max)<span class="org">OpenAI</span></td>
+  <td class="score">61</td>
+  <td class="price">$1.23</td>
+</tr>
+<tr>
+  <td class="rank">6</td>
+  <td class="model">Kimi K3 (max)<span class="org">Kimi</span></td>
+  <td class="score">60</td>
+  <td class="price">$0.84</td>
+</tr>
+<tr>
+  <td class="rank">7</td>
+  <td class="model">GPT-5.6 Sol (xhigh)<span class="org">OpenAI</span></td>
+  <td class="score">59</td>
+  <td class="price">$0.81</td>
+</tr>
+<tr>
+  <td class="rank">8</td>
+  <td class="model">Claude Opus 5 (medium)<span class="org">Anthropic</span></td>
+  <td class="score">59</td>
+  <td class="price">$0.72</td>
+</tr>
+<tr>
+  <td class="rank">9</td>
+  <td class="model">Qwen3.8 Max<span class="org">Alibaba</span></td>
+  <td class="score">58</td>
+  <td class="price">$1.13</td>
+</tr>
+<tr>
+  <td class="rank">10</td>
+  <td class="model">GPT-5.6 Sol (high)<span class="org">OpenAI</span></td>
+  <td class="score">57</td>
+  <td class="price">$0.55</td>
+</tr></tbody>
+</table>
+<p class="table-note">数据来源：Artificial Analysis Intelligence Index · <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener" class="source-link">查看原始来源 ↗</a></p>
+</div>
+</div><div class="tab-panel" id="panel-2" role="tabpanel">
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>模型</th><th>Overall</th><th>推理</th><th>编码</th><th>数学</th><th>语言</th><th>Cost</th></tr></thead>
+<tbody><tr>
+  <td class="rank">1</td>
+  <td class="model">Claude Fable 5 Max Effort</td>
+  <td class="score">83.0</td>
+  <td class="votes">89.7</td>
+  <td class="votes">86.0</td>
+  <td class="votes">96.0</td>
+  <td class="votes">90.7</td>
+  <td class="price">$1.439</td>
+</tr>
+<tr>
+  <td class="rank">2</td>
+  <td class="model">GPT-5.6 Sol Max Effort</td>
+  <td class="score">81.0</td>
+  <td class="votes">91.7</td>
+  <td class="votes">83.9</td>
+  <td class="votes">96.2</td>
+  <td class="votes">87.7</td>
+  <td class="price">$0.515</td>
+</tr>
+<tr>
+  <td class="rank">3</td>
+  <td class="model">GPT-5.5 Thinking xHigh Effort</td>
+  <td class="score">80.2</td>
+  <td class="votes">89.7</td>
+  <td class="votes">82.1</td>
+  <td class="votes">95.9</td>
+  <td class="votes">87.4</td>
+  <td class="price">$0.435</td>
+</tr>
+<tr>
+  <td class="rank">4</td>
+  <td class="model">Claude 5 Opus Thinking Max Effort</td>
+  <td class="score">80.1</td>
+  <td class="votes">91.2</td>
+  <td class="votes">81.4</td>
+  <td class="votes">95.7</td>
+  <td class="votes">88.7</td>
+  <td class="price">$0.699</td>
+</tr>
+<tr>
+  <td class="rank">5</td>
+  <td class="model">Kimi K3open</td>
+  <td class="score">79.2</td>
+  <td class="votes">90.7</td>
+  <td class="votes">81.4</td>
+  <td class="votes">84.4</td>
+  <td class="votes">85.5</td>
+  <td class="price">$0.348</td>
+</tr>
+<tr>
+  <td class="rank">6</td>
+  <td class="model">Qwen 3.8 Max</td>
+  <td class="score">78.5</td>
+  <td class="votes">88.2</td>
+  <td class="votes">72.9</td>
+  <td class="votes">91.3</td>
+  <td class="votes">79.7</td>
+  <td class="price">$0.275</td>
+</tr>
+<tr>
+  <td class="rank">7</td>
+  <td class="model">GPT-5.4 Thinking xHigh Effort</td>
+  <td class="score">78.0</td>
+  <td class="votes">88.1</td>
+  <td class="votes">77.5</td>
+  <td class="votes">94.1</td>
+  <td class="votes">82.6</td>
+  <td class="price">$0.387</td>
+</tr>
+<tr>
+  <td class="rank">8</td>
+  <td class="model">Muse Spark 1.2 xHigh Effort</td>
+  <td class="score">78.0</td>
+  <td class="votes">90.0</td>
+  <td class="votes">77.5</td>
+  <td class="votes">91.2</td>
+  <td class="votes">78.6</td>
+  <td class="price">$0.375</td>
+</tr>
+<tr>
+  <td class="rank">9</td>
+  <td class="model">GPT-5.6 Terra Max Effort</td>
+  <td class="score">77.9</td>
+  <td class="votes">90.6</td>
+  <td class="votes">78.2</td>
+  <td class="votes">94.9</td>
+  <td class="votes">82.9</td>
+  <td class="price">$0.352</td>
+</tr>
+<tr>
+  <td class="rank">10</td>
+  <td class="model">Gemini 3.1 Pro Preview High</td>
+  <td class="score">77.0</td>
+  <td class="votes">84.0</td>
+  <td class="votes">76.5</td>
+  <td class="votes">91.0</td>
+  <td class="votes">85.4</td>
+  <td class="price">$0.286</td>
+</tr></tbody>
+</table>
+<p class="table-note">数据来源：LiveBench · 抗污染客观评测 · <a href="https://livebench.ai/" target="_blank" rel="noopener" class="source-link">查看原始来源 ↗</a></p>
+</div>
+</div><div class="tab-panel" id="panel-3" role="tabpanel">
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>模型</th><th>Average</th><th>参数量</th><th>架构</th></tr></thead>
+<tbody><tr>
+  <td class="rank">1</td>
+  <td class="model"><a href="https://huggingface.co/CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑" target="_blank" rel="noopener">CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">46.8</td>
+  <td class="price">32.764B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">2</td>
+  <td class="model"><a href="https://huggingface.co/CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑" target="_blank" rel="noopener">CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">45.7</td>
+  <td class="price">32.764B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">3</td>
+  <td class="model"><a href="https://huggingface.co/EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑" target="_blank" rel="noopener">EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑</a><span class="org">other</span></td>
+  <td class="score">44.2</td>
+  <td class="price">72.706B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">4</td>
+  <td class="model"><a href="https://huggingface.co/Aryanne/QwentileSwap  📑" target="_blank" rel="noopener">Aryanne/QwentileSwap  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">43.9</td>
+  <td class="price">32.764B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">5</td>
+  <td class="model"><a href="https://huggingface.co/Cran-May/tempmotacilla-cinerea-0308  📑" target="_blank" rel="noopener">Cran-May/tempmotacilla-cinerea-0308  📑</a><span class="org"></span></td>
+  <td class="score">43.6</td>
+  <td class="price">14.766B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">6</td>
+  <td class="model"><a href="https://huggingface.co/Daemontatox/Llama3.3-70B-CogniLink  📑" target="_blank" rel="noopener">Daemontatox/Llama3.3-70B-CogniLink  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">42.8</td>
+  <td class="price">70.554B</td>
+  <td class="ctx">LlamaForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">7</td>
+  <td class="model"><a href="https://huggingface.co/BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑" target="_blank" rel="noopener">BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑</a><span class="org"></span></td>
+  <td class="score">42.3</td>
+  <td class="price">72.7B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">8</td>
+  <td class="model"><a href="https://huggingface.co/1024m/QWEN-14B-B100  📑" target="_blank" rel="noopener">1024m/QWEN-14B-B100  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">41.9</td>
+  <td class="price">14.77B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">9</td>
+  <td class="model"><a href="https://huggingface.co/CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑" target="_blank" rel="noopener">CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">41.8</td>
+  <td class="price">14.77B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">10</td>
+  <td class="model"><a href="https://huggingface.co/CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑" target="_blank" rel="noopener">CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">41.5</td>
+  <td class="price">14.77B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr></tbody>
+</table>
+<p class="table-note">数据来源：HuggingFace Open LLM Leaderboard v2 · 开源模型 · <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" class="source-link">查看原始来源 ↗</a></p>
+</div>
+</div><div class="tab-panel" id="panel-4" role="tabpanel">
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>模型</th><th>均分</th><th>参数量</th><th>语言</th><th>知识</th><th>推理</th><th>数学</th><th>代码</th><th>智能体</th></tr></thead>
+<tbody><tr>
+  <td class="rank">1</td>
+  <td class="model"><span class="plain-model">GPT-5.4-2026-03-05 (high)</span><span class="org">OpenAI</span></td>
+  <td class="score">67.3</td>
+  <td class="price">N/A</td>
+  <td class="votes">80.2</td>
+  <td class="votes">93.7</td>
+  <td class="votes">64.4</td>
+  <td class="votes">72.1</td>
+  <td class="votes">63.4</td>
+  <td class="votes">52.8</td>
+</tr>
+<tr>
+  <td class="rank">2</td>
+  <td class="model"><span class="plain-model">DeepSeek-V4-Pro</span><span class="org">DeepSeek</span></td>
+  <td class="score">65.1</td>
+  <td class="price">1.6T</td>
+  <td class="votes">70.1</td>
+  <td class="votes">92.1</td>
+  <td class="votes">60</td>
+  <td class="votes">74.8</td>
+  <td class="votes">59.4</td>
+  <td class="votes">55.3</td>
+</tr>
+<tr>
+  <td class="rank">3</td>
+  <td class="model"><span class="plain-model">Claude Opus 4.7 (high)</span><span class="org">Anthropic</span></td>
+  <td class="score">64</td>
+  <td class="price">N/A</td>
+  <td class="votes">70</td>
+  <td class="votes">92.2</td>
+  <td class="votes">63.5</td>
+  <td class="votes">72.4</td>
+  <td class="votes">63.7</td>
+  <td class="votes">43.3</td>
+</tr>
+<tr>
+  <td class="rank">4</td>
+  <td class="model"><span class="plain-model">Doubao-Seed-2-0-Pro-260215 (high)</span><span class="org">ByteDance</span></td>
+  <td class="score">63.5</td>
+  <td class="price">N/A</td>
+  <td class="votes">77.3</td>
+  <td class="votes">91.9</td>
+  <td class="votes">65.2</td>
+  <td class="votes">77.3</td>
+  <td class="votes">57</td>
+  <td class="votes">44.2</td>
+</tr>
+<tr>
+  <td class="rank">5</td>
+  <td class="model"><span class="plain-model">Kimi-K2.6</span><span class="org">Moonshot</span></td>
+  <td class="score">63.4</td>
+  <td class="price">1T</td>
+  <td class="votes">75</td>
+  <td class="votes">91.5</td>
+  <td class="votes">62.2</td>
+  <td class="votes">76.4</td>
+  <td class="votes">62.4</td>
+  <td class="votes">39.3</td>
+</tr>
+<tr>
+  <td class="rank">6</td>
+  <td class="model"><span class="plain-model">Gemini-3.1-Pro-Preview</span><span class="org">Google</span></td>
+  <td class="score">63.2</td>
+  <td class="price">N/A</td>
+  <td class="votes">74.8</td>
+  <td class="votes">95.2</td>
+  <td class="votes">59.7</td>
+  <td class="votes">76.5</td>
+  <td class="votes">60.2</td>
+  <td class="votes">41</td>
+</tr>
+<tr>
+  <td class="rank">7</td>
+  <td class="model"><span class="plain-model">Qwen3.6-Max-Preview</span><span class="org">Alibaba</span></td>
+  <td class="score">60.8</td>
+  <td class="price">N/A</td>
+  <td class="votes">79.5</td>
+  <td class="votes">89.6</td>
+  <td class="votes">59.2</td>
+  <td class="votes">73.4</td>
+  <td class="votes">61.6</td>
+  <td class="votes">30.5</td>
+</tr>
+<tr>
+  <td class="rank">8</td>
+  <td class="model"><span class="plain-model">DeepSeek-V4-Flash</span><span class="org">DeepSeek</span></td>
+  <td class="score">60.4</td>
+  <td class="price">284B</td>
+  <td class="votes">66.2</td>
+  <td class="votes">88.6</td>
+  <td class="votes">57.2</td>
+  <td class="votes">69.2</td>
+  <td class="votes">56.4</td>
+  <td class="votes">46.7</td>
+</tr>
+<tr>
+  <td class="rank">9</td>
+  <td class="model"><span class="plain-model">Doubao-Seed-2-0-Lite-260215 (high)</span><span class="org">ByteDance</span></td>
+  <td class="score">60.4</td>
+  <td class="price">N/A</td>
+  <td class="votes">74.4</td>
+  <td class="votes">88.9</td>
+  <td class="votes">59.5</td>
+  <td class="votes">72.4</td>
+  <td class="votes">54.6</td>
+  <td class="votes">42.4</td>
+</tr>
+<tr>
+  <td class="rank">10</td>
+  <td class="model"><span class="plain-model">GLM-5.1</span><span class="org">Zhipu AI</span></td>
+  <td class="score">59</td>
+  <td class="price">744B</td>
+  <td class="votes">71.9</td>
+  <td class="votes">89.9</td>
+  <td class="votes">54.3</td>
+  <td class="votes">67.9</td>
+  <td class="votes">55.7</td>
+  <td class="votes">39.9</td>
+</tr></tbody>
+</table>
+<p class="table-note">数据来源：OpenCompass 司南 · 上海人工智能实验室官方评测榜 · <a href="https://rank.opencompass.org.cn/home" target="_blank" rel="noopener" class="source-link">查看原始来源 ↗</a></p>
+</div>
+</div>
+</div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">📰 模型测评动态与新闻</h2>
+    <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Celeris-1</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">DeepSeek V4 Flash 0731 scores 50 on the Artificial Analysis Intelligence Index, 10 points above previous DeepSeek V4 Flash</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">G9v3-39A5B</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Launching the Endpoint Accuracy Index: Same Model, Different Accuracy</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Muse Spark 1.2 (xhigh)</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Ling 3.0 Flash</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Qwen3.8 Max</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Muse Spark 1.2</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Ling 3.0 Tiny</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">What&#x27;s changed</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Artificial Analysis Intelligence Index v4.1.1</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Launching v4.1.1 of the Artificial Analysis Intelligence Index</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.ithome.com/0/987/603.htm" target="_blank" rel="noopener">5 岁孩子使用 AI 后“暴躁易怒”，家长发现 AI 竟会迎合孩子编造血腥暴力内容</a></h3>
+  <p class="summary">IT之家 8 月 9 日消息，据央视新闻今天（9 日）报道，孩子沉迷 AI 聊天，或造成身心健康隐患。当事人刘女士告诉记者，自己因为工作繁忙，在朋友的推荐下开始让孩子使用 AI。据其介绍，让孩子使用 AI 的初衷是利用其陪伴功能和学习功能对孩子进行早教启蒙。然而，当孩子使用 AI 一段时间后，孩子的语言表达出现了一些不好的苗头，甚至带有暴力倾向。刘女士进一步透露，自己在浏览孩子平常使用的平板时发现，里面两个东西都是恐怖、血腥相关内容，甚…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.ithome.com/0/987/602.htm" target="_blank" rel="noopener">员工用 AI 批量提交诉讼，英国就业法院诉状激增</a></h3>
+  <p class="summary">IT之家 8 月 9 日消息，据科技媒体 The Decoder 今天报道，英国就业法院的临时救济申请数如今增长迅猛。越来越多员工开始使用 ChatGPT 或 Grok 免费起草诉状，不再聘请律师。英国就业法庭主席 Barry Clarke（IT之家注：巴里 · 克拉克）和 Susan Walker（苏珊 · 沃克）联合发布的一份备忘录显示，该法院今年 3 月受理的案件增长 39%，积压案件数量增加 55%。许多 AI 生成的诉状长达数…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.ithome.com/0/987/601.htm" target="_blank" rel="noopener">上汽大众：ID. ERA 5X 定位“超能纯电 SUV”，搭载“行云智行”智能辅助驾驶系统</a></h3>
+  <p class="summary">IT之家 8 月 9 日消息，工信部周五发布第 410 批《道路机动车辆生产企业及产品公告》新产品公示，上汽大众 ID. ERA 5X 纯电动多用途乘用车完成申报。上汽大众官方昨日对新车进行详细介绍，作为 ID. ERA 家族首款纯电车型，ID. ERA 5X 定位为“超能纯电 SUV”，新车也是大众全球首款基于 CMP 平台打造、搭载 CEA 电子电气架构的量产车型。新车前脸采用贯穿式灯带搭配发光 Logo，并配备灵眸矩阵 LED 大…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.ithome.com/0/987/600.htm" target="_blank" rel="noopener">《空之轨迹 the 2nd》游戏新预告发布，9 月 17 日发售</a></h3>
+  <p class="summary">IT之家 8 月 9 日消息，《空之轨迹 the 2nd》游戏最新预告片现已公开，本作将于 9 月 17 日发售，登陆 PS5、Switch 和 PC 平台，支持简体中文界面和字幕。IT之家了解到，本次发售同时包含数字版和实体版。作为《空之轨迹 the 1st》的正统续作，本作是“轨迹”系列完全重制企划的第二部作品，剧情紧接前作，以利贝尔王国全境为舞台，玩家将继续扮演已成为正游击士的艾丝蒂尔 · 布莱特，为寻找失踪的搭档约书亚 · 阿斯…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.ithome.com/0/987/590.htm" target="_blank" rel="noopener">穆迪警告：银行加速拥抱 AI 或将陷入科技巨头依赖</a></h3>
+  <p class="summary">IT之家 8 月 9 日消息，据《卫报》今天报道，信用评级机构穆迪警告称，大型银行如今越来越依赖几家硅谷科技公司。IT之家在此援引穆迪，金融行业将 AI 融入日常运营后可以获得降本增效等好处。但投入 AI 需要耗费大量金钱，还可能带来隐私泄露、网络安全和诈骗等风险。据英国财政部 1 月报告，英国已有 75% 金融企业使用 AI，其中保险公司、国际银行的接受程度最高。这些企业主要使用 AI 进行自动化工作，甚至处理保险理赔、评估客户信贷报…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.ithome.com/0/987/583.htm" target="_blank" rel="noopener">消息称 iQOO Z11S 手机本月发布，搭载天玑 7500 / Turbo 芯片</a></h3>
+  <p class="summary">IT之家 8 月 9 日消息，一款型号为 V2603A 的 vivo 新机近日现身 Geekbench 跑分数据库，该机已通过 3C 认证，支持 44W 快充。博主 @体验more 今日确认，这款新机是 iQOO Z11S，并透露其将于本月发布，搭载天玑 7500 / 天玑 7500 Turbo 芯片，可能和 iQOO Neo 11 至尊版一起发布。据IT之家此前报道，iQOO Z11 手机发布于 3 月 26 日，搭载天玑 8500…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.ithome.com/0/987/582.htm" target="_blank" rel="noopener">新加坡总理黄循财谈 AI：将利用新技术提高生产效率、创造高质量就业岗位</a></h3>
+  <p class="summary">IT之家 8 月 9 日消息，据彭博社 8 日报道，在新加坡独立 61 周年前夕，新加坡总理黄循财发表国庆献词指出，人工智能快速发展正在给新加坡带来新的增长机会。面对部分劳动者对工作和生计受到 AI 冲击的担忧，政府将利用新技术提高生产率，同时创造质量更高的就业岗位。黄循财表示：“新的技术突破正在创造几年前还无法想象的机会，但同时也带来了新的挑战和问题。别人向前走的时候，我们不能原地不动，但也不能对每一项新技术照单全收。新加坡会按照自己…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/08/469010.html" target="_blank" rel="noopener">180万刀，连亚马逊都烧不起Claude了</a></h3>
+  <p class="summary">Claude不是我说你，钱真不能这么花</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/08/468913.html" target="_blank" rel="noopener">GPT-5.6和Fable联手，解决了一道悬了25年的数学难题</a></h3>
+  <p class="summary">作者读博时就在研究，17年后被AI解开了</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.ithome.com/0/987/579.htm" target="_blank" rel="noopener">苹果客服回应删除接入千问手册：目前并没有收到新项目发布通知</a></h3>
+  <p class="summary">IT之家 8 月 9 日消息，据新浪科技今日消息，针对删除《在 Mac 上配合 Apple 智能使用千问》使用文档一事，苹果客服对此回应称：“我们有功能或新项目发布时，都会提前收到通知，目前并没有收到相关通知，中国大陆还没推出‘Apple 智能使用千问’相关功能。”据IT之家此前报道，一篇名为《在 Mac 上配合 Apple 智能使用千问》的支持文档昨日现身苹果官网 Mac 简体中文使用手册，其中明确提到 Apple 智能可配合阿里巴巴…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/08/468782.html" target="_blank" rel="noopener">当题库追不上模型，AI开始给自己出题：中国这支团队跑通了数据层RSI</a></h3>
+  <p class="summary">AI参与创造下一代AI</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-08-09</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/08/468766.html" target="_blank" rel="noopener">Opus 5狂烧6.9亿token做游戏，GPT-5.6用5美元复刻了</a></h3>
+  <p class="summary">据说GPT-5.6很适合拿来做游戏</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-08-08</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/08/468631.html" target="_blank" rel="noopener">奥特曼的ChatGPT育儿大法，捅了马蜂窝</a></h3>
+  <p class="summary">这就有些尴尬了。</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-08-08</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/08/468462.html" target="_blank" rel="noopener">都学坏了！奥特曼亲手封锁最强模型Astra，重蹈Mythos覆辙</a></h3>
+  <p class="summary">唉，赶紧整完快点发布吧。。。</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-08-08</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/08/468398.html" target="_blank" rel="noopener">谷歌急了：AI核心员工全给我搬回硅谷坐班！</a></h3>
+  <p class="summary">再花15亿美元买现成AI编程团队</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-08-07</span>
+  </div>
+  <h3><a href="https://www.theverge.com/ai-artificial-intelligence/976801/fenix-flexin-rubberz-ai-song-treblo" target="_blank" rel="noopener">Fenix Flexin isn’t even denying using AI to make ‘Rubberz’ anymore</a></h3>
+  <p class="summary">It took long enough, but now LA rapper Fenix Flexin appears to have admitted using AI for the 80s synth pop-themed song &quot;Rubberz.&quot; His comments follow the producer Medasin&#x27;s videos claiming that an AI tool called Treblo…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-08-07</span>
+  </div>
+  <h3><a href="https://www.theverge.com/entertainment/976939/roku-fairground-ai-fast-channel" target="_blank" rel="noopener">Watching Roku’s AI channel is like eating from a trough</a></h3>
+  <p class="summary">The appeal of free ad-supported streaming television (FAST) channels has always been the way they make it easier to (re)discover classic films and series. But Roku&#x27;s latest experiment in the FAST space has less to do wit…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-08-07</span>
+  </div>
+  <h3><a href="https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities" target="_blank" rel="noopener">OpenAI puts the brakes on a new model because it&amp;#8217;s supposedly too powerful</a></h3>
+  <p class="summary">OpenAI says it is pausing &quot;internal activities&quot; around an in-development AI model, Astra, because it doesn&#x27;t yet meet new security standards the company is putting in place. The announcement follows its recent disclosure…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#0d9488">MIT Technology Review</span>
+    <span class="date">2026-08-07</span>
+  </div>
+  <h3><a href="https://www.technologyreview.com/2026/08/07/1141389/the-download-censorship-conspiracy-theory-first-ai-virus/" target="_blank" rel="noopener">The Download: a censorship conspiracy theory and the first virus created by AI</a></h3>
+  <p class="summary">This is today&amp;#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&amp;#8217;s going on in the world of technology. How ideas of a vast censorship network moved from the online fringe to…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-08-07</span>
+  </div>
+  <h3><a href="https://www.theverge.com/podcast/976784/google-deepmind-ai-race-vergecast" target="_blank" rel="noopener">What&amp;#8217;s behind the Google AI shake-up</a></h3>
+  <p class="summary">Some of the biggest names on Google&#x27;s AI team got new jobs this week. In some cases, including for legendary Googler Jeff Dean, those jobs are no longer at Google. Given that Google&#x27;s models seem to be behind the best of…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-08-06</span>
+  </div>
+  <h3><a href="https://www.theverge.com/ai-artificial-intelligence/976431/openai-chatgpt-battery-smart-speaker-rumor" target="_blank" rel="noopener">Jony Ive&amp;#8217;s first OpenAI gadget is reportedly a hockey puck-sized smart speaker</a></h3>
+  <p class="summary">The AI device OpenAI is developing with former Apple designer Jony Ive is &quot;essentially a smart speaker without a display&quot; that&#x27;s battery-powered, doughnut-shaped and roughly the size of a hockey puck, according to Bloomb…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-08-06</span>
+  </div>
+  <h3><a href="https://www.theverge.com/ai-artificial-intelligence/976289/suno-ai-music-spam-watermark" target="_blank" rel="noopener">Suno shares plans to combat spammy AI music</a></h3>
+  <p class="summary">Suno announced plans to implement a new watermarking technology and download policy to limit the spread of spammy AI tracks and increase transparency. In a lengthy blog post, CEO and co-founder Mikey Shulman laid out the…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-08-06</span>
+  </div>
+  <h3><a href="https://www.theverge.com/ai-artificial-intelligence/976239/openai-chatgpt-free-go-text-chats" target="_blank" rel="noopener">OpenAI is giving ChatGPT free users unlimited text chats</a></h3>
+  <p class="summary">OpenAI is making a big change for ChatGPT users on its free and Go tiers: Starting next week, users on those tiers will be able to have unlimited text chats with the chatbot, according to OpenAI. Right now, you may run i…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#0d9488">MIT Technology Review</span>
+    <span class="date">2026-08-06</span>
+  </div>
+  <h3><a href="https://www.technologyreview.com/2026/08/06/1141278/the-download-google-ai-shake-up-meta-rogue-model/" target="_blank" rel="noopener">The Download: Google’s AI shake-up and Meta’s rogue model</a></h3>
+  <p class="summary">This is today&amp;#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&amp;#8217;s going on in the world of technology. Google’s AI empire is being reshaped. Here’s what’s changed. After a w…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#0d9488">MIT Technology Review</span>
+    <span class="date">2026-08-03</span>
+  </div>
+  <h3><a href="https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/" target="_blank" rel="noopener">Trump’s AI protectionism has come for robotics</a></h3>
+  <p class="summary">This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first,&amp;#160;sign up here. Humanoid robots usually elicit more cringe than awe: They stumble, kick child…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#0d9488">MIT Technology Review</span>
+    <span class="date">2026-08-03</span>
+  </div>
+  <h3><a href="https://www.technologyreview.com/2026/08/03/1141039/the-download-reward-hacking-water-cyberattacks/" target="_blank" rel="noopener">The Download: reward hacking explained and suspected Iranian cyberattacks</a></h3>
+  <p class="summary">This is today&amp;#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&amp;#8217;s going on in the world of technology. Here’s why AI agents lie and cheat to reach their goals When two OpenA…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#0d9488">MIT Technology Review</span>
+    <span class="date">2026-08-03</span>
+  </div>
+  <h3><a href="https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/" target="_blank" rel="noopener">Here’s why AI agents lie and cheat to reach their goals</a></h3>
+  <p class="summary">MIT Technology Review Explains: Let our writers untangle the complex, messy world of technology to help you understand what’s coming next. You can read more from the series here. When two OpenAI models hacked into the we…</p>
+</article></div>
+  </section>
+
+  <footer>更新时间：2026-08-09 21:02 · LMArena / Artificial Analysis / LiveBench / Open LLM Leaderboard / MIT TR / The Verge</footer>
+</div>
+<script>
+document.querySelectorAll('.tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    var idx = tab.dataset.tab;
+    document.querySelectorAll('.tab').forEach(function(t) {
+      t.classList.remove('active'); t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('active'); tab.setAttribute('aria-selected', 'true');
+    document.querySelectorAll('.tab-panel').forEach(function(p) {
+      p.classList.toggle('active', p.id === 'panel-' + idx);
+    });
+  });
+});
+</script>
+</body>
+</html>
