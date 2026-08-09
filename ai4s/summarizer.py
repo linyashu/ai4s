@@ -47,33 +47,50 @@ def _client(cfg: dict) -> httpx.Client:
     )
 
 
-def _extract_json(text: str) -> dict | None:
-    """从容错解析 LLM 输出中的 JSON 对象。"""
-    # 去掉 markdown 代码块围栏
+def _extract_json(text: str) -> dict | list | None:
+    """从容错解析 LLM 输出中的 JSON（对象或数组）。"""
     text = re.sub(r"```(?:json)?\s*", "", text).strip()
-    # 直接从第一个 { 到最后一个 } 截取
-    start, end = text.find("{"), text.rfind("}")
-    if start == -1 or end == -1 or end <= start:
-        return None
-    candidate = text[start : end + 1]
+    # 先试整体解析
     try:
-        return json.loads(candidate)
+        return json.loads(text)
     except json.JSONDecodeError:
         pass
-    # 容错：清理常见尾部逗号
-    candidate = re.sub(r",\s*([}\]])", r"\1", candidate)
-    try:
-        return json.loads(candidate)
-    except json.JSONDecodeError:
-        return None
+    # 对象：从第一个 { 到最后一个 }
+    start, end = text.find("{"), text.rfind("}")
+    if start != -1 and end > start:
+        candidate = text[start : end + 1]
+        try:
+            return json.loads(candidate)
+        except json.JSONDecodeError:
+            candidate = re.sub(r",\s*([}\]])", r"\1", candidate)
+            try:
+                return json.loads(candidate)
+            except json.JSONDecodeError:
+                pass
+    # 数组：从第一个 [ 到最后一个 ]
+    start, end = text.find("["), text.rfind("]")
+    if start != -1 and end > start:
+        candidate = text[start : end + 1]
+        try:
+            return json.loads(candidate)
+        except json.JSONDecodeError:
+            candidate = re.sub(r",\s*([}\]])", r"\1", candidate)
+            try:
+                return json.loads(candidate)
+            except json.JSONDecodeError:
+                pass
+    return None
 
 
 def _normalize(raw: dict) -> Digest:
     """把 LLM 返回的任意结构规整为 Digest。兼容多字段名。"""
-    date = str(raw.get("date") or raw.get("发布日期") or "")
-    trend = str(raw.get("trend") or raw.get("趋势") or raw.get("今日趋势观察") or "")
-
-    items_raw = raw.get("items") or raw.get("progresses") or raw.get("进展") or raw.get("entries")
+    # 兼容对象 {"items":[...]} 与顶层数组 [...]
+    if isinstance(raw, list):
+        date, trend, items_raw = "", "", raw
+    else:
+        date = str(raw.get("date") or raw.get("发布日期") or "")
+        trend = str(raw.get("trend") or raw.get("趋势") or raw.get("今日趋势观察") or "")
+        items_raw = raw.get("items") or raw.get("progresses") or raw.get("进展") or raw.get("entries")
     items: list[dict] = []
     for it in items_raw or []:
         if not isinstance(it, dict):
@@ -166,7 +183,10 @@ def _select_eval_candidates(cfg: dict, payload: list[dict], limit: int) -> list[
             return []
         selected = []
         by_url = {it["url"]: it for it in payload if it.get("url")}
-        for it in raw.get("items") or []:
+        items = raw.get("items") if isinstance(raw, dict) else raw
+        for it in items or []:
+            if not isinstance(it, dict):
+                continue
             url = it.get("url")
             src = by_url.get(url) if url else None
             if src:
@@ -292,19 +312,37 @@ def summarize(
 def _select_candidates(cfg: dict, payload: list[dict], limit: int) -> list[dict]:
     """基于标题和摘要挑选候选条目。返回条目 dict 列表。"""
     prompt = (
-        "你是 AI for Science (AI4S) 领域的专业情报分析师。\n"
+        "你是人工智能/计算机科学与计算社会科学领域的专业情报分析师。\n"
+        "【重要】本简报所称 AI4S 的口径以下方清单为准：收录\"计算机/AI 领域进展\""
+        "与\"AI 赋能社会科学研究\"，不收录生命科学及其他自然科学应用。\n\n"
+        "收录范围（满足其一即可）：\n"
+        "- 计算机科学与人工智能自身的研究与技术进展：模型架构、训练与推理方法、"
+        "大模型与智能体、评测基准、系统与算力、重要开源模型/数据集发布\n"
+        "- AI/机器学习/大模型应用于社会科学研究：经济学、金融学、管理学、社会学、"
+        "政治学、心理学、传播学、法学、教育学、人口学等\n"
+        "- 面向社会科学的研究方法创新：如 LLM 模拟受访者/被试、机器学习因果推断、"
+        "基于智能体的社会模拟、文本挖掘用于社科数据\n"
+        "- 科学学/元科学，以及 AI 对科研组织方式、科研生态的影响\n"
+        "- 与上述主题直接相关的产业与人才动态\n\n"
+        "排除范围（命中即不选，无论方法多新颖）：\n"
+        "- 生命科学类：生物学、蛋白质结构与设计、药物发现、基因组学、脑科学、"
+        "医学与健康等，即使核心方法是 AI/深度学习\n"
+        "- 其他自然科学应用：物理、化学、材料、地球/海洋/气候、天文、工程仿真等\n\n"
+        "判定规则：以条目的研究对象/应用领域为准——AI 方法应用于生命科学或其他"
+        "自然科学的，一律排除；没有自然科学应用对象的纯 AI/计算机研究，予以收录。\n\n"
         "以下是近期从 arXiv、权威期刊、中文科技媒体和 HuggingFace 聚合的条目。\n"
-        "请从中挑选最有价值的候选，输出为 JSON，不要输出任何其他文字。\n\n"
-        "JSON 结构：\n"
-        "{\n"
-        '  "items": [\n'
-        "    {\"title\": \"原始标题\", \"url\": \"原始链接\"}\n"
-        "  ]\n"
-        "}\n\n"
-        f"要求：\n1. 挑出最多 {limit} 条，按重要性从高到低排列\n"
-        "2. 只挑与 AI for Science 密切相关且信息量大的条目\n"
-        "3. title 和 url 必须一字不改取自上方条目\n"
-        "4. 严格输出合法 JSON，字段名用英文\n\n"
+        "请从中挑选最有价值的候选，输出为 JSON。\n"
+        "要求：\n"
+        f"1. 只挑与收录范围密切相关且信息量大的条目；命中排除范围的一律不选\n"
+        f"2. 最多 {limit} 条，按重要性从高到低排列；相关条目不足时宁缺毋滥、"
+        "不得凑数，若无相关条目则输出空数组 []\n"
+        "3. 每条附 relevance 字段（一句话说明属于收录范围中的哪一类）\n"
+        "4. title 和 url 必须一字不改取自上方条目\n"
+        "5. 严格输出合法 JSON，字段名用英文（title/url/relevance）\n\n"
+        "反例（不要选）：蛋白质构象预测、AI 药物发现、等离子体平衡求解、"
+        "海洋-海冰模式、材料电子结构计算。\n"
+        "正例（要选）：新的大模型训练/推理方法、智能体评测基准、LLM 模拟社会调查"
+        "受访者、机器学习评估公共政策因果效应、AI 对劳动力市场影响的实证研究。\n\n"
         "条目列表（JSON）：\n"
         + json.dumps(payload, ensure_ascii=False, indent=2)
     )
@@ -321,11 +359,18 @@ def _select_candidates(cfg: dict, payload: list[dict], limit: int) -> list[dict]
             return []
         selected = []
         by_url = {it["url"]: it for it in payload if it.get("url")}
-        for it in raw.get("items") or []:
+        # 兼容对象 {"items": [...]} 与顶层数组 [...]
+        items = raw.get("items") if isinstance(raw, dict) else raw
+        for it in items or []:
+            if not isinstance(it, dict):
+                continue
             url = it.get("url")
             src = by_url.get(url) if url else None
             if src:
-                selected.append(dict(src))
+                merged = dict(src)
+                if it.get("relevance"):
+                    merged["relevance"] = it["relevance"]
+                selected.append(merged)
         return selected
     except Exception as exc:
         logger.warning("LLM 候选粗选失败: %s", exc)
@@ -336,30 +381,31 @@ def _refine(cfg: dict, shortlist: list[dict]) -> Digest:
     """对候选条目做深度分析，产出最终 Digest。"""
     empty = Digest()
     prompt = (
-        "你是 AI for Science (AI4S) 领域的专业情报分析师。\n"
+        "你是人工智能/计算机科学与计算社会科学领域的专业情报分析师。\n"
+        "【重要】本简报只收录\"计算机/AI 领域进展\"与\"AI 赋能社会科学研究\"两类内容，"
+        "不收录生命科学（蛋白质、药物、医学等）及物理、化学、材料、地学、天文等"
+        "自然科学应用。\n\n"
         "以下是你先前挑选出的候选条目，含原文摘要（可能含抓取到的全文）。\n"
-        "请对每个候选做深度分析，输出为 JSON，不要输出任何其他文字。\n\n"
-        "JSON 结构（示例）：\n"
+        "请对每个候选做深度分析，输出为 JSON。\n"
+        "JSON 字段：title/url/source/impact（一句话点评）/why（1-2句，尽量引用全文具体信息）/trend（趋势观察）\n"
+        "要求：\n"
+        "1. 先复核相关性：若发现某条实为生命科学或其他自然科学应用研究，直接剔除，不进入结果\n"
+        "2. 按重要性排列，最多 8 条；不足 8 条不凑数\n"
+        "3. title 和 url 一字不改\n"
+        "4. source 填真实来源站点（优先 publisher）\n"
+        "5. impact 凝练；why 要基于全文给出具体理由，不要泛泛而谈；"
+        "trend 侧重对 AI 技术演进、社会科学研究方法或科研生态的意义\n"
+        "6. 无 fulltext 则基于 summary 判断\n"
+        "7. 严格输出合法 JSON\n\n"
+        "输出结构：\n"
         "{\n"
         '  "date": "2026-08-09",\n'
         '  "items": [\n'
-        "    {\n"
-        '      "title": "原始标题（必须与条目完全一致）",\n'
-        '      "url": "原始链接",\n'
-        '      "source": "真实来源名称",\n'
-        '      "impact": "一句话点评，说明它为何重要",\n'
-        '      "why": "值得关注的理由，1-2 句，尽量引用全文中的具体信息"\n'
-        "    }\n"
+        "    {\"title\": \"原始标题\", \"url\": \"原始链接\", \"source\": \"真实来源\", "
+        '"impact": "一句话点评", "why": "值得关注的理由"}\n'
         "  ],\n"
-        '  "trend": "今日趋势观察，一段话"\n'
+        '  "trend": "趋势观察，一段话"\n'
         "}\n\n"
-        "要求：\n"
-        "1. 按重要性从高到低排列 items，最多 8 条\n"
-        "2. title 和 url 必须一字不改地取自候选条目\n"
-        "3. source 字段填真实来源站点（优先用 publisher 字段）\n"
-        "4. impact 用词凝练；why 要基于全文内容给出具体、有信息量的理由，不要泛泛而谈\n"
-        "5. 若某条目没有 fulltext，则基于其 summary 判断\n"
-        "6. 严格输出合法 JSON，字段名用英文\n\n"
         "候选条目（JSON）：\n"
         + json.dumps(shortlist, ensure_ascii=False, indent=2)
     )
