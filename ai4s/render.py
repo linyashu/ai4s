@@ -49,13 +49,29 @@ def _sorted(articles: list[Article]) -> list[Article]:
 
 
 def _render_articles(articles: list[Article]) -> str:
+    """渲染文章卡片。新闻类先做同事件聚类去重，arXiv/RSS/HF 保持单篇。"""
+    try:
+        from .cluster import cluster_articles
+
+        clusters = cluster_articles(articles)
+    except Exception:
+        clusters = []
+
     chunks = []
-    for a in _sorted(articles):
+    for cl in clusters:
+        # 代表文章（最早一篇）
+        if not cl.articles:
+            continue
+        a = sorted(cl.articles, key=lambda x: x.published or dt.datetime.min)[0]
         color = SOURCE_COLORS.get(a.source, "#666")
         label = SOURCE_LABELS.get(a.source, a.source)
         date = a.date_str or "—"
         authors = "，".join(str(x) for x in (a.authors or [])[:4])
         display_source = a.publisher or a.source_name
+        # 多家来源时显示聚合来源
+        if cl.source_count > 1:
+            pubs = cl.publishers or cl.sources
+            display_source = f"{cl.source_count} 家来源 · " + "、".join(pubs[:3])
         summary = ""
         if a.summary:
             clean = _strip_html(a.summary)
@@ -71,7 +87,7 @@ def _render_articles(articles: list[Article]) -> str:
     <span class="date">{_esc(date)}</span>
     <span class="source">{_esc(display_source)}</span>
   </div>
-  <h3><a href="{_esc(a.url)}" target="_blank" rel="noopener">{_esc(a.title)}</a></h3>
+  <h3><a href="{_esc(a.url)}" target="_blank" rel="noopener">{_esc(cl.title)}</a></h3>
   {summary}
   <div class="card-foot">
     <span class="authors">{_esc(authors)}</span>

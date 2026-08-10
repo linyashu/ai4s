@@ -50,11 +50,13 @@ def fetch_markdown(url: str, timeout: int = 90, render_timeout: int = 0) -> str:
 def _firecrawl(url: str, headers: dict[str, str], timeout: int, render_timeout: int) -> str:
     """调用 Firecrawl /v1/scrape，返回 markdown。
 
-    render_timeout > 0 时用 waitFor 毫秒等待 JS 渲染完成（应对 SPA 动态数据）。
+    render_timeout > 0 时用 waitFor 毫秒等待 JS 渲染完成（应对 SPA 动态数据），
+    并附加滚动动作以触发懒加载（部分 SPA 需滚动才加载榜单数据）。
     """
     body: dict = {"url": url, "formats": ["markdown"]}
     if render_timeout > 0:
         body["waitFor"] = int(render_timeout) * 1000
+        body["actions"] = [{"type": "scroll", "direction": "down"}]
     with httpx.Client(timeout=timeout) as client:
         resp = client.post(FIRECRAWL_API, json=body, headers=headers)
         resp.raise_for_status()
