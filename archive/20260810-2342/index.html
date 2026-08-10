@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI4S 每日进展看板</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin:0; background:#f6f7f9; color:#222; line-height:1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+header { text-align:center; padding: 32px 0 12px; }
+h1 { margin:0; font-size:1.9em; }
+.sub { color:#666; font-size:.92em; }
+.nav { margin-top:10px; }
+.nav a { color:#1a73e8; text-decoration:none; font-size:.9em; }
+.nav a:hover { text-decoration:underline; }
+.digest { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:20px 24px; margin:20px 0; }
+.digest h2 { margin:0 0 4px; font-size:1.25em; }
+.digest-date { color:#888; font-size:.85em; margin-bottom:16px; }
+.digest-item { border-top:1px solid #eef0f3; padding:14px 0; }
+.digest-item-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.digest-rank { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#1a73e8; color:#fff; font-size:.78em; font-weight:700; flex:none; }
+.digest-source { color:#666; font-size:.82em; }
+.digest-title { margin:0 0 6px; font-size:1.02em; line-height:1.45; }
+.digest-title a { color:#1a0dab; text-decoration:none; }
+.digest-title a:hover { text-decoration:underline; }
+.digest-impact, .digest-why { margin:3px 0; color:#333; font-size:.92em; }
+.digest-why { color:#555; }
+.digest-impact strong, .digest-why strong { color:#1a73e8; font-weight:600; margin-right:2px; }
+.digest-trend { border-top:2px solid #eef0f3; margin-top:10px; padding-top:14px; }
+.digest-trend h3 { margin:0 0 6px; font-size:1em; color:#b26a00; }
+.digest-trend p { margin:0; color:#555; font-size:.94em; }
+.section-title { display:flex; align-items:center; gap:10px; margin:32px 0 12px; }
+.count { color:#888; font-size:.85em; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:14px; }
+.card { background:#fff; border:1px solid #e3e6ea; border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; }
+.card h3 { margin:8px 0 6px; font-size:1em; }
+.card h3 a { color:#1a0dab; text-decoration:none; }
+.card h3 a:hover { text-decoration:underline; }
+.card-head { display:flex; align-items:center; gap:8px; font-size:.8em; }
+.badge { color:#fff; padding:2px 8px; border-radius:999px; font-size:.75em; font-weight:600; white-space:nowrap; }
+.date { color:#888; }
+.source { color:#666; }
+.summary { color:#444; font-size:.86em; margin:4px 0; overflow-wrap:anywhere; }
+.card-foot { margin-top:auto; padding-top:8px; display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+.authors { color:#888; font-size:.8em; flex:1; min-width:100px; }
+.tag { background:#eef1f5; border-radius:4px; padding:2px 6px; font-size:.72em; color:#555; }
+footer { text-align:center; color:#999; font-size:.8em; margin-top:32px; }
+@media (prefers-color-scheme: dark) {
+  body { background:#14171c; color:#e8eaed; }
+  .digest, .card { background:#1e232b; border-color:#2b313b; }
+  .summary { color:#c9cdd3; }
+  .card h3 a { color:#8ab4f8; }
+  .tag { background:#2b313b; color:#b8bec8; }
+  .sub { color:#9aa0a6; }
+  .digest-date { color:#9aa0a6; }
+  .digest-item { border-top-color:#2b313b; }
+  .digest-impact { color:#e0e3e8; }
+  .digest-why { color:#c0c4cc; }
+  .digest-trend { border-top-color:#2b313b; }
+  .digest-trend p { color:#c0c4cc; }
+  .digest-title a { color:#8ab4f8; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🧪 AI4S 每日进展看板</h1>
+    <div class="sub">AI for Science 每日聚合 · arXiv / 期刊 / 中文媒体 / HuggingFace</div>
+    <div class="nav"><a href="eval.html">📊 AI 大模型测评看板 →</a></div>
+  </header>
+  
+  <section class="section">
+  <h2 class="section-title"><span class="badge" style="background:#2e7d32">期刊/博客</span><span class="count">10 条</span></h2>
+  <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2e7d32">期刊/博客</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">Nature</span>
+  </div>
+  <h3><a href="https://www.nature.com/articles/s41586-026-10973-y" target="_blank" rel="noopener">Author Correction: Cooperation conflicts with equality when allocating public goods</a></h3>
+  <p class="summary">Nature, Published online: 10 August 2026; doi:10.1038/s41586-026-10973-yAuthor Correction: Cooperation conflicts with equality when allocating public goods</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2e7d32">期刊/博客</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">Nature</span>
+  </div>
+  <h3><a href="https://www.nature.com/articles/d41586-026-02435-2" target="_blank" rel="noopener">How and when to use artificial intelligence in your science job application</a></h3>
+  <p class="summary">Nature, Published online: 10 August 2026; doi:10.1038/d41586-026-02435-2A webinar offers advice to hiring managers and jobseekers.</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2e7d32">期刊/博客</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">Nature</span>
+  </div>
+  <h3><a href="https://www.nature.com/articles/d41586-026-02447-y" target="_blank" rel="noopener">I caught my students using AI to cheat in an exam — here’s what universities must do to stamp this out</a></h3>
+  <p class="summary">Nature, Published online: 10 August 2026; doi:10.1038/d41586-026-02447-yWithout strong standards and smart oversight, artificial intelligence risks eroding the foundations of higher education.</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2e7d32">期刊/博客</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">Nature</span>
+  </div>
+  <h3><a href="https://www.nature.com/articles/d41586-026-01681-8" target="_blank" rel="noopener">What to do when you have too many PhD projects on the go</a></h3>
+  <p class="summary">Nature, Published online: 10 August 2026; doi:10.1038/d41586-026-01681-8By ruthlessly narrowing down his priorities, Zachary Sentell managed to publish several papers in the final year of his PhD and graduate on time.</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2e7d32">期刊/博客</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">Nature</span>
+  </div>
+  <h3><a href="https://www.nature.com/articles/d41586-026-02276-z" target="_blank" rel="noopener">This AI tool claims to pick the top 1% of preprints. Should researchers trust it?</a></h3>
+  <p class="summary">Nature, Published online: 10 August 2026; doi:10.1038/d41586-026-02276-zQED Science says that its metrics reduce bias by assessing papers solely on the basis of their originality and validity.</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2e7d32">期刊/博客</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">Nature</span>
+  </div>
+  <h3><a href="https://www.nature.com/articles/d41586-026-02453-0" target="_blank" rel="noopener">Despite global turmoil, Gen Z researchers are not giving up</a></h3>
+  <p class="summary">Nature, Published online: 10 August 2026; doi:10.1038/d41586-026-02453-0Four researchers born after 1997 describe how they stay motivated and cultivate resilience during difficult times.</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2e7d32">期刊/博客</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">Nature</span>
+  </div>
+  <h3><a href="https://www.nature.com/articles/d41586-026-02199-9" target="_blank" rel="noopener">Turning the tide: restoring Mozambican mangroves — in photos</a></h3>
+  <p class="summary">Nature, Published online: 10 August 2026; doi:10.1038/d41586-026-02199-9As urban expansion in Maputo threatens to destroy mangrove forests, marine biologist Célia Macamo is studying how to save them.</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article></div>
+</section><section class="section">
+  <h2 class="section-title"><span class="badge" style="background:#e65100">中文媒体</span><span class="count">46 条</span></h2>
+  <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMizwVBVV95cUxQT3U2N2IxV1oyYjk5TWpmdmdxdWRSdmNvemxoRklWRk4za3dWbFhTUUY3MXNRUlByMmJLM09LVW9wRW5Qa3doNXZ0UEdaSGhDYk1ZQW8wWUR0Zm9DaGRTTlptblNISG9lUG1LTlhxYjJZUjFqTGtMTWpSNEZJbnFYVk1NNVI5bTNTdjJ2XzBpcDhaOEplMDgzQUdhc2ZpdjdkU3Utei1YYkp3VlBTY2o4dVV0emZ5Y3psNC1yVF83dmRyUzV1ajJKRXlVQ1pkdG5Hanh1akZZblU4aUpoMWZtejA3QnZoVmFhUlhrelh6NFlVNlpwTVgwb2RNTE1TRWI4bzZHdWFPeFFhcnRYa0tLWFJLbDJCMDdnYWtjN2k1ekpCdENXb21XQWJsZldYeTZkS2dNbFVvWlIxdGFZNFlLT0E4R3F6M0llUDcyZm9LZE1Ka0lidnJZaHRSaVFqREFvNTM5QjA2NHJEN1M3N3RzQmZsRG5XT2ZvSWhtbWRJNlZYZ1oxUnhfeUNnclV6aHZnN2FDLWRiRVFPdkk0WmMybGtTWmtpbnV3dHNDX0JTa0tmc2Z4bzJYMEk4cmctYTJJZ09YdVM4R1ljdTVrQVR0Q1BYRFF4ckhETFpBNTB4bFEtd0oxNTZMcXFQWFh2bkFGanRMdlBwZEEtOXppT21DY1VRY0dZOTBxNC10dzJfaUkwalA5RU5MdXFOdmxBRVlXbmNEWFowZkJHUTNTRGNVTDRRbzBNZWZrcHR6V2NYZDc4QmdVQ3p0YWpzNVA0dkJid1lfSENYSFRxWW81UVQ2Mk5ORW9ZbEkxNEJlTmlvMEo4eDhaQWVQampHYWJiS3B4U0lGd2RGZTU1QXFxRXpuNkVhT0RkWEVoWExjTzI1MDhLWU44cjNxc1o3Und2Z0JrV3VoYW0yYkdORkswcDVSSlNzWkdrSnJaT251YjlLQQ?oc=5" target="_blank" rel="noopener">AI让科研变成“科学自动机”，副作用是什么？ - 新浪财经</a></h3>
+  <p class="summary">AI让科研变成“科学自动机”，副作用是什么？  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">4 家来源 · 新浪网、观点网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE52VlBhTVZpTWJsWDc2N3M2c05ubTBVdktRTUhuM2hYTzZjZXgxOV9oZnQwMFh5LXNNeURvaVNEZVZIRUZqdVVXbUFJTFVubjdja2xvTzZkSGZPdkYwMW5mVkpn?oc=5" target="_blank" rel="noopener">美国创世纪计划推出科研大模型GS1 进入数据收集阶段 - 观点网</a></h3>
+  <p class="summary">AI4S又一里程碑！美国“创世纪计划”推出科研大模型 现已进入数据收集阶段  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">A5站长网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE01RlJxVVNmeE5UTlpabDJ1S0ZxNS0ya2JXVVFTYXNtN293WDFxU0pBM1BYTXRpNmoydmpuT3dxeDQ5REhkWUhEbC1EQjVWSGVhZmNidU82NkRMaUg5RXJPM1lfbEY?oc=5" target="_blank" rel="noopener">落实“人工智能+”招标政策 北京筑龙采购文件智能审查解决方案 - A5站长网</a></h3>
+  <p class="summary">落实“人工智能+”招标政策 北京筑龙采购文件智能审查解决方案  A5站长网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNUGlyWGY2VUx4T0pxR3Y5NGQtVTJqRnNVQnY5LTZodm1xWGdhT0NqWDRDT3ZKSWhQNXp4cjBNbDd3NXRwclhnVmxHZHlyRzRnWkhWU2hEcnpNTTZUUXl2QVhDWkRwQXFzMkc4dEp3VS1mbEZFUUJzS21kb1d1WnctNw?oc=5" target="_blank" rel="noopener">开元旗牌官方网站入口助力上海交通大学落成全国高校规模最大智算平台“致远一号” - 电玩巴士</a></h3>
+  <p class="summary">开元旗牌官方网站入口助力上海交通大学落成全国高校规模最大智算平台“致远一号”  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQWE9qWW9xZlpCZkpsWnFnamRidzNCRFRpYmZlQXNiUEUtWnhQeDRvSUJaUzV1NnN3a0pjckg5ZEVWOG1QMjAxbHpIeGZsZWhuRndlMjJRaWc5ZzJlZkt6czJGN0szSU5kMkgzZmF4d3JHSF9rV2pTSTZ6Y2g5dnBqYlp4OA?oc=5" target="_blank" rel="noopener">蔡磊目前身体状况怎么样了？ - 新浪网</a></h3>
+  <p class="summary">蔡磊目前身体状况怎么样了？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">神州学人</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE9LOXl6MmdJSXVwY0VvbEF0RFBhSzhiNzhRUU5QYUY2YlhtTzNjOF9QSkY0R1M2aHEySEUzRzh0cUYzMV9fOUc4OUxEb0c2MmU2RUNGaGJpYUJJVXpOLUlucklpckJSNklrMldPT3N1LXNLZw?oc=5" target="_blank" rel="noopener">坚定不移探索通用人工智能发展的中国道路 - 神州学人</a></h3>
+  <p class="summary">坚定不移探索通用人工智能发展的中国道路  神州学人</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">观点网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE1HZFhjWnBONnBybjBIcWdsc1ZrdTF2UDBJa3lSelhNRlBSNzNSWjBzdmh1ejdBeXVsODNKXzYyZFFmOVNnVnk1R0hXOUtRZlVNNS1FMzQ5ZmxOX21WNXFTejZB?oc=5" target="_blank" rel="noopener">美国能源部联合多方推出科研大模型GS1 尚未正式发布已开放贡献者入口 - 观点网</a></h3>
+  <p class="summary">美国能源部联合多方推出科研大模型GS1 尚未正式发布已开放贡献者入口  观点网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">飞象网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE5rY240dGVScFFRZlQzZVh2N1NhTGhZUTBTa3pTdU91bGI5cV85cnduYW5DSVB1cndxYjh1OUlzX3NtU0JyaFhaRUd4MA?oc=5" target="_blank" rel="noopener">数智龙江 智启新程｜AI赋能黑龙江千行万业 - 飞象网</a></h3>
+  <p class="summary">数智龙江 智启新程｜AI赋能黑龙江千行万业  飞象网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">36 Kr</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE1BS1lOdmdfS3cwdHNyb1pIYnVjMGdGNXZLY21tV0lsUW1SMUVLUHhJZ3JhVnRuckJBOFYxckVzTFNIalNUV1BFZndIUE5Vdw?oc=5" target="_blank" rel="noopener">10本书，让你成为AI时代少数看懂牌局的人 - 36 Kr</a></h3>
+  <p class="summary">10本书，让你成为AI时代少数看懂牌局的人  36 Kr</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">中华网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE8zQVFoX0tQYktVbXNtSHdGRUR3MDVOYlJ4ZnNSdzBGeXFKcXIycVh6SDBzNV9fNHQxWFhnTWZqdWs5TmNqODNYZmZrN0ZuS2YwSkVJa2JCY2hGTWhkNFU3cHpmRHRISzFoeVdGWWwzMEM?oc=5" target="_blank" rel="noopener">未来AI能否拥有人的心智和意识 当复杂系统涌现意识 - 中华网</a></h3>
+  <p class="summary">未来AI能否拥有人的心智和意识 当复杂系统涌现意识  中华网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">湖北日报传媒集团</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9HNS1ZZzg2T1ZSU1ozQnNJaTJpMUIwY3VTSGw5YkgyUnJVR2tnek9XbG9WN1VuY2VJWXlLNUxsX0xOb0xGNFhjbng2TTZzdXlvYTl5NnFodVM?oc=5" target="_blank" rel="noopener">东湖有理丨成长为顶级策源地，四个创新环节缺一不可- 湖北日报新闻客户端 - 湖北日报传媒集团</a></h3>
+  <p class="summary">东湖有理丨成长为顶级策源地，四个创新环节缺一不可- 湖北日报新闻客户端  湖北日报传媒集团</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">飞象网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE15aEtfS3l1bXlEdFdKa1JVV3lfd2g2WnVaT3pFYnJUb0dyaHZEYkZPbktycEMtTHdERUhhQ0kxN09zeGtaSzB1WnB0dC04bV9IMEgyWVNBRlk1TWIy?oc=5" target="_blank" rel="noopener">卡巴斯基：一个针对亚太地区且最为活跃的APT组织，正通过伪造的Claude传播恶意软件 - 飞象网</a></h3>
+  <p class="summary">卡巴斯基：一个针对亚太地区且最为活跃的APT组织，正通过伪造的Claude传播恶意软件  飞象网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">神州学人</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE1jVmdDY2VYSDdydGJ4SXN3QnlaU3Rnek5hQW1pOTlZendKY3VQVTRaTkhoMVJoMlNGSGRQVEQ3VzBYckJySlVJanFSVnhwOFdVVFJzUy00c2dYX0U2ZFlIQjc1VVJzckNHNzdrS2xudEVoSW5Y?oc=5" target="_blank" rel="noopener">香港高校放榜，AI专业受青睐 - 神州学人</a></h3>
+  <p class="summary">香港高校放榜，AI专业受青睐  神州学人</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">中华网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFAyeENoaVVnRWY3MHBPQVlkNVYxY01QcGVhcXh1U19qalE1aE1DT3FlUENwek1UMjBNSzNGSXA1X2JVTTUwbnVOMEg1N3pVWHJuTk9EdWp5SEZjbVdjYUN2cFBfdks1N3F3UUU2b25n?oc=5" target="_blank" rel="noopener">在植物园，“长”出小小AI自然科学家 - 中华网</a></h3>
+  <p class="summary">在植物园，“长”出小小AI自然科学家  中华网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxOdGZkSDBBOE9sRmJWaEU2WFpxelpVeDJhOGZHM0pmUUZoWXoxc2lmWHlQT2JuNmpCNlIxczM1dy1WWWpqSTZhbXM5VjliUXF0aDkteEw0SHU5VXpDV1N4ellwSk9pN0pwVXlSQmdoZVJidlR0aVhibHVKd3NNbl9zbk83dTJUVGY1VFYxTEF0U2RMOUhTa3l1Z3ZhZkVuTU1LbW9PMmdhYVpocFVBa0RsVzkybnRJV25XQXdLbQ?oc=5" target="_blank" rel="noopener">你电脑里涨价涨疯了的内存，曾经是工人们一针一线穿出来的｜博览日报|存储芯片|模型|数据|推理|图片来源_手机新浪网 - 新浪财经</a></h3>
+  <p class="summary">你电脑里涨价涨疯了的内存，曾经是工人们一针一线穿出来的｜博览日报|存储芯片|模型|数据|推理|图片来源_手机新浪网  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">飞象网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE5MYjZZT3FQbXhHQjliMnFlYlJhMnpBWnFYVjZQNU5rZXUwNm5TcktNTU5vc2prT2lTQVdLd1ZOQjFtbjJpT1M0am1PNA?oc=5" target="_blank" rel="noopener">中国唯一具身智能大模型重点实验室，银河通用牵头获批！ - 飞象网</a></h3>
+  <p class="summary">中国唯一具身智能大模型重点实验室，银河通用牵头获批！  飞象网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">时代在线</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE5zZFVlNlRLQzY4VkRUT2NaTXpXSFQ0MzVlb2JNQmFTaWhnVUtwWVRfSmxoLTBfQ2diX0dSOEk3b2hiLWxCaFhqdmJkZw?oc=5" target="_blank" rel="noopener">“PCB牛股”宝鼎科技五连板背后：赛道冰火两重天，警惕“较大回调风险”？ - 时代在线</a></h3>
+  <p class="summary">“PCB牛股”宝鼎科技五连板背后：赛道冰火两重天，警惕“较大回调风险”？  时代在线</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">fxbaogao.com</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE0zMC1RY3RhYXgyNUtuX1NBNFpYbEQyOU9TamFKWEF0eGxmMXE3cDU3eEJMMC0ta24xRGNBd2VCb3FObm5SU1ZiMHBNS2hmSThR?oc=5" target="_blank" rel="noopener">[国金证券]：计算机行业专题研究报告：第三次谈VERA RUBIN - fxbaogao.com</a></h3>
+  <p class="summary">[国金证券]：计算机行业专题研究报告：第三次谈VERA RUBIN  fxbaogao.com</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9ERXN5LVFsRkZnX19jS19OdHVzNzdVMDVlRnNiOHZ0RG9BcjNRalo5OGhzY2M3Q3FJQ3pRUnVkVTFDbHNFQ1BwX25nTzhTeEpzTElENUJMVDF5UWRsWncxMmxYSjJqSTZrWTRYVWZtZUc2OERWWmxhTg?oc=5" target="_blank" rel="noopener">素源矩阵那荣钰：AI改写硬科技创业路径 - 新浪财经</a></h3>
+  <p class="summary">素源矩阵那荣钰：AI改写硬科技创业路径  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9SYzRrUTRsSzAwR0xwWWtTcVkyS3NSUUFCd0JubDAzZGtEXy13eHFsbFBtUzI0b2RGNmtfbXBnaDV5TGlobWpoUkhBVmhjMUM5YmZpaXRYTEpvQmxfMU9QdlEwSFU3ZzhBTTI0?oc=5" target="_blank" rel="noopener">能看欧盘的app核心功能上线，鸿蒙生态探索体育资讯新可能-TGBUS - 电玩巴士</a></h3>
+  <p class="summary">能看欧盘的app核心功能上线，鸿蒙生态探索体育资讯新可能-TGBUS  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMi2wJBVV95cUxQNUpmaVU3YXdrTnVUNWdmTzBVWVQ1Q2xnbWl0SGt0bWV3ZEh3S3p2Vk1YWmU4TVdkclQ1MVNGVmlQeWxsc3dmZWtWLTUtYkpnUjBnYUJHOXZ3RUJ0SWdJMVpXMUtWby0yanhlSU1ReWFQYkhtVy00VWRTTDFfTnQyQnNBV3AzcGl6VERTRHA1Z1pKTTFFSDVucTJHcWE0NnR2MXo0cHh1ckFoR3VhUnBKWVZyVEtXOVM5c3E2VVF5Tll1YTIzYThnejRtQlVLeWN5YVU1SnVfWGdFR3E2X3h6czRSN0owdUxidW4yOTB0RnJ6dzRwVDNpNk9tSjZOSUwycDlZMjhtQ1ZTZVROb3R3NDR4ajE3bnBza0hwd0pDbE1mbjhiMHFYZFNQYjB5T1Rad0x6M3dlSDgweVZDRzBiZ2d0NUctTERpdjEzZ2t0MHhrYXFZUlQyN3NwYw?oc=5" target="_blank" rel="noopener">诺奖得主Hassabis，也要走了！ - 新浪财经</a></h3>
+  <p class="summary">诺奖得主Hassabis，也要走了！  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5IVTQ0VU9ZWDA3eC1MS2tuTExhajNTSXZ6ZGFLa292bGVnaHdOeFdyR0toVFYzVDg4cXBEVDVyTk1lamN1d0xqQ3BtMHNoMzJOd21jNjI4aTM5T2hoZ2RKRzkxbllrVDRlZ3NwX3N3QWVjd3FidlVhVHd0S0NhT2M?oc=5" target="_blank" rel="noopener">首个全国产10万卡AI超集群投用后，哪些行业受益最大？ - 新浪网</a></h3>
+  <p class="summary">首个全国产10万卡AI超集群投用后，哪些行业受益最大？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">财联社</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9FT3JqTS0zUkdXTUVtcjVsSUVGODlCbE9yd3N0Qzh5NkdQTURLRmlNTkpVZGxfcVdlcHpNTUFjYVh3cS1NbFVkTw?oc=5" target="_blank" rel="noopener">电报解读 - 财联社</a></h3>
+  <p class="summary">电报解读  财联社</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">inewsweek.cn</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9ZRFVSd1h3WWItNF9VZm9FS01ON1NsTXo4MUVXdHd4U1JxUkxvczFKTWVMT3ViUUlvQTl2S1NrOVFjbUZ6OGg1cXFQaVZHTlVoM3pNd2dXSUp2X3Y4aGc?oc=5" target="_blank" rel="noopener">“到底真的还是假的”，一位哈佛博士穿越“死亡谷” - inewsweek.cn</a></h3>
+  <p class="summary">“到底真的还是假的”，一位哈佛博士穿越“死亡谷”  inewsweek.cn</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">雪球</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBTRm9IWXlMeHZBQVVDWndqcHpCa2pkMVR2NG1qeXJRZnlFSF92MVA3WDIxb3c2QktHdkdKM1Bid1Z4LWZYSjVKQTJ3b21hQ2VaZEtGczdFN2gxY2FHbG1N?oc=5" target="_blank" rel="noopener">剂泰科技-P(07666)股票股价_股价行情_讨论_资讯_财报_数据报告 - 雪球</a></h3>
+  <p class="summary">剂泰科技-P(07666)股票股价_股价行情_讨论_资讯_财报_数据报告  雪球</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">sc.stock.cnfol.com</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBrWTRYM0ltNW9QWFpQek9PdUgtMUZPY0lBRDQxcmRfRGY1b25BN1M3NUo4Z2c3dXVfajIyNkVyVnY1eHl6ZWlXZlF5a290bGhUa0gxc2xhTzJmZmVVSmpSYUpqWkUzOGFB?oc=5" target="_blank" rel="noopener">AI改写生命规则！斯坦福突破引爆A股，重组蛋白赛道强势拉升_个股资讯_市场 - sc.stock.cnfol.com</a></h3>
+  <p class="summary">AI改写生命规则！斯坦福突破引爆A股，重组蛋白赛道强势拉升_个股资讯_市场  sc.stock.cnfol.com</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">21财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQellGX0t1bEZhN3pZbXdZRmd3MUN4UExEUTVpWVpQdkdrd010Q3pzdS1iN1NneFZJNEtpU212U0tTTVFzc1pDVXRhN1VhQmN4bTA4NWhxekJoaTR4UjM3d1pXMWJwdWYxOTFsaGlQNEdSRUxHOW9wTGFxT3pYdURnNE1mTVYxRTQ5TTlIRQ?oc=5" target="_blank" rel="noopener">千亿研发订单共振，CRO板块集体涨停 - 21财经</a></h3>
+  <p class="summary">千亿研发订单共振，CRO板块集体涨停  21财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article></div>
+</section><section class="section">
+  <h2 class="section-title"><span class="badge" style="background:#ffd21e">HuggingFace</span><span class="count">15 条</span></h2>
+  <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/us-7z/20260811-004100" target="_blank" rel="noopener">us-7z/20260811-004100</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Miiche/visualrl-ft-grpo" target="_blank" rel="noopener">Miiche/visualrl-ft-grpo</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Miiche/visualrl-opd-v3" target="_blank" rel="noopener">Miiche/visualrl-opd-v3</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/JamesResearch1216/HELM_7c" target="_blank" rel="noopener">JamesResearch1216/HELM_7c</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/excepto64/lox_Llama-3_2-1B_r0_1e_dpo_sgd_s2_extracted_k6_step-60" target="_blank" rel="noopener">excepto64/lox_Llama-3_2-1B_r0_1e_dpo_sgd_s2_extracted_k6_step-60</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/paulsaul126261/nagini-glm-5.2-abliterated-fp8" target="_blank" rel="noopener">paulsaul126261/nagini-glm-5.2-abliterated-fp8</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    <span class="tag">text-generation</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Miiche/visualrl-agopd-v3" target="_blank" rel="noopener">Miiche/visualrl-agopd-v3</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/iamseungpil/metacot-h200-triobj-dcpo-v3" target="_blank" rel="noopener">iamseungpil/metacot-h200-triobj-dcpo-v3</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/solphor/MiniMax-H3-Prompt-Rewriter-LoRA-Q8-GGUF" target="_blank" rel="noopener">solphor/MiniMax-H3-Prompt-Rewriter-LoRA-Q8-GGUF</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/MHM0321/canvasAIEdit-adapter" target="_blank" rel="noopener">MHM0321/canvasAIEdit-adapter</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/nucleiloo/autumn-flint" target="_blank" rel="noopener">nucleiloo/autumn-flint</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/yukimama/E_MiYu" target="_blank" rel="noopener">yukimama/E_MiYu</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Miiche/visualrl-gad-pure-v3" target="_blank" rel="noopener">Miiche/visualrl-gad-pure-v3</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/huangxudong/MOSS-Audio-Tokenizer-v2" target="_blank" rel="noopener">huangxudong/MOSS-Audio-Tokenizer-v2</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    <span class="tag">feature-extraction</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/stage-babylm/llama-128-12L" target="_blank" rel="noopener">stage-babylm/llama-128-12L</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article></div>
+</section>
+  <footer>更新时间：2026-08-10 23:41 · 共 71 条</footer>
+</div>
+</body>
+</html>

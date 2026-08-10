@@ -49,11 +49,12 @@ def _sorted(articles: list[Article]) -> list[Article]:
 
 
 def _render_articles(articles: list[Article]) -> str:
-    """渲染文章卡片。新闻类先做同事件聚类去重，arXiv/RSS/HF 保持单篇。"""
+    """渲染文章卡片。新闻类先做同事件聚类去重，arXiv/RSS/HF 保持单篇。
+    按 AI4S 口径先过滤自然科学应用，再聚类。"""
     try:
-        from .cluster import cluster_articles
+        from .cluster import cluster_articles, filter_articles
 
-        clusters = cluster_articles(articles)
+        clusters = cluster_articles(filter_articles(articles))
     except Exception:
         clusters = []
 
