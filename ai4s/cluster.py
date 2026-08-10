@@ -3,6 +3,7 @@
 - cluster_articles：将同一事件的多篇报道聚合成一个 cluster（去重）
 - score_hotness：按信源数量/时效/权威度计算热度
 - classify_article：将条目分类为 模型/论文/行业/教程/观点
+- exclude_natural_science：按 AI4S 提示词口径过滤自然科学应用
 """
 from __future__ import annotations
 
@@ -17,6 +18,57 @@ from .collectors import Article
 logger = logging.getLogger(__name__)
 
 CATEGORIES = ["模型", "论文", "行业", "教程", "观点"]
+
+# ===== AI4S 口径排除规则（与提示词排除范围一致）=====
+# 生命科学类
+_EXCLUDE_LIFE_SCIENCE = [
+    "蛋白质", "蛋白结构", "配体", "药物", "制药", "新药", "靶点", "基因组", "基因",
+    "脑科学", "神经", "医学", "医疗", "健康", "患者", "临床", "细胞", "肿瘤",
+    "癌症", "病毒", "疫苗", "生物", "生化", "抗体", "基因编辑", "dna", "rna",
+    "分子动力学", "drug", "protein", "pharma", "clinical", "genome",
+]
+# 其他自然科学类
+_EXCLUDE_NATURAL_SCIENCE = [
+    "物理", "化学", "材料", "金属", "合金", "晶体", "半导体", "量子点",
+    "地球", "海洋", "气候", "气象", "飓风", "台风", "天气", "天文", "天体",
+    "宇宙", "星系", "工程仿真", "流体", "等离子体", "分子动力学",
+    "physics", "chemistry", "material", "climate", "weather", "hurricane",
+    "perovskite", "solar cell", "semiconductor", "earthquake", "地震",
+]
+
+# 强收录信号：命中则不排除（避免误杀纯 AI 内容）
+_INCLUDE_STRONG = [
+    "大模型", "语言模型", "模型发布", "智能体", "评测", "基准", "benchmark",
+    "openai", "anthropic", "deepseek", "qwen", "kimi", "claude", "gpt",
+    "机器学习", "深度学习", "神经网络", "强化学习", "因果推断", "agent",
+    "训练", "推理", "微调", "提示词", "多模态", "hugging face",
+]
+
+
+def is_excluded(title: str, summary: str = "") -> bool:
+    """按 AI4S 口径判断条目是否应排除（自然科学应用）。命中强收录信号则不排除。"""
+    text = f"{title} {summary}".lower()
+    # 强收录信号优先（纯 AI 内容即使提到某领域也不排除）
+    if any(k in text for k in _INCLUDE_STRONG):
+        return False
+    for kw in _EXCLUDE_LIFE_SCIENCE + _EXCLUDE_NATURAL_SCIENCE:
+        if kw in text:
+            return True
+    return False
+
+
+def filter_articles(articles: list[Article]) -> list[Article]:
+    """过滤掉不符合 AI4S 口径的条目（生命科学/其他自然科学应用）。"""
+    kept, dropped = [], []
+    for a in articles:
+        if is_excluded(a.title, a.summary or ""):
+            dropped.append(a)
+        else:
+            kept.append(a)
+    if dropped:
+        logger.info("AI4S 口径过滤：剔除 %d 条自然科学应用（保留 %d 条）", len(dropped), len(kept))
+    return kept
+
 
 # 内容分类关键词规则
 _CATEGORY_KEYWORDS = {

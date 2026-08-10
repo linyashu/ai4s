@@ -216,10 +216,13 @@ def render(articles: list[Article], digest: Digest | str, output: Path) -> Path:
 
     # 多信源聚类：仅对 Google News 新闻类聚合生成热点 & 分类
     # （期刊 RSS 标题唯一性强、无多源重复，保持独立展示）
+    # 先按 AI4S 口径过滤自然科学应用，再聚类
     try:
-        from .cluster import cluster_articles, finalize_clusters
+        from .cluster import cluster_articles, finalize_clusters, filter_articles
 
-        news_articles = [a for a in articles if a.source == "google_news"]
+        news_articles = filter_articles(
+            [a for a in articles if a.source == "google_news"]
+        )
         clusters = finalize_clusters(cluster_articles(news_articles))
     except Exception:
         clusters = []
