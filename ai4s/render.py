@@ -7,7 +7,6 @@ import json
 from pathlib import Path
 
 from .collectors import Article
-from .cluster import Cluster, CATEGORIES, classify_clusters
 from .summarizer import Digest
 
 SOURCE_LABELS = {
@@ -137,97 +136,11 @@ def _render_digest(digest: Digest) -> str:
 </div>"""
 
 
-def _render_hotspots(clusters: list[Cluster], top_n: int = 6) -> str:
-    """渲染今日热点（按热度排序的聚类）。"""
-    if not clusters:
-        return ""
-    cards = []
-    for cl in clusters[:top_n]:
-        srcs = "、".join(dict.fromkeys(cl.sources)) or (cl.publishers[0] if cl.publishers else "")
-        pubs = "、".join(list(dict.fromkeys(cl.publishers))[:4]) if cl.publishers else ""
-        title = cl.title
-        url = cl.url
-        count = cl.source_count
-        heat = cl.heat
-        cat = cl.top_category
-        cards.append(f"""<div class="hot-card">
-  <div class="hot-head">
-    <span class="hot-rank">#{clusters.index(cl) + 1}</span>
-    <span class="hot-cat">{_esc(cat)}</span>
-    <span class="hot-heat">🔥 {heat}</span>
-    <span class="hot-src">N家信源</span>
-  </div>
-  <h3 class="hot-title"><a href="{_esc(url)}" target="_blank" rel="noopener">{_esc(title)}</a></h3>
-  <div class="hot-meta">
-    <span class="hot-date">{_esc(cl.date_str)}</span>
-    <span class="hot-pubs">{_esc(pubs or srcs)}</span>
-  </div>
-</div>""")
-    return f"""<section class="section hotspot-section">
-  <h2 class="section-title">🔥 今日热点</h2>
-  <div class="hot-grid">{''.join(cards)}</div>
-</section>"""
-
-
-def _render_category_tabs(clusters: list[Cluster]) -> str:
-    """渲染分类 tab（模型/论文/行业/教程/观点）+ 各分类下的聚类卡片。"""
-    grouped = classify_clusters(clusters)
-    if not any(grouped.values()):
-        return ""
-    tabs = []
-    panels = []
-    all_items = []
-    for i, cat in enumerate(CATEGORIES):
-        items = grouped.get(cat, [])
-        if not items:
-            continue
-        # 分类卡片
-        item_cards = []
-        for cl in items[:8]:
-            pubs = "、".join(list(dict.fromkeys(cl.publishers))[:3])
-            srcs = "、".join(dict.fromkeys(cl.sources))
-            count = cl.source_count
-            item_cards.append(f"""<article class="cat-card">
-  <div class="card-head">
-    <span class="hot-heat">🔥 {cl.heat}</span>
-    <span class="date">{_esc(cl.date_str)}</span>
-    <span class="source">{_esc(pubs or srcs)}</span>
-  </div>
-  <h3 class="cat-title"><a href="{_esc(cl.url)}" target="_blank" rel="noopener">{_esc(cl.title)}</a></h3>
-  <div class="cat-meta"><span class="cat-count">{count} 家信源</span></div>
-</article>""")
-        active = " active" if i == 0 else ""
-        tabs.append(f'<button class="cat-tab{active}" data-cat="{cat}">{_esc(cat)}</button>')
-        panels.append(f"""<div class="cat-panel{active}" id="cat-{cat}">
-  <div class="grid">{''.join(item_cards) or '<p class="empty">暂无内容</p>'}</div>
-</div>""")
-    return f"""<section class="section cat-section">
-  <h2 class="section-title">🗂️ 内容分类</h2>
-  <div class="cat-bar">{''.join(tabs)}</div>
-  {''.join(panels)}
-</section>"""
-
-
 def render(articles: list[Article], digest: Digest | str, output: Path) -> Path:
     """生成 index.html 到 output 目录。"""
     output.mkdir(parents=True, exist_ok=True)
 
     digest_html = _render_digest(digest) if isinstance(digest, Digest) else (digest or "")
-
-    # 多信源聚类：仅对 Google News 新闻类聚合生成热点 & 分类
-    # （期刊 RSS 标题唯一性强、无多源重复，保持独立展示）
-    # 先按 AI4S 口径过滤自然科学应用，再聚类
-    try:
-        from .cluster import cluster_articles, finalize_clusters, filter_articles
-
-        news_articles = filter_articles(
-            [a for a in articles if a.source == "google_news"]
-        )
-        clusters = finalize_clusters(cluster_articles(news_articles))
-    except Exception:
-        clusters = []
-    hotspots_html = _render_hotspots(clusters)
-    cat_html = _render_category_tabs(clusters)
 
     grouped = _group(articles)
     sections = []
@@ -295,38 +208,11 @@ h1 {{ margin:0; font-size:1.9em; }}
 .authors {{ color:#888; font-size:.8em; flex:1; min-width:100px; }}
 .tag {{ background:#eef1f5; border-radius:4px; padding:2px 6px; font-size:.72em; color:#555; }}
 footer {{ text-align:center; color:#999; font-size:.8em; margin-top:32px; }}
-.hot-grid {{ display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:14px; }}
-.hot-card {{ background:#fff; border:1px solid #e3e6ea; border-left:4px solid #f59e0b; border-radius:10px; padding:14px 16px; }}
-.hot-head {{ display:flex; align-items:center; gap:8px; font-size:.8em; margin-bottom:6px; }}
-.hot-rank {{ display:inline-flex; align-items:center; justify-content:center; min-width:22px; height:22px; border-radius:50%; background:#f59e0b; color:#fff; font-weight:700; font-size:.8em; padding:0 4px; }}
-.hot-cat {{ background:#fef3c7; color:#92400e; border-radius:4px; padding:1px 6px; font-size:.72em; }}
-.hot-heat {{ color:#d97706; font-weight:700; }}
-.hot-src {{ color:#888; }}
-.hot-title {{ margin:4px 0; font-size:.98em; line-height:1.4; }}
-.hot-title a {{ color:#1a0dab; text-decoration:none; }}
-.hot-title a:hover {{ text-decoration:underline; }}
-.hot-meta {{ display:flex; gap:10px; font-size:.78em; color:#888; align-items:center; }}
-.hot-pubs {{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }}
-.cat-bar {{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }}
-.cat-tab {{ background:#fff; border:1px solid #d5dbe2; border-radius:999px; padding:6px 16px; font-size:.85em; cursor:pointer; color:#444; }}
-.cat-tab:hover {{ border-color:#1a73e8; color:#1a73e8; }}
-.cat-tab.active {{ background:#1a73e8; border-color:#1a73e8; color:#fff; }}
-.cat-panel {{ display:none; }}
-.cat-panel.active {{ display:block; }}
-.cat-card {{ background:#fff; border:1px solid #e3e6ea; border-radius:10px; padding:14px 16px; }}
-.cat-card h3 {{ margin:8px 0 6px; font-size:.98em; }}
-.cat-card h3 a {{ color:#1a0dab; text-decoration:none; }}
-.cat-card h3 a:hover {{ text-decoration:underline; }}
-.cat-meta {{ color:#888; font-size:.78em; }}
-.cat-count {{ color:#888; }}
 @media (prefers-color-scheme: dark) {{
   body {{ background:#14171c; color:#e8eaed; }}
-  .digest, .card, .hot-card, .cat-card {{ background:#1e232b; border-color:#2b313b; }}
-  .hot-card {{ border-left-color:#f59e0b; }}
-  .hot-title a, .cat-card h3 a, .card h3 a {{ color:#8ab4f8; }}
-  .hot-cat {{ background:#3b2f14; color:#fbbf24; }}
-  .cat-tab {{ background:#1e232b; border-color:#2b313b; color:#c9cdd3; }}
+  .digest, .card {{ background:#1e232b; border-color:#2b313b; }}
   .summary {{ color:#c9cdd3; }}
+  .card h3 a {{ color:#8ab4f8; }}
   .tag {{ background:#2b313b; color:#b8bec8; }}
   .sub {{ color:#9aa0a6; }}
   .digest-date {{ color:#9aa0a6; }}
@@ -347,23 +233,9 @@ footer {{ text-align:center; color:#999; font-size:.8em; margin-top:32px; }}
     <div class="nav"><a href="eval.html">📊 AI 大模型测评看板 →</a></div>
   </header>
   {digest_html}
-  {hotspots_html}
-  {cat_html}
   {''.join(sections)}
   <footer>更新时间：{now} · 共 {len(articles)} 条</footer>
 </div>
-<script>
-document.querySelectorAll('.cat-tab').forEach(function(tab) {{
-  tab.addEventListener('click', function() {{
-    var cat = tab.dataset.cat;
-    document.querySelectorAll('.cat-tab').forEach(function(t) {{ t.classList.remove('active'); }});
-    tab.classList.add('active');
-    document.querySelectorAll('.cat-panel').forEach(function(p) {{
-      p.classList.toggle('active', p.id === 'cat-' + cat);
-    }});
-  }});
-}});
-</script>
 </body>
 </html>"""
     out = output / "index.html"
