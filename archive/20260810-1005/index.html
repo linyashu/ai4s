@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI4S 每日进展看板</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin:0; background:#f6f7f9; color:#222; line-height:1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+header { text-align:center; padding: 32px 0 12px; }
+h1 { margin:0; font-size:1.9em; }
+.sub { color:#666; font-size:.92em; }
+.nav { margin-top:10px; }
+.nav a { color:#1a73e8; text-decoration:none; font-size:.9em; }
+.nav a:hover { text-decoration:underline; }
+.digest { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:20px 24px; margin:20px 0; }
+.digest h2 { margin:0 0 4px; font-size:1.25em; }
+.digest-date { color:#888; font-size:.85em; margin-bottom:16px; }
+.digest-item { border-top:1px solid #eef0f3; padding:14px 0; }
+.digest-item-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.digest-rank { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#1a73e8; color:#fff; font-size:.78em; font-weight:700; flex:none; }
+.digest-source { color:#666; font-size:.82em; }
+.digest-title { margin:0 0 6px; font-size:1.02em; line-height:1.45; }
+.digest-title a { color:#1a0dab; text-decoration:none; }
+.digest-title a:hover { text-decoration:underline; }
+.digest-impact, .digest-why { margin:3px 0; color:#333; font-size:.92em; }
+.digest-why { color:#555; }
+.digest-impact strong, .digest-why strong { color:#1a73e8; font-weight:600; margin-right:2px; }
+.digest-trend { border-top:2px solid #eef0f3; margin-top:10px; padding-top:14px; }
+.digest-trend h3 { margin:0 0 6px; font-size:1em; color:#b26a00; }
+.digest-trend p { margin:0; color:#555; font-size:.94em; }
+.section-title { display:flex; align-items:center; gap:10px; margin:32px 0 12px; }
+.count { color:#888; font-size:.85em; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:14px; }
+.card { background:#fff; border:1px solid #e3e6ea; border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; }
+.card h3 { margin:8px 0 6px; font-size:1em; }
+.card h3 a { color:#1a0dab; text-decoration:none; }
+.card h3 a:hover { text-decoration:underline; }
+.card-head { display:flex; align-items:center; gap:8px; font-size:.8em; }
+.badge { color:#fff; padding:2px 8px; border-radius:999px; font-size:.75em; font-weight:600; white-space:nowrap; }
+.date { color:#888; }
+.source { color:#666; }
+.summary { color:#444; font-size:.86em; margin:4px 0; overflow-wrap:anywhere; }
+.card-foot { margin-top:auto; padding-top:8px; display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+.authors { color:#888; font-size:.8em; flex:1; min-width:100px; }
+.tag { background:#eef1f5; border-radius:4px; padding:2px 6px; font-size:.72em; color:#555; }
+footer { text-align:center; color:#999; font-size:.8em; margin-top:32px; }
+@media (prefers-color-scheme: dark) {
+  body { background:#14171c; color:#e8eaed; }
+  .digest, .card { background:#1e232b; border-color:#2b313b; }
+  .summary { color:#c9cdd3; }
+  .card h3 a { color:#8ab4f8; }
+  .tag { background:#2b313b; color:#b8bec8; }
+  .sub { color:#9aa0a6; }
+  .digest-date { color:#9aa0a6; }
+  .digest-item { border-top-color:#2b313b; }
+  .digest-impact { color:#e0e3e8; }
+  .digest-why { color:#c0c4cc; }
+  .digest-trend { border-top-color:#2b313b; }
+  .digest-trend p { color:#c0c4cc; }
+  .digest-title a { color:#8ab4f8; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🧪 AI4S 每日进展看板</h1>
+    <div class="sub">AI for Science 每日聚合 · arXiv / 期刊 / 中文媒体 / HuggingFace</div>
+    <div class="nav"><a href="eval.html">📊 AI 大模型测评看板 →</a></div>
+  </header>
+  
+  <section class="section">
+  <h2 class="section-title"><span class="badge" style="background:#e65100">中文媒体</span><span class="count">38 条</span></h2>
+  <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">finance.ifeng.com</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFBkRFQwX0pJN0doYlZpaXJNNDJQRW8tQVJNSTFMbjNYXzN2Zm15T3J2anFMcGZLTmRxQkVFWVRWNXNxTTZqRFNpb3NTLXBGbHg4?oc=5" target="_blank" rel="noopener">A股三大指数开盘集体上涨，创业板指涨0.11% - finance.ifeng.com</a></h3>
+  <p class="summary">A股三大指数开盘集体上涨，创业板指涨0.11%  finance.ifeng.com</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">飞象网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1pcE1Qb2lINTcxd2tCd3dsY3ZzeXNRMlpVUFdtVGF4bS03Rmc3NDQ5bWVXNzZCdjI2WkxXTXFOMXpqNU15ZlJMTHJHaXBVQW5JNkNVZmpwSUtUS1pS?oc=5" target="_blank" rel="noopener">移起向青 智绘高原 “大美青海算电协同&amp;信号升格”主题媒体行 - 飞象网</a></h3>
+  <p class="summary">移起向青 智绘高原 “大美青海算电协同&amp;信号升格”主题媒体行  飞象网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNQlpkRkk3NG12Y3FYTTcyNUh5OG5NbHV3YzVPOXktNVNRQzlnbnc0M3VoX1FuNE5DN2pMdnRITWdKNzdGeThQOXZ3b3AzVTdxOWhCZ0VPVGcxZnpTZW02dktWOGlWWkVIRXRvb0xTeUk0MWZzUGFJS3htc3JyWUJrUm5QdURWbXBNR21ZV3NjRHQzb0FEcEM5VGR6QmllTTZqSU9oYmx1YldDTEJDbDZ6cjBn?oc=5" target="_blank" rel="noopener">LSTM之父最新97页综述：Agent如何真正学会「自我进化」？ - 新浪财经</a></h3>
+  <p class="summary">LSTM之父最新97页综述：Agent如何真正学会「自我进化」？  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">财新</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE45dEJXdEtLdTc1VUZ5RmRUdXJRaHNtRkxpZC1tWUVFZnZBMFNUc0RhX05YUmU3akdYX3h4dDJaaEpaaUthVGJFeXZSMk5qOXczdmxncnNVeUNFb2h1MlU3ZA?oc=5" target="_blank" rel="noopener">当科学开始研究自己：科技竞争正在进入“元科学”时代 - 财新</a></h3>
+  <p class="summary">当科学开始研究自己：科技竞争正在进入“元科学”时代  财新</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">动脉网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTFBjTVpzZzVEQnZHUWlxODAxLTRBY0RrdXlCRmlaWUhqRjZUTTFVZTVfM1lwS0YxS09KalNsUjNjR2tyTTEwbGJj?oc=5" target="_blank" rel="noopener">【首发】深度细胞完成近亿元种子轮融资，用“AI+物理”突围药物设计 - 动脉网</a></h3>
+  <p class="summary">【首发】深度细胞完成近亿元种子轮融资，用“AI+物理”突围药物设计  动脉网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">飞象网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE1xaU51QWdWTlZjTURzN0xoM3Y0YVJ6djNxRU1lUjdBVWV1MUZKRjRBSmI1Nk85VnItN2h1dUtFMTlMN2k4bUY4cEhyaklxanlvdmgtSmlUVUFlNEtv?oc=5" target="_blank" rel="noopener">千里智驾ASD累计装车量突破53万辆 装机量排名第三 - 飞象网</a></h3>
+  <p class="summary">千里智驾ASD累计装车量突破53万辆 装机量排名第三  飞象网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">cnBeta.COM</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5SUTBUVDJESk1YMTlEZkwyNE1iNWx4bkRUSm55eERhWHZIOUJLNmQ2Z3BCaGVXOF9ORk1DTkctbDk5ajd6RFNZQk14aXpudE5Qb1dnZ05JMHhleGtNZnZzVjVaUC0?oc=5" target="_blank" rel="noopener">开源AI模型实现了对晶体中缺失原子的高精度预测与还原- AI 人工智能 - cnBeta.COM</a></h3>
+  <p class="summary">开源AI模型实现了对晶体中缺失原子的高精度预测与还原- AI 人工智能  cnBeta.COM</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE1XUGxhcGE0YmdKLUxKTFBZeW84eDU5dDBfZWlSdTZrampHUGtwZzBSWGMxY2dXY09HSlJMdzV4NXJpSWM2TDBhSDJDaw?oc=5" target="_blank" rel="noopener">中信建投：AI制药大有可为，产业链有望持续受益 - 新浪财经</a></h3>
+  <p class="summary">中信建投：AI制药大有可为，产业链有望持续受益  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">凤凰网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE1YamVMNS1ZZjRNdWVQR3ZXeXpGM2xzb0xqMEl0QmwzdEkzdlBUTUoyOU5pQTIyNm5pQWhDUkd6ZEVrQmktcjdWNXRId1A?oc=5" target="_blank" rel="noopener">著名数学家、基础科学奖章获得者张寿武谈AI做数学证明：深度思考能力目前还与人类相差甚远 - 凤凰网</a></h3>
+  <p class="summary">著名数学家、基础科学奖章获得者张寿武谈AI做数学证明：深度思考能力目前还与人类相差甚远  凤凰网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">湖北日报传媒集团</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9HNS1ZZzg2T1ZSU1ozQnNJaTJpMUIwY3VTSGw5YkgyUnJVR2tnek9XbG9WN1VuY2VJWXlLNUxsX0xOb0xGNFhjbng2TTZzdXlvYTl5NnFodVM?oc=5" target="_blank" rel="noopener">东湖有理丨成长为顶级策源地，四个创新环节缺一不可- 湖北日报新闻客户端 - 湖北日报传媒集团</a></h3>
+  <p class="summary">东湖有理丨成长为顶级策源地，四个创新环节缺一不可- 湖北日报新闻客户端  湖北日报传媒集团</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5IVTQ0VU9ZWDA3eC1MS2tuTExhajNTSXZ6ZGFLa292bGVnaHdOeFdyR0toVFYzVDg4cXBEVDVyTk1lamN1d0xqQ3BtMHNoMzJOd21jNjI4aTM5T2hoZ2RKRzkxbllrVDRlZ3NwX3N3QWVjd3FidlVhVHd0S0NhT2M?oc=5" target="_blank" rel="noopener">首个全国产10万卡AI超集群投用后，哪些行业受益最大？ - 新浪网</a></h3>
+  <p class="summary">首个全国产10万卡AI超集群投用后，哪些行业受益最大？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5IVTQ0VU9ZWDA3eC1MS2tuTExhajNTSXZ6ZGFLa292bGVnaHdOeFdyR0toVFYzVDg4cXBEVDVyTk1lamN1d0xqQ3BtMHNoMzJOd21jNjI4aTM5T2hoZ2RKRzkxbllrVDRlZ3NwX3N3QWVjd3FidlVhVHd0S0NhT2M?oc=5" target="_blank" rel="noopener">首个全国产10万卡AI超集群投用后，哪些行业受益最大？ - 新浪网</a></h3>
+  <p class="summary">首个全国产10万卡AI超集群投用后，哪些行业受益最大？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOczMtckxHd2lfdEV3Q2FlQ09aWkFXVV9pXzZwRXB2akVTZ0haVG1vWjNiVzhHcjlkZ3Z0OGI5TzRzY3pxX2VKNXlRRTdkd1dMM3JSeWw0ZHRRdWJzaTRlZHIxcGxUQWdiNmxYbzV2NUhpN3pjQ2h1NDg2ZG1MSy02TGFTZjhyMloxX0Y4VTFwOVplZHN4TUhaRi0zX2VFQVYwVVpwbTR6Zk9SNGMtV08wR1NB?oc=5" target="_blank" rel="noopener">AI让科研变成“科学自动机”，副作用是什么？ - 新浪财经</a></h3>
+  <p class="summary">AI让科研变成“科学自动机”，副作用是什么？  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">wyzxwk.com</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1ZYWdJU294c0ZhWS1RczgwNDNjenFoQzNRZndqcGYxc2xmM2NYOU1wcEdHWEJjdEhVMXpfWl9HZHEyQS16aGNGX25KZERBdl9iWlJsZ2tjSy1kdlloTHJoRldwa1VlZDlL?oc=5" target="_blank" rel="noopener">AI既能辅助研制疫苗也能辅助实验室研制“病毒”：正悄然推动一场生物技术革命吗？ - wyzxwk.com</a></h3>
+  <p class="summary">AI既能辅助研制疫苗也能辅助实验室研制“病毒”：正悄然推动一场生物技术革命吗？  wyzxwk.com</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNVGRXUXNyZHZkanlZdkQ1aDgzWF95SUVkUVIwZjB6MkQxWTh3UG9yS1hyRGFMY1JYTUktQlZhYVdQWW9CNlVpZ3FBbGlOaF9GZ0xhRTZHNkpRdnBzY2c5M3gxeFNiNU1CaU02RVVVc0J0YWc3XzZOTG41dHN3VEdKX01BZUhkdF93c3ZITGpYNG82LWNiMjc0aGNuOTVRUlFuV09KekVTZw?oc=5" target="_blank" rel="noopener">“到底真的还是假的”，一位哈佛博士穿越“死亡谷” - 新浪财经</a></h3>
+  <p class="summary">“到底真的还是假的”，一位哈佛博士穿越“死亡谷”  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMi2wJBVV95cUxQNUpmaVU3YXdrTnVUNWdmTzBVWVQ1Q2xnbWl0SGt0bWV3ZEh3S3p2Vk1YWmU4TVdkclQ1MVNGVmlQeWxsc3dmZWtWLTUtYkpnUjBnYUJHOXZ3RUJ0SWdJMVpXMUtWby0yanhlSU1ReWFQYkhtVy00VWRTTDFfTnQyQnNBV3AzcGl6VERTRHA1Z1pKTTFFSDVucTJHcWE0NnR2MXo0cHh1ckFoR3VhUnBKWVZyVEtXOVM5c3E2VVF5Tll1YTIzYThnejRtQlVLeWN5YVU1SnVfWGdFR3E2X3h6czRSN0owdUxidW4yOTB0RnJ6dzRwVDNpNk9tSjZOSUwycDlZMjhtQ1ZTZVROb3R3NDR4ajE3bnBza0hwd0pDbE1mbjhiMHFYZFNQYjB5T1Rad0x6M3dlSDgweVZDRzBiZ2d0NUctTERpdjEzZ2t0MHhrYXFZUlQyN3NwYw?oc=5" target="_blank" rel="noopener">诺奖得主Hassabis，也要走了！ - 新浪财经</a></h3>
+  <p class="summary">诺奖得主Hassabis，也要走了！  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">智源社区</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFBUUHJ6aEs5WjJual90WmlkbXF1ekpaRHFxRkZMQ1JkajJqbkwxUlozUy1NeFl2bjQ2U2JucFdpZW5GSTlqQzQ2WA?oc=5" target="_blank" rel="noopener">当题库追不上模型，AI开始给自己出题：中国这支团队跑通了数据层RSI - 智源社区</a></h3>
+  <p class="summary">当题库追不上模型，AI开始给自己出题：中国这支团队跑通了数据层RSI  智源社区</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE9sZlM4MFRCRzZwUkkwSUU5NE9uRjhiU2hnUExBQVFBOUJnNHZKZXoxMTNiVDVWcEJPdm5NUVBqVFRsWUFwdEV0QjQxenFLWDAxT1Rtb0Zqaw?oc=5" target="_blank" rel="noopener">华为助力上海交通大学落成全国高校规模最大智算平台‘致远一号’，开启‘注册开户秒�彩金’新篇章 - 电玩巴士</a></h3>
+  <p class="summary">华为助力上海交通大学落成全国高校规模最大智算平台‘致远一号’，开启‘注册开户秒�彩金’新篇章  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">cfi.net.cn</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE5INHdBakp3emJRWXdIQ3EwS1ZtcElROGQ2SG1tQ0Y3bUJSX0wzaGtwVVE3cXVlSnhkTkVVWkgwYmVacUtIcTgwWGRkd0ZEY0JqUGV5MGZ3?oc=5" target="_blank" rel="noopener">17股获买入评级 最新:悍高集团 - cfi.net.cn</a></h3>
+  <p class="summary">17股获买入评级 最新:悍高集团  cfi.net.cn</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOd2YxTjVSdHhSQjlWM2I2SmEwaUVBQ0VJUTc1SHI1dExmWFQ2RGJTQXRCMW1rcXl1a3NzMDRleDZwN0NqNW1BQThiTXgybjZrdEJRbUw1eDBoQXdOVEVMak1RLS1LWU5sMnByS1p0Y1FsaHBWM0toeDQzOWZsSEFmZzlEakp1TG16Q0plMTRmbFdDcklUbTBXQg?oc=5" target="_blank" rel="noopener">锚定“人工智能+”，北京海淀发布“智谷中试港”规划 - 新浪财经</a></h3>
+  <p class="summary">锚定“人工智能+”，北京海淀发布“智谷中试港”规划  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">cls.cn</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE5tck93MWZvdzNLS0lLTEdHVVZCeHhTNnF5eEx1TkdLMTVYbEhmN0JvXzctVHNKdzRrNFNmMnQtb1RPaEhDZjlMTA?oc=5" target="_blank" rel="noopener">AI制药新痛点：化学模型跑出成绩单，生物模型仍待跨越“死亡谷” - cls.cn</a></h3>
+  <p class="summary">AI制药新痛点：化学模型跑出成绩单，生物模型仍待跨越“死亡谷”  cls.cn</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">电玩巴士</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5aTFpmaklPcnBvQkRzV0hJcTBnRjBjS1hSME1zaG41c0lmSm92R3F2Z3hDbXR4LWdsMG90VGlKTnhoMThqY1U5TFRrNk50NGp3RWVwQTBZcWNQUEJJOU9EUQ?oc=5" target="_blank" rel="noopener">彩6娱乐app官网2026赛季数据分析实战指南：从数据清洗到胜率预测 - 电玩巴士</a></h3>
+  <p class="summary">彩6娱乐app官网2026赛季数据分析实战指南：从数据清洗到胜率预测  电玩巴士</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">搜狐网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPaE1TTXdEamh1WmJqWnEzcEZWUklzbS16Q2ZqSW1FMWV0RGxpUE1BUXc1VGQxUk1WNVBsaUpqa1RrVldFcWJpWU8tSmlWblFMclpfelRwSVBSLU5NRnZadDR6VW0tMjJFcWEyY2FCUVg1X1VRWTdEQld5dUlSLWJVTVNobWk5RHlH?oc=5" target="_blank" rel="noopener">美国AI4S战略进入实施阶段，能源部牵头打造“创世纪”开放科学大模型 - 搜狐网</a></h3>
+  <p class="summary">美国AI4S战略进入实施阶段，能源部牵头打造“创世纪”开放科学大模型  搜狐网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">京报网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE52alhuX3JBb2ZIenNuNUpKYWI4alpmYnJ4R1BUOTdkeEtmajdHa3AyWGZGMHB1YmNxWEFQVjkxVHFWY2toU3dFYUhiYVd1TThnUzdXaFpYZEp2eDdodGFNNmxCVmpKSjJMNUZPNWVEZFQydw?oc=5" target="_blank" rel="noopener">官宣！海淀智谷中试港来了，这批平台率先签约入驻 - 京报网</a></h3>
+  <p class="summary">官宣！海淀智谷中试港来了，这批平台率先签约入驻  京报网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">雪球</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiP0FVX3lxTE4zMFdRYmZkMEVtdjV1XzNROXNabEJfaVpVa1VlcEg5WFVSWnBOSEc5RFVFUks1Tnp1d09NTzF4dw?oc=5" target="_blank" rel="noopener">剂泰科技-P(07666)股票股价_股价行情_讨论_资讯_财报_数据报告 - 雪球</a></h3>
+  <p class="summary">剂泰科技-P(07666)股票股价_股价行情_讨论_资讯_财报_数据报告  雪球</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE9rclBweDNQNGItVExvbDk2QnFFVzcybHZ0NWw2aUcyNHlTTmNHYzNWdnJMcUVqQnJWbVJmTDJ0NHJfT1NGdkVvNVh4WDdFeFB4ejNHTUxKbFlKcXhyWHN3NlZXOFh2WXFhTXVHQ1dyTEo1eUZTSjdaMTdiN1djUVU?oc=5" target="_blank" rel="noopener">曙光8000投用后，普通人能用到哪些AI服务？ - 新浪网</a></h3>
+  <p class="summary">曙光8000投用后，普通人能用到哪些AI服务？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOamZZT3FfTUlEbUc0X2tMZkp2eEtKTDU5ZWx3bVg2dFFxS0h5R3FrSzVDdDVJTjlHbW9uYVZOaHVFREx6TlR4bW1UVVUxRjFhQUJMWEpBU0RjUkkzck5fR1E2Qk1aV0dSZmYxQnVTY1RucEsxOFpVSzN1cUFuTzBIQWVOWWgtcW5sT0tOdUNveXdDYjdtbktjbnc3SFFDbUw3QU44dS1tZ3FkT01kV25Iak53?oc=5" target="_blank" rel="noopener">谷歌AI重组：创始人布林亲自盯Gemini，哈萨比斯交权 - 新浪财经</a></h3>
+  <p class="summary">谷歌AI重组：创始人布林亲自盯Gemini，哈萨比斯交权  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">搜狐网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9NUDk0eW1CdGdTY0tCWG40aU5BVS1ZMXhOYlJzVHZYeGZIZ2VCM3FNZTNiQWNSTHFBQTdDdGwyZEZTeVZOaDBSVnhFN1hhYnh3VmhxdW13?oc=5" target="_blank" rel="noopener">浦江淮、赵小龙：迈向认识论奇点：人工智能、不透明性与科学发现的新规范 - 搜狐网</a></h3>
+  <p class="summary">浦江淮、赵小龙：迈向认识论奇点：人工智能、不透明性与科学发现的新规范  搜狐网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">매일경제</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE9QUDJwNHNJbVJSTjFzWmw5eE5OaWlHemtPZktrN3lhZEl4eE9wTnVNNXN4cTZZSmM5ZHQ1ZjhHRG1GVEpKekFXazFyVQ?oc=5" target="_blank" rel="noopener">今年韩美科学家大会(UKC)最关心的当然是&quot;科学人工智能(AI)&quot; 在过去的一年里,美国推出了捷恩斯任务,韩国则发射了K-Moonshot项目。 全部都是&quot;用AI加速科学发现的速度&quot;的基本要点。 在此.. - 매일경제</a></h3>
+  <p class="summary">今年韩美科学家大会(UKC)最关心的当然是&quot;科学人工智能(AI)&quot; 在过去的一年里,美国推出了捷恩斯任务,韩国则发射了K-Moonshot项目。 全部都是&quot;用AI加速科学发现的速度&quot;的基本要点。 在此..  매일경제</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">cls.cn</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTE5TQjZCME1MZzhjUXF1aHpzb2xXemZIOGpkRFRYeHBFTWFhYVpPa0xlZlBMU21UYWhWTzRCemNlRlR1cXZXakE?oc=5" target="_blank" rel="noopener">电报解读 - cls.cn</a></h3>
+  <p class="summary">电报解读  cls.cn</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">科学网—新闻</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE12QjRxc0Rmcks0eFBrNVp0ZnBmcVBJSUJrZklnNFpnd2lLdmcyOUxFdEs5T3FHQy0teGJvRTNwSkN5aHhqcTNfVzlEUk9ycjA3cHRmUk1rMXBEYW0zbnN6UGthaHk?oc=5" target="_blank" rel="noopener">2026国际基础科学大会在京开幕 - 科学网—新闻</a></h3>
+  <p class="summary">2026国际基础科学大会在京开幕  科学网—新闻</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">至顶网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE04Q2VuODdzbThuUG5YeHdtcWQyX0dxdTVCSzNaZDJjYlR6ZUpOUy1ETE5PV3Y5RjYtT0d3U0F4WkhoaTREemtJS1pobTZhWUc4WmRfWUQ3bzhUek1qeEE?oc=5" target="_blank" rel="noopener">DeepMind飓风预测模型为预报员争取到额外一天预警时间-人工智能 - 至顶网</a></h3>
+  <p class="summary">DeepMind飓风预测模型为预报员争取到额外一天预警时间-人工智能  至顶网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE80aTgtQTk2MUpyel9yRWlEYmFLdFlIX09FYUR3dHlrNk11MUhoV28xMklUX01nQVFiYzhoUUp3MjA4cERFOTdlTS1CM0QxZFhWRWt4eHo1Z2ttVHZaZTIzNzlOT2EwMG94c2k1NGMyQzdCR2E0NnpmYnBGZ2hxVlU?oc=5" target="_blank" rel="noopener">AI芯片功耗飙升为何让风冷散热失效？ - 新浪网</a></h3>
+  <p class="summary">AI芯片功耗飙升为何让风冷散热失效？  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">新浪财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9DQUVkV0RFcWxsVjZEbUU4ejdVOXpnNWtvcU1DcFh5T1VxSFRsY1VRUFlUdjVCWTFHT3VoUW16eFYxOC1nUjRCWmRKSjdXdkJqYjR2Tkk5dVFEV0lBWk5sMERfWjJYM0dQck4tMVltUVJ6cDlsQ2pNOQ?oc=5" target="_blank" rel="noopener">北京海淀发布“智谷中试港”规划 将建设AI全栈式中试平台集群 - 新浪财经</a></h3>
+  <p class="summary">北京海淀发布“智谷中试港”规划 将建设AI全栈式中试平台集群  新浪财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">潮起网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFA2YS1HU09BbXJjSVpNTzRXMS01RFNSa2hvbkgxZkVwRnRRT0Y2ZlpnamtqODNQNElra09uVXl5dFZlQ2Z6VDBYd3VSMFNjQkVvdHpVOVJKcFNIc0RMdVVyVG1QSQ?oc=5" target="_blank" rel="noopener">Jeff Dean挥别谷歌48小时首秀：我眼中AI的下一个十年 - 潮起网</a></h3>
+  <p class="summary">Jeff Dean挥别谷歌48小时首秀：我眼中AI的下一个十年  潮起网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">VOI.ID</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiQkFVX3lxTFBFNmdXLVIyLXNyYWpaa2JIOEJPbERRR3B2YUZrcG1vNUdJZTBqMG9aVGN4S2RRcExKNWp0ZEJ3bHo2d9IBQkFVX3lxTFBFNmdXLVIyLXNyYWpaa2JIOEJPbERRR3B2YUZrcG1vNUdJZTBqMG9aVGN4S2RRcExKNWp0ZEJ3bHo2dw?oc=5" target="_blank" rel="noopener">研究发现人工智能故事更受欢迎，特别是如果它被认为是人类写的 - VOI.ID</a></h3>
+  <p class="summary">研究发现人工智能故事更受欢迎，特别是如果它被认为是人类写的  VOI.ID</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">CSDN</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBMUXFUcENPeDNxdjdINHJCSjZoazZfQjlxbmRRM3hYTnBMSGdkVGM0UDQwaGhJUlh3eDRiZnpGbjctZ3Fzem9sZkZITVFTanFhOFJRMmJueVVLRWd6SHFIaVFmRlEyX1RfQVduMXFR?oc=5" target="_blank" rel="noopener">Jeff Dean谈AI的下一次范式升级 - blog.csdn.net</a></h3>
+  <p class="summary">Jeff Dean谈AI的下一次范式升级  blog.csdn.net</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-08-09</span>
+    <span class="source">디지털투데이</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPSWY4aE9jZl9mb2h0UWZwdEhmLW5XUHQ1bTc5UjlGZ2k3OUtMUkVRckptV1JwQW1aOUxvcDZRRVV5QUREUXMzeDJ5LUpoWEo3anlsbVVJUXJGTUNPdjFRQjNPSm0xemN6TXQ0U2JYQmpkNl9BaXZjb0VBdExuNy1SbUR5djdLMGx2dFRZaUFXNkwyLUVvR0doc0hUZ1JoY0FaNUVYdUt3c1l1MFlINHZfTzRncGQwTUJKbFVhazFtTHJ0bkVxVXEzOUx3?oc=5" target="_blank" rel="noopener">韩国科技信息通信部科技创新本部长Park In-gyu赴美出席UKC 2026 聚焦AI、航天和量子合作 - 디지털투데이</a></h3>
+  <p class="summary">韩国科技信息通信部科技创新本部长Park In-gyu赴美出席UKC 2026 聚焦AI、航天和量子合作  디지털투데이</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article></div>
+</section><section class="section">
+  <h2 class="section-title"><span class="badge" style="background:#ffd21e">HuggingFace</span><span class="count">15 条</span></h2>
+  <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/jacob-rojic/albedo-arc-darius3th-ckpt80-gentle" target="_blank" rel="noopener">jacob-rojic/albedo-arc-darius3th-ckpt80-gentle</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/JinNakamura/study-a-artifacts-2" target="_blank" rel="noopener">JinNakamura/study-a-artifacts-2</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Attila115/co7" target="_blank" rel="noopener">Attila115/co7</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Attila115/co6" target="_blank" rel="noopener">Attila115/co6</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Attila115/co14" target="_blank" rel="noopener">Attila115/co14</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/sundaycoil/music-playlist" target="_blank" rel="noopener">sundaycoil/music-playlist</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/mradermacher/Qwen2.5-14B-OBLITERATED-i1-GGUF" target="_blank" rel="noopener">mradermacher/Qwen2.5-14B-OBLITERATED-i1-GGUF</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/solvc4u/sn102-178" target="_blank" rel="noopener">solvc4u/sn102-178</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/ethanpaker/al_165_5d4tn2der4" target="_blank" rel="noopener">ethanpaker/al_165_5d4tn2der4</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/mradermacher/gemma-4-31B-it-continued-i1-GGUF" target="_blank" rel="noopener">mradermacher/gemma-4-31B-it-continued-i1-GGUF</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Attila115/co15" target="_blank" rel="noopener">Attila115/co15</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/thirtyspokes/standings" target="_blank" rel="noopener">thirtyspokes/standings</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/solvc4u/sn102-250" target="_blank" rel="noopener">solvc4u/sn102-250</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/solvc4u/sn102-121" target="_blank" rel="noopener">solvc4u/sn102-121</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-08-10</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Attila115/co5" target="_blank" rel="noopener">Attila115/co5</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article></div>
+</section>
+  <footer>更新时间：2026-08-10 10:05 · 共 53 条</footer>
+</div>
+</body>
+</html>

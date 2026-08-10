@@ -4,6 +4,7 @@ LLM 输出结构化 JSON，便于前端渲染成干净卡片排版。
 """
 from __future__ import annotations
 
+import datetime as dt
 import json
 import logging
 import re
@@ -206,7 +207,7 @@ def _refine_eval(cfg: dict, shortlist: list[dict], max_items: int) -> Digest:
         "请基于全文做深度分析，输出为 JSON。\n\n"
         "JSON 结构（示例）：\n"
         "{\n"
-        '  "date": "2026-08-09",\n'
+        '  "date": "<今日日期，如 2026-08-10>",\n'
         '  "items": [\n'
         "    {\n"
         '      "title": "原始标题（必须与条目完全一致）",\n'
@@ -240,6 +241,7 @@ def _refine_eval(cfg: dict, shortlist: list[dict], max_items: int) -> Digest:
         if not raw:
             return empty
         digest = _normalize(raw)
+        digest.date = dt.datetime.now().strftime("%Y-%m-%d")
         logger.info("测评深度分析完成：%d 条动态", len(digest.items))
         return digest
     except Exception as exc:
@@ -409,7 +411,7 @@ def _refine(cfg: dict, shortlist: list[dict]) -> Digest:
         "7. 严格输出合法 JSON\n\n"
         "输出结构：\n"
         "{\n"
-        '  "date": "2026-08-09",\n'
+        '  "date": "<今日日期，如 2026-08-10>",\n'
         '  "items": [\n'
         "    {\"title\": \"原始标题\", \"url\": \"原始链接\", \"source\": \"真实来源\", "
         '"impact": "一句话点评", "why": "值得关注的理由"}\n'
@@ -431,6 +433,7 @@ def _refine(cfg: dict, shortlist: list[dict]) -> Digest:
         if not raw:
             return empty
         digest = _normalize(raw)
+        digest.date = dt.datetime.now().strftime("%Y-%m-%d")
         logger.info("LLM 深度分析完成：%d 条进展", len(digest.items))
         return digest
     except Exception as exc:
