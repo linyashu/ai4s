@@ -1,0 +1,138 @@
+.main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4) 80px;
+}
+
+.hero {
+  padding-top: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.pageTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.pageSubtitle {
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.sectionCount {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.headlines {
+  margin-bottom: var(--space-5);
+}
+
+.headlineList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.headline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.headline:hover {
+  background: var(--surface-card-hover);
+  border-color: var(--border-strong);
+}
+
+.headlineNum {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: var(--bg-2);
+  color: var(--text-1);
+}
+
+.headlineBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.headlineTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-0);
+}
+
+.headlineSource {
+  font-size: 13px;
+  color: var(--text-2);
+  margin-top: 2px;
+}
+
+.categorySection {
+  margin-bottom: var(--space-5);
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.categoryItem {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  transition: background 0.15s ease;
+}
+
+.categoryItem:hover {
+  background: var(--surface-card);
+}
+
+.categoryItemTitle {
+  font-size: 14px;
+  color: var(--text-0);
+  flex: 1;
+  min-width: 0;
+  line-height: 1.5;
+}
+
+.categoryItemMeta {
+  flex: none;
+  font-size: 12px;
+  color: var(--text-2);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.empty {
+  padding: 60px 0;
+  text-align: center;
+  color: var(--text-2);
+  font-size: 14px;
+}

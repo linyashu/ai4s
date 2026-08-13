@@ -1,0 +1,183 @@
+.main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4) 80px;
+}
+
+.hero {
+  padding-top: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.pageTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.pageSubtitle {
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.rankList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.rankRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.rankRow:hover {
+  background: var(--surface-card-hover);
+  border-color: var(--border-strong);
+}
+
+.rankNumber {
+  flex: none;
+  width: 32px;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-align: center;
+}
+
+.rankNumber1 {
+  color: var(--rank-1);
+}
+
+.rankNumber2 {
+  color: var(--rank-2);
+}
+
+.rankNumber3 {
+  color: var(--rank-3);
+}
+
+.rankNumber4,
+.rankNumber5,
+.rankNumber6,
+.rankNumber7,
+.rankNumber8,
+.rankNumber9,
+.rankNumber10 {
+  color: var(--rank-rest);
+}
+
+.rankContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.rankTitle {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text-0);
+}
+
+.rankTitle:hover {
+  color: var(--accent-cyan-fg);
+}
+
+.rankMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.rankSource {
+  font-size: 12px;
+  color: var(--accent-cyan-fg);
+  font-weight: 500;
+}
+
+.rankDup {
+  font-size: 12px;
+  color: var(--accent-amber-fg, var(--accent-amber));
+  border: 1px solid rgba(163, 127, 47, 0.35);
+  border-radius: 999px;
+  padding: 1px 8px;
+  transition: background 0.15s ease;
+}
+
+.rankDup:hover {
+  background: rgba(163, 127, 47, 0.1);
+}
+
+.rankCategory,
+.rankTag {
+  font-size: 12px;
+  color: var(--text-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 8px;
+}
+
+.rankBarTrack {
+  margin-top: var(--space-2);
+  height: 4px;
+  border-radius: 999px;
+  background: var(--bg-2);
+  overflow: hidden;
+}
+
+.rankBar {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.bar-top {
+  background: var(--accent-amber);
+}
+
+.bar-rest {
+  background: var(--accent-cyan);
+}
+
+.rankHeat {
+  flex: none;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.heatValue {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--text-0);
+}
+
+.heatLabel {
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+.vibe {
+  font-size: 11px;
+  color: var(--text-2);
+  margin-top: 2px;
+}
+
+.empty {
+  padding: 60px 0;
+  text-align: center;
+  color: var(--text-2);
+  font-size: 14px;
+}

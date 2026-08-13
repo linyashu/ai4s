@@ -1,0 +1,136 @@
+.card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  background: var(--surface-card-hover);
+  border-color: var(--border-strong);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.source {
+  font-size: 12px;
+  color: var(--accent-cyan-fg);
+  font-weight: 500;
+}
+
+.time {
+  font-size: 12px;
+  color: var(--text-2);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text-0);
+}
+
+.title:hover {
+  color: var(--accent-cyan-fg);
+}
+
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  background: var(--note-bg);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+}
+
+.noteLabel {
+  flex: none;
+  font-size: 12px;
+  color: var(--note-fg);
+  font-weight: 600;
+  white-space: nowrap;
+  padding-top: 1px;
+}
+
+.noteText {
+  font-size: 13px;
+  color: var(--text-1);
+  line-height: 1.55;
+}
+
+.summary {
+  font-size: 14px;
+  color: var(--text-1);
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.foot {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-1);
+}
+
+.flex {
+  flex: 1;
+}
+
+.category {
+  font-size: 12px;
+  color: var(--text-1);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+
+.tag {
+  font-size: 12px;
+  color: var(--text-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+
+.score {
+  flex: none;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-strong);
+}
+
+.score-high {
+  color: var(--accent-emerald);
+  border-color: rgba(95, 199, 154, 0.4);
+}
+
+.score-mid {
+  color: var(--accent-amber);
+  border-color: rgba(211, 178, 106, 0.4);
+}
+
+.score-low {
+  color: var(--text-2);
+}

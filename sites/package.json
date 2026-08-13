@@ -1,0 +1,40 @@
+{
+  "name": "ai4s-sites",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "ingest": "tsx scripts/ingest.ts",
+    "migrate": "tsx scripts/migrate.ts",
+    "refresh-rankings": "tsx scripts/refresh-rankings.ts",
+    "fetch-aa": "tsx scripts/fetch-aa.ts",
+    "refresh-github": "tsx scripts/refresh-github.ts",
+    "refresh-openrouter": "tsx scripts/refresh-openrouter.ts"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.4",
+    "fast-xml-parser": "^5.10.1",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^17.4.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "tsx": "^4.23.12",
+    "typescript": "^5",
+    "vitest": "^4.1.10"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "unrs-resolver@1.12.2": true
+  }
+}

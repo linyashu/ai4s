@@ -1,0 +1,17 @@
+services:
+  ai4s-sites:
+    build: .
+    container_name: ai4s-sites
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env.local
+    environment:
+      - NODE_ENV=production
+      - BASE_PATH=/ai4s
+      - SITE_URL=http://107.182.191.63/ai4s
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
