@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { AIItem } from "@/lib/types"
 import { CATEGORY_LABELS } from "@/lib/types"
+import VoteButton from "./vote-button"
 import styles from "./item-card.module.css"
 
 function timeAgo(publishedAt: string): string {
@@ -22,7 +23,13 @@ export function ScoreBadge({ score }: { score: number }) {
   )
 }
 
-export default function ItemCard({ item }: { item: AIItem }) {
+export default function ItemCard({
+  item,
+  votes = 0,
+}: {
+  item: AIItem;
+  votes?: number;
+}) {
   return (
     <article className={styles.card}>
       <div className={styles.head}>
@@ -51,6 +58,7 @@ export default function ItemCard({ item }: { item: AIItem }) {
           </span>
         ))}
         <span className={styles.flex} />
+        <VoteButton itemId={item.id} votes={votes} />
         <ScoreBadge score={item.finalScore} />
       </div>
     </article>

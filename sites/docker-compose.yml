@@ -1,6 +1,9 @@
 services:
   ai4s-sites:
-    build: .
+    build:
+      context: .
+      args:
+        BASE_PATH: /ai4s
     container_name: ai4s-sites
     restart: unless-stopped
     ports:

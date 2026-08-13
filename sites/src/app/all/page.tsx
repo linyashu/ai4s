@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/site-header";
 import ItemCard from "@/components/item-card";
 import Pagination from "@/components/pagination";
-import { readItems } from "@/lib/store";
+import { readItems, readVoteCounts } from "@/lib/store";
 import { searchItems } from "@/lib/search";
 import { CATEGORY_LABELS, type Category } from "@/lib/types";
 import styles from "./page.module.css";
@@ -30,6 +30,7 @@ export default async function AllPage({ searchParams }: AllProps) {
   const page = Math.max(1, Number(pageParam) || 1);
 
   const items = await readItems();
+  const voteCounts = await readVoteCounts();
   const results = searchItems(items, { q, category: activeCat });
   const totalPages = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
   const current = Math.min(page, totalPages);
@@ -96,7 +97,7 @@ export default async function AllPage({ searchParams }: AllProps) {
         <>
           <div className={styles.grid}>
             {pageItems.map((item) => (
-              <ItemCard key={item.id} item={item} />
+              <ItemCard key={item.id} item={item} votes={voteCounts.get(item.id) ?? 0} />
             ))}
           </div>
           <Pagination

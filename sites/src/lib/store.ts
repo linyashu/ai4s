@@ -7,6 +7,7 @@ import {
   dbGetItemById,
   dbReadStories,
   dbReadHeatSnapshots,
+  dbReadVoteCounts,
 } from "./db"
 
 export interface HeatSnapshot {
@@ -50,4 +51,8 @@ export async function readHeatSnapshots(): Promise<HeatSnapshot[]> {
 
 export async function writeHeatSnapshots(snapshot: HeatSnapshot): Promise<void> {
   await dbWriteHeatSnapshot(snapshot.timestamp, snapshot.points)
+}
+
+export async function readVoteCounts(): Promise<Map<string, number>> {
+  return dbReadVoteCounts()
 }

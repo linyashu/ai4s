@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { computeHeat, vibeVotes } from "./hot"
+import { computeHeat } from "./hot"
 import type { AIItem } from "./types"
 
 function makeItem(partial: Partial<AIItem> = {}): AIItem {
@@ -65,17 +65,23 @@ describe("hot.computeHeat", () => {
   })
 })
 
-describe("hot.vibeVotes", () => {
-  it("同一 item 投票数确定且稳定", () => {
-    const item = makeItem({ id: "stable-id" })
-    expect(vibeVotes(item)).toBe(vibeVotes(item))
+describe("hot 氛围票加权", () => {
+  it("每票 +0.5%，10 票 = +5%", () => {
+    const item = makeItem({ finalScore: 60 })
+    const now = new Date(item.publishedAt).getTime()
+    expect(computeHeat(item, { votes: 10, now })).toBeCloseTo(126, 2)
   })
 
-  it("票数范围在 50-950 之间", () => {
-    for (let i = 0; i < 20; i++) {
-      const v = vibeVotes(makeItem({ id: `item-${i}` }))
-      expect(v).toBeGreaterThanOrEqual(50)
-      expect(v).toBeLessThan(950)
-    }
+  it("票数封顶 100（+50%）", () => {
+    const item = makeItem({ finalScore: 60 })
+    const now = new Date(item.publishedAt).getTime()
+    expect(computeHeat(item, { votes: 100, now })).toBeCloseTo(180, 2)
+    expect(computeHeat(item, { votes: 1000, now })).toBeCloseTo(180, 2)
+  })
+
+  it("无票数不加成", () => {
+    const item = makeItem({ finalScore: 60 })
+    const now = new Date(item.publishedAt).getTime()
+    expect(computeHeat(item, { votes: 0, now })).toBeCloseTo(120, 2)
   })
 })

@@ -35,66 +35,51 @@ export async function processWithLLM(item: RawItem): Promise<LLMOutput> {
     return mockProcess(item)
   }
 
-  const apiKey = process.env.DEEPSEEK_API_KEY
-  if (!apiKey) {
-    throw new Error("缺少 DEEPSEEK_API_KEY 环境变量")
+  // 解析失败时重试一次（LLM 偶发截断 JSON）
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const { content, usage } = await fetchWithRetry(
+      {
+        messages: [
+          { role: "system", content: "你只输出合法 JSON。" },
+          { role: "user", content: buildPrompt(item) },
+        ],
+      },
+      1200
+    )
+    if (usage) {
+      const { recordLLMUsage } = await import("./usage")
+      recordLLMUsage({
+        promptTokens: usage.prompt_tokens,
+        completionTokens: usage.completion_tokens,
+        totalTokens: usage.total_tokens,
+      })
+    }
+
+    const json = extractJson(content)
+    if (!json) {
+      console.warn(`[llm] JSON 解析失败（第 ${attempt + 1} 次），标题 "${item.title.slice(0, 30)}"`)
+      continue
+    }
+    const parsed = JSON.parse(json) as Partial<LLMOutput>
+
+    const category = (CATEGORY_PROMPTS as Record<string, string>)[
+      parsed.category ?? ""
+    ]
+      ? (parsed.category as Category)
+      : "industry"
+
+    return {
+      titleZh: parsed.titleZh || item.title,
+      summaryZh: parsed.summaryZh || "",
+      category,
+      tags: Array.isArray(parsed.tags) ? parsed.tags.slice(0, 4) : [],
+      aiSelected: Boolean(parsed.aiSelected),
+      aiSelectedReason: parsed.aiSelectedReason || "",
+      finalScore: Math.max(0, Math.min(100, Number(parsed.finalScore) || 0)),
+    }
   }
 
-  const res = await fetch(API_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      messages: [
-        { role: "system", content: "你只输出合法 JSON。" },
-        { role: "user", content: buildPrompt(item) },
-      ],
-      temperature: 0.3,
-      max_tokens: 800,
-      response_format: { type: "json_object" },
-    }),
-    cache: "no-store",
-  })
-
-  if (!res.ok) {
-    const body = await res.text()
-    throw new Error(`LLM API ${res.status}: ${body.slice(0, 200)}`)
-  }
-
-  const data = (await res.json()) as {
-    choices: Array<{ message: { content: string } }>
-    usage?: { prompt_tokens: number; completion_tokens: number; total_tokens: number }
-  }
-  const content = data.choices?.[0]?.message?.content ?? ""
-  const parsed = JSON.parse(content) as Partial<LLMOutput>
-
-  if (data.usage) {
-    const { recordLLMUsage } = await import("./usage")
-    recordLLMUsage({
-      promptTokens: data.usage.prompt_tokens,
-      completionTokens: data.usage.completion_tokens,
-      totalTokens: data.usage.total_tokens,
-    })
-  }
-
-  const category = (CATEGORY_PROMPTS as Record<string, string>)[
-    parsed.category ?? ""
-  ]
-    ? (parsed.category as Category)
-    : "industry"
-
-  return {
-    titleZh: parsed.titleZh || item.title,
-    summaryZh: parsed.summaryZh || "",
-    category,
-    tags: Array.isArray(parsed.tags) ? parsed.tags.slice(0, 4) : [],
-    aiSelected: Boolean(parsed.aiSelected),
-    aiSelectedReason: parsed.aiSelectedReason || "",
-    finalScore: Math.max(0, Math.min(100, Number(parsed.finalScore) || 0)),
-  }
+  throw new Error(`LLM 输出两次均无法解析: ${item.title.slice(0, 40)}`)
 }
 
 function mockProcess(item: RawItem): LLMOutput {

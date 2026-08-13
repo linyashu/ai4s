@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "@/components/site-header";
-import { buildTodayItems } from "@/lib/daily";
+import { buildTodayItems, readDailyDeepReport } from "@/lib/daily";
 import { CATEGORY_LABELS } from "@/lib/types";
 import { ScoreBadge } from "@/components/item-card";
 import styles from "./page.module.css";
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 export default async function DailyPage() {
   const items = await buildTodayItems();
+  const deepReport = await readDailyDeepReport();
   const todayLabel = new Intl.DateTimeFormat("zh-CN", {
     month: "long",
     day: "numeric",
@@ -46,6 +47,25 @@ export default async function DailyPage() {
         </div>
       ) : (
         <>
+          {deepReport && (
+            <section className={styles.deepSection}>
+              <h2 className={styles.sectionTitle}>
+                今日解读 <span className={styles.deepBadge}>AI 生成</span>
+              </h2>
+              <div className={styles.deepCard}>
+                <h3 className={styles.deepHeadline}>{deepReport.headline}</h3>
+                <p className={styles.deepAnalysis}>{deepReport.analysis}</p>
+                {deepReport.points.length > 0 && (
+                  <ul className={styles.deepPoints}>
+                    {deepReport.points.map((p, i) => (
+                      <li key={i}>{p}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </section>
+          )}
+
           {headlineItems.length > 0 && (
             <section className={styles.headlines}>
               <h2 className={styles.sectionTitle}>今日头条</h2>

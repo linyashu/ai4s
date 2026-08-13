@@ -1,0 +1,40 @@
+.wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface-card);
+  color: var(--text-2);
+  font-size: 11px;
+  line-height: 1;
+  padding: 4px 7px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.btn:hover {
+  border-color: var(--border-strong);
+  color: var(--text-0);
+}
+
+.activeUp {
+  color: var(--accent-emerald);
+  border-color: var(--accent-emerald);
+  background: rgba(46, 139, 102, 0.08);
+}
+
+.activeDown {
+  color: var(--accent-rose);
+  border-color: var(--accent-rose);
+  background: rgba(179, 64, 42, 0.08);
+}
+
+.count {
+  margin-left: 3px;
+  font-variant-numeric: tabular-nums;
+}

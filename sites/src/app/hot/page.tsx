@@ -11,21 +11,34 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "AI4S — 热门排行",
-  description: "AI4S 热门话题排行，精选信源权重 + 氛围票 + 24 小时半衰期热度衰减。",
+  description: "AI4S 热门话题排行，精选信源权重 + 用户投票加成 + 24 小时半衰期热度衰减。",
 };
+
+const WINDOWS = [
+  { key: "24h", hours: 24, label: "24 小时" },
+  { key: "7d", hours: 168, label: "7 天" },
+] as const;
+
+interface HotProps {
+  searchParams: Promise<{ window?: string }>;
+}
 
 function heatBarClass(rank: number): string {
   return rank <= 3 ? `bar-top` : `bar-rest`;
 }
 
-export default async function HotPage() {
+export default async function HotPage({ searchParams }: HotProps) {
+  const { window: windowParam } = await searchParams;
+  const windowKey = windowParam === "7d" ? "7d" : "24h";
+  const windowHours = WINDOWS.find((w) => w.key === windowKey)?.hours ?? 24;
+
   const items = (await readItems()).filter((it) => it.aiSelected);
   const stories = await readStories();
   const heatSnaps = await readHeatSnapshots();
   const series = heatSnaps.flatMap((s) =>
     s.points.map((p) => ({ ts: s.timestamp, heat: p.heat, itemId: p.itemId }))
   );
-  const ranking = await computeHotRanking(items, 10, undefined, stories);
+  const ranking = await computeHotRanking(items, 10, undefined, stories, windowHours);
 
   const maxHeat = ranking[0]?.heat ?? 1;
 
@@ -36,9 +49,23 @@ export default async function HotPage() {
       <section className={styles.hero}>
         <h1 className={styles.pageTitle}>热门排行</h1>
         <p className={styles.pageSubtitle}>
-          精选信源权重 + 氛围票权重，按 24 小时半衰期衰减
+          精选信源权重 + 用户投票加成，按 24 小时半衰期衰减
         </p>
       </section>
+
+      <div className={styles.windowTabs} role="tablist" aria-label="时间窗口">
+        {WINDOWS.map((w) => (
+          <a
+            key={w.key}
+            href={w.key === "24h" ? "/hot" : `/hot?window=${w.key}`}
+            role="tab"
+            aria-selected={windowKey === w.key}
+            className={`${styles.windowTab} ${windowKey === w.key ? styles.windowTabActive : ""}`}
+          >
+            {w.label}
+          </a>
+        ))}
+      </div>
 
       {ranking.length === 0 ? (
         <div className={styles.empty}>
@@ -87,7 +114,9 @@ export default async function HotPage() {
               <div className={styles.rankHeat}>
                   <span className={styles.heatValue}>{heat}</span>
                   <span className={styles.heatLabel}>热度</span>
-                  <span className={styles.vibe}>氛围 {vibeVotes}</span>
+                  {vibeVotes > 0 && (
+                    <span className={styles.vibe}>票 {vibeVotes}</span>
+                  )}
                 </div>
               </li>
             );

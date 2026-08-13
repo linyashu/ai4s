@@ -360,6 +360,15 @@ export async function runPipeline(): Promise<IngestResult> {
     }
   }
 
+  if (process.env.REFRESH_DAILY !== "0") {
+    try {
+      const { generateDailyDeepReport } = await import("./daily")
+      await generateDailyDeepReport()
+    } catch (err) {
+      console.warn("[ingest] 深度日报生成失败（不影响主流程）:", err instanceof Error ? err.message : err)
+    }
+  }
+
   const result: IngestResult = {
     fetched: raw.length,
     processed,

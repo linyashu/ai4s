@@ -5,6 +5,8 @@ RUN npm ci
 
 FROM node:20-slim AS builder
 WORKDIR /app
+ARG BASE_PATH=
+ENV BASE_PATH=${BASE_PATH}
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN npm run build

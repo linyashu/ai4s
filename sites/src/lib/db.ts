@@ -105,6 +105,22 @@ async function migrate(db: ReturnType<typeof createClient>): Promise<void> {
       name TEXT PRIMARY KEY,
       acquiredAt INTEGER NOT NULL
     );
+
+    CREATE TABLE IF NOT EXISTS votes (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      itemId TEXT NOT NULL,
+      sessionId TEXT NOT NULL,
+      value INTEGER NOT NULL DEFAULT 1,
+      createdAt TEXT NOT NULL,
+      UNIQUE(itemId, sessionId)
+    );
+    CREATE INDEX IF NOT EXISTS idx_votes_item ON votes (itemId);
+
+    CREATE TABLE IF NOT EXISTS daily_reports (
+      dateKey TEXT PRIMARY KEY,
+      content TEXT NOT NULL,
+      createdAt TEXT NOT NULL
+    );
   `)
 }
 
@@ -286,4 +302,54 @@ export async function dbReadIngestRuns(limit = 10): Promise<Array<Record<string,
     args: [limit],
   })
   return r.rows.map((row) => row as Record<string, unknown>)
+}
+
+export async function dbUpsertVote(
+  itemId: string,
+  sessionId: string,
+  value: number
+): Promise<number> {
+  await ensureMigrated()
+  await getDb().execute({
+    sql: `INSERT INTO votes (itemId, sessionId, value, createdAt) VALUES (?, ?, ?, ?)
+       ON CONFLICT(itemId, sessionId) DO UPDATE SET value = excluded.value, createdAt = excluded.createdAt`,
+    args: [itemId, sessionId, value, new Date().toISOString()],
+  })
+  const r = await getDb().execute({
+    sql: "SELECT COALESCE(SUM(value), 0) AS total FROM votes WHERE itemId = ?",
+    args: [itemId],
+  })
+  return Number((r.rows[0] as Record<string, unknown> | undefined)?.total ?? 0)
+}
+
+export async function dbReadVoteCounts(): Promise<Map<string, number>> {
+  await ensureMigrated()
+  const r = await getDb().execute(
+    "SELECT itemId, SUM(value) AS total FROM votes GROUP BY itemId"
+  )
+  const map = new Map<string, number>()
+  for (const row of r.rows) {
+    const rr = row as Record<string, unknown>
+    map.set(String(rr.itemId), Number(rr.total ?? 0))
+  }
+  return map
+}
+
+export async function dbReadDailyReport(dateKey: string): Promise<string | null> {
+  await ensureMigrated()
+  const r = await getDb().execute({
+    sql: "SELECT content FROM daily_reports WHERE dateKey = ?",
+    args: [dateKey],
+  })
+  const row = r.rows[0] as { content?: string } | undefined
+  return row?.content ?? null
+}
+
+export async function dbWriteDailyReport(dateKey: string, content: string): Promise<void> {
+  await ensureMigrated()
+  await getDb().execute({
+    sql: `INSERT INTO daily_reports (dateKey, content, createdAt) VALUES (?, ?, ?)
+       ON CONFLICT(dateKey) DO UPDATE SET content = excluded.content, createdAt = excluded.createdAt`,
+    args: [dateKey, content, new Date().toISOString()],
+  })
 }
