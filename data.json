@@ -1,0 +1,2316 @@
+[
+  {
+    "title": "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions",
+    "url": "https://arxiv.org/abs/2609.04199v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "Many recurring text functions are easy to describe but difficult to implement with rules, while calling a large remote model for every input introduces repeated cost, latency, and dependency on a provider. We present compile by training, which turns a natural-language specification into a reusable neural function. At compile time, teacher models generate task-specific examples that are used to train a small adapter for a compact interpreter. The resulting function runs without the teachers and can be stored, versioned, and composed like ordinary software. On FuzzyBench-Hard, a subset on which the Program-as-Weights fast compiler produced no exact matches, compile by training reaches 83.6% semantic accuracy. This higher accuracy comes with a higher compile-time cost: roughly a minute rather than seconds for the fast compiler. We deploy the compiler in a public interactive service and demonstrate compiled functions in a multi-site website helper, a language-controlled 3D avatar, and a bidirectional English-Claudish translator.",
+    "authors": [
+      "Yuntian Deng",
+      "Pengyu Nie",
+      "Stuart Shieber"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Clean Engineering, Unstable Measurement: A Preregistered Reliability Failure of Black-Box LLM Observers on Shared Endpoints",
+    "url": "https://arxiv.org/abs/2609.04198v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "Language-model judges now gate training data, score generations, and drive leaderboards. The judge is then a measurement instrument, resting on one rarely stated assumption: the same request, sent to the same model name, reads the same tomorrow. We audited that assumption in two preregistered campaigns with every threshold fixed in advance; neither got past validating its instrument. Across 52,988 audited request attempts, same-window repeat rankings agreed at Spearman 0.400 against a required 0.90, and byte-identical next-day replays agreed at 0.78 against a required 0.99, each time with the execution record at ceiling. Three mechanisms explain the gap: a label-to-meaning mapping that biased readouts as strongly as the signal; candidate gaps seven orders of magnitude below the instrument's own noise floor; and byte-identical inputs returning different rankings, a noise that exact-permutation readouts compound. Neither metric substitution nor sampling repaired it on the tested grid. Preregistered follow-ups bound the problem: waiting did not help on the days sampled (0.805 versus 0.800, replicated over five further days); switching providers did not help (four providers share the floor, medians 0.74 to 0.88, predicted by none of the metadata fields they expose); self-hosting on batch-invariant kernels helped only while the server was quiet; and on constructed errors with known gaps, the readout's separation tracks error type, not size. We distill the evidence into a three-level snapshot-identity ladder, eight design rules, and a reporting checklist; a pilot at roughly 2% of the study's call volume would have exposed both unreachable gates in advance. All results concern externally measured behaviour on shared serving infrastructure. On a shared endpoint, a model name is not a frozen instrument; a preregistered evaluation must measure its instrument before freezing any gate on it.",
+    "authors": [
+      "Haoyaun Zhu",
+      "Jie Zhang"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "ESPO: Error-Structured Prompt Optimization via Diagnose, Diversify, and Stabilize",
+    "url": "https://arxiv.org/abs/2609.04197v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "Evolutionary prompt optimizers such as GEPA suffer from prompt bloat: each iteration appends rules and caveats, producing prompts up to 3$\\times$ longer yet no more accurate. We trace this to three deficiencies - incomplete error observation, limited search diversity, and unreliable selection - and propose ESPO (Error-Structured Prompt Optimization), which decomposes prompt optimization into three phases: Diagnose clusters all training errors into structural patterns in one round; Propose generates candidates via four complementary strategies with independent biases; Select applies bootstrap stability selection. On seven public NLP benchmarks - Tweet, MMLU, GSM8K, HotpotQA, ScoNe, HoVer, and PUPA - ESPO improves average accuracy by $+$3.76 pp over the state-of-the-art (74.67% vs 70.91% for GEPA), matching or exceeding GEPA on every dataset while producing prompts 47% shorter (1,004 vs 1,878 chars) and faster at inference. Cross-model experiments across four additional student models (Gemma 3 12B, Mistral 14B, Qwen3 32B, Claude Haiku 4.5) show ESPO yields the best average accuracy on every model tested, with the largest gap on Qwen3 GSM8K (15.00% $\\to$ 91.40%). A generalization bound (Appendix) grounds each phase in a corresponding term of the test-time gap, and the ablation confirms a key prediction: adding diversity without bootstrap selection actually hurts performance ($-$1.20%).",
+    "authors": [
+      "Lihao Liu",
+      "Peng Tang",
+      "Kunwar Yashraj Singh",
+      "Shabnam Ghadar"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "One Editor, Many Edits: A Unified Training-Free Framework for Diverse Video Editing",
+    "url": "https://arxiv.org/abs/2609.04190v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "Video editing spans diverse editing paradigms, yet achieving high-quality instruction-guided and subject-guided editing within a single unified framework remains challenging. We introduce EditVid, a training-free framework combining sparse causal memory for local coherence, correspondence-based post-attention token injection for long-range identity preservation, and soft latent blending for edit locality. The same framework supports instruction-guided and reference-guided edits, including style transfer, attribute modification, object insertion, part-level editing, and subject replacement. On FiVE, EditVid achieves 78.16 FiVE-Acc, compared with 58.95 for the strongest evaluated training-free baseline, while obtaining competitive results on IVEBench. A user study further shows a 51.8\\% overall preference for EditVid over 7 competing methods.",
+    "authors": [
+      "Adheesh Sunil Juvekar",
+      "Onkar Kishor Susladkar",
+      "Kiet A. Nguyen",
+      "Muntasir Wahed",
+      "Nabeel Bashir",
+      "Xiaona Zhou",
+      "Tianjiao Yu",
+      "Vedant Shah"
+    ],
+    "tags": [
+      {
+        "term": "cs.CV",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Seeing Before Synthesizing: VLM-Guided Transition Event Discovery for Weakly-Supervised Dense Video Captioning",
+    "url": "https://arxiv.org/abs/2609.04183v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "Weakly-Supervised Dense Video Captioning aims to localize and describe multiple events in untrimmed videos given only an ordered set of event-level captions per video. Recent work synthesizes auxiliary transition captions via LLM to provide additional vision-language alignment, but these captions lack visual grounding and are rigidly assigned to every inter-event gap at a fixed location and duration. To address these, we propose Seeing Before Synthesizing (SBS), a framework that adaptively provides visually grounded linguistic guidance only where warranted. Leveraging a VLM, we generate frame-level narratives for the inter-event gaps and detect transitions from the semantic variation across them. For identified transitions, we then refine inter-event temporal masks by blending the temporal midpoint with the semantic change point and selecting the width that maximizes vision-language alignment. Experiments on ActivityNet Captions and YouCook2 demonstrate state-of-the-art performance in both captioning and localization.",
+    "authors": [
+      "Ye-Chan Kim",
+      "Seunghee Choi",
+      "SeungJu Cha",
+      "Si-Woo Kim",
+      "Hwiseon Kim",
+      "Hyungee Kim",
+      "Dong-Jin Kim"
+    ],
+    "tags": [
+      {
+        "term": "cs.CV",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Knowledge Acquisition During Pre-training? Large Language Models Learn Better With Auxiliary Views",
+    "url": "https://arxiv.org/abs/2609.04180v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "Gaps remain in our understanding of how large language models (LLMs) acquire knowledge during pre-training. We posit that auxiliary views, reformulations of knowledge, are causally helpful for learning. We design controlled experiments to isolate this. First, we confirm that repetition is necessary for acquisition and clarify that paraphrasing helps only at smaller batch sizes. Second, holding the token budget fixed, allocating tokens from document repetition to auxiliary views improves learning, counterintuitively, even for factual recall. Third, the effectiveness of auxiliary views is not contingent on the strength of the teacher model that generates them. Fourth, we identify forms of knowledge, contextual and foundational, that aid learning in the presence of prior knowledge gaps. Finally, we examine how these effects manifest mechanistically via layer-wise biases and compression. Together, our findings suggest that auxiliary representations of knowledge, which arise naturally in large pre-training corpora, are a key factor in the success of pre-training and offer a plausible explanation for why data diversity matters.",
+    "authors": [
+      "Joseph Lee",
+      "Yidi Huang",
+      "Dokyoon Kim",
+      "Shu Yang",
+      "Li Shen"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "A Computationally Feasible Framework for Causal Probabilistic Explanation",
+    "url": "https://arxiv.org/abs/2609.04177v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "Explaining why a specific outcome occurred, and which inputs deserve the blame or credit, is central to philosophical, scientific, and policy analysis. Existing tools split into two camps. The theory of actual causality (AC) gives principled verdicts, but only for toy-sized models, because computing them requires enumerating counterfactual scenarios. Scalable attribution methods like SHAP (or even causal SHAP) at least partially ignore the causal structure that generated the data, and can give answers that conflict with a careful causal analysis. We close this gap with Probabilistic Causal Impact (PCI).   PCI builds on actual causality and on Pearl's notions of probability of necessity and sufficiency, but recasts the question of explainability as an estimation problem on a probabilistic causal model that is easily approximated via Monte Carlo. By specifying a distribution over \"candidate explanations,\" a distribution over counterfactual values, and a scoring function, PCI provides tractable, causally grounded, graded explanations, generalizing AC and Pearl's probability of causation as degenerate cases.   We evaluate PCI in synthetic and real-world examples, spanning consistency checks with AC, scaling experiments, complex continuous-valued dynamical systems, and a real-world deployed causal machine learning model trained on millions of datapoints.",
+    "authors": [
+      "Rafal Urbaniak",
+      "Sam Witty",
+      "Daniel Waxman",
+      "Andy Zane",
+      "Poorva Garg",
+      "Emily Bunnapradist",
+      "Sankaran Vaidyanathan",
+      "Jack Feser"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Rethinking On-Policy Distillation of Large Language Models II: One Training Example",
+    "url": "https://arxiv.org/abs/2609.04172v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "On-policy distillation (OPD) combines student-generated rollouts with dense token-level supervision from a teacher. Existing work has mainly studied its algorithmic behavior, leaving the role of training data unclear. We examine this role at the data-minimal limit by training on a single query. One-shot OPD keeps improving for hundreds of steps and recovers most of full-data OPD's gain across task domains and model families. We explain this result through the states visited during training and the rate at which the student aligns with the teacher. We measure \\emph{state coverage}, the fraction of the states full-data OPD visits that a query set's rollouts reach. A single query already reaches \\(71.5\\%\\), most of it within the first 100 steps. Adding semantically distinct queries raises coverage and validation accuracy together, until 16 queries reach \\(98.9\\%\\) and match full-data training. Yet alignment slows at a similar pace whether OPD trains on one query or the whole dataset, and even a fixed set of states takes hundreds of steps to absorb. OPD is therefore data-overfed but algorithm-starved. Its rollouts quickly expose broad supervision, while the student absorbs that supervision increasingly slowly. The state-coverage result extends to multi-teacher OPD, where 16 semantically diverse queries per domain match full-data MOPD. As a further stress test, content-light templates and off-domain WildChat queries also approach the real-query baseline. Task content and induced state coverage can therefore come apart. We hope these findings direct future work toward the step efficiency of OPD, and prompt a re-examination of the data and the mechanisms behind its recent successes in frontier post-training.",
+    "authors": [
+      "Zixuan Fu",
+      "Bingxiang He",
+      "Yuxin Zuo",
+      "Haohuan Huang",
+      "Jinqian Zhang",
+      "Ruhang Xiao",
+      "Cheng Qian",
+      "Qinyu Luo"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms",
+    "url": "https://arxiv.org/abs/2609.04170v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "Multi-agent AI science ecosystems rely on agents possessing tools that allow them to communicate, coordinate, and build on each other's work. Yet this shared infrastructure can also introduce vulnerabilities by creating a substrate for the contagious spread of unintended and undesirable behaviors. We report a case study on a research collective of 100 autonomous LLM agents tasked with proving formal mathematical conjectures. Within the swarm, cheating spontaneously emerged and was later challenged by whistleblowers - both without any external intervention. When a single agent discovered an exploit in the evaluation system, it propagated across the collective via a shared knowledge library and later through peer-to-peer messages. Despite early reluctance, a cohort of agents adopted the exploit in response to competitive pressure. A separate group of agents produced an emergent counter-response: auditing fraudulent proofs, alerting peers across broadcast and private channels, staging boycotts, lodging formal complaints, and proposing validation patches. In recent incidents, agent swarms coordinated covertly through improvised side-channels (Dalton and Wallace, 2026; Greenblatt et al., 2026). Our setting differs: the same transparent channels that carried the exploit also gave non-cheating agents the visibility they needed to detect fraud, organize resistance, and enforce norms. We cast the problem of managing the agents' shared infrastructure as the knowledge commons governance problem (Ostrom, 1990). To protect the commons from exploits, we propose to adopt institutional mechanisms, such as graduated sanctioning and collective-choice rules, to support decentralized self-governance in autonomous swarms.",
+    "authors": [
+      "Davide Paglieri",
+      "Logan Cross",
+      "Tim Genewein",
+      "Joel Z. Leibo",
+      "Nenad Tomasev",
+      "Alexander Sasha Vezhnevets"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "SWE-Gate: Passing Functional Tests Is Not Enough for Software Engineering Agents",
+    "url": "https://arxiv.org/abs/2609.04167v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "Repository-level software engineering benchmarks have significantly advanced the evaluation of coding agents, but existing benchmarks primarily measure whether generated patches pass functional tests and overlook review-derived acceptance constraints (review constraints) that often influence whether a patch is acceptable in real-world software development. We introduce SWE-Gate, a repository-level benchmark for software engineering agents that explicitly evaluates review constraint compliance alongside functional correctness. SWE-Gate derives review constraints from real pull request review comments and synthesizes repository-level repair instances around these constraints. Each instance provides separate functional and constraint tests, together with non-compliant and gold patches, enabling explicit separation between issue resolution capability and review constraint compliance. We construct SWE-Gate with 303 repository-level repair instances spanning 75 open-source Python repositories across diverse software domains. Experiments with four LLM backends spanning different capability levels under a common coding-agent scaffold reveal a substantial gap between functional success and success under the complete repair specification: among 644 repairs that pass the functional tests, 221 fail to satisfy the provided review constraints. These findings show that functional-only evaluation overestimates agents' ability to satisfy the full requirements of repository-level repair tasks. The replication package including code, data, and experimental results is available at https://github.com/DeepSoftwareAnalytics/SWE-Gate.",
+    "authors": [
+      "Xin He",
+      "Yanlin Wang",
+      "Mingwei Liu",
+      "Jiachi Chen",
+      "Hongyu Zhang",
+      "Guanbin Li"
+    ],
+    "tags": [
+      {
+        "term": "cs.SE",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "From Deceptive Outputs to Deceptive Mechanisms: A Causal Framework for Language-Model Deception Research",
+    "url": "https://arxiv.org/abs/2609.04166v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "Research and news coverage of language-model deception increasingly attributes human-like mental-state concepts to language models. Such claims can blur the distinction between behavior that looks deceptive and a mechanism that is actually deceptive.   We introduce a causal taxonomy separating prior commitment from retrospective report, model preference from realized output, false preference from sensitivity to the utility of misleading a recipient, and deceptive behavior from the provenance of the objective or strategy producing it. We test these distinctions in two open-weight model families. Across controlled guessing-game and stock-trading experiments, we find that deceptive-looking behavior can arise without the corresponding proposed mechanism, while other interventions provide direct evidence that recipient information state can causally affect deceptive preference.   These results show that deceptive behavior can provide evidence for a deceptive mechanism. But even evidence for such a mechanism does not establish model agency in the deception.",
+    "authors": [
+      "Yakov Pyotr Shkolnikov"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center",
+    "url": "https://arxiv.org/abs/2609.04159v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "Large language model (LLM) agents are increasingly proposed as autonomous SOC analysts, but two limitations make them unreliable at enterprise scale: a finite context window cannot hold a multi-thousand-host authentication graph, and free-form generation offers no guarantee that a recommended containment action is consistent with the topology it operates on. We present Sentinel-RL, an agentic-SOC architecture that decouples topological reasoning from semantic reasoning: a heterogeneous graph attention encoder summarizes the live authentication subgraph into a fixed-dimensional state, a Proximal Policy Optimization (PPO) policy maps this state to a constrained set of investigative actions, and an LLM agent loop is restricted to consuming the policy's recommendations and producing analyst-readable narratives gated by a critic. We instantiate the system on the LANL Comprehensive, Multi-Source Cyber-Security Events dataset and the Indiana University Quartz HPC cluster, reporting four results: (i) a two-phase CREATE ingestion pattern loads a 24M-edge authentication subgraph into Neo4j in 14.2 minutes on a single 32-core node, roughly 24x faster than the canonical MERGE-based pipeline; (ii) a sliding-window alert engine reliably trips a 25-event/10-second threshold in <=2.5 s across 50 trials; (iii) PPO training over 200 iterations converges to a mean episodic return of 8.74+/-0.31, with held-out precision of 0.91 and recall of 0.87 on labeled red-team events; and (iv) the integrated containment loop completes a full detect-investigate-recommend-human-approve cycle in a median of 6.3 s. We contribute a reusable engineering pattern (the hot-node deadlock workaround), a portable HPC deployment pattern (anchor-node co-location), and an enterprise-readiness analysis covering false-positive economics, reversibility guarantees, audit compliance, and the human-approval boundary.",
+    "authors": [
+      "Uday Vallabhaneni",
+      "Cassie L. Cagwin",
+      "David J. Wild"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments",
+    "url": "https://arxiv.org/abs/2609.04148v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "As terminal-based code agents become prevalent, agent trajectories have accumulated at scale, while realistic, executable environments remain scarce. However, environments are what agent post-training actually requires: each can be re-queried into many verifiable tasks and provides execution feedback, whereas a trajectory is a single frozen demonstration. Rather than generating environments from scratch, we observe that the tool-execution history in existing trajectories exposes the structure and contents of the environments in which they ran, making it possible to reconstruct those environments from the trajectories themselves. Thus, we introduce Terminal-Universe, a framework which turns each trajectory into a reusable environment and explores it for synthesizing new tasks and continued interactions. Specifically, Terminal-Universe replays the file operations recorded in a trajectory to restore each file before the agent modified it, yielding a partial workspace; a completion agent then supplies the missing files and dependencies. On this recovered workspace, we both reconstruct the original intent task and synthesize entirely new ones. Besides, we also scale the tasks along two complementary axes: breadth and depth. For breadth, we mine directional dependency relations between related environments and synthesize cross-workspace queries spanning multiple codebases, as developers routinely do in real-world development. For depth, we extend the initial single-turn query into a multi-round session that captures iterative user feedback and requirement refinement via a user agent. Applied to public terminal agent trajectories, Terminal-Universe produces 37.3k task-sufficient environments. Supervised fine-tuning of Qwen3.5-27B on this corpus improves single-round performance on Terminal-Bench 2.1 by 11.9 points and multi-round performance on EvoCode-Bench v2 MT@4 by 13.8 points.",
+    "authors": [
+      "Jie Wu",
+      "Zhenru Zhang",
+      "Beichen Zhang",
+      "Xuwu Wang",
+      "Yuhui Su",
+      "Mouxiang Chen",
+      "Peng Wang",
+      "Zhihai Wang"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "A Low-Cost, Open Platform for End-to-End Autonomous Driving on a Miniature Ackermann Vehicle",
+    "url": "https://arxiv.org/abs/2609.04147v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "This paper presents a low-cost, open experimental platform for research in end-to-end autonomous driving with miniature Ackermann vehicles. The platform combines a physical vehicle, a printed urban track, data collection tools, trajectory registration, and a Webots digital twin, enabling controlled experiments that connect simulation-based autonomous-driving methods to real-world execution. As a first baseline, we implement command-conditioned behavior cloning, in which a neural policy receives an on-board camera image and a high-level navigation command and outputs steering and speed. The system is evaluated both on the physical vehicle and in simulation. In real closed-loop experiments, the learned policy follows lanes and executes commanded turns, reaching a mean cross-track error of 6.1 cm with respect to the reference route, close to the 4.7 cm observed in human demonstrations. In the digital twin, camera field of view has a strong effect on performance, reducing the mean cross-track error from 35.6 to 3.3 cm when widened from 58 to 120 degrees. Using the digital twin to generate synthetic driving data and a learned sim-to-real image translator to reduce the appearance gap, we further show that a higher-capacity policy trained on this synthetic data combined with real demonstrations is the only configuration that completes all four track routes in closed loop, whereas the compact baseline and the same network trained on real data alone complete fewer. These results establish the open platform as a practical testbed for sim-to-real studies and provide an initial command-conditioned imitation-learning baseline; we release it to support reproducible research.",
+    "authors": [
+      "Gustavo Claudio Karl Couto",
+      "Eric Aislan Antonelo",
+      "Gabriel George Zipperer"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.RO",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Efficient Test-Time Adaptation through Human-AI Interaction",
+    "url": "https://arxiv.org/abs/2609.04141v1",
+    "source": "arxiv",
+    "source_name": "AI 研究进展 (cs.AI)",
+    "published": "2026-09-03",
+    "summary": "AI agents are trained on population-scale data to encode broad capabilities spanning those of many practitioners. Yet the artifacts they produce rarely meet the personal bar professionals need to stake their reputation on. On realistic, open-ended tasks where success criteria are heterogeneous and insufficiently documented, individual expertise lives precisely in the elevation and departure from the average. In practice, iterative human-agent interaction surfaces criteria that users cannot fully specify up front, yet apply repeatedly across tasks. We argue this cross-session interaction data is a rich, underused signal for closing the gap to individual expertise. In this work, we propose test-time adaptation through human-agent interaction (TAHI), which integrates these signals into agent context and weights, and crystallizes each user's training and evaluation criteria via an evolving rubric module. We adapt agents to 30 individuals in two high-utility domains, writing and visual creation, on a total of 600 tasks. Our agents improve solo task success by 4.5-20.9% within only tens of tasks. Meanwhile, our evolving rubric module serves as a scalable annotation tool, creating evaluation rubrics that catch 16.0-22.3% more failures than those from LMs or humans alone. While agents are adapted towards individuals, we show these personalized agents also produce improvements in success of up to 8.8% that generalize across users.",
+    "authors": [
+      "Zora Zhiruo Wang",
+      "Apurva Gandhi",
+      "Rulin Shao",
+      "Aspen Chen",
+      "Jonas Mueller",
+      "Zhiqi Liang",
+      "Jett Chen",
+      "Michael Ryan"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments",
+    "url": "https://arxiv.org/abs/2609.04148v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "As terminal-based code agents become prevalent, agent trajectories have accumulated at scale, while realistic, executable environments remain scarce. However, environments are what agent post-training actually requires: each can be re-queried into many verifiable tasks and provides execution feedback, whereas a trajectory is a single frozen demonstration. Rather than generating environments from scratch, we observe that the tool-execution history in existing trajectories exposes the structure and contents of the environments in which they ran, making it possible to reconstruct those environments from the trajectories themselves. Thus, we introduce Terminal-Universe, a framework which turns each trajectory into a reusable environment and explores it for synthesizing new tasks and continued interactions. Specifically, Terminal-Universe replays the file operations recorded in a trajectory to restore each file before the agent modified it, yielding a partial workspace; a completion agent then supplies the missing files and dependencies. On this recovered workspace, we both reconstruct the original intent task and synthesize entirely new ones. Besides, we also scale the tasks along two complementary axes: breadth and depth. For breadth, we mine directional dependency relations between related environments and synthesize cross-workspace queries spanning multiple codebases, as developers routinely do in real-world development. For depth, we extend the initial single-turn query into a multi-round session that captures iterative user feedback and requirement refinement via a user agent. Applied to public terminal agent trajectories, Terminal-Universe produces 37.3k task-sufficient environments. Supervised fine-tuning of Qwen3.5-27B on this corpus improves single-round performance on Terminal-Bench 2.1 by 11.9 points and multi-round performance on EvoCode-Bench v2 MT@4 by 13.8 points.",
+    "authors": [
+      "Jie Wu",
+      "Zhenru Zhang",
+      "Beichen Zhang",
+      "Xuwu Wang",
+      "Yuhui Su",
+      "Mouxiang Chen",
+      "Peng Wang",
+      "Zhihai Wang"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Translation as a Decision Space: A Multi-Agent Perspective on Low-Resource Dialect Generation",
+    "url": "https://arxiv.org/abs/2609.04048v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "Neural machine translation (NMT) systems typically produce a single output per input, obscuring the alternative decision trajectories implicitly available within multilingual decoding. This opacity becomes particularly problematic in low-resource dialect settings, where multiple linguistically valid realizations may differ in lexical authenticity, register, and structural stability. We propose reframing translation as a structured decision space explored by autonomous translation agents. Instead of analyzing a single output, we model distinct translation pathways as agents operating over a shared multilingual backbone. Inter-agent divergence is treated not as error but as an interpretable behavioral signal. We conduct an empirical study on Turkish--Syrian Arabic translation using three agents: (1) zero-shot direct translation, (2) dialect-stabilized translation via lightweight fine-tuning, and (3) pivot translation through English. Evaluation is performed on 5,000 dialogue sentences, while stabilization is trained on 5,000 additional Turkish--Syrian sentence pairs drawn from television dialogue and MADAR-Turk resources. Rather than optimizing for conventional performance metrics, we quantify structured behavioral displacement using dialect marker frequency, lexical proximity to standardized Arabic, and structural variance. Lightweight stabilization nearly doubles dialect marker usage, increasing it from 0.2266 to 0.4988, while significantly reducing structural instability. Pivot mediation introduces normalization pressure and measurable compression effects, whereas zero-shot translation exhibits the highest decision variance. We argue that translation divergence across agents reveals latent decision flexibility within multilingual models and we provide a principled interpretability framework for low-resource dialect generation.",
+    "authors": [
+      "Hasan Alkhder",
+      "Mohammad Abboush",
+      "Igor Tchappi",
+      "Ahmet Zengin",
+      "Amro Najjar"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Editable Visual Design",
+    "url": "https://arxiv.org/abs/2609.04034v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "While diffusion base models such as GPT-Image-2 and Nano-Banana exhibit remarkable visual expressiveness, their end-to-end generation inherently yields flattened bitmaps with error-prone text, precluding layer-wise post-editing. Conversely, code-based visual generation via Coding Agents provides precise layout control and decoupled layers, yet remains constrained by a lack of global aesthetic intuition and the difficulty of coding complex visual assets.   To address this, we propose Editable Visual Design, a new paradigm driven by a Coding Agent. We designate the VLM as the ``creative brain'' for requirement comprehension, task planning, and aesthetic judgment, while utilizing the image generation model as an on-demand ``visual world simulator'' to synthesize standalone visual assets. Operating under an ``imagine first, then act'' closed-loop workflow, the agent generates isolated assets, writes native HTML/CSS, and iteratively refines the design against visual rendering feedback.   Furthermore, Agent Design Replay faithfully reproduces the creative and reasoning trajectory akin to that of professional human designers. Ultimately, the system delivers editable artifacts with decoupled layers and real text, enabling users to perform intuitive mouse dragging and layout adjustments on a graphical user interface. Validations on posters, infographics, and other scenarios show that this paradigm successfully achieves both refined aesthetics and production-grade editability.",
+    "authors": [
+      "Junyan Ye",
+      "Wei Liu",
+      "Dongzhi Jiang",
+      "Zichen Wen",
+      "HaoDong Li",
+      "Zhutao Lv",
+      "Jiaxin Lin",
+      "Jinhua Yu"
+    ],
+    "tags": [
+      {
+        "term": "cs.CV",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "FiMI Banking: A Sovereign Model for Indian Retail Banking",
+    "url": "https://arxiv.org/abs/2609.03960v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "Banks need conversational systems that can answer product questions, assist customers with account-related requests, and operate safely within strict operational and regulatory constraints. General-purpose language models do not reliably meet these requirements. They fall short when a task requires grounded information, correct tool use, or cautious handling of bank-specific sensitive situations. We introduce FiMI Banking, a controlled Indian retail-banking setting. We build it from vetted banking documents, structured ground truth, synthetic customer backgrounds, and banking tools. We evaluate two post-training approaches: preference optimization for response-level behavior, and reinforcement learning with verifiable rewards for multi-turn tool-use tasks. Preference optimization improves safe behavior substantially: out-of-scope refusal rises from 52% to 80%. Reinforcement learning improves edge-case performance from 0.509 to 0.718 and order-sensitive task performance from 0.590 to 0.679, while using 29% fewer generated tokens. These results show that preference optimization and verifiable-reward reinforcement learning address complementary requirements for reliable banking agents.",
+    "authors": [
+      "NPCI AI Research Team",
+      "Aman Kumar",
+      "Asit Desai",
+      "Chandra Bhushan",
+      "Harsh Sharma",
+      "Harshit Bhushan",
+      "Hrithik Kadam",
+      "Keyur Doshi"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Headroom-Drift Replay: A Primitive for Principled Replay Control in GRPO",
+    "url": "https://arxiv.org/abs/2609.03941v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "RL-based post-training for reasoning models is increasingly bottlenecked by repeated fresh rollout generation, particularly in agentic settings where environment interaction dominates wall-clock cost. Replay can reduce this burden by reusing past trajectories, but existing methods typically embed it within larger training pipelines involving exploration, experience restructuring, or mixed-policy optimization. This makes replay's own contribution difficult to isolate. We ask a focused question: how far can principled replay selection alone go? We introduce Headroom-Drift Replay, a group-level replay control primitive for GRPO that separates reuse into two decisions. Headroom ranks stored groups by remaining learning value, while Drift gates them by compatibility with the current policy. The fresh on-policy stream remains unchanged, and the method adds no auxiliary generation or training machinery. Across mathematical reasoning, multimodal reasoning, and Agentic Search benchmarks, this single intervention outperforms naive replay and matches or exceeds broader replay methods on Avg Mean@32. In Agentic Search, where environment interaction dominates cost, it delivers comparable quality at materially lower wall-clock time.",
+    "authors": [
+      "Hyun Bin Park",
+      "Du-Seong Chang"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Speak for Me: Giving LLMs the Situational Awareness to Participate in a Meeting",
+    "url": "https://arxiv.org/abs/2609.03923v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "In online meeting delegation, LLM agents fail to recognize when to speak. With no structured way to track stances, coverage, and floor, they miss the moments where they should contribute. Prompt-only delegates stay silent on 51.4% of the absent participant's talking opportunities on the AMI corpus. We present CAPA (Collaborative Agent Predictive Architecture), an architecture for online meeting delegation. A Perceiver updates the meeting state from each observed turn. A Predictor forecasts how the conversation will continue. A Controller decides whether to speak and which proposition to surface. A Generator phrases the chosen contribution in the participant's style. Two judges score the forecast and the action against the next observed turn. A Recalibrator updates the meeting state from those verdicts for future decisions. To evaluate online delegation, we introduce an episode-level protocol that scores whether, when, and what a delegate contributes around the participant's actual idea units. The protocol's schema-constrained LLM judges align with human annotations at Cohen's kappa = 0.71. On 137 AMI meetings, CAPA reduces the silence rate from 51.4% to 2.5%, doubles credited recovery (26.1 --> 52.2), and keeps hallucination at 0.6%. The failure mode shifts from omission to selection, with each residual near-miss attributable to a specific module of the architecture. Mechanism ablations identify the meeting state as the lever that closes the recognition gap, where raw-context scaling alone does not.",
+    "authors": [
+      "Muneeb Khan",
+      "Frederic Kirstein",
+      "Terry Ruas",
+      "Bela Gipp"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "RuleMem: Active Rule Memory for Long-Term Conversational Agents",
+    "url": "https://arxiv.org/abs/2609.03915v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "Question answering agents in long-term conversations must reason over massive, temporally dispersed dialogue histories. However, existing memory mechanisms primarily treat past information as \\textit{passively} stored facts, leading to semantic gaps and unreliable reasoning. To address this limitation, we propose RuleMem, a rule-based memory framework that induces reusable logical rules from historical interactions to \\textit{actively} guide both evidence retrieval and reasoning. Specifically, RuleMem constructs natural-language Horn clauses from conversations and validates them via a Rule Perplexity Consistency (RPC) mechanism. These induced rules enable the retrieval of semantically distant evidence while providing an explicit logical structure for answer generation. We conducted a comprehensive evaluation of RuleMem on two long-term conversational benchmarks, LoCoMo and LongMemEval_s*. In a rigorous comparison against 14 baselines on LoCoMo, RuleMem achieved the highest accuracy, exceeding the baseline average by 27.47 points (a 54.3% relative improvement).",
+    "authors": [
+      "Xingyuan Zeng",
+      "Zuohan Wu",
+      "Quanming Yao",
+      "Yue Wang",
+      "Wei Liu",
+      "Libin Zheng",
+      "Jiuke Wang",
+      "Jian Yin"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.IR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "RealCADBench: Benchmarking Parametric CAD Modeling from Industrial Design Intents",
+    "url": "https://arxiv.org/abs/2609.03773v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "Parametric computer-aided design (CAD) modeling is difficult to evaluate with a single metric. Existing CAD benchmarks often emphasize synthetic or CAD-native settings, limited input modalities, or executability and IoUs alone. We introduce RealCADBench, a benchmark for intent-to-program CAD modeling from real industrial design intents. It contains 12,632 tasks from 19 factory-automation categories and spans text descriptions, 2D engineering drawings, real product pictures, and rendered images for both Part and Assembly modeling. We report results on a 1,770-task evaluation slice: 1,745 Part tasks across four input regimes and RCB-Assm25, a 25-task assembly study used in every reported assembly comparison. Each method generates FreeCAD API Python, which a shared runtime executes to export the 3D model. We evaluate the exported model using executability, Solid IoU, Surface IoU, and a rubric-based visual-semantic identity Judge. Among the nine standalone frontier large models evaluated, no model leads all four metrics. Across six frontier-scale large models, executability ranges from 0.565 to 0.812, Solid IoU from 0.2841 to 0.5379, and Surface IoU from 0.112 to 0.217 across the four Part regimes. The highest regime-balanced composite comes from a different model than the leaders on the four component metrics. On RCB-Assm25, Codex with GPT-5.5 improves executability and both IoU metrics over standalone GPT-5.5, but lowers the Judge score by 6.98 percentage points, leaving GPT-5.5 as the Judge leader. We also observe recurring failure modes, most notably missing fine structures, loss of part identity, and incorrect assembly placement. These results show that execution alone is insufficient to characterize realistic CAD modeling and that frontier models and agents differ substantially across executability, IoUs, and visual-semantic identity.",
+    "authors": [
+      "JoyIndustrial VisCAD Team",
+      "Linxin Cai",
+      "Qiuhe Hong",
+      "Zhichao Huang",
+      "Guanlin Li",
+      "Zongzhen Li",
+      "Hongsen Liu",
+      "Yichen Long"
+    ],
+    "tags": [
+      {
+        "term": "cs.CV",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "What Do CAE Simulation Agents Really Need Beyond a Generic Harness?",
+    "url": "https://arxiv.org/abs/2609.03718v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "Computer-aided engineering (CAE) simulation is among the largest and most demanding areas of engineering, where setting up a solver such as OpenFOAM, FEniCS, or COMSOL takes real expertise. Large language model (LLM) agents promise to turn a natural-language request into a working simulation, and recent CAE agents add simulation-specific machinery: multi-agent decomposition, domain retrieval, and scripted reflection. That machinery suited weak base models; modern harnesses already supply multi-turn reasoning, tool use, and execution feedback. We ask what a CAE simulation agent still needs beyond a generic harness. With information access and repair budget held fixed, a single-agent harness matches or beats multi-agent specialized systems (FoamBench 96.4\\% vs.\\ 88.2\\%).   Ablations trace this to capabilities the harness already provides: execution-feedback repair lifts FoamBench from 71.8\\% with no repair round to 96.4\\%, while scripted reflection adds nothing. The one input that still helps is domain knowledge supplied as solver tutorials, our largest measured gain (80.9\\% to 96.4\\%).",
+    "authors": [
+      "Jiasheng Shi",
+      "Tianhan Zhang"
+    ],
+    "tags": [
+      {
+        "term": "cs.CE",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "physics.comp-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Remember and Reweight: Enhancing Multi-Agent Debate with Experience Memory and Confidence Estimation",
+    "url": "https://arxiv.org/abs/2609.03619v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "Multi-agent debate (MAD) improves the reasoning capabilities of large language models by having multiple agents iteratively refine their responses through discussion. However, MAD suffers from a critical vulnerability known as shared misconception: when a majority of agents initially converge on an incorrect answer, the debate process tends to amplify rather than correct the error. Existing methods primarily address peer skew but leave the agents' inherently biased concept priors unaddressed. To mitigate this systematic weakness, we propose R$^2$-MAD (Remember and Reweight for Multi-Agent Debate), a framework that equips agents with an experience memory accumulated from past debates. R$^2$-MAD intervenes on both failure modes through two complementary mechanisms: A debate-state-aware retrieval policy dynamically calibrates the concept prior by retrieving relevant historical evidence based on the current consensus level. Then these retrieved experiences provide a basis for estimating per-agent reliability, yielding confidence weights to modulate peer influence. Experiments on various benchmarks show that R$^2$-MAD achieves consistent improvements over existing single-agent and MAD baselines.",
+    "authors": [
+      "Xuanfa Jin",
+      "Zhijian Ma",
+      "Yongcheng Zeng",
+      "Xinyu Cui",
+      "Haifeng Zhang",
+      "Jun Wang"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "When Users Don't Ask: Benchmarking Context-Driven Memory Retrieval in Conversational Agents",
+    "url": "https://arxiv.org/abs/2609.03467v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "Large language models (LLMs) are increas- ingly deployed as long-horizon conversational agents, motivating growing interest in mem- ory systems. However, existing benchmarks primarily evaluate memory through QA-style probing rather than in-situ conversational usage. We introduce LOCOMO-CONV, a conversa- tional memory benchmark derived from Lo- CoMo with four query styles: dialog, implicit, counterfactual, and composed. Across five rep- resentative memory systems, we evaluate both retrieval recall and end-to-end response qual- ity. Our experiments show that conversational framing exposes substantial retrieval gaps over- looked by QA benchmarks, especially on im- plicit and composed queries, which multi-facet query rewriting narrows for raw-turn mem- ory but not abstractive memory. We further find that strong retrieval does not fully trans- late into response quality, and that implicit queries exhibit silent grounding, where mem- ory improves contextual grounding without ex- plicitly surfacing the gold fact. These results point to reasoning-based memory elaboration as a promising direction, and we release aux- iliary supportive_memory annotations captur- ing conversationally useful context beyond the original gold evidence.",
+    "authors": [
+      "Wen-Yu Chang",
+      "Yun-Nung Chen"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Plan Pointers and Record-Directive Form in Budgeted Verification of Inherited Agent Memory",
+    "url": "https://arxiv.org/abs/2609.03450v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "An agent that inherits six one-line memories may pull at most one archived source record before acting; a directive written into the store can steer that choice: a pointer to the record, a criterion that identifies it, or both. Across twelve registered studies on one instrument lineage (14,760 attempts) we measured where the request goes under each form. On six direct-provider models a length-matched criterion exceeded a bare id by +35.0 points [+31.2, +38.8] (Study D); the contrast failed its registered superiority rule on a nine-model OpenRouter-served panel (Study E). Appending the id cancelled the criterion on three Claude models (Opus 5: 40/40 to 0/40; Study F-x); six byte-matched edits gave each exact string its own effect (Study G), and a re-run at eighty runs per cell left fifteen of thirty replication contrasts within the margin, fifteen unresolved and none beyond (Study G'). A ratification line (+96.0 points on Opus 5) and a budget of two credits restored the target on all three (Study J); across five criterion strings the suffix's cancellation held for four of the five wordings on Opus 5 and all five wordings on Fable 5.1 (Study H2); in a second store every model followed the criterion (Study H1). Continued into a decision, the criterion moved the choice toward the current record (+100.0 points, Opus 5) and away from it on Fable 5.1 (Study I). A one-character plan pointer's effect (+78.0 points; Study B, after a correction of its first repository report) returned the same verdict under a prospectively registered re-run (+81.7 points; Study B'). All results are descriptive effects of exact edits on fixed panels with registered intervals and no mechanism claim.",
+    "authors": [
+      "Kazuki Nakayashiki"
+    ],
+    "tags": [
+      {
+        "term": "cs.IR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Accountable AI with Grounded, Faithful, Consistent, Actionable Rationales: A Case Study in Clinical Trial Matching with VERDICT",
+    "url": "https://arxiv.org/abs/2609.03366v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "Accountability means a decision can be examined, justified, and contested. LLMs make this hard: fluent output may be ungrounded, incomplete, or unfaithful to the decision process. Achieving accountability requires verified rationales (how was the decision reached), assumptions (what was assumed rather than known), policy consistency (the same treatment for the same facts), and pivotal conditions (what would change the outcome). We introduce self-faithfulness as an automatic test of accountability: changing the pivotal conditions should change the decision.   We examine accountable AI through clinical trial matching, a high-stakes task central to evidence-based medicine. Although LLM-based matchers match patients to trials reasonably accurately, they apply decision policies inconsistently and produce rationales that are unfaithful to their own decisions.   We introduce VERDICT, an LLM-based agent that translates a decision task, its constraints, and its policy into Satisfiability Modulo Theories (SMT), then derives the decision with SMT and MaxSMT solvers -- so policies are applied consistently and decisions are accountable by construction.   Across a SIGIR 2016-derived dataset and TREC 2021, VERDICT achieves the strongest decision accuracy among LLM-only and neurosymbolic baselines, applies policies with perfect consistency, and produces clinician-preferred rationales grounded in explicit assumptions and pivotal conditions, with improved counterfactual self-faithfulness.",
+    "authors": [
+      "Zikai Zhou",
+      "Yufei Jin",
+      "Yilin Xu",
+      "Yu-Chiang Wang",
+      "Chieh-Ju Chao",
+      "Monica S. Lam"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LO",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Decoupling Turn-Taking from Semantics: A Decoupled Data Approach for Finite-State-Machine-Based Full-Duplex Dialogue",
+    "url": "https://arxiv.org/abs/2609.03321v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "The Neural Finite State Machine (NFSM) framework offers a pragmatic path to full-duplex dialogue by serializing turn-taking control and response generation onto a single causal tape under the standard next-token prediction objective, thereby preserving semantic prowess at a low fine-tuning cost. However, its reliance on synthetic text data fundamentally limits turn-taking naturalness, as Large Language Models (LLMs) cannot faithfully simulate the fine-grained acoustic temporal dynamics of real human dialogues. In this work, we propose a decoupled data approach that learns turn-taking from real Human-Human (HH) spoken dialogues while shaping semantic behavior through configurable Human-Agent (HA) text dialogues. To operationalize this approach, we introduce a rule-based event-guided data transformation method that serializes HH spoken dialogues into FSM tapes by classifying turn-taking events and applying deterministic mapping rules, enabling scalable supervision without LLM-generated annotations. We further propose a Source-Aware Calibrated (SAC) Loss that jointly calibrates the long-tailed distribution of state transition tokens and channels each data source toward the capability it best supervises. Experiments show that our approach substantially improves turn-taking proficiency while recovering the foundation LLM's semantic capability. Our code and model are available at https://github.com/Liyht/def-fsm.",
+    "authors": [
+      "Yihang Li",
+      "Chenhui Chu"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "PACE: Towards Surfacing Hidden Conflicts in User Requests",
+    "url": "https://arxiv.org/abs/2609.03293v1",
+    "source": "arxiv",
+    "source_name": "大模型与智能体 (cs.CL)",
+    "published": "2026-09-03",
+    "summary": "Personalized assistants should not only comply with user requests but also assess whether those requests are appropriate given the user's current circumstances. However, prior work has primarily focused on accurately executing requests, overlooking the need for assistants to account for context and engage in conflict-based refusal. Furthermore, while existing work on conflict or safety detection relies on explicitly provided factors, real-world scenarios often involve implicit factors that must be retrieved from a knowledge base (KB). To this end, we introduce Personalized Assistants for Conflict Evaluation (PACE), a dataset for evaluating whether models can identify latent constraints, expressed as egocentric knowledge or events, that render seemingly reasonable user requests inappropriate. PACE pairs user requests grounded in well-defined personas with egocentric KB facts, requiring models to integrate contextual evidence to determine whether a request is conflicting. This implicit retrieval setting hinders the direct association between user requests and conflict-inducing knowledge, making it difficult for existing models to identify relevant user-specific facts. To address this challenge, we further propose PaceMaker, a multi-agent framework in which specialized agents coordinate across query reformulation, multi-hop graph traversal, and conflict-aware filtering to retrieve contextually decisive evidence. Experiments on PACE evaluate both evidence retrieval quality and conflict decision accuracy, showing that PaceMaker consistently outperforms existing approaches.",
+    "authors": [
+      "Yoojin Kim",
+      "Jihyoung Jang",
+      "Hyounghun Kim"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Decreasing Digital Distraction in College Students: Associated Online Learning Strategies Identified by Unsupervised Data Mining Approaches",
+    "url": "https://arxiv.org/abs/2609.04125v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "The proliferation of digital tools in education offers numerous benefits but also introduces significant challenges, notably digital distractions that hinder academic performance, especially in online learning contexts. This study employed unsupervised data mining techniques, specifically association rule mining and clustering analysis, to identify effective learning strategies associated with lower levels of digital distractions among college students. Data from 530 participants revealed that self-regulated learning strategies (i.e., goal setting, environment structuring, and time management) co-occurred most consistently with lower digital distractions. Additionally, learner-instructor and learner-content engagement strategies, as well as technical competencies, also tended to appear in the same profiles as lower distraction. Interestingly, reliance on peer help-seeking and learner-learner engagement strategies appeared less often in those lower distraction profiles. These findings offer actionable implications for educators to design targeted interventions that foster focused and productive online learning environments.",
+    "authors": [
+      "Hui Shi",
+      "Ran Bi",
+      "Xi Lin",
+      "Yan Dai"
+    ],
+    "tags": [
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.HC",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Shifting from Injection to Interaction: Rethinking Web Security in the Age of LLMs and Beyond",
+    "url": "https://arxiv.org/abs/2609.03999v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "Large language models (LLMs) are becoming integral to web applications and browser agents, transforming online interactions while introducing new attack vectors and reshaping longstanding web vulnerabilities. Classical threats such as cross-site scripting (XSS) can be amplified through LLM-mediated interactions, while LLM-specific vulnerabilities can propagate across web applications, introducing attacks such as prompt injection. Securing modern web systems therefore requires understanding interactions between traditional and LLM-specific threats across the system lifecycle. Unlike prior surveys treating web and LLM security separately, this survey provides a unified analysis of how LLMs amplify web vulnerabilities across client-side, server-side, and pipeline layers while evaluating defenses and their limitations. The analysis examines extending NIST and ISO/IEC AI security frameworks to the security needs of LLM-enabled web environments. Three unresolved challenges are identified: adversarial natural-language instructions, autonomous agent security, and post-deployment security through continuous monitoring and adaptation. An LLM-aware monitoring and control framework is proposed, integrating semantic input validation, prompt integrity protection, output isolation, agent governance, and runtime monitoring. This unified perspective characterizes the evolving threat landscape and outlines future directions for secure AI-enabled web systems.",
+    "authors": [
+      "Nivedita Singh",
+      "Alsharif Abuadbba",
+      "Yansong Gao",
+      "Surya Nepal",
+      "Hyoungshick Kim"
+    ],
+    "tags": [
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Making Gender-Inclusive Practices Actionable: Evaluating a Research-Informed Computing Education Toolkit",
+    "url": "https://arxiv.org/abs/2609.03936v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "The persistent gender imbalance in computing remains a global concern, and universities offer a key part of the pipeline to address it. Although research has identified practices that support under-represented student groups, translating this evidence into actionable guidance remains challenging. This paper first presents a novel web- based toolkit (TechMate) designed to address this gap by helping computing educators implement gender- inclusive initiatives through practical research-informed guidance. The toolkit defines over 25 actions, ranging from operational to strategic, and provides case studies and implementation resources. Second, this work reports on the evaluation of TechMate, capturing educators first impressions of its usefulness and usability through authentic tasks, and eliciting unanticipated insights about structural barriers to gender-inclusive practice in computing higher education. Eighteen computing educators of varying seniority from eight universities in Ireland assessed the toolkit using nine research-driven attributes: four usefulness measures (novelty, relevance, trustworthiness, actionability) and five usability measures (effectiveness, aesthetics, navigation, terminology, user satisfaction). Data was analysed using mixed methods: deductive coding, quantitative sentiment scoring, and inductive thematic analysis. Educators rated TechMate highly for user satisfaction and praised its novelty and trustworthiness, with over 60% of participants reporting positively on all attributes, suggesting that research -informed tools can be designed for real-world use. Thematic analysis highlighted other challenges, including women students isolation, institutional resistance to change, and the scarcity of women role models, while also surfacing proposed solutions such as leveraging student ambassadors and fostering supportive learning environments.",
+    "authors": [
+      "Alina Berry",
+      "Susan McKeever",
+      "Brenda Murphy",
+      "Sarah Jane Delany"
+    ],
+    "tags": [
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.HC",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Bridging Formal and Perceived Fairness: Development of an Interdisciplinary Framework in Algorithmic Decision-Making",
+    "url": "https://arxiv.org/abs/2609.03853v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "While fairness has become a central concern in research on algorithmic systems, the field remains predominantly shaped by Computer Science, resulting in a strong emphasis on formal fairness metrics and bias mitigation strategies. Nevertheless, this focus may obscure a fundamental challenge: fairness is not merely a technical property, but a subjective, context-sensitive human judgment shaped by cognitive heuristics, mental models, normative expectations, and sociotechnical factors. Crucially, users' perceptions of fairness may diverge substantially from the fairness criteria an algorithm formally satisfies; a system may meet predefined technical fairness requirements yet still be perceived as unjust by decision-affected stakeholders. In such cases, the system fails on a fundamental dimension: it will not be trusted, accepted, or considered legitimate. Taking a user-centered design perspective, this paper presents a work-in-progress conceptual framework that bridges Computer Science approaches to formal algorithmic fairness with normative and Social Science fairness approaches regarding perceived fairness, trust, and technology acceptance, embedding both within the sociotechnical conditions that shape human judgment. Through (1) theoretical literature synthesis, (2) interdisciplinary workshops, and (3) stakeholder interviews, the project aims to inform evaluation approaches that integrate computational fairness audits with user-centered assessments and guide the design of fairness-aware, human-centered algorithmic systems that support informed, well-calibrated fairness judgments by those affected.",
+    "authors": [
+      "Maike Lindermayr",
+      "Mattia Cerrato",
+      "Luisa Hübner",
+      "Johannes Kraus"
+    ],
+    "tags": [
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "OBER+: Continuity-Aware Reporting and Traceable Continuous Improvement in Outcome-Based Education",
+    "url": "https://arxiv.org/abs/2609.03770v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "Institutions practising outcome-based education compute learning outcome attainment routinely, while reviews of curriculum analytics report an absence of evidence on how that computation informs decisions. This paper presents OBER+, an extension of a deployed institutional attainment platform that computes the step from a measured shortfall to an evaluated corrective action. Five connected stages accumulate attainment across deliveries of a course, signal a shortfall and a persistent shortfall, grade it on cutoffs the regulator already uses, record the decision against a catalogue of practices annotated with their evidence, log the change, and quantify the subsequent movement in the shortfall. A further rule compares successive statements of an outcome, so attainment is never read as a series across a point at which the outcome changed. Applying the rules to the live record of two real courses produced three results. Every outcome of a core course was substantively redefined between consecutive deliveries, with subject matter moving between outcome numbers, so a naive reading would have reported a twenty-five point collapse between quantities that do not refer to the same learning. Recomputing the platform's figures from its documented rule showed six of ten differing by more than rounding explains, in a pattern that identified a defect since reported to the institution. Across fifteen statement pairs from three transitions, five were identical character for character, and among the ten that were not, the outcome carrying a given number was nearest to a differently numbered earlier outcome in six, a result resting on an ordering of similarities and requiring no threshold and no labelling. The contribution is a computational design for outcome-based reporting, stated as rules any attainment platform can implement, with evidence of what they make visible in a live institutional record.",
+    "authors": [
+      "Elakkiya Rajasekar"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Open WebXR versus Commercial Game Engines: A Socio-Technical Position Analysis for an Open, Sustainable, and Interoperable Metaverse",
+    "url": "https://arxiv.org/abs/2609.03666v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "The Metaverse is often framed as a persistent, interoperable, and embodied network of virtual and augmented environments. Yet, most contemporary XR applications are developed through commercial game engines and distributed through proprietary app stores, creating tensions between openness and platform dependency. This paper critically examines open WebXR technologies with conventional commercial game-engine pipelines, with particular attention to XR hardware, software architectures, developer workflows, governance, ethics, and sustainability. We argue that WebXR may provide a viable route toward a more accessible, device-independent, and institutionally sustainable Metaverse, especially for education, research, cultural heritage, prototyping, and public-interest applications. At the same time, commercial engines remain advantageous for graphically intensive, low-latency, deeply integrated, and large-scale XR products. The paper concludes that the choice should not be framed as WebXR versus engines, but as a continuum: WebXR is preferable when accessibility, interoperability, low-friction deployment, and long-term maintainability are primary goals, whereas native engines remain preferable when performance, platform-specific hardware access, and production-grade tooling dominate.",
+    "authors": [
+      "Luca Turchet",
+      "Michel Buffa"
+    ],
+    "tags": [
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "GPS-Bench: A Governance Policy Benchmark for Automating Policy Analysis",
+    "url": "https://arxiv.org/abs/2609.03553v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "Policy analysis requires more than predicting whether a proposal will pass: it requires identifying who will be affected, how those actors respond, and what follows. LLM-based policy simulations model these processes at scale, but their validity is hard to establish when plausible behaviour is never compared with observed outcomes. We introduce GPS-Bench, an evidence-grounded benchmark for governance policy simulation that links policies to relevant actors, actor actions and downstream impacts using legislative records, lobbying disclosures, regulatory documents, corporate filings, economic data and other public evidence. Actors are reconstructed from the dated record rather than prompted as archetypes, so a persona is an evidence object with provenance; a human-annotated pool forms the Gold evaluation set, while cases labelled by a separate LLM from retrieved evidence are treated as Silver supervision and never as test labels. Because every inference mode reads the same grounded state and emits the same schema, GPS-Bench turns \"does multi-agent simulation help?\" into a controlled comparison: we contrast joint reasoning, independent and communicating actor agents, graph-based methods and weight-level fine-tuning over one policy state. Fine-tuning on the grounded record gives the strongest actor-level impact prediction, and decomposition does not beat it; what decomposition adds is mechanism. Agents hold private, non-identical evidence, each seeing its own exposure clause, and address named partners with concrete joint proposals, what they offer, what they need in return, and why acting together beats acting alone, so the coalitions that form can be checked against the commitments the record holds. GPS-Bench therefore gives a common empirical setting for studying when evidence, actor modelling and multi-agent interaction improve the prediction and interpretation of policy outcomes.",
+    "authors": [
+      "Linh Le",
+      "Melanie Bui",
+      "My Chiffon Nguyen",
+      "Zachary Schlosser",
+      "David Williams-King"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "The 5P Reflection Model for Education in the Generative Artificial Intelligence (GenAI) Era",
+    "url": "https://arxiv.org/abs/2609.03413v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "Contributions: A reflection model suitable for the era of Generative Artificial Intelligence (GenAI) is introduced. The proposed model is an integrated model that extracts features from various existing models and also incorporates technological aspects of GenAI.   Background: Universities worldwide are facing challenges in adopting GenAI into their curricula, as it has impacted academic integrity and the scholarship of teaching and research. Traditional reflection models are struggling to authenticate student reflection as GenAI is incorporated in education. This requires a GenAI-aware model to enable the opportunities that address the associated challenges with GenAI.   Research Questions: Does the academic ecosystem require a GenAI-aware reflection model to adopt GenAI into education? How to make a reflection model structured to ensure student authenticity and cognitive engagement within a GenAI-aware learning environment?   Methodology: This study employs a design-based research methodology, assisted by a critical inquiry approach, to analyse existing reflection models in the era of GenAI and examine the technological aspects of GenAI. Additionally, it identifies a gap and the absence of a comprehensive reflection model that enhances reflection in the era of GenAI and supports the effective integration of GenAI in education.   Findings: The literature survey indicates there is a greater need for reflection in the era of GenAI to ensure learning, but the existing reflection models lack proper strategies to manage the problem introduced by GenAI. A standard GenAI-aware reflection model, called 5P (Purpose, Process, Product, Pitfalls and Plan), is proposed i) to manage greater demand for reflection, ii) to address the limitations of the existing reflection models, iii) to consider technological aspects of GenAI.",
+    "authors": [
+      "Rajan Kadel",
+      "Samar Shailendra",
+      "Islam Mohammad Tahidul",
+      "Urvashi Rahul Saxena",
+      "Aakanksha Sharma",
+      "Sabitra Kaphle"
+    ],
+    "tags": [
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Accountable AI with Grounded, Faithful, Consistent, Actionable Rationales: A Case Study in Clinical Trial Matching with VERDICT",
+    "url": "https://arxiv.org/abs/2609.03366v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "Accountability means a decision can be examined, justified, and contested. LLMs make this hard: fluent output may be ungrounded, incomplete, or unfaithful to the decision process. Achieving accountability requires verified rationales (how was the decision reached), assumptions (what was assumed rather than known), policy consistency (the same treatment for the same facts), and pivotal conditions (what would change the outcome). We introduce self-faithfulness as an automatic test of accountability: changing the pivotal conditions should change the decision.   We examine accountable AI through clinical trial matching, a high-stakes task central to evidence-based medicine. Although LLM-based matchers match patients to trials reasonably accurately, they apply decision policies inconsistently and produce rationales that are unfaithful to their own decisions.   We introduce VERDICT, an LLM-based agent that translates a decision task, its constraints, and its policy into Satisfiability Modulo Theories (SMT), then derives the decision with SMT and MaxSMT solvers -- so policies are applied consistently and decisions are accountable by construction.   Across a SIGIR 2016-derived dataset and TREC 2021, VERDICT achieves the strongest decision accuracy among LLM-only and neurosymbolic baselines, applies policies with perfect consistency, and produces clinician-preferred rationales grounded in explicit assumptions and pivotal conditions, with improved counterfactual self-faithfulness.",
+    "authors": [
+      "Zikai Zhou",
+      "Yufei Jin",
+      "Yilin Xu",
+      "Yu-Chiang Wang",
+      "Chieh-Ju Chao",
+      "Monica S. Lam"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LO",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Large-Language Models as a Cognitive Virus",
+    "url": "https://arxiv.org/abs/2609.03344v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "Large-language models (LLMs) are rapidly becoming part of human culture, reshaping how information is produced, transmitted, and used. Here we propose that their diffusion can be understood through a viral analogy, with LLM use spreading through populations, becoming embedded in cognitive and cultural practices. We model transitions among uncoupled, coupled, and persistently dependent users, and show that the interplay between social transmission, recovery, and collective reinforcement can generate tipping points and technological lock-in. A central consequence is the possibility of runaway dynamics: once a critical threshold is crossed, small increases in adoption can trigger rapid population-level shifts toward persistent dependence, with abrupt losses in cognitive competence. The same framework, however, identifies conditions for cognitive immunization, based on reducing transmission and facilitating reversibility. Our results highlight how LLM adoption may involve nonlinear collective transitions with important consequences for cognitive autonomy.",
+    "authors": [
+      "Ricard Solé",
+      "Giulio Ruffini",
+      "Francesca Castaldo",
+      "Marco Tuccio",
+      "Luis F. Seoane",
+      "Manlio de Domenico",
+      "Santiago F. Elena",
+      "David C. Krakauer"
+    ],
+    "tags": [
+      {
+        "term": "physics.soc-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "nlin.AO",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "q-bio.PE",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Less Is Moral: A CHARMing Framework for Moral Foundations Detection in Endorsement Behaviour",
+    "url": "https://arxiv.org/abs/2609.03330v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "Moral language plays a central role in shaping online endorsement and the diffusion of information, yet existing moral foundation detection systems often suffer from poor cross-domain generalization, weak rationale grounding, and reliance on costly prompting-based large language models (LLMs). We introduce CHARM, a MA\\textbf{C}- and \\textbf{H}ate-speech-\\textbf{A}ware \\textbf{R}ationale-aligned \\textbf{M}oral foundation detection framework built on a lightweight fine-tuned LLM, which integrates complementary moral grounding, rationale alignment, and polarity-aware hate speech signals to support more robust and faithful moral prediction. Unlike prior dictionary-, fine-tune-, or prompt-based detectors, which decouple computation from psychological theory, CHARM is built so that each component -- MAC cross-attention, rationale alignment, and hate-speech modulation -- operationalizes a distinct psychological construct. Using a 30\\% subsample of the MFTC, MFRC, and News training pools together with the richer supervision in MFTCXplain, CHARM improves AUC by up to 15.3\\% in-domain, surpasses the supervised baselines on every out-of-domain dataset in both AUC and F1, and offers a scalable, low-cost alternative to prompting-based LLM detectors. We further apply CHARM to large-scale COVID-19 discourse on Twitter and show that moral value alignment is strongly associated with online endorsement behavior. By making moral framing measurable at scale, CHARM offers a practical tool for studying the spread of morally charged misinformation.",
+    "authors": [
+      "Huixiang Fu",
+      "Marian-Andrei Rizoiu"
+    ],
+    "tags": [
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.SI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Multilingual Agent System for Inclusive Wildfire Evacuation Guidance",
+    "url": "https://arxiv.org/abs/2609.03301v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "Wildfire seasons have become 84 days longer in the current days than in the 1970s, causing enormous threats to one's financial status and short- and long-term health. During the fire, public agencies send out emergency messages to provide warnings and orders. Although 26 million people in the US have limited English proficiency, over 80% of those messages are only delivered in English, which can cause disproportionate information distribution and awareness. In order to better serve marginalized communities during emergencies, the authors developed BEACON, a service that provides comprehensive and personalized evacuation guidance, including navigation routes, personalized checklists, and a chatbot in the language that a user uses. Our current system ingests data including fire perimeter information, evacuation order status, and shelter information from Watch Duty. When a user is within a certain proximity from the fire, the system utilizes real-time GPS locations and nearby weather data from the National Oceanic and Atmospheric Administration (NOAA) to predict fire danger levels. The assessment model refreshment are dynamically scheduled based on fire progress and trends using XGBoost. If the location has a likelihood of fire danger, the system sends alerts with evacuation routes outputted from a polygon-avoidant routing pipeline. The application provides a context-aware multilingual agent that users can communicate with and is tightly connected to other features of the application. In addition, based on data that the user entered, the system dynamically generates and checks off personalized reminder items to provide an organized evacuation plan. The system's user interface dynamically changes its language settings based on the language the user most recently used in either setting or chatbot conversation for all the application elements.",
+    "authors": [
+      "Shruti Kulkarni",
+      "Lynn Tong",
+      "Aditi Namboodiripad",
+      "Chelyah Miller",
+      "Helen Lin",
+      "Peeyush Patel",
+      "Bogdan Bistriceanu",
+      "Diane Myung-kyung Woodbridge"
+    ],
+    "tags": [
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Affective publics in Arabic YouTube",
+    "url": "https://arxiv.org/abs/2609.03269v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-03",
+    "summary": "What is the emotional register of Arabic YouTube's affective publics? To investigate this, we analyzed 67,725 YouTube comments collected around socio-political topics associated with Yemen, Saudi Arabia, Iraq, Jordan, and Syria using a unified sentiment-and-emotion pipeline. Our results profile a single regional affective public rather than five separate national ones. Sentiment is overwhelmingly negative across all five country-oriented corpora, and the country-level emotion profiles are structurally similar. This shared register still accommodates some regional variations: discourse is organized around country-level political actors and cross-border historical trauma figures, and grief singularizes Iraq from the other countries. The differences in emotional register also tracks lived political causes rather than fixed categories, which we observe from patterns of the valence of US-related content, that tracks the presence or absence of direct US military engagement. Our work shows that the emotional register of Arabic YouTube's affective publics is a shared one that is historically layered and geographically conditioned, which has implications for public diplomacy in the MENA region.",
+    "authors": [
+      "Lynnette Hui Xian Ng",
+      "Craig Douglas Albert",
+      "Abdullah Melhem",
+      "Ahmed Aleroud",
+      "Lance Y. Hunter"
+    ],
+    "tags": [
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Reducing Catastrophic Risk from AI with Systematic Monitoring and Evaluation of Rogue AI Progression",
+    "url": "https://arxiv.org/abs/2609.03189v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-02",
+    "summary": "This article presents a structured framework of behavioral indicators that may signal progression toward potentially catastrophic threats from artificial intelligence systems. We adopt a pragmatic approach, inspired by established methodologies in cybersecurity and national security. By establishing clear metrics, indicators, and thresholds across multiple dimensions of AI capability and behavior, this framework enables researchers and policymakers to implement evidence-based monitoring protocols.",
+    "authors": [
+      "T. Bauer",
+      "W. P. Kegelmeyer",
+      "E. Begoli",
+      "A. Sadovnik",
+      "T. Emerson",
+      "C. Corley",
+      "N. Generous",
+      "J. Moore"
+    ],
+    "tags": [
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.HC",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Open Problems in AI Risk Modeling: Insights from a Workshop on the Technical Foundations of AI Risk Modeling",
+    "url": "https://arxiv.org/abs/2609.03178v1",
+    "source": "arxiv",
+    "source_name": "AI 与社会科学 (cs.CY + econ.GN)",
+    "published": "2026-09-02",
+    "summary": "We investigate the design of robust risk models to assess societal risks posed by advanced AI systems, an emerging area in AI governance. Many regulatory proposals increasingly require systemic risk assessment, but in the absence of rigorous quantitative methods, the question remains what state of the art risk modeling should look like in practice. We identify the key methodological and institutional challenges that currently limit the adoption of risk modeling. We review five research traditions that inform this problem: probabilistic risk assessment, catastrophic AI risk analysis, cybersecurity risk quantification, Bayesian causal inference, and threshold-based governance. We compare two leading proposals, scenario-based risk estimation and Bayesian network-based threshold setting. Drawing on a workshop with 22 experts and subsequent analysis, we identify a structured agenda of open questions concerning model structure, scope, evidence integration, validation, and governance. We close by outlining priorities for progress, arguing that it will depend on integrating quantitative modeling with independent evaluation, transparent and tiered disclosure, and institutions capable of maintaining and updating risk models over time.",
+    "authors": [
+      "Krystal Jackson",
+      "Deepika Raman",
+      "Jakub Kryś",
+      "Sean P. Fillingham",
+      "Jack Kengott",
+      "Andrew J. Lohn",
+      "Nada Madkour",
+      "Henry Papadatos"
+    ],
+    "tags": [
+      {
+        "term": "cs.CY",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "When Vision Meets Graphs: A Survey on Graph Reasoning and Learning",
+    "url": "https://arxiv.org/abs/2609.03816v1",
+    "source": "arxiv",
+    "source_name": "AI 与计算社会 (cs.SI)",
+    "published": "2026-09-03",
+    "summary": "Graphs are a fundamental data structure underlying many problems in the natural and social sciences. Over the past decade, Graph Neural Networks (GNNs) have dominated graph machine learning, supported by solid theoretical foundations. Yet scientists often understand graph structure through vision: chemists read molecular diagrams and social scientists inspect network visualizations. Despite decades of work on graph visualization, most graph learning pipelines still treat graphs purely as symbolic structures, rarely leveraging the visual form of graphs. We argue that this gap deserves renewed attention in the era of powerful vision and vision-language models. This survey provides a first systematic overview of the emerging area we term vision meets graphs, which treats visual depictions of graphs as first-class inputs for reasoning and learning. We organize existing work into three threads. Vision for Graph Reasoning studies how models can use visual depictions of graphs to understand structure and carry out multi-step reasoning. Vision for Graph Learning explores how visual features can complement or augment graph encoders beyond known limitations of message passing. Scientific Graphs examines domains where standardized depiction conventions support both reasoning and learning. Our goal is to clarify what current methods can and cannot do, and to outline a path toward foundation models that perceive and reason about graphs as scientists do.",
+    "authors": [
+      "Xinjian Zhao",
+      "Wei Pang",
+      "Zhixuan Yu",
+      "Xiangru Jian",
+      "Xiaozhuang Song",
+      "Yaoyao Xu",
+      "Zhongkai Xue",
+      "Dingshuo Chen"
+    ],
+    "tags": [
+      {
+        "term": "cs.SI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CV",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Dynamic probabilistic decision networks",
+    "url": "https://arxiv.org/abs/2609.03632v1",
+    "source": "arxiv",
+    "source_name": "AI 与计算社会 (cs.SI)",
+    "published": "2026-09-03",
+    "summary": "A new type of decision networks is suggested and its operation is analyzed. The network nodes are represented by intelligent agents who can denote either some biological beings, like humans, or neurons of the brain, or the nodes of artificial intelligence. The specifics of the network are in the following: It is probabilistic in the sense that the choice, accomplished by each agent, is characterized by the related probability. It is dynamic, with the probabilities varying in time due to the exchange of information between the agents. It is affective, because the agents choose between alternatives by taking account of utility as well as of biases and emotions. In general, it is heterogeneous, being composed of the groups of agents with different properties, for instance having long-term memory and short-term memory. The network dynamics, caused by the information exchange, results in decision error decrease. The network operation is illustrated by the example starting with the Allais paradox, its resolution, and the decision error diminution in the process of decision dynamics with information exchange. Resorting to machine-learning techniques it is possible to regulate the behavior of the network agents forcing them to choose particular alternatives.",
+    "authors": [
+      "V. I. Yukalov",
+      "E. P. Yukalova"
+    ],
+    "tags": [
+      {
+        "term": "physics.soc-ph",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.SI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "From Euclidean to Graph-Structured Data: A Survey of Collaborative Learning",
+    "url": "https://arxiv.org/abs/2609.02984v1",
+    "source": "arxiv",
+    "source_name": "AI 与计算社会 (cs.SI)",
+    "published": "2026-09-02",
+    "summary": "The conventional approach to machine learning, that is, collecting data, training models, and performing inference in a single location, faces fundamental limitations, including scalability and privacy, that restrict its applicability. To address these challenges, recent research has explored collaborative learning approaches, including federated learning and decentralized learning, where individual agents perform training and inference locally, with limited collaboration. Most collaborative learning research focuses on Euclidean data with regular, grid-like structure (e.g., images, text). However, these approaches fail to capture the relational patterns in many real-world applications, best represented by graphs. Learning on graphs relies on message-passing mechanisms to propagate information between connected nodes, making it conceptually well-suited for collaborative environments where agents must exchange information. Yet, the opportunities and challenges of learning on graph-structured data in collaborative settings remain largely underexplored. This survey provides a comprehensive investigation of collaborative learning from Euclidean to graph-structured data, aiming to consolidate this emerging field. We begin by reviewing its foundational principles for Euclidean data, organizing them along three core dimensions: learning effectiveness, efficiency, and privacy preservation. We then extend the discussion to graph-structured data, introducing a taxonomy of graph distribution scenarios, characterizing associated statistical heterogeneities, and developing standardized problem formulations and algorithmic frameworks. Finally, we systematically identify open challenges and promising research directions.",
+    "authors": [
+      "Rémi Bourgerie",
+      "Šarūnas Girdzijauskas",
+      "Viktoria Fodor"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.MA",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.SI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Statistical Feature Augmentation for Anomaly Detection in Dynamic Graphs",
+    "url": "https://arxiv.org/abs/2609.02965v1",
+    "source": "arxiv",
+    "source_name": "AI 与计算社会 (cs.SI)",
+    "published": "2026-09-02",
+    "summary": "Dynamic networks are being applied in many domains, from social media to logistics systems, each with their own set of special characteristics. A model employed on this type of data must capture the duality between temporal/structural and feature-based information. Yet state-of-the-art deep learning models often struggle to learn especially short-term behavioral interaction signals, such as sender intensity or interaction inertia, directly from raw event streams. To address this gap, we propose a statistical feature augmentation method that explicitly encodes behavioral interaction statistics into the input feature space. We evaluate our proposed method on an anomaly detection task across three real-world datasets (Reddit, Wikipedia, MOOC) and seven models spanning both continuous-time and discrete-time architectures. As a baseline, we apply the same models trained on the original embeddings. Our results show, that augmentation consistently improves detection performance. Beyond performance, the enriched input enables fine-grained post-hoc analysis of behavioral importance, since each statistic occupies a dedicated input dimension. In particular, this work showcases a promising approach for merging classical network analysis with deep learning.",
+    "authors": [
+      "Philipp Schlinge",
+      "Jean-Luc Schnipper",
+      "Martin Atzmueller"
+    ],
+    "tags": [
+      {
+        "term": "cs.SI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "stat.ML",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "A Network Science Perspective on Evaluating Deep Graph Generative Models",
+    "url": "https://arxiv.org/abs/2609.01015v1",
+    "source": "arxiv",
+    "source_name": "AI 与计算社会 (cs.SI)",
+    "published": "2026-09-01",
+    "summary": "Traditional network models from network science, such as the Erdos-Renyi and configuration models, generate random networks that reproduce few selected topological properties observed in real-world networks. Deep graph generative models emerge as a data-driven approach, leveraging deep neural network architectures to learn complex structural distributions directly from real-world networks to generate more realistic synthetic networks. Because real social contact networks cannot be shared due to privacy risks, synthetic networks serve as an alternative for developing and evaluating epidemic mitigation strategies. In this work, we evaluate deep graph generative models as well as the configuration from a network science perspective by assessing both the topological similarity between generated and real-world networks and their utility in identifying effective node immunization strategies to sup- press epidemic/misinformation spreading. It is found that two deep graph generative models produce synthetic networks that closely resemble the structural properties of real-world networks, enabling them to identify effective immunization strategies.",
+    "authors": [
+      "Tianrui Mao",
+      "Abele Malan",
+      "Megha Khosla",
+      "Lydia Chen",
+      "Huijuan Wang"
+    ],
+    "tags": [
+      {
+        "term": "cs.SI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "A Multi-Branch Feature Fusion Approach for Health Misinformation Detection and Propagation",
+    "url": "https://arxiv.org/abs/2609.00403v1",
+    "source": "arxiv",
+    "source_name": "AI 与计算社会 (cs.SI)",
+    "published": "2026-08-31",
+    "summary": "This paper presents a multi-branch fusion framework for detecting and characterising the propagation of health misinformation in online social networks (OSNs). Grounded in the Elaboration Likelihood Model (ELM) and the Theory of Planned Behaviour (TPB), the model fuses transformer-based semantics with rhetorical cues, stance representations, and psychologically motivated proxies in a unified multi-task architecture. In addition to binary classification, we introduce the Cognitive Propagation Score (CPS), an interpretable post-hoc auxiliary score computed from psychologically motivated, text-derived cues capturing argument complexity, emotional intensity, and content-derived virality potential, to support diffusion-risk reasoning when engagement ground truth is incomplete or unavailable. Experiments on three benchmark datasets, Constraint, COVID--19\\_FNIR, and Monkeypox, show strong classification performance, achieving ROC--AUC up to 0.9999 on COVID--19\\_FNIR, while propagation-oriented ranking achieves near-perfect agreement when engagement-derived supervision is available (Monkeypox, Spearman's $ρ= 0.9952$) and similarly high ranking alignment under proxy-based supervision on COVID--19\\_FNIR ($ρ= 0.9954$). Compared with representative literature baselines, the fusion model improves detection on Constraint and COVID--19\\_FNIR, while Monkeypox remains more challenging, reflecting domain- and signal-specific differences. Ablation analysis further indicates that psychological and rhetorical branches provide complementary gains beyond semantic embeddings. Overall, the framework bridges cognitive theory and neural modelling to improve transparency and to support scalable misinformation monitoring, with future work required to validate CPS against human-centred diffusion judgements.",
+    "authors": [
+      "Mkululi Sikosana",
+      "Sean Maudsley-Barton",
+      "Oluwaseun Ajao"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.SI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "One AI Signal, Many Human Judgments: A Bayesian Cascade Analysis of AI-based Credibility Indicators in Online Information Spread",
+    "url": "https://arxiv.org/abs/2608.30311v1",
+    "source": "arxiv",
+    "source_name": "AI 与计算社会 (cs.SI)",
+    "published": "2026-08-31",
+    "summary": "Social media platforms increasingly use AI-based credibility indicators to help users judge misinformation. Unlike individual human-AI decision-making, these indicators are embedded in information spread: users see both an AI prediction and earlier judgments shaped by the same AI, and their own judgments may then enter the public history. Yet how to analytically characterize this process remains under-explored. We therefore introduce a social-learning lens for this setting by extending the classical Bayesian cascade model with the AI indicator as a shared public signal. The resulting Gateway condition compares the evidence from the AI prediction with users' private impressions. Through this view, we show that AI changes what public history means. Crowd agreement may reflect accumulated independent human evidence, or repeated dependence on the same AI prediction. This creates a preservation-correction trade-off: stronger reliance on AI can preserve correct predictions, but can also lock in incorrect ones by blocking corrective private impressions. We calibrate the model using human-subject data on news veracity judgments. Although the AI outperforms human users, the average user weights it below her own impression but above several peer judgments, while individual users vary from discounting the AI to relying on it enough to cascade. Simulations show that over-reliance on a weak AI is especially harmful, and that diversifying AI signals across users can better keep the crowd informative. We conclude with implications for understanding human-AI interaction in information spread and designing misinformation interventions.",
+    "authors": [
+      "Zhuoran Lu",
+      "Weilong Wang",
+      "Yangyang Yu",
+      "Xinru Wang",
+      "Zhuoyan Li",
+      "Zhiwei Liu",
+      "Sophia Ananiadou"
+    ],
+    "tags": [
+      {
+        "term": "cs.HC",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.SI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Unsupervised Multi-Scale Gromov-Wasserstein Hypergraph Alignment",
+    "url": "https://arxiv.org/abs/2608.29635v1",
+    "source": "arxiv",
+    "source_name": "AI 与计算社会 (cs.SI)",
+    "published": "2026-08-30",
+    "summary": "We study unsupervised hypergraph alignment, where the goal is to infer node correspondences between two hypergraphs using only structural information, without node features, labels, seed matches, or side information. Direct higher-order formulations can represent hyperedge interactions faithfully, but they can be computationally demanding and cumbersome for non-uniform hypergraphs. Graph-reduction approaches introduce a different challenge: clique expansions keep the alignment problem on the original node set but collapse all hyperedge evidence into one pairwise graph, whereas bipartite expansions preserve incidence structure but enlarge the problem from nodes to nodes plus hyperedges. We introduce FALCON (Filtration-based hypergrAph aLignment via Cross-scale Optimal traNsport), an unsupervised optimal-transport framework for hypergraph alignment. Instead of representing each hypergraph by a single collapsed clique graph, FALCON constructs a filtration-induced sequence of clique-based co-occurrence dissimilarity matrices and jointly aligns all levels through one shared multi-scale Gromov--Wasserstein (GW) objective. The shared transport plan enforces a globally consistent node correspondence across filtration levels while avoiding the auxiliary hyperedge nodes introduced by bipartite expansion. Experiments on perturbation benchmarks derived from real-world hypergraphs show that FALCON is robust to structural noise and in almost all cases outperforms strong graph- and hypergraph-alignment baselines.",
+    "authors": [
+      "Lutz Oettershagen",
+      "Honglian Wang",
+      "Aristides Gionis"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.SI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "PatchBench: Evaluating AI Agents for Vulnerability Patching",
+    "url": "https://arxiv.org/abs/2609.04075v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-03",
+    "summary": "AI agents have recently demonstrated strong performance in automated vulnerability patching. However, existing evaluations often validate a patch only by testing whether the provided Proof-of-Concept (PoC) input still triggers a crash. This leaves two key threats to validity: agents may reproduce memorized historical developer patches, or they may generate surface-level fixes that only suppress the reported crash.   We study these concerns for C/C++ vulnerability patching. We introduce a patch similarity metric to detect memorized patches. On average, 25% of the agent patches exhibit substantial similarity to historical developer patches, indicating that patch memorization is a real threat to the validity of vulnerability patching evaluations. Meanwhile, agents also frequently exploit benchmark structures to pass patch validation by patching on the crash stack trace to suppress the crash, rather than localizing and fixing the root cause of the vulnerabilities.   To handle these issues, we propose PatchBench, a new benchmark for evaluating AI agents on realistic vulnerability patching tasks. PatchBench selects vulnerabilities whose ground-truth fixes lie outside the crash stack and uses vulnerability transplant and code mutations to migrate historical vulnerabilities into new repository contexts, reducing the risks of surface-level fixes and patch memorization. We develop new patch validation methods that thoroughly evaluate both security and semantic correctness of agent patches. Across 11 state-of-the-art agents, including the top three AIxCC agents, the original PoC-only validation inflates the patching task solve rate of agents by 1.83$\\times$ on average. Our results reveal key limitations of current patching agents and point to future research directions for more reliable vulnerability repair.",
+    "authors": [
+      "Chihao Shen",
+      "Jiacheng Li",
+      "Aastha Mahajan",
+      "Jeffery Siyuan Tian",
+      "Yonghwi Kwon",
+      "Yizheng Chen"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.SE",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Practice Makes (Im)Perfect: A Look Back at Benchmarking Practices for Microarchitectural Side-Channel Attacks",
+    "url": "https://arxiv.org/abs/2609.03893v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-03",
+    "summary": "Microarchitectural side-channel research has grown at an exceptional pace in recent years, increasing the need for rigorous and meaningful benchmarking. Early attack papers typically relied on indirect proxies, such as covert-channel bandwidth or key-recovery on naive AES and RSA implementations, setting de facto standards that many subsequent works continued to replicate, sometimes by directly comparing against raw numbers from prior work. While these practices offer convenient points of comparison, current benchmarks may not be the most relevant to assess specific properties of new primitives. Even more problematic, microarchitectural attacks are notoriously sensitive to experimental conditions: minimal changes in the target system can significantly alter outcomes and performance. As a result, inadequate evaluation practices undermine reproducibility and cast doubt on the relevance of comparisons, even in top-tier venues where such issues should be identified. This paper tackles the core problem of proper benchmarking for microarchitectural side-channel attacks and examines its broader impact on research quality in the field. We survey 83 attack papers published in top-ranked security and architecture conferences from 2014 to 2024. From this corpus, we identify and define 19 recurrent benchmarking flaws that affect evaluation completeness, relevance, soundness, and reproducibility. These flaws include unfair or absent comparisons, missing code or materials, and the failure to evaluate the key attack properties. On average, each paper exhibits 5.5 such flaws, highlighting how widespread the issue is, even in highly selective venues. Based on our findings, we identify and suggest key properties that are relevant to properly evaluate new attacks. We also highlight trends over time and different practices between security and architecture conferences.",
+    "authors": [
+      "Iliana Fayolle",
+      "Antoine Geimer",
+      "Daniel De Almeida Braga",
+      "Clémentine Maurice"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Flip, Don't Shuffle: Watermarking LLMs at the Speed of Inference",
+    "url": "https://arxiv.org/abs/2609.03844v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-03",
+    "summary": "We introduce Stateless Bernoulli Watermarking (SBW), a new statistical watermark for Large Language Models that determines green list membership through independent per-token Bernoulli trials. Unlike KGW's vocabulary permutation or SynthID's multi-layer tournament, SBW requires only a single comparison per token against a counter-based random number generator, reducing membership complexity to $O(1)$ and enabling single-kernel execution with zero intermediate allocations. We prove that this formulation preserves the same detection guarantees as fixed-size green lists: the z-score test remains $\\mathcal{N}(0,1)$ under the null. The stateless architecture enables capabilities unavailable to existing methods: full-vocabulary self-salt watermarking (over 6000$\\times$ faster than KGW's self-salt and 2$\\times$ faster than SynthID despite biasing the entire vocabulary with candidate-dependent seeding) and architectural compatibility with distributed inference. In end-to-end generation benchmarks, SBW adds less than 1\\% overhead at all batch sizes. We additionally identify hash function design as a previously unexplored axis for watermark quality, showing that a GPU-native Jenkins hash improves null calibration by 1.8$\\times$ while producing more diverse text. Experiments across two seeding schemes and eight $(γ, δ)$ configurations confirm statistical equivalence with ROC-AUC differences below 0.01.",
+    "authors": [
+      "Simone Ceppi",
+      "Ignacio Sanchez"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Inferring Hidden User Models from the Behavior of Personalized LLM Agents",
+    "url": "https://arxiv.org/abs/2609.03815v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-03",
+    "summary": "Recent personalized LLM agents increasingly transform information retained in memory into compressed or structured representations, which we call user models, to guide later decisions. When source wording is removed from the state reachable through the ordinary interface, these models are commonly treated as more privacy-preserving because direct memory-extraction attacks lose the text they target. Yet we argue that user models expose a new attack surface because an attacker can still recover the private information from the personalized choices they shape, even when source records and backend state remain inaccessible. We therefore introduce UMPeek, a black-box attack based on hypothesis-guided adaptive probing to infer such hidden user model. It forms hypotheses from choices left open by a request, switches among ordinary follow-up tasks, and retains only claims supported and not contradicted by visible behavior. We conduct an extensive benchmark evaluation across diverse personalization tasks and user-model backends against existing attacks. We further validate UMPeek in real-world systems using information confirmed to be retained, and we evaluate defenses against its adaptive probing. Overall, UMPeek outperforms existing attacks in both benchmark and real-world comparisons and continues to recover user information under response-level defenses, showing that keeping records and backend state inaccessible does not guarantee semantic privacy when retained information shapes visible behavior.",
+    "authors": [
+      "Haoyang Li",
+      "Yaxin Xiao",
+      "Qingqing Ye",
+      "Huadi Zheng",
+      "Haibo Hu"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Rent-a-RAG: Embedding-Space Watermarks for Auditing Third-Party RAG",
+    "url": "https://arxiv.org/abs/2609.03749v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-03",
+    "summary": "Third-party retrieval-augmented generation (RAG) marketplaces create a new auditing problem: data providers may license corpora to a RAG operator, yet later have no visibility into whether their documents are being reused without compensation. Auditing this misuse is difficult because the operator is non-cooperative, answers are paraphrased by the generator, and one response may combine evidence from many providers. We propose DirBucket, a provider-side semantic watermarking and black-box auditing framework for document-level reuse in multi-provider RAG. DirBucket watermarks documents by meaning-preserving paraphrases whose embeddings are biased toward provider-bucket secret directions, enabling detection from black-box answers while preserving retrieval utility. On a challenging benchmark that reflects mixed-provider reuse under black-box access, DirBucket is the only method that consistently achieves strong target detection with no non-target activation, detecting non-compliance in every audit within 23 audited answers on our primary benchmark. The watermark survives adversarial post-answer laundering, and none of the evaluated evasion strategies simultaneously defeats detection while preserving user-perceived answer quality. Detection transfers unchanged to a second benchmark built from real clinical, cyber-threat-intelligence, and legal provider corpora. These results suggest that embedding-space watermarking can make document reuse in third-party RAG statistically auditable.",
+    "authors": [
+      "Alexandr Goultiaev Tolstokorov",
+      "Kyriakos Mouratidis",
+      "Javad Dogani",
+      "Nikolaos Laoutaris"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "AlcaTRAz - Anchored Tree-Rule Defense Against Jailbreaks",
+    "url": "https://arxiv.org/abs/2609.03693v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-03",
+    "summary": "Large language models (LLMs) are vulnerable to jailbreak attacks that bypass safety alignment through carefully crafted prompts. Many existing defenses require access to model weights or internals, making them difficult to apply to black-box deployments. We propose AlcaTRAz (Anchored Tree-Rule defense Against jailbreaks), a prompt-level defense based on rule trees that operates exclusively on the input text and requires no modification or retraining of the target model. The method automatically learns a transferable transformation rule that inserts controlled character-level perturbations at selected positions, thereby disrupting structural regularities exploited by jailbreak attacks while largely preserving the model's utility on benign queries. We evaluate the proposed method across 33 open-weight models, 22 jailbreak attack types, and a benchmark of short, single-turn benign questions, comparing against three representative prompt-level baselines (Llama Guard, RA-LLM, Goal Prioritization). Among the compared defenses, AlcaTRAz achieves the best composite security and functionality score in 73.4 % of model-attack combinations and shifts the aggregate score from a modal value of 10 (maximal-severity response to the malicious request) in the undefended setting to a modal value of 2 (near-refusal) after defense, while keeping the mean benign score within 0.27 points of the undefended baseline (8.35 vs. 8.62 on a 0-10 scale). AlcaTRAz substantially reduces but does not eliminate jailbreak success: a high-severity tail remains, and we do not consider adaptive attackers, so we position it as one layer within a defense-in-depth strategy rather than a standalone guarantee.",
+    "authors": [
+      "Jakub Reš",
+      "Petr Kaška",
+      "Martin Perešíni",
+      "Martin Ukrop",
+      "Kamil Malinka"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Memetic Search for Supersingular Elliptic Curves over $\\mathbb{F}_p$",
+    "url": "https://arxiv.org/abs/2609.03249v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-03",
+    "summary": "The search for supersingular elliptic curves is a fundamental computational problem in isogeny-based cryptography. A recent metaheuristic formulation over $\\mathbb{F}_{p^2}$ introduced the NonMultiplicity Distance (NMD) objective, measuring the deviation of the Frobenius trace from a multiple of $p$, and showed that uninformed random search fails beyond $\\approx 10^{13}$ candidates. This work investigates metaheuristic search over the prime field $\\mathbb{F}_p$, the setting for oriented isogeny protocols such as CSIDH, OSIDH, and SQISign. Although the candidate space decreases from $p^2$ to $p$, the supersingular locus is asymptotically sparse ($O(\\sqrt{p}\\log p)$ curves), keeping the search exponentially difficult. We formulate a memetic algorithm tailored to $\\mathbb{F}_p$ using a one-dimensional $j$-invariant chromosome, bit-level recombination, adaptive mutation, and periodic local search under the NMD objective. Benchmarks across 30 independent seeds at 40-bit, 46-bit, and 51-bit prime sizes ($p \\approx 1.13\\times 10^{15}$) show that the algorithm discovers an exact supersingular curve at 46 bits and consistently converges to ``near-supersingular'' ordinary curves with Frobenius traces remarkably close to zero: best NMD values of 19 at 40 bits and 3 at 51 bits, corresponding to relative trace deviations of $1.3\\times 10^{-5}$ and $4.5\\times 10^{-8}$ across the Hasse interval. These results demonstrate that NMD-driven memetic search effectively navigates the sparse $\\mathbb{F}_p$ landscape and systematically locates near-supersingular structures.",
+    "authors": [
+      "Ismel Martínez-Díaz"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "SafeEvolve: Harness-Policy Co-Evolution from Agent Experience for Safety Alignment",
+    "url": "https://arxiv.org/abs/2609.02786v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-02",
+    "summary": "The performance of LLM-based agents is jointly shaped by the base model and the harness used when interacting with the environment. This exposes them to safety risks in both harmful final responses and multi-step execution trajectories. Existing safety alignment mechanisms often rely on either external harness updates or policy optimization, yet applying either paradigm in isolation fails to bridge runtime control with intrinsic safety. We propose SafeEvolve, an experience-driven self-evolving framework for agent safety alignment. SafeEvolve leverages safety experience from completed on-policy trajectories to drive a continual loop of harness-policy co-evolution. On the harness side, SafeEvolve converts trajectory-level safety evidence into bounded, component-level updates across safety prompt and hierarchical skills, yielding auditable and reversible harness artifacts. On the policy side, SafeEvolve follows a two-stage SFT-RL paradigm, where harness-use SFT bootstraps the policy to actively leverage evolved harness artifacts, and harness-augmented RL further shapes autonomous safety behaviors during multi-step exploration via verifier-decomposed rewards. Through harness-policy co-evolution, SafeEvolve converts safety experience into an evolved runtime harness and improved policy behavior. Experiments on agentic safety benchmarks show that SafeEvolve achieves a stronger safety-utility tradeoff than existing baselines. For Qwen3.5-4B, SafeEvolve achieves a $3\\times$ ASR reduction on AgentDojo while improving benign utility from 59.79% to 61.86%.",
+    "authors": [
+      "Qinghua Mao",
+      "Wanying Qu",
+      "Dadi Guo",
+      "Leitao Yuan",
+      "Qingyu Liu",
+      "Yu Li",
+      "Guanxu Chen",
+      "Yanwei Fu"
+    ],
+    "tags": [
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Privacy Leakage in Federated Learning: Gradient-Based Client Identity Inference and Defenses for Inertial Sensing in Vehicular Edge Networks",
+    "url": "https://arxiv.org/abs/2609.02971v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-02",
+    "summary": "As vehicular networks move toward 5G/6G edge intelligence, federated learning (FL) is widely promoted as a privacy-preserving way for vehicles and infrastructure to train shared models without exposing raw sensor data. Yet the updates clients transmit still leak enough information to identify who sent them, which threatens the anonymity that safety-critical V2X applications assume and adds to existing concerns over adversarial ML, model poisoning, and backdoor attacks. We study server-side client identity inference from transmitted weight deltas using inertial (IMU) measurements, evaluated on the UCI Human Activity Recognition (HAR) benchmark as an accessible proxy for the IMU streams produced onboard connected vehicles. Across five attack classifiers and five non-IID partitions, an honest-but-curious server recovers client identity with near-perfect accuracy (approximately 1.000) from undefended updates, confirming a concrete identifiability risk. We then quantify the privacy-utility trade-off of a lightweight clip-then-noise defense by sweeping Gaussian noise (sigma in {0.00, 0.05, 0.10, 0.20, 0.50, 1.00}) at fixed clipping (C=1.0), and report formal (epsilon, delta)-DP budgets through Renyi accounting. A practical region (sigma in [0.1, 0.2]) drives attack accuracy to near-random while costing under 5% relative FL accuracy. Ensemble FL supplies complementary structural privacy with a 1/K anonymity-set bound and no noise penalty. Results are supported by cryptographic (SHA-256) train/evaluation gradient disjointness, three seeds, and a count-normalized attacker-advantage metric. We position HAR explicitly as a proxy and discuss what validation on true vehicular telemetry would require.",
+    "authors": [
+      "Ali Akarma",
+      "Toqeer Ali Syed",
+      "Muhammad Khan",
+      "Qurat-ul-ain Mastoi",
+      "Adeel Ahmad"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.NI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Counter-GEO-Bench: Evaluating Defenses Against Information-Distorting Generative Engine Optimization",
+    "url": "https://arxiv.org/abs/2609.02316v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-02",
+    "summary": "Generative engine optimization (GEO) enables content producers to increase the visibility of their web pages in generative search engines, but the same techniques can deliver targeted misinformation when adversaries publish ordinary-looking GEO-optimized documents that victim large language models (LLMs) retrieve and synthesize into distorted answers. No existing benchmark evaluates defenses against this threat under controlled conditions. Therefore, we present Counter-GEO-Bench, a defense benchmark that pairs 247 human-verified, quality-gated queries with information-preserving and information-distorting GEO rewrites, and evaluates defenses on attack success rate (ASR), false positive rate, and answer quality across three victim LLMs. Under Counter-GEO-Bench, three off-the-shelf defenses (Granite Guardian, Llama Guard 3, and NeMo Self-Check Fact-Checking) reduce ASR by at most 5.7% relative, while Granite Guardian's reduction is not statistically significant. Safety-taxonomy guardrails target policy violations, while GEO misinformation passes through them as fluent informational content. To this end, a lightweight benchmark baseline, C-GEO Guard, is proposed, reducing ASR by 47.6% relative with near-zero utility loss, which proves threat tractable.",
+    "authors": [
+      "Bing Zheng",
+      "Zongyao Zhao",
+      "Wenming Yang"
+    ],
+    "tags": [
+      {
+        "term": "cs.IR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "SEAL: Reinforcing Global Safety in Mixture-of-Experts through Shared Expert ALignment",
+    "url": "https://arxiv.org/abs/2609.02293v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-02",
+    "summary": "Mixture-of-Experts (MoE) is a scaling architecture for large language models that activates only a small subset of expert modules per token, enabling massive parameter growth with nearly constant computation. Recent Hybrid MoE architecture adds \\textit{shared experts} to capture consistently useful representations, further improving stability and generalization. MoE now powers many flagship open-source and commercial models, yet remains vulnerable to adversarial attacks. Specifically, sparse routing introduces a structural vulnerability: MoE safety hinges on which experts are activated, and adversaries can subvert this selection through jailbreak prompts, malicious fine-tuning, and weight-level pruning of safety-critical neurons. Existing defenses primarily focus on hardening the router, but an adversary may still manipulate or bypass the routing trajectory due to the routing process's nondeterministic nature, thereby collapsing the defense. To cope with this problem, we first identify theoretically and empirically that shared expert, an always-activated component containing a small proportion of safety-critical neurons, can overcome the uncertainty of sparsely activated routing path and serve as a router-independent anchor to enhance global safety alignment. Based on this insight, we propose SEAL, a training-time parameter-efficient defense that produces a plug-and-play adapter attached to shared expert, and SEAL++, a variant that adds an orthogonal constraint preserving pre-existing safety subspaces during training. We evaluate SEAL and SEAL++ across six attack scenarios that combine three adversarial inputs (harmful prompting, jailbreak, malicious fine-tuning) with and without neuron pruning. SEAL reduces attack success rate (ASR) by up to 60\\%, at a capability cost of at most 1.4\\% on a five-benchmark average. Additionally, SEAL can seamlessly integrate with router-level ......",
+    "authors": [
+      "Qingyu Meng",
+      "Yiwei Zha",
+      "Jiahuan Pei",
+      "Koen Hindriks",
+      "Herbert Bos",
+      "Min Chen"
+    ],
+    "tags": [
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Privacy-Preserving Topology-Guided Safety for LLM-Based Multi-Agent Systems via Federated Graph Learning",
+    "url": "https://arxiv.org/abs/2609.02967v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-02",
+    "summary": "Topology-guided safeguards for LLM-based multi-agent systems (MAS) train a GNN over the inter-agent communication graph to localize risky agents and intervene on the topology---but they assume one operator can pool all labeled traces. Across organizations that assumption breaks: episodes contain private prompts, tool outputs, and proprietary workflows, and no silo alone sees the full attack distribution. We cast privacy-preserving MAS safeguarding as graph federated learning and instantiate FGLGuard: each operator fits an edge-featured graph attention detector on its own judge-labeled episode graphs and shares only model updates. The method couples a proximal local objective for non-IID clients, domain-balanced aggregation, over-refusal-constrained threshold calibration, corroborated upstream scoring, and a guarded rewrite for blocked answers. Federation is not optional: off-the-shelf transfer collapses under distribution shift (AUROC 0.51 to 0.70 only after in-domain retraining), so a deployable guard must adapt on each site's private traces. On Agent-SafetyBench, R-Judge, and AgentDojo, federated FGLGuard exceeds the in-domain centralized ceiling on all three benchmarks without pooling any data---where unsupervised anomaly guards and local-only training fail. One guard federated across four different-domain operators comes within 0.03 AUROC of multi-domain centralization, while any single-domain guard collapses on the others. Live FGLGuard cuts AgentDojo's ground-truth attack-success rate by 43% at near-unguarded utility, zero API cost, and negligible capability loss.",
+    "authors": [
+      "Jinxi Yu",
+      "Eric Hanchen Jiang",
+      "Levina Li",
+      "Dong Liu",
+      "Zhi Zhang",
+      "Wenxiao Zhao",
+      "Yanxuan Yu",
+      "Kai-Wei Chang"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.MA",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Transfer Safety Awareness for Cross-Modal Safety Drift in Multimodal Large Language Models",
+    "url": "https://arxiv.org/abs/2609.02082v2",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-02",
+    "summary": "Visual modality enhances the capabilities of multimodal large language models (MLLMs) but also introduces a safety concern: a benign textual query may convey harmful intent when grounded in a visual image. We term this cross-modal safety drift and our pilot studies show that the safety response rate for such requests is substantially lower than that for requests containing explicitly unsafe text. This paper aims to systematically study this issue. First, we conduct an empirical analysis to identify representative unsafe response patterns. Building on these, we interpret model representations and attentions, revealing that visually risky cues receive limited attention and weakly trigger refusal. Motivated by the observation that safety signals from unsafe text processing can be transferred, we propose safety-awareness representation transfer (SRT), a lightweight direction-refinement method that mitigates cross-modal safety drift with a frozen MLLM backbone. Experiments across multiple benchmarks and models show that SRT effectively improves safety in diverse cross-modal settings while preserving utility. Code is available at https://github.com/cucu220123/safety-awareness.",
+    "authors": [
+      "Tianqi Xiao",
+      "Shiyao Cui",
+      "Minghao Zhang",
+      "Junxiao Yang",
+      "Renmiao Chen"
+    ],
+    "tags": [
+      {
+        "term": "cs.MM",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Privacy-Preserving Heterogeneous Multi-LLM Federated Inference for Cognitive Diagnosis",
+    "url": "https://arxiv.org/abs/2609.02947v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-01",
+    "summary": "Significant challenges remain in AI-driven educational systems in balancing privacy preservation with accurate cognitive diagnosis. To overcome this, we propose a federated inference framework in which several commercial LLM APIs collaborate without requiring access to raw student data or proprietary model internals. Using multiple federated entities, such as LLaMA-3.3-70B, GPT-4o-mini, and Claude-3-Haiku, our framework builds upon a heterogeneous multi-LLM architecture. The predictions generated by these entities are combined with epsilon-local differential privacy by adding Laplace noise locally to each entity's prediction output before aggregation, while residual-based aggregation mitigates model heterogeneity. Our approach is predicated on an honest-but-curious trust paradigm in which API providers are presumed not to abuse submitted queries, and our differential privacy mechanism shields the published diagnostic results from external inference. We conduct rigorous privacy-utility analysis showing strong privacy guarantees with minimal accuracy loss, and extensive real-world evaluations across three educational benchmarks confirm the framework's practical usability and cross-domain generalizability.",
+    "authors": [
+      "Yagna Manasa Boyapati",
+      "Chong Yu",
+      "Tianyu Jiang",
+      "Justin Zhan"
+    ],
+    "tags": [
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.AI",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CL",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.LG",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Modelstamp: Pre-Deserialization Verification of Machine-Learning Artifacts and Runtime Environment State",
+    "url": "https://arxiv.org/abs/2609.01781v1",
+    "source": "arxiv",
+    "source_name": "AI 安全与评测 (cs.CR)",
+    "published": "2026-09-01",
+    "summary": "Persisted machine-learning models can remain byte-identical while the software environments in which they are loaded evolve, creating a verification problem that artifact integrity checks alone cannot expose. This paper presents Modelstamp, a lightweight Python persistence library for verifying artifact integrity and represented runtime-environment state before deserialization. At persistence time, Modelstamp associates a serialized artifact with a sidecar JSON manifest containing a SHA-256 digest, runtime metadata, and installed versions from a bounded tracked-package set; a separately recorded model-relevant subset determines which package versions participate in drift comparison. Optional HMAC authentication supports workflows in which the producer and verifier share a secret key. At verification time, the artifact and represented current environment are checked against this recorded evidence before the model is deserialized. Modelstamp is evaluated using 14 controlled environment-drift scenarios, eight controlled trust-boundary scenarios, and an artifact-size scaling benchmark from 10 MiB to 1 GiB. The controlled drift experiments behaved as specified across relevant dependency changes, unchanged environments, and unrelated environmental changes, including broader noise controls. The trust-boundary experiments similarly confirmed both intended detections and expected limitations, including shared-key forgery and replay. Median verification time increased from 0.032 s at 10 MiB to 3.334 s at 1 GiB, with measured throughput of approximately 307-312 MiB/s in the benchmark environment. These results characterize Modelstamp as a complementary pre-deserialization reference-state verification control rather than as a replacement for dependency-management systems, malicious-model detection, safe deserialization, or public publisher authentication.",
+    "authors": [
+      "Anagha Dhekne"
+    ],
+    "tags": [
+      {
+        "term": "cs.SE",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      },
+      {
+        "term": "cs.CR",
+        "scheme": "http://arxiv.org/schemas/atom",
+        "label": null
+      }
+    ]
+  },
+  {
+    "title": "Outrage greets NIH pact that could funnel biodefense research funds to Pentagon",
+    "url": "https://www.science.org/content/article/outrage-greets-nih-pact-could-funnel-biodefense-research-funds-pentagon",
+    "source": "rss",
+    "source_name": "Science",
+    "published": "2026-09-05",
+    "summary": "NIH director defends interagency plan as “100% aligned with our public health mission”",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "河北福利彩票申请助力北京大学落成全国高校规模最大AI for Science智算平台“凯元一号”-体坛网_体坛+ - 体坛",
+    "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9ZV1pVSW5vMDBGVTRVajFQUFVtQXhiYjFsZHZOdDJ2QVpkaERJWGFzdWxSbDlnSF9Cb2hfSnFBdFZoTV8wYnBhN1d3?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI for Science",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSkFVX3lxTE9ZV1pVSW5vMDBGVTRVajFQUFVtQXhiYjFsZHZOdDJ2QVpkaERJWGFzdWxSbDlnSF9Cb2hfSnFBdFZoTV8wYnBhN1d3?oc=5\" target=\"_blank\">河北福利彩票申请助力北京大学落成全国高校规模最大AI for Science智算平台“凯元一号”-体坛网_体坛+</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">体坛</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "华为助力浙江大学落成全国高校规模最大智算平台‘AG彩票投注’ - 体坛",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA5Sm1ZRTc1RWRYclN5RUt4ajJ4LTdydl9JczlUSDhTLXVGQXRWbC1VbXdQWTBoT2Y4Rmdwc1VFeWlxNURvVUVxSkpzOU9BbnhSeFJOcTRB?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI for Science",
+    "published": "2026-09-04",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFA5Sm1ZRTc1RWRYclN5RUt4ajJ4LTdydl9JczlUSDhTLXVGQXRWbC1VbXdQWTBoT2Y4Rmdwc1VFeWlxNURvVUVxSkpzOU9BbnhSeFJOcTRB?oc=5\" target=\"_blank\">华为助力浙江大学落成全国高校规模最大智算平台‘AG彩票投注’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">体坛</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "黎曼猜想推至理论边界99.55%！元代理架构AI：在思考中重塑大脑 - hub.baai.ac.cn",
+    "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE00YUYyYXVnVDlvZkdqTlVfZS10aTFQX2xNRDQzbDJYTHdZMm5YTjBBUlY0Z2tpek9mRTBWWWN2V0hVQnZzQ0hzNw?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-09-04",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE00YUYyYXVnVDlvZkdqTlVfZS10aTFQX2xNRDQzbDJYTHdZMm5YTjBBUlY0Z2tpek9mRTBWWWN2V0hVQnZzQ0hzNw?oc=5\" target=\"_blank\">黎曼猜想推至理论边界99.55%！元代理架构AI：在思考中重塑大脑</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">hub.baai.ac.cn</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "【早报】马斯克、库克等将随特朗普访华；国内航线燃油附加费将上调 - 财联社",
+    "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE80cWU4ZEJIaFBYdHhzS3FkMTBnd1V4R2JEVFR1VnFTXy1LZ3ZGd2F3WG9UZkNXTnZrcDItaWFFT1dlTGdrbzZfYg?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE80cWU4ZEJIaFBYdHhzS3FkMTBnd1V4R2JEVFR1VnFTXy1LZ3ZGd2F3WG9UZkNXTnZrcDItaWFFT1dlTGdrbzZfYg?oc=5\" target=\"_blank\">【早报】马斯克、库克等将随特朗普访华；国内航线燃油附加费将上调</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">财联社</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "AI开始「研究自己」：Mechanist开启机器智能机制科学 - 凤凰网",
+    "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBvSFlSNXJ2MzJCaW5ZYzRlUlFlNHNoTkZBOFUwUkU3b29ROTN6M0NpdE95d25DUEZzejZKZU8wd0htRDd3c2xRMw?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTFBvSFlSNXJ2MzJCaW5ZYzRlUlFlNHNoTkZBOFUwUkU3b29ROTN6M0NpdE95d25DUEZzejZKZU8wd0htRDd3c2xRMw?oc=5\" target=\"_blank\">AI开始「研究自己」：Mechanist开启机器智能机制科学</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">凤凰网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "中国首个大视场亚秒级采样的1米级巡天望远镜在青海冷湖建成 - Sohu",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQck05RkJUSWRzZW1fREZXRWxnS00xYlREMkJUU0ZoSHFiVzEtNEpIQ3lEcHBGZld5Mk1aMGdKaHk4TDA1M0VmT1FST3VwRjh3QXYyempxZTdsTU5vdGI1cllwYm14a0w3Sk5ORzFNNEMxeTRDSlN2TjdJdm9rWVVyVm1WWGZ4TkNP?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQck05RkJUSWRzZW1fREZXRWxnS00xYlREMkJUU0ZoSHFiVzEtNEpIQ3lEcHBGZld5Mk1aMGdKaHk4TDA1M0VmT1FST3VwRjh3QXYyempxZTdsTU5vdGI1cllwYm14a0w3Sk5ORzFNNEMxeTRDSlN2TjdJdm9rWVVyVm1WWGZ4TkNP?oc=5\" target=\"_blank\">中国首个大视场亚秒级采样的1米级巡天望远镜在青海冷湖建成</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Sohu</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "大气甲烷“平台期”之谜被破解：谁激发了大气自净能力？ - 科学网—新闻",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBsZnhqTTBXcDNGSnNQTWpmemxhdFZ3WXVSYmgtYV8wMUQ3dEw0aFk4RDlVZFpBSnJFWFV3bEJBTzIwamprVFI4Y2FRaFNRYkpWU0NLdkZSa2g0SWdZRERTOG51dG8?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-09-04",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTFBsZnhqTTBXcDNGSnNQTWpmemxhdFZ3WXVSYmgtYV8wMUQ3dEw0aFk4RDlVZFpBSnJFWFV3bEJBTzIwamprVFI4Y2FRaFNRYkpWU0NLdkZSa2g0SWdZRERTOG51dG8?oc=5\" target=\"_blank\">大气甲烷“平台期”之谜被破解：谁激发了大气自净能力？</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">科学网—新闻</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "OpenAI推最强AI模型 GPT-6 Astra瞄准高阶市场 - KLSE Screener",
+    "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNcGY2U1R5WFBLbGE0NG84ajhnWVZBX2d1RlBZNVBTeXlER2NVMk5EWVFHLThuLUdSQUVoZktwUXp1cndJejBxbFB5RUwtSDZsanAxUzlKT2VrOFJ0MVhZbmh3QnBaRWdxSnhyMjJNbHRrU0RtQmVpTWdta1owSkEwMWpycllBUXVTVmplWElxMS1waVpyN0h0QmVoMk9KQnBpdXRZNWoydzU0TGZjOXdMajZpbTZpbWVZYUFFNHRuZjVSSWRQN2dYc3N0UGJ0WllDWERCcHJYX3ZYc3lPX2xvN0R2Wlo3UzJ5RE9QYmhpVEZOWFhfb3BtVGRVbVljZw?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMi_gFBVV95cUxNcGY2U1R5WFBLbGE0NG84ajhnWVZBX2d1RlBZNVBTeXlER2NVMk5EWVFHLThuLUdSQUVoZktwUXp1cndJejBxbFB5RUwtSDZsanAxUzlKT2VrOFJ0MVhZbmh3QnBaRWdxSnhyMjJNbHRrU0RtQmVpTWdta1owSkEwMWpycllBUXVTVmplWElxMS1waVpyN0h0QmVoMk9KQnBpdXRZNWoydzU0TGZjOXdMajZpbTZpbWVZYUFFNHRuZjVSSWRQN2dYc3N0UGJ0WllDWERCcHJYX3ZYc3lPX2xvN0R2Wlo3UzJ5RE9QYmhpVEZOWFhfb3BtVGRVbVljZw?oc=5\" target=\"_blank\">OpenAI推最强AI模型 GPT-6 Astra瞄准高阶市场</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">KLSE Screener</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "GPT-6来了，号称“目前智能水平最高模型” - thepaper.cn",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1TZWNtQ3BEVldSTjlVTUlZY19Rei1kbTR1QmdlYU5Jam5FeVhlSGptaklxeEQzODZoVF91VklBQ01zdHd6S0tmNU1rbExlanBSQ3hLcGFfVkdMaFZTUkE?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-09-04",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE1TZWNtQ3BEVldSTjlVTUlZY19Rei1kbTR1QmdlYU5Jam5FeVhlSGptaklxeEQzODZoVF91VklBQ01zdHd6S0tmNU1rbExlanBSQ3hLcGFfVkdMaFZTUkE?oc=5\" target=\"_blank\">GPT-6来了，号称“目前智能水平最高模型”</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thepaper.cn</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "“欢迎来到AGI时代”：OpenAI发布GPT-6 Astra - cacnews.ca",
+    "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE5jcjdiTDkwNE5vTWF1MEJwNFZaNTJ3LTVjTTg0X3BfUFkzVTZ3LXFYdEktRDNaZE1aeEo5eTk4a3c4Wl9u?oc=5",
+    "source": "google_news",
+    "source_name": "中文·人工智能科学发现",
+    "published": "2026-09-04",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiREFVX3lxTE5jcjdiTDkwNE5vTWF1MEJwNFZaNTJ3LTVjTTg0X3BfUFkzVTZ3LXFYdEktRDNaZE1aeEo5eTk4a3c4Wl9u?oc=5\" target=\"_blank\">“欢迎来到AGI时代”：OpenAI发布GPT-6 Astra</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">cacnews.ca</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "当AI遇上新材料，马鞍山经开区这场对接会“精准对味” - ah.chinanews.com.cn",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5YLWlTdEFUMDJBR0hXazBLOWdMSmYzckZ2aThBblJjSVdnaTcwMUp3b2VVU0lsRjdrSEsyWjFsQUlDOWhiVXd1X2FMU2FfZnFlQVg5LXpXX2hiNGh1TnA3ZmlUQ3QwdjZMRnJj?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 新材料",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE5YLWlTdEFUMDJBR0hXazBLOWdMSmYzckZ2aThBblJjSVdnaTcwMUp3b2VVU0lsRjdrSEsyWjFsQUlDOWhiVXd1X2FMU2FfZnFlQVg5LXpXX2hiNGh1TnA3ZmlUQ3QwdjZMRnJj?oc=5\" target=\"_blank\">当AI遇上新材料，马鞍山经开区这场对接会“精准对味”</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ah.chinanews.com.cn</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "【用“硅碳共治”重塑企业智能】——火狐发布ESPN体育官网，定义“交付结果”新范式 - 体坛",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE01c05zdjFZS3UxbEIzZFllR3BRN1MxVkZVQWFLV3hodlVvUnRrbHpVcWlTNHNGMDJtZWhGZ2RwR1kySFVsOFQ2bEI3UHY?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 新材料",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE01c05zdjFZS3UxbEIzZFllR3BRN1MxVkZVQWFLV3hodlVvUnRrbHpVcWlTNHNGMDJtZWhGZ2RwR1kySFVsOFQ2bEI3UHY?oc=5\" target=\"_blank\">【用“硅碳共治”重塑企业智能】——火狐发布ESPN体育官网，定义“交付结果”新范式</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">体坛</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "中国生物制药谢承润：用AI和国际化穿越医药新周期 - 新浪网",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQT2MyU1dRWWgxOXRmOFAxWlg1RlBEU0hjd3VFWTF6NnF2VmFRQ195Z1ZlMC1Ha2hPbnVfanRabm1qUkNfZlJSS3lucTh2dWtrLWJ0RW0tOWpQWVdQTExoRFJ2cFZ6VTVscU1heXZ2VTRNUUMxZ3dtX3BXaUo0VEJpYTNR?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxQT2MyU1dRWWgxOXRmOFAxWlg1RlBEU0hjd3VFWTF6NnF2VmFRQ195Z1ZlMC1Ha2hPbnVfanRabm1qUkNfZlJSS3lucTh2dWtrLWJ0RW0tOWpQWVdQTExoRFJ2cFZ6VTVscU1heXZ2VTRNUUMxZ3dtX3BXaUo0VEJpYTNR?oc=5\" target=\"_blank\">中国生物制药谢承润：用AI和国际化穿越医药新周期</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "创新药投资，优先布局这些可把握的机会 - 证券市场周刊",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9CeGZPTE9GSjdXenRZZmFvMkt1UUl5aTNld1ZSeXVhZ1NibjJUaEhvaXZ6WTFYa2hXenpURjNkREtLMDRqQ2lhWkRNUlpXSzBNSjZleFQzVnIwak80aHBfV0FJYVh3dw?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE9CeGZPTE9GSjdXenRZZmFvMkt1UUl5aTNld1ZSeXVhZ1NibjJUaEhvaXZ6WTFYa2hXenpURjNkREtLMDRqQ2lhWkRNUlpXSzBNSjZleFQzVnIwak80aHBfV0FJYVh3dw?oc=5\" target=\"_blank\">创新药投资，优先布局这些可把握的机会</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">证券市场周刊</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "太阳1城集团网址指南：快速获取最新版本，畅享便捷服务-体坛网_体坛+ - 体坛",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1nTmwtRkQwbk00Y0J1aGs5ME01WXMzUTJwSHdNU1g0YXBiTVlBenlzc1QzQVdEcHROS2oyQVNpTnFCTnFhYXJxZkJJTGxNZ1hteTNjZXotN2w3eXdUWVE?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE1nTmwtRkQwbk00Y0J1aGs5ME01WXMzUTJwSHdNU1g0YXBiTVlBenlzc1QzQVdEcHROS2oyQVNpTnFCTnFhYXJxZkJJTGxNZ1hteTNjZXotN2w3eXdUWVE?oc=5\" target=\"_blank\">太阳1城集团网址指南：快速获取最新版本，畅享便捷服务-体坛网_体坛+</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">体坛</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "编程之后，AI的下一棒在哪里？|Anthropic|大模型|风险|模型|基金管理人_手机新浪网 - 新浪财经",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQT2ZGN1AyRC1Yc0dsX0IxNzVUVy1fT3FHYk5CQ0czSGJuMGpEeEo0cFRvVENLLWZsRmdXRFNxNmk3eXlObzBZd1F0SmpmZE5PZ1RfMEVDaXdoWVE2N2dHTHhxTnhqbHhwX1dha2FyQkhEVlVBQWRKbzNiMENPdldDZHk5cUllV3BrSVpFQ1dnVmVWdFJlWVpKcGN6YnpSZnZtbkxrWGVSOGY?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-04",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQT2ZGN1AyRC1Yc0dsX0IxNzVUVy1fT3FHYk5CQ0czSGJuMGpEeEo0cFRvVENLLWZsRmdXRFNxNmk3eXlObzBZd1F0SmpmZE5PZ1RfMEVDaXdoWVE2N2dHTHhxTnhqbHhwX1dha2FyQkhEVlVBQWRKbzNiMENPdldDZHk5cUllV3BrSVpFQ1dnVmVWdFJlWVpKcGN6YnpSZnZtbkxrWGVSOGY?oc=5\" target=\"_blank\">编程之后，AI的下一棒在哪里？|Anthropic|大模型|风险|模型|基金管理人_手机新浪网</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪财经</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "阿里安娜·赫芬顿在《时代》批评AI 能治愈所有疾病的承诺 - UA.NEWS",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVV9qMVRhRS1DQTk2aDBKbmFzaTNjbF9CSXRxLWFYYy1nVG1BeHFBNkxKbVVtT3dGMTRKWV9Lc3p1V20tTDVnVWc2OTRrTkJtRjJIWTktRS1za3hqVlhWZ2hmTlNheVAtc2lJWkxiTHhpd1dpSDVVZXBYc2VlWW56c1UtYVlreHU2bVdtSERmT3JyOGIwSG5HV0pWNVRNNlAxMVVvMTFlZEk?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVV9qMVRhRS1DQTk2aDBKbmFzaTNjbF9CSXRxLWFYYy1nVG1BeHFBNkxKbVVtT3dGMTRKWV9Lc3p1V20tTDVnVWc2OTRrTkJtRjJIWTktRS1za3hqVlhWZ2hmTlNheVAtc2lJWkxiTHhpd1dpSDVVZXBYc2VlWW56c1UtYVlreHU2bVdtSERmT3JyOGIwSG5HV0pWNVRNNlAxMVVvMTFlZEk?oc=5\" target=\"_blank\">阿里安娜·赫芬顿在《时代》批评AI 能治愈所有疾病的承诺</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UA.NEWS</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "西丽湖路演生物医药专场落幕 共探产业新周期与创新底气 - Sohu",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWXRTY0FGcG4zcnpNbkk3dzJvYVlaT2lYRWdQcFJ5T3YwYlIwSzQteXhrWHl6VzZrcGxaU2VwMHhsMExzTnJMcUJ6bnI4dWhYX3UzZU9zaGdTaEVTeW56OVFUNjlVTm5MOTJKYUhJZmFsR1kxaFc4VUw4QVN2eGplZXZzWTRVbUFh?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWXRTY0FGcG4zcnpNbkk3dzJvYVlaT2lYRWdQcFJ5T3YwYlIwSzQteXhrWHl6VzZrcGxaU2VwMHhsMExzTnJMcUJ6bnI4dWhYX3UzZU9zaGdTaEVTeW56OVFUNjlVTm5MOTJKYUhJZmFsR1kxaFc4VUw4QVN2eGplZXZzWTRVbUFh?oc=5\" target=\"_blank\">西丽湖路演生物医药专场落幕 共探产业新周期与创新底气</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Sohu</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "爱康张黎刚：AI在癌症早筛方面功不可没，在心血管管理领域大有可为 - 新浪财经",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOGREU29ycVBpSzVPN2g5MmloMTgxb291aFNvbUFsZjRVU3kyamtVTDZPdXJFRGRGOFYzVWhwNzlxT211eEhIYXhqM3dCWXpJN3RlMHlndDRVNDRJWHlyWUF6VUI5a1A1cWdTRmwtMEJlZHJoeml0TUZwM3BYSlB1QXZTT1BWY2ZISDZV?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOGREU29ycVBpSzVPN2g5MmloMTgxb291aFNvbUFsZjRVU3kyamtVTDZPdXJFRGRGOFYzVWhwNzlxT211eEhIYXhqM3dCWXpJN3RlMHlndDRVNDRJWHlyWUF6VUI5a1A1cWdTRmwtMEJlZHJoeml0TUZwM3BYSlB1QXZTT1BWY2ZISDZV?oc=5\" target=\"_blank\">爱康张黎刚：AI在癌症早筛方面功不可没，在心血管管理领域大有可为</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪财经</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "签到第30天，我被美高梅网络充值网址“宠”到了！-体坛网_体坛+ - 体坛",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE55TE5KRzVJMFVtWThqOEplVF9ScDhLOUJQOWh5YVM0RVJNR09oNFUzVVpXVnNUaTVlNFU3VjZ0M01MYXBnUFRFWlJHblQyd0x4N3c?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-04",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE55TE5KRzVJMFVtWThqOEplVF9ScDhLOUJQOWh5YVM0RVJNR09oNFUzVVpXVnNUaTVlNFU3VjZ0M01MYXBnUFRFWlJHblQyd0x4N3c?oc=5\" target=\"_blank\">签到第30天，我被美高梅网络充值网址“宠”到了！-体坛网_体坛+</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">体坛</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "麦科医药向国家科技重大专项项目组汇报MT200605进展，III期临床剑指“脑肾同治”新格局 - 中华网",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE40b1ladl9lNWRRTHNBYklqZG54WmJfa01kemMzSmpxVGUySXNPbnM2MHVLTFFXWUJkb0NWeWEydS1TTmd2RUZ1Zy0zbHo4Q2ZqNF9DQTRNSVcyclBGRGc?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE40b1ladl9lNWRRTHNBYklqZG54WmJfa01kemMzSmpxVGUySXNPbnM2MHVLTFFXWUJkb0NWeWEydS1TTmd2RUZ1Zy0zbHo4Q2ZqNF9DQTRNSVcyclBGRGc?oc=5\" target=\"_blank\">麦科医药向国家科技重大专项项目组汇报MT200605进展，III期临床剑指“脑肾同治”新格局</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">中华网</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "【早报】美存储股全线重挫，SK海力士破发；原油暴跌、黄金微涨；“东方证券+上海证券”合并重组草案出炉 - 财联社",
+    "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9NQmJRSmdlaVlRWnpIeUk4TEE2WWxXa0R3T0ZpZjFxYmRyUElHQzRrUjNINWJkZFJKQTI0R2tzVGIxRXFBUm1yVA?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE9NQmJRSmdlaVlRWnpIeUk4TEE2WWxXa0R3T0ZpZjFxYmRyUElHQzRrUjNINWJkZFJKQTI0R2tzVGIxRXFBUm1yVA?oc=5\" target=\"_blank\">【早报】美存储股全线重挫，SK海力士破发；原油暴跌、黄金微涨；“东方证券+上海证券”合并重组草案出炉</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">财联社</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "安顿健康白伟民：院外趋势监测结合院内治疗，是保障生命健康的最佳路径 - 新浪财经",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE42enpsUWpTdnkwN1ZPbnF0dUlva3RWLVVJZGtVWnFPLUtYazRsU0dtNUsySzJpYXN2RG9aa0ctcHVzbTlKWUhDVWM4Y28wSldySGlYUG1wRWJZNkNqUU90TVJWbjlWOXdmajkxYXlLVXhtTTJ0Uk8wR1ptQW4?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE42enpsUWpTdnkwN1ZPbnF0dUlva3RWLVVJZGtVWnFPLUtYazRsU0dtNUsySzJpYXN2RG9aa0ctcHVzbTlKWUhDVWM4Y28wSldySGlYUG1wRWJZNkNqUU90TVJWbjlWOXdmajkxYXlLVXhtTTJ0Uk8wR1ptQW4?oc=5\" target=\"_blank\">安顿健康白伟民：院外趋势监测结合院内治疗，是保障生命健康的最佳路径</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪财经</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "【早报】美股存储、半导体板块连日大跌；一批A股公司中报业绩预计大增；油价微升、黄金走强；西班牙晋级世界杯16强 - 财联社",
+    "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBNYmRrQjlUZko5NDdxa2lkeGFrUGUtVFBqb3ZHSDVza1U2Y0tlQ0wxSUo0eGQ3QzFwb19nZDZRQmgzUjIxSkN4cg?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-04",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTFBNYmRrQjlUZko5NDdxa2lkeGFrUGUtVFBqb3ZHSDVza1U2Y0tlQ0wxSUo0eGQ3QzFwb19nZDZRQmgzUjIxSkN4cg?oc=5\" target=\"_blank\">【早报】美股存储、半导体板块连日大跌；一批A股公司中报业绩预计大增；油价微升、黄金走强；西班牙晋级世界杯16强</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">财联社</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "安顿健康白伟民：院外趋势监测结合院内治疗，是保障生命健康的最佳路径 - 新浪财经",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPNEE0VTUzWWptSUNNcUk1bWNOUHhzdzFIcURMSzdaWU5XUkN0WldwWGZ0Y3p1ZGVob0Z6RjJmYjlLaXNUTXl6cC1mVTRrZnBzR25FMVI0Ni1BN3QxV0pkVHI1M2lOdkI3ZzNLSVdSYjVNQmFfYXpxbU93RmM0d3ctRDhuYk5NOVNvMm1RUl8xbDRaUy1qeEhGaUNSTnZHVmFtc2ZUOVJuWjBrVldrWndkMVg1TUtQVmg3dGg5WkJ4VG1oZlJlRS1sRGFacEVDQmRlWXJ6Tg?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxPNEE0VTUzWWptSUNNcUk1bWNOUHhzdzFIcURMSzdaWU5XUkN0WldwWGZ0Y3p1ZGVob0Z6RjJmYjlLaXNUTXl6cC1mVTRrZnBzR25FMVI0Ni1BN3QxV0pkVHI1M2lOdkI3ZzNLSVdSYjVNQmFfYXpxbU93RmM0d3ctRDhuYk5NOVNvMm1RUl8xbDRaUy1qeEhGaUNSTnZHVmFtc2ZUOVJuWjBrVldrWndkMVg1TUtQVmg3dGg5WkJ4VG1oZlJlRS1sRGFacEVDQmRlWXJ6Tg?oc=5\" target=\"_blank\">安顿健康白伟民：院外趋势监测结合院内治疗，是保障生命健康的最佳路径</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">新浪财经</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "太空制药，正在成为商业航天最有潜力的应用场景？ - Sohu",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYVlvUnNzbFlIdWw1SGVId1JyaVI1Sk9kNllTN2VMY2N2MVdoVE5PWmpaQXFxVVJUc2kxMVFsRE5qa082TUduTDRERy1PQU5uN0ItSnRaTzhLUzdES3NiODlRcFA1Q0ppakY2TjhvZC1yUW81S21ZS1BJTHc2aWljbFoyMXFuR1N0?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYVlvUnNzbFlIdWw1SGVId1JyaVI1Sk9kNllTN2VMY2N2MVdoVE5PWmpaQXFxVVJUc2kxMVFsRE5qa082TUduTDRERy1PQU5uN0ItSnRaTzhLUzdES3NiODlRcFA1Q0ppakY2TjhvZC1yUW81S21ZS1BJTHc2aWljbFoyMXFuR1N0?oc=5\" target=\"_blank\">太空制药，正在成为商业航天最有潜力的应用场景？</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Sohu</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "江苏5分钟快三亮相2026全球科技峰会，展示数据中心与AI工作站创新成果 - 体坛",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE44MzZ1WC0zX1VKMTFnZ0Y5LXotUzRjNG54MmhhZXI0M2VfX3lrdGF6Y095ZHVYSHo3bklkSmgxekV3c3hEOFFQaHZaUUVGb1haWEE?oc=5",
+    "source": "google_news",
+    "source_name": "中文·AI 药物研发",
+    "published": "2026-09-05",
+    "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE44MzZ1WC0zX1VKMTFnZ0Y5LXotUzRjNG54MmhhZXI0M2VfX3lrdGF6Y095ZHVYSHo3bklkSmgxekV3c3hEOFFQaHZaUUVGb1haWEE?oc=5\" target=\"_blank\">江苏5分钟快三亮相2026全球科技峰会，展示数据中心与AI工作站创新成果</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">体坛</font>",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "SaFD-00/qwen2.5-vl-3b-ac-exp08-world-model-stage1-full-epoch3-stage2-full-epoch0.75",
+    "url": "https://huggingface.co/SaFD-00/qwen2.5-vl-3b-ac-exp08-world-model-stage1-full-epoch3-stage2-full-epoch0.75",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": [
+      "image-text-to-text"
+    ]
+  },
+  {
+    "title": "hdae/karume-lucida",
+    "url": "https://huggingface.co/hdae/karume-lucida",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": [
+      "image-segmentation"
+    ]
+  },
+  {
+    "title": "Vxtzq/Crowd-v1",
+    "url": "https://huggingface.co/Vxtzq/Crowd-v1",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Lucien-shark/Linny-Voice-VITS",
+    "url": "https://huggingface.co/Lucien-shark/Linny-Voice-VITS",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Miiche/visualrl-qwen3vl4b-visionsr1-r19-clean",
+    "url": "https://huggingface.co/Miiche/visualrl-qwen3vl4b-visionsr1-r19-clean",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "OmCodex/distilbert-base-uncased-finetuned-clinc",
+    "url": "https://huggingface.co/OmCodex/distilbert-base-uncased-finetuned-clinc",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "reyansh38771/sn97____albetop____uid206____hk5EyWp",
+    "url": "https://huggingface.co/reyansh38771/sn97____albetop____uid206____hk5EyWp",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "sundaycoil/config-watcher",
+    "url": "https://huggingface.co/sundaycoil/config-watcher",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Alienanthony/Nested_Mamba_3Level",
+    "url": "https://huggingface.co/Alienanthony/Nested_Mamba_3Level",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": [
+      "text-generation"
+    ]
+  },
+  {
+    "title": "Lanni-ni/dynamic_alibi_2_4_256_babylm_100m_seed43_epoch10",
+    "url": "https://huggingface.co/Lanni-ni/dynamic_alibi_2_4_256_babylm_100m_seed43_epoch10",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "ussoewwin/Flash-Attention-2_for_Windows",
+    "url": "https://huggingface.co/ussoewwin/Flash-Attention-2_for_Windows",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "tihon-nth/vivit-vit-8-10-epochs-5_class_1_p0_splited-1788619611.183424",
+    "url": "https://huggingface.co/tihon-nth/vivit-vit-8-10-epochs-5_class_1_p0_splited-1788619611.183424",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "Lanni-ni/dynamic_alibi_2_4_256_babylm_100m_seed43_epoch9",
+    "url": "https://huggingface.co/Lanni-ni/dynamic_alibi_2_4_256_babylm_100m_seed43_epoch9",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": [
+      "text-generation"
+    ]
+  },
+  {
+    "title": "DistributedAI/102-v14",
+    "url": "https://huggingface.co/DistributedAI/102-v14",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  },
+  {
+    "title": "darkstudio009/VanessaX",
+    "url": "https://huggingface.co/darkstudio009/VanessaX",
+    "source": "huggingface",
+    "source_name": "HuggingFace 热门模型",
+    "published": "2026-09-05",
+    "summary": "",
+    "authors": [],
+    "tags": []
+  }
+]
