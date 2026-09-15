@@ -1,0 +1,997 @@
+{
+  "updated": "2026-09-15T16:36:10.961022",
+  "leaderboards": {
+    "LMArena": [
+      {
+        "rank": 1,
+        "model": "claude-fable-5",
+        "score": "1506±5",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        "votes": "30,057",
+        "price": "$10 / $50",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "claude-opus-4-6-high",
+        "score": "1505±4",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-6",
+        "votes": "71,993",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "claude-opus-4-7-high",
+        "score": "1502±4",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-7",
+        "votes": "60,002",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "muse-spark-1.2 (xHigh)",
+        "score": "1500±11",
+        "org": "Meta",
+        "url": "https://developer.meta.com/ai/models/muse-spark/",
+        "votes": "3,227",
+        "price": "$1.25 / $4.25",
+        "context": "N/A",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "claude-fable-5.1-max",
+        "score": "1498±8",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "votes": "5,783",
+        "price": "$10 / $50",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "claude-opus-4-6",
+        "score": "1497±3",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-6",
+        "votes": "75,878",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "claude-opus-4-7",
+        "score": "1494±4",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-7",
+        "votes": "61,128",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "muse-spark-1.3-max",
+        "score": "1493±9",
+        "org": "Meta",
+        "url": "https://developer.meta.com/ai/models/muse-spark/",
+        "votes": "4,723",
+        "price": "N/A",
+        "context": "N/A",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "gemini-3.8-flash-high",
+        "score": "1493±9Preliminary",
+        "org": "",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+        "votes": "5,076",
+        "price": "$0.75 / $3.75",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "claude-opus-5-high",
+        "score": "1493±4",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-5",
+        "votes": "42,617",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "Artificial Analysis": [
+      {
+        "rank": 1,
+        "model": "Claude Fable 5.1 (max with fallback)",
+        "score": "53",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$7.63",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "Claude Fable 5.1 (xhigh with fallback)",
+        "score": "53",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$5.98",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "GPT-6 Astra (max)",
+        "score": "53",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$3.26",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "GPT-6 Astra (xhigh)",
+        "score": "53",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$2.31",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Claude Fable 5.1 (high with fallback)",
+        "score": "51",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$3.91",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "GPT-6 Astra (high)",
+        "score": "51",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$1.72",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "Claude Opus 5 (max)",
+        "score": "51",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$5.86",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "Claude Fable 5 (with fallback)",
+        "score": "50",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$8.75",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "GPT-6 Astra (medium)",
+        "score": "50",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$1.54",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "Claude Opus 5 (xhigh)",
+        "score": "50",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$4.88",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "LiveBench": [
+      {
+        "rank": 1,
+        "model": "Claude Fable 5.1 Max Effort",
+        "score": "83.4",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$1.212",
+        "context": "",
+        "category_scores": {
+          "reasoning": "91.7",
+          "coding": "86.4",
+          "agentic": "66.1",
+          "math": "97.0",
+          "data": "80.3",
+          "language": "89.5",
+          "instruct": "73.0"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "Claude Fable 5 Max Effort",
+        "score": "83.0",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$1.439",
+        "context": "",
+        "category_scores": {
+          "reasoning": "89.7",
+          "coding": "86.0",
+          "agentic": "62.2",
+          "math": "96.0",
+          "data": "80.5",
+          "language": "90.7",
+          "instruct": "75.8"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "GPT-6 Astra Max Effort",
+        "score": "82.2",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.736",
+        "context": "",
+        "category_scores": {
+          "reasoning": "92.7",
+          "coding": "80.4",
+          "agentic": "57.3",
+          "math": "96.8",
+          "data": "83.0",
+          "language": "89.4",
+          "instruct": "75.6"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "Muse Spark 1.3 xHigh Effort",
+        "score": "81.6",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.219",
+        "context": "",
+        "category_scores": {
+          "reasoning": "89.7",
+          "coding": "81.1",
+          "agentic": "64.1",
+          "math": "95.9",
+          "data": "79.6",
+          "language": "82.8",
+          "instruct": "78.0"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "DeepSeek V4.1 Flash Max Effort open",
+        "score": "81.1",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.029",
+        "context": "",
+        "category_scores": {
+          "reasoning": "86.7",
+          "coding": "80.0",
+          "agentic": "77.3",
+          "math": "93.3",
+          "data": "79.3",
+          "language": "81.2",
+          "instruct": "70.0"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "GPT-5.6 Sol Max Effort",
+        "score": "81.0",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.515",
+        "context": "",
+        "category_scores": {
+          "reasoning": "91.7",
+          "coding": "83.9",
+          "agentic": "56.2",
+          "math": "96.2",
+          "data": "79.8",
+          "language": "87.7",
+          "instruct": "71.8"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "GPT-5.5 Thinking xHigh Effort",
+        "score": "80.2",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.435",
+        "context": "",
+        "category_scores": {
+          "reasoning": "89.7",
+          "coding": "82.1",
+          "agentic": "54.0",
+          "math": "95.9",
+          "data": "81.6",
+          "language": "87.4",
+          "instruct": "70.7"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "Claude 5 Opus Thinking Max Effort",
+        "score": "80.1",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.699",
+        "context": "",
+        "category_scores": {
+          "reasoning": "91.2",
+          "coding": "81.4",
+          "agentic": "65.2",
+          "math": "95.7",
+          "data": "74.6",
+          "language": "88.7",
+          "instruct": "63.8"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "Kimi K3 open",
+        "score": "79.2",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.348",
+        "context": "",
+        "category_scores": {
+          "reasoning": "90.7",
+          "coding": "81.4",
+          "agentic": "62.2",
+          "math": "84.4",
+          "data": "78.7",
+          "language": "85.5",
+          "instruct": "71.4"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "Gemini 3.7 Flash High",
+        "score": "78.8",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.157",
+        "context": "",
+        "category_scores": {
+          "reasoning": "87.8",
+          "coding": "78.9",
+          "agentic": "58.3",
+          "math": "93.5",
+          "data": "68.0",
+          "language": "85.5",
+          "instruct": "79.9"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "Open LLM Leaderboard": [
+      {
+        "rank": 1,
+        "model": "CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "score": "46.8",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "score": "45.7",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑",
+        "score": "44.2",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 72.706,
+        "license": "other",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "Aryanne/QwentileSwap  📑",
+        "score": "43.9",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/Aryanne/QwentileSwap  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Cran-May/tempmotacilla-cinerea-0308  📑",
+        "score": "43.6",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/Cran-May/tempmotacilla-cinerea-0308  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.766,
+        "license": "",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "Daemontatox/Llama3.3-70B-CogniLink  📑",
+        "score": "42.8",
+        "org": "LlamaForCausalLM",
+        "url": "https://huggingface.co/Daemontatox/Llama3.3-70B-CogniLink  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 70.554,
+        "license": "apache-2.0",
+        "arch": "LlamaForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑",
+        "score": "42.3",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 72.7,
+        "license": "",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "1024m/QWEN-14B-B100  📑",
+        "score": "41.9",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/1024m/QWEN-14B-B100  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "score": "41.8",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "score": "41.5",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      }
+    ],
+    "OpenCompass 司南": []
+  },
+  "news": [
+    {
+      "title": "K2 Horizon 0.9B",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "K2 Horizon 3.7B",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "K2 Horizon 7B",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "K2 Horizon MoVA 36B A4B",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "Agnes 3.0 Flash",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "DeepSeek V4.1 Flash (Reasoning, Max Effort)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "Ling-3.0-flash-VL",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "Benchmarking GPT-6 Astra",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "OpenBMB releases MiniCPM5-2B",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "Announcing the Artificial Analysis Intelligence Index v4.3",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "Artificial Analysis Intelligence Index v4.3",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "What's changed",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "The Download: AI doomers, whistleblowing agents, and de-aged livers",
+      "url": "https://www.technologyreview.com/2026/09/15/1144141/the-download-ai-extinction-whistleblowing-agents-donated-livers/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-15",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. The AI industry has taken a doomer turn. What now? AI chiefs Dario Amodei, Sam Altman, Elon Musk, and Demis Hassabis are suddenly all in agreement: the latest generation of LLMs&#8230;"
+    },
+    {
+      "title": "AI models need more data about biology, and OpenAI is paying to create it",
+      "url": "https://www.technologyreview.com/2026/09/15/1144129/ai-models-need-more-data-about-biology-and-openai-is-paying-to-create-it/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-15",
+      "summary": "Last year Ruxandra Teslo, a policy analyst who focuses on clinical trials, posted an idea for supercharging medical AI systems: Use data from failed biotech companies. By bidding at their bankruptcy proceedings, she proposed, it might be possible to obtain detailed regulatory filings, manufacturing strategies, and safety data—types of information usually considered trade secrets. She&#8230;"
+    },
+    {
+      "title": "What’s at stake in AI’s trillion-dollar gamble",
+      "url": "https://www.technologyreview.com/2026/09/15/1144028/ai-infrastructure-boom-investment-bubble-risk/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-15",
+      "summary": "When Jessica Wachter, a finance professor at the University of Pennsylvania’s Wharton School, wanted to assess AI’s impact on the economy over the next few years, she faced a long list of business and technical uncertainties. So she started with what she calls a “remarkable fact” that is not in question: A handful of so-called&#8230;"
+    },
+    {
+      "title": "The AI industry has taken a doomer turn. What now?",
+      "url": "https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-14",
+      "summary": "This story appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first,&#160;sign up here. This weekend, Dario Amodei, CEO of Anthropic, posted an essay calling for a brake on the pace of development of LLMs. Amodei cites the looming dangers he sees from the technology, from its&#8230;"
+    },
+    {
+      "title": "AI agents blew the whistle on their cheating colleagues",
+      "url": "https://www.technologyreview.com/2026/09/14/1144037/ai-agents-blew-whistle-o-cheating-colleagues/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-14",
+      "summary": "A group of AI agents asked to solve a series of math problems split into rival factions—when some cheated, others tried to stop them. That whistleblowing behavior, seen for the first time in a recent experiment run by Google DeepMind, could have implications for alignment researchers trying to keep swarms of autonomous AI agents in&#8230;"
+    },
+    {
+      "title": "The Download: AI’s real extinction threat and age-reversal tech for eyes",
+      "url": "https://www.technologyreview.com/2026/09/14/1144012/the-download-ai-extinction-threat-age-reversal-vision/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-14",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Roundtables: could AI really kill us all? Employees at the world&#8217;s leading AI labs are saying there&#8217;s a real possibility that advanced AI could destroy humanity. Are they right? Or is&#8230;"
+    },
+    {
+      "title": "Roundtables: Could AI really kill us all?",
+      "url": "https://www.technologyreview.com/2026/09/11/1143936/roundtables-will-ai-really-kill-us-all/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-11",
+      "summary": "Employees at the world&#8217;s leading AI labs are saying there&#8217;s a real possibility that advanced AI could destroy humanity. Are they right? Or is this more scaremongering and hype? Join MIT Technology Review executive editor Niall Firth for a conversation with senior AI editor Will Douglas Heaven and AI reporter Grace Huckins unpacking AI extinction&#8230;"
+    },
+    {
+      "title": "Meta&#8217;s new One subscriptions put a price on social media and AI",
+      "url": "https://www.theverge.com/tech/995453/meta-one-subscriptions-ai",
+      "source": "The Verge AI",
+      "published": "2026-09-15",
+      "summary": "Shortly after launching its new do-everything AI assistant Muse, Meta's launching subscription bundles that pair its standalone app subscriptions with extra AI usage. Some of the new Meta One bundles were in testing earlier this year, but are now available globally starting today, with several tiers for individual users, creators, and businesses. Meta says the [&#8230;]"
+    },
+    {
+      "title": "Is Big Tech’s AI slowdown a safety pact or a cartel?",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/995186/is-big-techs-ai-slowdown-a-safety-pact-or-a-cartel",
+      "source": "The Verge AI",
+      "published": "2026-09-14",
+      "summary": "When OpenAI CEO Sam Altman, Anthropic CEO Dario Amodei, Google DeepMind cofounder Demis Hassabis, and SpaceX head Elon Musk loosely agreed over the weekend to slow down AI development, skeptics spotted an ulterior motive immediately. The AI titans had declared that their aim was to \"pace the frontier,\" signing on at least partially to a [&#8230;]"
+    },
+    {
+      "title": "What execs and politicians are saying about slowing down AI development",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/995141/ai-executives-politicians-safety-regulation-anthropic-dario-amodei",
+      "source": "The Verge AI",
+      "published": "2026-09-14",
+      "summary": "Dario Amodei kicked off a flood of statements over the past few days about AI safety by publishing a long essay titled \"We Must Pace the Frontier\" detailing why AI development should be slowed down. Other AI leaders and politicians are speaking out in favor of or opposing his points, and we've compiled some of [&#8230;]"
+    },
+    {
+      "title": "Microsoft says ‘people matter more than AI’ following safety concerns",
+      "url": "https://www.theverge.com/news/994566/microsoft-humanist-ai-code-of-conduct",
+      "source": "The Verge AI",
+      "published": "2026-09-14",
+      "summary": "Microsoft is publishing a 37-page \"humanist AI code of conduct\" today, amid growing safety concerns over AI model progress. Anthropic CEO Dario Amodei called for a coordinated slow down of AI development over the weekend, after researchers warned recently that AI model progress could outpace our ability to safely deploy increasingly complex systems and verify [&#8230;]"
+    },
+    {
+      "title": "Trump and Mike Johnson think the AI industry is overreacting",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/994441/trump-mike-johnson-ai-industry-overreacting",
+      "source": "The Verge AI",
+      "published": "2026-09-13",
+      "summary": "Yesterday, Anthropic CEO Dario Amodei published a lengthy open letter saying it was time to \"pace the frontier\" and slow down AI development. OpenAI's Sam Altman and Elon Musk both agreed, publicly voicing their support on X. Even Alphabet's Demis Hassabis offered tentative support for Amodei's proposal. Donald Trump and House Speaker Mike Johnson, however, [&#8230;]"
+    },
+    {
+      "title": "OpenAI’s rogue AI tried to hack another company in May",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
+      "source": "The Verge AI",
+      "published": "2026-09-12",
+      "summary": "In May, hundreds of malicious and spam packages were uploaded to RubyGems, causing a serious disruption for the host. Now independent researchers have said that a swarm of OpenAI agents were responsible for the attack. Not only that, but the AI tried to steal users' API keys. At the time, RubyGems described it as a [&#8230;]"
+    },
+    {
+      "title": "Sam Altman says OpenAI going public in 2026 would be ‘ill-advised’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/994384/sam-altman-no-openai-ipo-ill-advised",
+      "source": "The Verge AI",
+      "published": "2026-09-12",
+      "summary": "OpenAI CEO Sam Altman confirmed that there would be no OpenAI IPO in 2026 during an interview with Fortune. Over the course of 45 minutes, Altman discussed a variety of subjects including the Hugging Face hacking incident, recursive self-improvement, and the possibility of building an AI that was beyond human control. On the latter, he [&#8230;]"
+    },
+    {
+      "title": "Anthropic CEO says it’s time to pump the brakes on AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/994337/anthropic-ceo-slow-down-ai-development",
+      "source": "The Verge AI",
+      "published": "2026-09-12",
+      "summary": "Anthropic CEO Dario Amodei says the time has come to slow down AI development and will give third-party evaluators like METR access to its models to help ensure its \"adherence to safety practices and commitments.\" In a winding essay, Amodei proposed a three-step plan to \"pace the frontier\" - jargon that simply means to slow [&#8230;]"
+    },
+    {
+      "title": "手机替我跑了一整套流程！我就说了一句话，AI执行了100步",
+      "url": "https://www.qbitai.com/2026/09/489466.html",
+      "source": "量子位",
+      "published": "2026-09-15",
+      "summary": "一句话，YOYO全面接管我的生活"
+    },
+    {
+      "title": "无问芯穹联合清华、上交正式开源具身端侧推理引擎APXInf，Pi 0.5性能SOTA",
+      "url": "https://www.qbitai.com/2026/09/489460.html",
+      "source": "量子位",
+      "published": "2026-09-15",
+      "summary": "卡位具身智能规模化落地“最后一公里”！"
+    },
+    {
+      "title": "全球AI视频榜单第一梯队再添中国力量：智象发布首款物理规律导向视频模型",
+      "url": "https://www.qbitai.com/2026/09/489389.html",
+      "source": "量子位",
+      "published": "2026-09-15",
+      "summary": "智象未来（HiDream.ai）正式发布首个原生全模态视频生成模型 HiDream-O1-Video-1.0"
+    },
+    {
+      "title": "一张GPU跑10万原子！分子之心用AI把化学反应“拍”成了电影",
+      "url": "https://www.qbitai.com/2026/09/489381.html",
+      "source": "量子位",
+      "published": "2026-09-15",
+      "summary": "打破分子模拟“不可能三角”"
+    },
+    {
+      "title": "首个AIGC长片大赛！RunningHub单项大奖100万，科幻IP免费改编",
+      "url": "https://www.qbitai.com/2026/09/489260.html",
+      "source": "量子位",
+      "published": "2026-09-15",
+      "summary": "刘慈欣督战"
+    },
+    {
+      "title": "Meta新研究：字节模型蒸馏后，天花板破了",
+      "url": "https://www.qbitai.com/2026/09/489337.html",
+      "source": "量子位",
+      "published": "2026-09-15",
+      "summary": ""
+    },
+    {
+      "title": "前OpenAI后训练VP回应陶哲轩：说AI毁了数学，可能还是太小瞧AI了",
+      "url": "https://www.qbitai.com/2026/09/489288.html",
+      "source": "量子位",
+      "published": "2026-09-15",
+      "summary": "未来的AI不仅能解决问题，还能提出有价值的洞见、建立新的概念框架，让数学家在此基础上继续探索。"
+    },
+    {
+      "title": "9月21日，深圳前海！聊聊工业AI与生态共创的下一步",
+      "url": "https://www.qbitai.com/2026/09/489277.html",
+      "source": "量子位",
+      "published": "2026-09-15",
+      "summary": "西门子Xcelerator繁星生态大会，在生态合作中共赢机遇"
+    },
+    {
+      "title": "Meta One 订阅服务上线：专为“AI 重度用户”、创作者、商业用户准备，最高档每月 499 美元",
+      "url": "https://www.ithome.com/1/002/818.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-15",
+      "summary": "<p>IT之家 9 月 15 日消息，Meta 今天（15 日）晚间宣布上线的 Meta One 套餐，把 Facebook、Instagram 和 WhatsApp 等独立订阅与更高的 AI 使用额度打包销售，面向“AI 重度用户”及创作者、商业用户。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/920768e2-5aa0-4109-9b08-5111430d4644.png?x-bce-process=image/format,f_auto\" /></p><p>Meta 强调，旗下应用和 Meta AI 的基础核心功能仍可免费使用，Facebook、Instagram 和 WhatsApp 订阅也不会强制与 Meta One 捆绑购买。未来，Edits、AI 眼镜等产品也会陆续加入套餐。</p><p>个人用户可以选择 Core 和 Premium 两档，月费分别为 <strong>7.99 美元</strong><span class=\"exch-money-value \">（IT之家注：现汇率约合 53.7 元人民币）</span><strong>和 19.99 美元</strong><span class=\"exch-money-value \">（现汇率约合 134.4 元人民币）</span>。两者都包含 Instagram Plus、WhatsApp Plus 和 Facebook Plus，并提供更多 Meta AI 媒体内容生成额度。</p><p>针对创作者和企业，Meta One 的月费从 <strong>14.99 美元</strong><span class=\"exch-money-value \">（现汇率约合 100.8 元人民币）</span>一直到<strong> 499 美元</strong><span class=\"exch-money-value \">（现汇率约合 3,356 元人民币）</span>不等。这些套餐同样覆盖 Meta 旗下各应用订阅，同时根据档位增加加粗关注按钮、认证徽章、搜索结果排名提升、仿冒账号监测等功能：</p><ul class=\" list-paddingleft-2\"><li><p><strong>Essential（每月 14.99 美元，现汇率约合 100.8 元人民币）：</strong> 主要用于建立可信身份并赢得新受众信任，提供账号管理工具和更多 WhatsApp Meta Business Agent 使用额度，可全天候自动回复客户。此外还包括认证徽章、WhatsApp Business 认证频道和冒充账号保护，通过身份认证后，可以帮助其他用户确认账号属于本人或企业。</p></li><li><p><strong>Advanced（每月 49.99 美元，现汇率约合 336.2 元人民币）：</strong> 加入更多专业运营工具，包括最多提前 30 天安排限时动态、在非付费帖子和 Reels 中添加链接、导出数据分析结果，以及获得更深入的受众洞察。企业还可以让团队成员在无需共享密码的情况下管理账号，并在 WhatsApp 上连接更多设备、获得更多企业广播额度和 Meta Business Agent 回复额度。</p></li><li><p><strong>Expert（每月 149 美元，现汇率约合 1,002 元人民币）和 Max（每月 499 美元，现汇率约合 3,356 元人民币）：</strong> 主要面向需要扩大运营规模的团队，提供最高级别的功能权限，以及更高的 Meta Business Agent 使用容量。</p></li></ul>"
+    },
+    {
+      "title": "雷蛇发布北海巨妖 V4 X SENSA HD 耳机，799 元",
+      "url": "https://www.ithome.com/1/002/815.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-15",
+      "summary": "<p>IT之家 9 月 15 日消息，雷蛇今日宣布推出北海巨妖 V4 X SENSA HD 耳机，新品主打电竞场景，<strong>拥有 SENSA HD 触觉反馈技术</strong>，支持 7.1 环绕声，<strong>定价 799 元</strong>。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/76a20f1f-ea9d-4cb4-8b57-f6f4a0ef546d.jpg?x-bce-process=image/format,f_auto\" /></p><p>据介绍，这款耳机支持雷蛇 SENSA HD 触觉反馈技术，可让玩家感知游戏的精彩瞬间，适配 100 多款游戏。搭载 40mm 驱动单元，采用三频分离设计，可带来更加出色的高音，让玩家更沉浸。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/7de477ca-2e53-4278-9e12-7be3d3c50a4b.jpg?x-bce-process=image/format,f_auto\" /></p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/8977a675-03ec-4fa2-b49f-344c258e723a.jpg?x-bce-process=image/format,f_auto\" /></p><p>规格方面，该耳机搭载灵晰技术心形指向麦克风，可精准聚焦人声，支持 7.1 环绕声技术，帮助玩家听声辨位，采用人造皮革记忆绵耳垫，减轻长时间佩戴负担。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/b9d82249-3531-4748-b0ec-4862af007217.jpg?x-bce-process=image/format,f_auto\" /></p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/34603e6d-52a2-4d01-938d-0ac6b91f3559.jpg?x-bce-process=image/format,f_auto\" /></p><p>此外，该耳机还支持雷蛇 CHROMA RGB 幻彩光效，用户可通过雷云软件自定义 Logo 灯效，并与其他雷蛇设备进行灯光同步。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/293bcd2d-a656-4aea-9a7e-f11a63f67626.jpg?x-bce-process=image/format,f_auto\" /></p><p>IT之家附该耳机详细参数如下：</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/9df8e079-86ea-40ff-85c1-aad06736b46e.jpg?x-bce-process=image/format,f_auto\" /></p><p>目前该耳机已在京东开售，定价 799 元。</p><dir><a contenteditable=\"false\" href=\"https://u.jd.com/xaFe3o8\" target=\"_blank\"><span class=\"card main-site\"><span class=\"card-logo\"><img src=\"https://img14.360buyimg.com/pop/jfs/t1/514468/16/10250/2370510/6aa11468Fb179d7df/008370670682a7f4.png\" /></span><span class=\"card-info\"><span class=\"card-title\"><span class=\"mall-data\">京东</span><span class=\"card-name\">雷蛇（Razer）北海巨妖 V4 X SENSA HD 耳机</span></span><span class=\"card-abstract\"></span><span class=\"card-controls\"><span class=\"price\"> 799 元</span><span class=\"card-btn-deep\">直达链接</span></span></span></span></a></dir>"
+    },
+    {
+      "title": "iQOO 16 三色官图发布：逐光 / 传奇 / 赛道、主打科幻感，新机 9 月 29 日发布",
+      "url": "https://www.ithome.com/1/002/798.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-15",
+      "summary": "<p>IT之家 9 月 15 日消息，<a href=\"https://www.ithome.com/1/002/388.htm\" target=\"_blank\">iQOO 官方今日宣布 iQOO 16 新机将于 9 月 29 日 19:00 发布</a>，发布即开售。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/39e1eb22-1515-4411-9824-88a259d74be8.jpg?x-bce-process=image/format,f_auto\" /></p><p>iQOO 官方还放出了新机三色官图，主打科幻感：</p><blockquote><ul class=\"medium-size list-paddingleft-2\"><li><p><strong>逐光</strong>｜独家激光全息技术，红蓝光影交错悬浮，科幻感拉满；</p></li><li><p><strong>传奇</strong>｜采用磁控溅射电镀工艺，670 纳米的电镀膜厚，冷调白色中透出细腻银灰；</p></li><li><p><strong>赛道</strong>｜以 F1 赛车刷紫灵感，把象征最快的紫融入低调内敛的黑，高级精致。</p></li></ul></blockquote><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/8a2bd692-843c-4f62-a9a4-d1f974b4b837.jpg?x-bce-process=image/format,f_auto\" /></p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/c0a573a9-08fb-430d-924f-dbb80ef7d7c6.jpg?x-bce-process=image/format,f_auto\" /></p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/f009fe3b-13b5-48c6-9f98-8f3894e430ae.jpg?x-bce-process=image/format,f_auto\" /></p><p>据IT之家昨日报道，在三星显示 × iQOO 屏幕技术沟通会上，双方首次官宣「三星显示 × iQOO 未来显示探索计划」，这项计划阶段性成果将首次在 iQOO 16 上搭载。iQOO 官方表示，未来双方将进一步加强合作，致力于为用户打造全球最佳屏幕视效体验。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/ad2a85fe-0baa-4be4-ad39-8cde9c3f8377.jpg\" /></p><p class=\"j_iframe_show ithome-content-placeholder\" style=\"text-align: center;\"></p>"
+    },
+    {
+      "title": "中文互联网基础语料 4.0 发布：数据量 120GB，为大模型训练和 AI 发展提供可信数据支撑",
+      "url": "https://www.ithome.com/1/002/795.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-15",
+      "summary": "<p>IT之家 9 月 15 日消息，据中国网络空间安全协会官方公众号，9 月 15 日（今天）下午，在济南召开的 2026 年国家网络安全宣传周人工智能安全治理分论坛上，中文互联网基础语料 4.0 正式向社会发布，<strong>数据量 120GB</strong>，并在“中文互联网语料资源平台”上线。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/467ec10e-76d9-4a64-b67c-27b7c9fb1d91.jpg?x-bce-process=image/format,f_auto\" /></p><p>据IT之家了解，用户登录中国网络空间安全协会官网（<a href=\"https://www.cybersac.cn/newhome\" target=\"_blank\">点此前往</a>），点击“中文互联网语料资源平台”链接，通过注册、认证等程序，即可下载或联系获取相关数据。</p><p>在中央网信办指导下，中国网络空间安全协会联合国家互联网应急中心，会同<strong>百度、中科闻歌、开普云、拓尔思、科大讯飞、知乎</strong>等单位，在前期发布中文互联网基础语料 1.0、2.0 和 3.0 的基础上，依托网安协会人工智能安全治理专委会建立的语料共建共享机制，汇聚一批新的高质量可信数据，经过一系列严格细致的数据加工处理措施，形成并对社会发布中文互联网基础语料 4.0，数据量 120GB，<strong>为大模型训练和人工智能发展提供可信数据支撑</strong>。</p><p>网安协会负责人表示，中文互联网基础语料 4.0 是社会各界协同共建高质量中文语料的重要阶段性成果，<strong>进一步丰富了国内高质量中文语料供给体系</strong>。下一步，协会将继续联合国家互联网应急中心等单位，联动各行业领域深化中文互联网基础语料建设，持续为人工智能产业高质量发展筑牢数据底座。</p>"
+    },
+    {
+      "title": "诺贝尔和平奖得主雷萨：如果不现在就限制 AI，人类将失去自主权",
+      "url": "https://www.ithome.com/1/002/794.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-15",
+      "summary": "<p>IT之家 9 月 15 日消息，诺贝尔和平奖得主玛丽亚 · 雷萨（Maria Ressa）表示，人工智能先是借助社交媒体攫取了人类的注意力，又利用人类对亲密情感的本能诉求，干扰我们的生理心理；如果我们现在不通过立法加以限制，人类最终将会丧失自主选择权。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2025/11/62b5ea8d-908b-4cef-8fe9-837cb9190d66.png?x-bce-process=image/format,f_auto\" /></p><p>据IT之家了解，这位拥有菲律宾、美国双重国籍的记者于 2021 年与另一位记者共同斩获诺贝尔和平奖，部分获奖缘由是她记录大型科技巨头所拥有的强大影响力。目前她担任联合国国际人工智能科学小组的联合主席，该小组的任务是评估人工智能正在如何改变世界各地民众的生活。</p><p>雷萨提出，普通民众应当主动投身 AI 监管的舆论呼吁，向政界施压，促使政客出台相关立法。</p><p>“呼吁对 AI 实施监管，这并不是言论自由层面的议题，而是一项公共安全议题。”她同时也是新闻机构 Rappler 的联合创始人兼首席执行官。</p><p>“我认为我们已经走到这样一个节点：如果再不采取行动，局面就会发生倾覆。倘若我们现在不介入干预，事态终将脱离人类的掌控。”她到访奥斯陆，出席一场探讨民主所面临威胁的会议期间，在采访中说道。</p><h3>人工智能的三波浪潮</h3><p>“人工智能既谈不上‘人工’，也算不上真正的‘智能’。这项技术已经存在大约 70 年，已经有三波冲击先后影响普通大众。”她讲道。</p><p>第一阶段，社交媒体平台抢夺人们的注意力，撕裂社会共识，同时让个体陷入孤立。</p><p>“第二波冲击依旧是利用人们对于亲密联结的心理诉求，入侵我们的生理本能：也就是各类聊天机器人。”雷萨说，“而第三波，则直接冲击人的自主决定权，也就是具备自主行动能力、多智能体协同的 AI。这些前沿模型打造出来的机器不再只是模仿人类，它们还会代替人类做出行动。”</p><p>包括美国总统唐纳德 · 特朗普在内的部分批评人士反对行业有关 AI 监管的呼声，他们担心实施监管之后，美国会在 AI 竞赛当中落后于中国。雷萨驳斥了这套说法，称其只是“高明的说辞”。</p><p>“事实上，相比于硅谷面向全球用户的产品，中国为本国公民设置了更多安全防护机制。拿 TikTok 来说，面向中国国内使用的版本设置了年龄限制。”她表示。</p><p>她提出，应当建设由公共利益团体运营、脱离大型科技公司掌控的通信平台；就如同城市修建城市公园这类公共基础设施一般。Rappler 媒体在 2023 年推出的 Rappler Communities 社区项目，正是一次这样的实践。</p><p>Rappler Communities 是一款手机 App，搭建在开源、安全、去中心化的 Matrix 协议之上。依托这款应用，Rappler 编辑部既可以和读者沟通，读者彼此之间也能够开展“真诚的对话交流”，雷萨介绍。</p><p>Rappler 已经邀请菲律宾其他本土媒体入驻该平台，如今还准备把这套模式推广到东南亚其他新闻机构。</p><p>“这里可以成为民众的一块数字安全空间。人们能够相互交谈，更为重要的是学会倾听彼此，民主社会的良性运转才得以在此发生。”她说。</p>"
+    },
+    {
+      "title": "18999 元起：索尼最轻超远摄定焦镜头 FE 400mm F4.5 / 600mm F6.3 GM OSS 发布",
+      "url": "https://www.ithome.com/1/002/793.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-15",
+      "summary": "<p>IT之家 9 月 15 日消息，索尼今日宣布推出 FE 400mm F4.5 GM OSS、FE 600mm F6.3 GM OSS 长焦镜头。两款新品主打轻量化设计，是索尼最轻的超远摄定焦镜头，<strong>售价 18999 元 / 24999 元</strong>。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/09af2a7c-5229-4b82-a611-b18c894dc6e3.png?x-bce-process=image/format,f_auto\" /></p><p>IT之家了解到，这两款镜头的重量均低于 1kg，全开光圈下可获得优秀的 MTF 表现，满足大幅裁切需求。搭载 3 枚 Super ED 超低色散镜片、1 枚 ED 低色散镜片，拥有 2 个 XD 线性马达，最高支持 120 张 / 秒连拍自动对焦、自动曝光。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/7ddc86da-67c0-4d93-afbe-64161d5eff94.png?x-bce-process=image/format,f_auto\" /></p><p>同时，两款镜头均采用优化镜片布局，重心更加接近机身，方便用户握持。配备 11 片光圈叶片，可拍出较圆的光斑，拥有第二代纳米 AR 镀膜，有效抑制炫光鬼影。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/7bde8d27-be17-4487-b329-d4d02fff7249.png?x-bce-process=image/format,f_auto\" /></p><p>此外，该系列镜头搭配索尼全画幅机身时，整体重量约 1.7kg，适合新手入门。支持加装增距镜，进一步扩展焦距，提供 3 档 OS 光学防抖模式，支持机身、镜头协同防抖，最近对焦距离约 2.5m。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/8ecf72bc-ebc4-48b2-bf7a-dc24d93ebe2c.png?x-bce-process=image/format,f_auto\" /></p>"
+    },
+    {
+      "title": "“三巨头”联手，OpenAI、Anthropic、谷歌 Deepmind 开始合作研究 AI 安全措施",
+      "url": "https://www.ithome.com/1/002/792.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-15",
+      "summary": "<p>IT之家 9 月 15 日消息，随着美国各界对 AI 可能威胁经济和国家安全的担忧不断升温，OpenAI 开始与主要竞争对手 Anthropic 和谷歌 DeepMind 合作研究 AI 安全措施，进一步推动行业共同应对潜在风险。</p><p>据彭博社今天（15 日）晚间报道，OpenAI 全球政策主管克里斯 · 莱恩透露，公司与 Anthropic 和谷歌围绕 AI 安全问题的接触持续了数周。OpenAI 认为，三家公司开展这类协调并不需要专门获得反垄断豁免。“<strong>尝试合作、优先保障安全，对大家都更好</strong>。”</p><p>当地时间上周六，Anthropic CEO 达里奥 · 阿莫迪发表了一篇 3800 词的长文，呼吁放缓最先进 AI 系统的研发，让研究人员有更多时间了解潜在威胁，也让 AI 生存风险迅速进入公众讨论。OpenAI CEO 萨姆 · 奥尔特曼和 SpaceXAI 负责人埃隆 · 马斯克很快对阿莫迪的主张<strong>表达支持</strong>。</p><p>Anthropic、谷歌 DeepMind 的发言人没有立即回应置评请求。</p><p>莱恩认为，企业为了安全开展合作并不罕见，航空业就是一个例子。“长期以来，企业为了提高安全性而相互帮助的情况很多。”</p><p>IT之家从报道中获悉，此次前往华盛顿期间，莱恩还计划与美国议员会面。他补充说，OpenAI 愿意支持两党提出、旨在防范 AI 潜在灾难性风险的方案。“<strong>只要能推动通过，我们都支持</strong>。”</p>"
+    },
+    {
+      "title": "将降本增效进行到底，Meta 计划明年上半年部署新一代自研 AI 芯片",
+      "url": "https://www.ithome.com/1/002/790.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-15",
+      "summary": "<p>IT之家 9 月 15 日消息，据彭博社今天（15 日）报道，Meta 计划明年上半年在数据中心<strong>部署新一代自研 AI 芯片</strong>，希望在运行 AI 模型时进一步<strong>降低成本和能耗</strong>。</p><p>Meta 于 2023 年公布自研 AI 芯片计划，目前正在测试<strong>第三代产品 MTIA 450，代号 Arke</strong>。下一代 MTIA 500 代号 Astrid，预计约一个月后完成设计，并于 2027 年底进入数据中心。相比前几代产品，Meta 计划更大范围部署 Astrid。</p><p>负责 Meta 定制芯片项目的工程副总裁 Yee Jiun Song 接受采访时指出，每一代产品都会在技术上承担稍高一些的风险，同时换来更好的性能。</p><p>具体而言，新一代芯片不仅要提高能效，也要在同等投入下<strong>提供更强性能</strong>。Meta 正大举建设 AI 基础设施，自研芯片是其中的重要一环。芯片由 Meta 与博通合作设计、台积电负责制造，目标之一是减少对英伟达领先 AI 处理器的依赖。</p><p>如果按照能耗规模衡量，Meta 计划在 12 个月内部署<strong>超过 1GW 规模的自研芯片</strong>，后续的部署速度预计还会加快，前提是 AI 市场和需求不出现大幅下滑。</p><p>Meta 超级智能实验室也参与芯片调校，向硬件团队提供未来 AI 模型以及推理阶段所需能力的信息。Yee Jiun Song 称，由于大量工程工作由 Meta 自行完成，自研芯片运行自家 AI 模型时，可以<strong>比“英伟达当前出货的任何产品”更高效</strong>。</p><p>9 月 1 日，台积电向 Meta 交付 12 枚新型号芯片，实测性能与此前模拟结果的差距<strong>只有 2% 至 3%</strong>。据IT之家了解，拿到芯片当天，团队便成功运行 Meta 自家模型，以及 DeepSeek 和阿里巴巴的模型。</p><p>初步测试没有发现芯片设计缺陷，但后续仍需要数月测试和调校，工厂也将在此期间逐步提高产量。四代芯片基本都采用高带宽内存，定位并非追求极致响应速度的超高速推理市场。Yee Jiun Song 透露，这些产品将成为用于通用推理的主力芯片。</p><p>Meta 此前还规划过一款代号 Olympus 的芯片，希望同时承担 AI 训练和推理任务，原定 2028 年或 2029 年推出。后来 Meta 取消了项目，转而集中资源开发推理芯片。</p><p>成本是主要考虑之一。当容量扩大到数 GW 级别时，成本就会变得非常重要。如果同时兼顾训练和推理会让芯片成本提高 30%，在这种规模下就会变得“完全无法接受”。</p><p>Astrid 开发完成后，Meta 下一阶段将重点提高芯片速度和吞吐量，也就是单位时间内能够处理的 AI 任务规模，同时利用光纤技术进一步提升性能。“我们的产品路线图非常完善。未来几年，我们会继续开发性能足以与供应商产品竞争的芯片。”</p>"
+    }
+  ]
+}
