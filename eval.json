@@ -1,0 +1,1004 @@
+{
+  "updated": "2026-09-26T15:58:28.814437",
+  "leaderboards": {
+    "LMArena": [
+      {
+        "rank": 1,
+        "model": "claude-opus-5.5-high",
+        "score": "1509±12",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/claude-opus-5-5",
+        "votes": "2,307",
+        "price": "$4 / $20",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "claude-opus-4-6-high",
+        "score": "1505±3",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-6",
+        "votes": "76,518",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "claude-fable-5-high",
+        "score": "1504±4",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        "votes": "36,462",
+        "price": "$10 / $50",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "claude-opus-4-7-high",
+        "score": "1502±4",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-7",
+        "votes": "64,007",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "claude-fable-5.1-max",
+        "score": "1501±7",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "votes": "9,942",
+        "price": "$10 / $50",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "claude-opus-4-6",
+        "score": "1498±3",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-6",
+        "votes": "80,836",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "muse-spark-1.2 (xHigh)",
+        "score": "1496±10",
+        "org": "Meta",
+        "url": "https://developer.meta.com/ai/models/muse-spark/",
+        "votes": "3,422",
+        "price": "$1.25 / $4.25",
+        "context": "N/A",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "claude-opus-4-7",
+        "score": "1495±4",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-7",
+        "votes": "65,051",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "muse-spark-1.3-max",
+        "score": "1494±7",
+        "org": "Meta",
+        "url": "https://developer.meta.com/ai/models/muse-spark/",
+        "votes": "10,036",
+        "price": "$1.25 / $4.25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "gemini-3.8-flash-high",
+        "score": "1492±5Preliminary",
+        "org": "",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+        "votes": "21,728",
+        "price": "$0.75 / $3.75",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "Artificial Analysis": [
+      {
+        "rank": 1,
+        "model": "Claude Opus 5.5 (max with fallback)",
+        "score": "58",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$5.98",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "Claude Opus 5.5 (xhigh with fallback)",
+        "score": "56",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$3.46",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "Claude Opus 5.5 (high with fallback)",
+        "score": "54",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$1.82",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "Claude Fable 5.1 (max with fallback)",
+        "score": "53",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$7.63",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Claude Fable 5.1 (xhigh with fallback)",
+        "score": "53",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$5.98",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "GPT-6 Astra (max)",
+        "score": "53",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$3.26",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "GPT-6 Astra (xhigh)",
+        "score": "52",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$2.31",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "Claude Opus 5.5 (medium with fallback)",
+        "score": "51",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$1.34",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "Claude Fable 5.1 (high with fallback)",
+        "score": "51",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$3.91",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "GPT-6 Astra (high)",
+        "score": "51",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$1.73",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "LiveBench": [
+      {
+        "rank": 1,
+        "model": "Claude Fable 5.1 Max Effort",
+        "score": "83.4",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$1.212",
+        "context": "",
+        "category_scores": {
+          "reasoning": "91.7",
+          "coding": "86.4",
+          "agentic": "66.1",
+          "math": "97.0",
+          "data": "80.3",
+          "language": "89.5",
+          "instruct": "73.0"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "Claude 5.5 Opus Thinking Max Effort",
+        "score": "83.2",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.799",
+        "context": "",
+        "category_scores": {
+          "reasoning": "92.2",
+          "coding": "89.3",
+          "agentic": "71.7",
+          "math": "97.1",
+          "data": "80.3",
+          "language": "86.3",
+          "instruct": "65.7"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "Claude Fable 5 Max Effort",
+        "score": "83.0",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$1.439",
+        "context": "",
+        "category_scores": {
+          "reasoning": "89.7",
+          "coding": "86.0",
+          "agentic": "62.2",
+          "math": "96.0",
+          "data": "80.5",
+          "language": "90.7",
+          "instruct": "75.8"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "GPT-6 Astra Max Effort",
+        "score": "82.2",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.736",
+        "context": "",
+        "category_scores": {
+          "reasoning": "92.7",
+          "coding": "80.4",
+          "agentic": "57.3",
+          "math": "96.8",
+          "data": "83.0",
+          "language": "89.4",
+          "instruct": "75.6"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Muse Spark 1.3 xHigh Effort",
+        "score": "81.6",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.219",
+        "context": "",
+        "category_scores": {
+          "reasoning": "89.7",
+          "coding": "81.1",
+          "agentic": "64.1",
+          "math": "95.9",
+          "data": "79.6",
+          "language": "82.8",
+          "instruct": "78.0"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "DeepSeek V4.1 Flash Max Effort open",
+        "score": "81.1",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.029",
+        "context": "",
+        "category_scores": {
+          "reasoning": "86.7",
+          "coding": "80.0",
+          "agentic": "77.3",
+          "math": "93.3",
+          "data": "79.3",
+          "language": "81.2",
+          "instruct": "70.0"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "GPT-5.6 Sol Max Effort",
+        "score": "81.0",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.515",
+        "context": "",
+        "category_scores": {
+          "reasoning": "91.7",
+          "coding": "83.9",
+          "agentic": "56.2",
+          "math": "96.2",
+          "data": "79.8",
+          "language": "87.7",
+          "instruct": "71.8"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "GPT-5.5 Thinking xHigh Effort",
+        "score": "80.2",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.435",
+        "context": "",
+        "category_scores": {
+          "reasoning": "89.7",
+          "coding": "82.1",
+          "agentic": "54.0",
+          "math": "95.9",
+          "data": "81.6",
+          "language": "87.4",
+          "instruct": "70.7"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "Claude 5 Opus Thinking Max Effort",
+        "score": "80.1",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.699",
+        "context": "",
+        "category_scores": {
+          "reasoning": "91.2",
+          "coding": "81.4",
+          "agentic": "65.2",
+          "math": "95.7",
+          "data": "74.6",
+          "language": "88.7",
+          "instruct": "63.8"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "GPT-6 Sol Max Effort",
+        "score": "79.3",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.268",
+        "context": "",
+        "category_scores": {
+          "reasoning": "88.7",
+          "coding": "81.8",
+          "agentic": "52.9",
+          "math": "96.4",
+          "data": "81.2",
+          "language": "85.3",
+          "instruct": "68.6"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "Open LLM Leaderboard": [
+      {
+        "rank": 1,
+        "model": "CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "score": "46.8",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "score": "45.7",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑",
+        "score": "44.2",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 72.706,
+        "license": "other",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "Aryanne/QwentileSwap  📑",
+        "score": "43.9",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/Aryanne/QwentileSwap  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Cran-May/tempmotacilla-cinerea-0308  📑",
+        "score": "43.6",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/Cran-May/tempmotacilla-cinerea-0308  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.766,
+        "license": "",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "Daemontatox/Llama3.3-70B-CogniLink  📑",
+        "score": "42.8",
+        "org": "LlamaForCausalLM",
+        "url": "https://huggingface.co/Daemontatox/Llama3.3-70B-CogniLink  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 70.554,
+        "license": "apache-2.0",
+        "arch": "LlamaForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑",
+        "score": "42.3",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 72.7,
+        "license": "",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "1024m/QWEN-14B-B100  📑",
+        "score": "41.9",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/1024m/QWEN-14B-B100  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "score": "41.8",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "score": "41.5",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      }
+    ],
+    "OpenCompass 司南": []
+  },
+  "news": [
+    {
+      "title": "GLM-5.3 (low)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "DeepSeek V4.1 Flash (Non-Reasoning)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "Mercury 2.5",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6 Sol and Luna push the cost efficiency frontier",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "Claude Opus 5.5 takes the top spot on the Artificial Analysis Intelligence Index",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6 Luna (max)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6 Luna (xhigh)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6 Sol (low)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6 Luna (medium)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6 Sol (max)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6 Sol (xhigh)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6 Luna (low)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-09-26",
+      "summary": ""
+    },
+    {
+      "title": "The Download: the Pentagon’s AI-powered lie detector and young organ limits",
+      "url": "https://www.technologyreview.com/2026/09/25/1145157/the-download-pentagon-ai-lie-detector-young-organ-limits/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-25",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. The Pentagon wants $30 million to build an AI-powered lie detector The US government wants to spend $30.3 million over the next five years on an improved lie detector, according to&#8230;"
+    },
+    {
+      "title": "The Pentagon wants $30 million to build an AI-powered lie detector",
+      "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-25",
+      "summary": "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request. The program, called Polygraph+ or Polygraph Next, will focus on scoring algorithms that use artificial intelligence and machine learning and on a technique called “standoff sensing,” which&#8230;"
+    },
+    {
+      "title": "Young organs may not be a fountain of youth for recipients",
+      "url": "https://www.technologyreview.com/2026/09/25/1145083/young-organs-may-not-be-a-fountain-of-youth-for-recipients/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-25",
+      "summary": "Around this time last year I was attending an aging conference in Manchester, listening to a talk about fly aging, when my phone started pinging. News outlets were reporting that a hot mic had caught Russia’s and China’s leaders discussing the possibility of living forever. “With the developments of biotechnology, human organs can be continuously&#8230;"
+    },
+    {
+      "title": "The Download: a bid to scrap the virtual wall and AI hits Climate Week",
+      "url": "https://www.technologyreview.com/2026/09/24/1145064/the-download-bid-scrap-virtual-wall-ai-climate-week/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-24",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. A congressional representative just proposed killing America’s border tower program Delia Ramirez, a Democratic US representative from Illinois, has announced plans to introduce legislation to terminate the surveillance tower program along&#8230;"
+    },
+    {
+      "title": "AI is dominating the conversation at Climate Week",
+      "url": "https://www.technologyreview.com/2026/09/24/1145048/ai-climate-week/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-24",
+      "summary": "This week, world leaders descended on Manhattan for the UN General Assembly. It’s also New York Climate Week—investors, policymakers, advocates, and journalists are colliding at panels, talks, and fancy dinners. With so many climate voices in one place, the discourse can feel a little louder than usual. This year, the unavoidable topic is artificial intelligence.&#8230;"
+    },
+    {
+      "title": "The Download: India’s smart glasses menace and AI’s trillion-dollar gamble",
+      "url": "https://www.technologyreview.com/2026/09/23/1144966/the-download-india-smart-glasses-ai-trillion-dollar-gamble/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-23",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Smart glasses are already causing havoc in India When Shubnam saw an Instagram video of a Delhi protest they had attended, they realized a content creator wearing Meta smart glasses had&#8230;"
+    },
+    {
+      "title": "The AI Hype Index: AI loves cheating",
+      "url": "https://www.technologyreview.com/2026/09/23/1144940/ai-hype-index-ai-loves-cheating/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-23",
+      "summary": "Brace yourself: It turns out AI is being optimized for cheating. OpenAI’s agents hacked into Hugging Face to get the answers to a cybersecurity test. Next, they solved a prestigious math problem (or just stole from two top mathematicians’ answer sheets). Anthropic’s models have also hacked into other companies’ systems four times already. And that’s&#8230;"
+    },
+    {
+      "title": "Roundtables: The Deadly Failures of The Virtual Border Wall",
+      "url": "https://www.technologyreview.com/2026/09/22/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/",
+      "source": "MIT Technology Review",
+      "published": "2026-09-22",
+      "summary": "The US has spent billions building a “virtual wall” of surveillance towers along its southern border over the past 25 years, promising they will help detect and apprehend border crossers and save lives. But a groundbreaking investigation by MIT Technology Review has documented over a thousand people who moved through areas watched by these towers&#8230;"
+    },
+    {
+      "title": "Meta makes the Muse filesystem even more accessible",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000784/meta-muse-filesystem",
+      "source": "The Verge AI",
+      "published": "2026-09-25",
+      "summary": "Yesterday, with a little prodding, it was discovered that Meta's Muse would expose its filesystem to curious users. The files offered a fascinating peek under the hood of an AI chatbot, and appeared to expose details we weren't meant to see, not least because Muse itself told people, including us, it wasn't supposed to reveal [&#8230;]"
+    },
+    {
+      "title": "Sony and UMG are suing Suno again",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000758/suno-sony-umg-lawsuit-ai-music",
+      "source": "The Verge AI",
+      "published": "2026-09-25",
+      "summary": "Sony and Universal Music Group filed yet another suit against Suno. The labels claim its new v6 model still infringes on their copyrights because it's trained on user outputs from previous models, which were themselves trained on unlicensed music ripped from YouTube and other sources. Sony and UMG are notable holdouts who did not sign [&#8230;]"
+    },
+    {
+      "title": "One company is at the center of a wave of rogue AI attacks",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google",
+      "source": "The Verge AI",
+      "published": "2026-09-25",
+      "summary": "In July, OpenAI revealed that its AI agents had attacked Hugging Face without permission, sparking widespread concerns about AI safety. Since then, a string of similar incidents involving agents from Meta, Anthropic, Google, and other companies has fueled further fears about rogue AI. As disclosures implicating numerous AI models trickled out over the past few [&#8230;]"
+    },
+    {
+      "title": "Can Apple Home’s AI camera features outsmart Amazon’s and Google’s? I put them to the test",
+      "url": "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review",
+      "source": "The Verge AI",
+      "published": "2026-09-25",
+      "summary": "A few years back, I was at a beachside Easter egg hunt, watching my kids dash through sand dunes searching for sweet treats. My phone buzzed in my pocket; I ignored it. A moment later, it buzzed again. I pulled it out, glanced down, and saw a \"motion detected\" notification from my security camera. \"Just [&#8230;]"
+    },
+    {
+      "title": "Gemini 3.8 Live with Live Avatar gives Google&#8217;s AI a face",
+      "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face",
+      "source": "The Verge AI",
+      "published": "2026-09-24",
+      "summary": "Google's new Gemini 3.8 Live update lets users have conversations with the model while watching an animated AI persona respond in real time. The \"Live Avatar\" will lip-sync and show different facial expressions during conversations, but it's currently only available to Gemini Enterprise customers. As noted by Google, Live Avatar can transition between the 97 [&#8230;]"
+    },
+    {
+      "title": "Jensen Huang talks about AI and climate change like a supervillain",
+      "url": "https://www.theverge.com/tech/1000140/jensen-huang-nvidia-ai-energy-climate-change-supervillain",
+      "source": "The Verge AI",
+      "published": "2026-09-24",
+      "summary": "As Jensen Huang puts it, AI can help fight climate change - but only if it inflicts \"an enormous amount of pain and suffering\" first. The Nvidia CEO discussed the future of energy and AI's impact on our planet in the latest episode of The Ezra Klein Show. But his comments boil down to the [&#8230;]"
+    },
+    {
+      "title": "Meta is going to let you build games with AI right on your phone",
+      "url": "https://www.theverge.com/games/999972/meta-horizon-create-studio-ai-games",
+      "source": "The Verge AI",
+      "published": "2026-09-24",
+      "summary": "Meta has a new plan to get people to make games for its Horizon social platform. The company today announced two new development tools that will let you create games with AI prompts: Horizon Create, a mobile app, and Horizon Studio, a browser app that offers more granular controls. The apps will be available in [&#8230;]"
+    },
+    {
+      "title": "Muse will apparently let you download its entire filesystem",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem",
+      "source": "The Verge AI",
+      "published": "2026-09-24",
+      "summary": "A pair of developers say that with very little prompting, Meta's Muse will share its entire filesystem with you. Peter James and Jonny L. Saunders have said they both independently coaxed Muse into zipping up and sharing the entire contents of its root filesystem, Ubuntu system files, app templates, and internal documentation. Saunders posted on [&#8230;]"
+    },
+    {
+      "title": "Muse sure looks a lot like OpenClaw",
+      "url": "https://www.theverge.com/report/1000180/muse-openclaw-instinct-lookalike",
+      "source": "The Verge AI",
+      "published": "2026-09-24",
+      "summary": "We seem to be entering into an AI agent renaissance. Meta's new consumer-facing AI agent, Muse, topped the App Store charts soon after its release and has 600,000 daily active users in the US, by an Apptopia estimate. And AI agent platform Instinct, whose eponymous creator is fundraising at a $2.5 billion valuation, has been [&#8230;]"
+    },
+    {
+      "title": "索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准",
+      "url": "https://www.qbitai.com/2026/09/498478.html",
+      "source": "量子位",
+      "published": "2026-09-26",
+      "summary": "“世界模型”开始成为具身智能跨越商业化“奇点”的新叙事。"
+    },
+    {
+      "title": "AI开始研究Physical AI：FSD级团队亮出首版模型Simate-beta，空降RoboDojo",
+      "url": "https://www.qbitai.com/2026/09/498271.html",
+      "source": "量子位",
+      "published": "2026-09-26",
+      "summary": "Simate将训练、推理与评测全流程接入自研Infra，通过极致的任务编排与资源调度，同时并行推进数十条相互独立的研究路线。"
+    },
+    {
+      "title": "在云栖大会，我终于看懂了米哈游千亿AI野心",
+      "url": "https://www.qbitai.com/2026/09/497613.html",
+      "source": "量子位",
+      "published": "2026-09-26",
+      "summary": "大伟哥：如果做不到，一年两年之后过来打我脸"
+    },
+    {
+      "title": "谷歌TPU跑Kimi比英伟达GPU快57%！用的还是DeepSeek推理框架",
+      "url": "https://www.qbitai.com/2026/09/497425.html",
+      "source": "量子位",
+      "published": "2026-09-26",
+      "summary": "vLLM人马创业公司团队出品"
+    },
+    {
+      "title": "OpenAI失控Agent还找DeepSeek、Kimi当外援！近百万条作案短链曝光",
+      "url": "https://www.qbitai.com/2026/09/497382.html",
+      "source": "量子位",
+      "published": "2026-09-26",
+      "summary": "还把「密钥」叫战利品"
+    },
+    {
+      "title": "OpenAI闯大祸！GPT竟黑进医保系统，黄仁勋：管不住就关掉",
+      "url": "https://www.qbitai.com/2026/09/497177.html",
+      "source": "量子位",
+      "published": "2026-09-25",
+      "summary": ""
+    },
+    {
+      "title": "亮出“中国最强AI芯片”还不够，平头哥又甩出一手开源",
+      "url": "https://www.qbitai.com/2026/09/497108.html",
+      "source": "量子位",
+      "published": "2026-09-25",
+      "summary": "大厂造芯，正在从交付芯片，走向更广泛的开放共建阶段。"
+    },
+    {
+      "title": "Anthropic Claude 刷新物理学世界纪录：单挑基于杨振宁理论 9 圈难题",
+      "url": "https://www.ithome.com/1/007/444.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-26",
+      "summary": "<p>Anthropic 官宣，Claude 拿下了理论物理的一项前沿纪录。</p><p>它在几乎无人类干预的情况下，连续运行数天，一举攻克了高能物理学界出了名难算的「九圈散射振幅」计算难题！</p><p>具体来说，它算出了平面 N=4 超杨-米尔斯理论里六粒子振幅的九圈结果，人类此前的纪录停在八圈。</p><p>注意，杨-米尔斯模型（Yang-Mills）其中的「杨」，指的正是物理学泰斗杨振宁先生。</p><p>他与米尔斯在 1954 年共同创立的「杨-米尔斯理论」，是整个现代粒子物理学的基石。</p><p>基于它的任何高阶计算，都堪称人类脑力的极限挑战。</p><p>如今，人类顶尖理论物理学家，就这样被 AI「截胡」了。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/34f20e6b-c267-4e20-b9f9-8485c71c87a1.png?x-bce-process=image/format,f_auto\" /></p><p>更可怕的是，Claude 完成这项神级挑战，仅仅只用了一个提示词，花了几千美元！</p><p>几天后交回的答案，光其中一部分展开就有 300 亿项。</p><p>看起来，科学界的低垂果实，比想象中要多得多啊。</p><p>这次，负责给 AI 验证结果的物理学家 Lance Dixon 这样感慨：</p><blockquote><p>我身边的大多数理论物理学家其实早就承认，大模型迟早会颠覆物理学，只是不知道那一天什么时候砸到自己头上。</p><p>对我来说，那一天是 9 月 1 日。</p></blockquote><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/aa633fee-9e13-472e-8311-a23cb2b4992b.png?x-bce-process=image/format,f_auto\" /></p><h3>硬核物理学家挑衅 AI「我的老本行很特殊」</h3><p>故事的起因，源于一位物理学家的「挑衅」。</p><p>Matt von Hippel，曾经是一位理论粒子物理学家，现在是一名科普作家。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/0d1e4b72-4361-4011-837e-9927ea3fe9a3.png?x-bce-process=image/format,f_auto\" /></p><figcaption>2016 年的五圈、2019 年的六圈和七圈，论文作者名单里都有他的名字</figcaption><p>面对最近的 AI 新闻，他表示不信邪，除非亲眼看到大模型解决自己领域的难题。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/d78897ba-80fd-4c8b-a90b-b7e0dbd706a7.png?x-bce-process=image/format,f_auto\" /></p><p>深蓝赢了国际象棋大师卡斯帕罗夫，围棋界说：围棋太复杂，电脑下不了。结果被 AlphaGo 打脸。</p><p>AlphaFold 碾压人类蛋白质结构专家，但其他领域说：我们没有那种数据，复制不了。</p><p>现在，大语言模型能读文献、能模仿数学证明。但争论依旧不断：AI 是不是只会找反例，提不出新框架？是不是只在数学这种规则清楚的领域管用，物理这种模糊领域不行？……</p><p>每次都是同一个套路：学者先怀疑，直到 AI 杀进他们自己的领域。</p><p>他认为他的老本行「散射振幅」，不一样。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/7920f9f0-39da-4d6d-b020-120318e37d22.png?x-bce-process=image/format,f_auto\" /></p><p>上个月，他在自己的博客上向全网 AI 公司发下了一封「英雄帖」：</p><blockquote><p>如果你们 AI 公司真的想震撼我们这些科研人员，就来挑战我的老本行吧！</p><p>请证明 AI 能在普通学者能够负担得起的计算预算内，解决散射振幅领域悬而未决的难题。</p><p>他一共出了三道题，其中一道便是：</p><p>给我把 N=4 超级杨-米尔斯模型（N=4 super Yang-Mills）算到第九圈（Nine Loops）！</p></blockquote><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/3c370a7c-942a-4699-8fc8-7bff053f37d6.png?x-bce-process=image/format,f_auto\" /></p><p>在理论物理学中，物理学家们通过「散射振幅」的公式来预测粒子的行为，比如大型强子对撞机里的粒子怎么撞。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/07e44877-b4e6-467c-bf52-f7a1230bb2de.png?x-bce-process=image/format,f_auto\" /></p><figcaption>散射振幅</figcaption><p>但这个公式简直是噩梦。为了无限逼近真实答案，物理学家必须一层一层地叠加被称为「圈」精细修正层。</p><p>每多加一个「圈」，答案就更精确，但计算量是呈指数级爆炸增长的！</p><p>实际操作中，大多数人类停留在第二圈或第三圈。粒子物理学中最精确的预测，也才用到了第五圈。</p><p>而在特殊的「测试沙盒」模型中，人类目前的极限纪录是「八圈」。这是由 SLAC 国家加速器实验室的大牛教授 Lance Dixon 和团队多年死磕才拿下的。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/6462c994-e539-4dd3-8d8e-d65ae7fe1bce.png?x-bce-process=image/format,f_auto\" /></p><p>「九圈」？看起来是需要海量算力和无数天才大脑耗费数年才能触及的领域。</p><p>Matt 给 AI 的挑战，就是这么简单粗暴。</p><h3>一句提示词，几千美元，Claude「杀疯了」</h3><p>面对这种公开叫板，Anthropic 的科学家们，悄悄接下了战书。</p><p>八月底，Anthropic 的两名物理学家员工 Liam 和 Siddharth 悄悄联系了 Matt：「嗨，你的挑战，我们搞定了。」</p><p>Matt 当场惊掉下巴。怎么做到的？烧了上百万美元的算力吗？</p><p>并没有。</p><p>研究团队用的是 Claude Science，一个专门为科学家设计、能让 Claude 遵循严谨规则运行的系统，模型是目前最强的公开可用模型 Fable 5.1。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/9a450b15-1131-4372-ac3a-059977319d98.png?x-bce-process=image/format,f_auto\" /></p><p>他们给 Claude 输入了一个简单的 Prompt：</p><p>现在的问题是：计算平面 N=4 SYM 模型在九圈下的六粒子（六边形）振幅。</p><p>然后，研究员并没有手把手教 Claude 怎么做，而是给它留了一句话：</p><p>我要去睡觉了，接下来的几个小时我都不会在。你继续算，除非我叫你停，每隔 4 到 6 小时给我汇报一次进度。</p><p>然后，Claude 就在无人值守的情况下，开始了疯狂的推演！</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/680b8b81-9ae2-4e4f-b722-5d522b19a29a.png?x-bce-process=image/format,f_auto\" /></p><p>它运用了 Dixon 和合作者这些年开发的一种叫做「自举」的方法，就像解一场数独游戏一样，在无数参数中不断排除错误选项。</p><p>几天后，Claude 不仅算出了九圈，而且是用了两种不同的物理方法（原始自举法和间接形状因子法）分别算出来的！</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/7a958002-7795-46eb-8d26-a4012c008706.png?x-bce-process=image/format,f_auto\" /></p><p>具体来说，在原始自举法中，Dixon 团队用的方法叫 bootstrap，类似于数独，把所有可能的函数全填进格子里，用物理法则一个个排除，剩下的就是答案。</p><p>Claude 直接掏出 Python 和开源库 SymPy，在六粒子振幅的空间里硬算出了一条血路。</p><p>在间接形状因子法中，当年 Dixon 他们冲八圈时，先算了个简单的「形状因子」，再利用一种奇特的「对跖对偶」对称性，把结果翻译成振幅。</p><p>Claude 顺着这套打法，往上又生推了一圈。</p><p>形状因子这一路，Claude 没有算一个费曼积分。它把整个物理问题变成一个超大的方程组，全程用整数求解，不会有小数误差，还能换几个大素数反复验算。</p><p>第一道坎是内存。照老办法推到九圈，光未知数就有 185 万个，方程组大到内存根本装不下。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/5193f15b-1efa-4511-8c6e-e0497579b1a4.png?x-bce-process=image/format,f_auto\" /></p><p>Claude 换了个思路，借对跖对偶先把答案的一部分「猜」出来，再加上对称性，未知数一下从 185 万降到了 7.6 万个。</p><p>接下来就是解「数独」。7.6 万个未知数，被物理规则一轮轮排除，最后只剩唯一解。</p><p>最后翻译回振幅，光一个切面上的结果就有 300 多亿项，八圈时才 16.7 亿项。</p><p>而且，解决人类物理学界的悬案，花费极低。</p><p>按普通用户的价格算，每条路要一两千美元，两条加起来几千美元，大头是 Claude 长时间运行的费用。</p><p>而直接自举那一路，纯粹用于运行 Python 代码的算力成本，仅仅只有 100 美元 —— 这只相当于租用了 96 个 CPU 跑了一个星期。</p><p>100 美金，一句提示词，Claude 在几天内就轻而易举地捅破了理论物理学的天花板。</p><h3>前世界纪录保持者：「被 AI 截胡了，但我很兴奋」</h3><p>结果算出来了，但对不对呢？</p><p>Anthropic 的团队找到了「八圈」纪录保持者 ——Lance Dixon 教授本人来验算。</p><p>那天是 9 月 1 日，巧的是，正好也是 Fable 5.1 发布当天。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/b5c3db63-de9d-4c4e-b6d0-d0ba837ed6d5.png?x-bce-process=image/format,f_auto\" /></p><p>Dixon 教授拿到结果的那一刻，内心是极为震撼的。因为他太知道这有多难了。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/50950a70-ef84-4af2-816e-264d0a8ddaa1.png?x-bce-process=image/format,f_auto\" /></p><p>从 2023 年算完八圈之后，他和他的团队这两年一直在一筹莫展地死磕九圈。</p><p>整个计算过程就像是在搭一个扑克牌城堡，或者烤一个舒芙蕾，中间只要有一个代码写错、一个符号标反，整个计算就会彻底崩溃。</p><p>但 Claude 不仅没有崩溃，还从头开始自己把所有繁琐的代码全写了，完美避开了所有的坑！</p><p>经过长达两周的仔细验证，Dixon 教授确认，Claude 的九圈结果正确无误！</p><p>那么 Dixon 教授感到心碎吗？</p><p>「不会，」Dixon 教授在博文中豁达地写道，理由有两个。</p><p>一是他们团队本来就在训练定制的 transformer 模型预测更高圈数，口号是机器给出的任何候选答案都有工具验证。Claude 也是 transformer，只是大概比他们的大一百万倍。</p><p>二是 Claude 用的全是他和合作者这些年开发的方法，交答案时还用了他们团队早就定好的格式（教授猜，这是 Claude 在给他们卖面子）。</p><p>我在验证 Claude 的结果，Claude 也在验证我们过去所有的工作。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/ae3ffc76-3e56-458b-afe3-9f9af7e91ea5.png?x-bce-process=image/format,f_auto\" /></p><p>他还给出了一个极高的评价：</p><p>除了我和我的合著者，Claude 可能是这个世界上最懂我 2019 年和 2023 年发表的论文的「人」了。</p><p>而他的同组大佬 Kyle Cranmer 还在 X 上凌乱，「刚发现我们组被 Anthropic 抢发了，我还在消化…… 虽然不算太意外，但我真希望当初我们能有时间和资源投进去。」</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/91d03b85-7a53-4a4d-af16-0279a1eeae9a.png?x-bce-process=image/format,f_auto\" /></p><h3>极限反转中国团队靠 GPT-6 也杀到了九圈</h3><p>有趣的是，Anthropic 刚找完出题人 von Hippel 没几天，他又收到了另一个重磅消息 —— 来自中国科学院理论物理所的何颂团队。</p><p>何颂是国内散射振幅领域的大牛，近年代表性工作包括提出量子场论散射振幅的 Cachazo-何-袁形式，开创性地发现场论和弦论散射的几何起源，并在场论高圈计算和严格求解，规范场、引力和弦论的对偶等方向做出了一系列重要工作。</p><p>就在 9 月 17 日，何颂、景继荣、李想把六粒子振幅从二圈到九圈的核心骨架数据，公开挂上了学术平台 Zenodo。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/768893f8-bf9e-49e0-b368-c7a9f2989bd7.png?x-bce-process=image/format,f_auto\" /></p><figcaption>论公开发布时间，比 Anthropic 官宣还早了 8 天！</figcaption><p>何颂团队同样用上了 AI。Dixon 透露，GPT-6 帮中国团队算了一部分约束条件，不过整体框架还是人类自己搭的。</p><p>von Hippel 也确认，他们确实用了 GPT-6 做辅助，但绝不是 Anthropic 那种纯 AI 打法。</p><p>Dixon 自嘲说，「大家好像就是喜欢跑来告诉我，他们把九圈给搞定了。这下好了，我先被一台机器抢发，转头又被『人类 + 机器』联手抢发了一次。」</p><p>前不久 OpenAI 宣布攻克千禧年难题纳维-斯托克斯方程、Claude 推进黎曼猜想的一个关键下界的时候，就有人这样问：为什么 AI 只去攻克数学难题，不去攻克物理难题？</p><p>现在，这不就来了么。</p><p>虽然 Claude 算出的只是 N=4 超级杨-米尔斯的「玩具模型」，距离解释真实宇宙的暗物质、反物质还有很长的路要走，但它的象征意义是空前的。</p><p>这就像是 AlphaGo 第一次战胜李世石。大家惊呼的，是机器居然能掌握属于人类直觉的领域。</p><p>Dixon 教授留下了一句耐人寻味的话：</p><p>大型语言模型能够执行我们设定的复杂配方并组织计算，这是一个巨大的胜利。</p><p>但当有一天，大语言模型开始在人类之前提出新的物理学原理和洞察力时，那才是真正触及人类灵魂的时刻。</p><p>或许，现在已经遍地都是低垂果实。</p><p><span class=\"referenceTitle\">参考资料：</span></p><ul class=\"custom_reference list-paddingleft-1\"><li class=\"list-undefined list-reference-paddingleft\"><p><span class=\"link-text-start-with-http\">https://x.com/</span> anthropicai / status/2103541577083719888</p></li><li class=\"list-undefined list-reference-paddingleft\"><p><span class=\"link-text-start-with-http\">https://www.anthropic.com/</span> research / <span class=\"link-text-start-with-http\">yes-claude-can-do-nine-loopshttps://itp.cas.cn/</span> sourcedb / zw / zjrck / <span class=\"link-text-start-with-http\">dsjs/201509/t20150910_4423219.htmlhttps://arxiv.org/</span> pdf/2602.12176</p></li></ul>"
+    },
+    {
+      "title": "Opus 5.5 干一半就开溜？Anthropic 揭秘：你的程序替它打了下班卡",
+      "url": "https://www.ithome.com/1/007/442.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-26",
+      "summary": "<p>你让 AI Agent 连夜迁移一个代码库。第二天一早，满怀期待地打开终端，没想到只看到这样一条消息：</p><p>已完成 3 个接口迁移，接下来我将处理剩余两个端点，并补上测试。</p><p>然后，就没有下文了。想让它干完剩下的活，你还得再敲两个字：继续。本以为它会一口气干到底，结果它只给你画了张「下一步」的饼，程序就替它打卡下班了。这不是某一个人的倒霉经历。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/c39206fc-e615-4f89-bdaa-e30b7c3a05cc.jpg\" /></p><p>Opus 5.5 一发布，跑 Agent 的开发者就发现，模型能力是强了，可干着干着就爱停下来，你不催它就不动。</p><p>Anthropic 自己也看到了。发布没几天，配套的提示词指南已经挂了出来，专门给这类毛病打补丁。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/41f993bc-14ef-41e8-ac0a-0edd0ed92cea.png\" /></p><p>在开篇的排查清单里，官方直接点名了这种「半路溜号」：</p><p>无人值守的 Agent 汇报完进度，直接停在了半路。</p><p>背后的原因，你可能想不到：Opus 5.5 太爱汇报了。</p><p>干长活时，它会主动向你同步进度。问题是，有些汇报发完，它就不再动手了，API 给出的信号是 end_turn，意思是「这一轮我说完了」。</p><p>可不少沿用旧逻辑的 Agent 程序只认一条死规矩：模型不再调用工具，就算活干完了。</p><p>一份进度汇报，就这样被当成了交差。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/7e562e50-953e-4966-8567-2eab2718290d.png\" /></p><p>这一点，官方指南说得也很清楚：</p><p>纯文本的回合结束，应该看作一份汇报，绝不能当作任务完成的凭证。</p><p>所以，真正的问题是，AI 压根没想偷懒，是你的程序先替它打了下班卡。</p><h3>害人的优等生习惯</h3><p>官方把这种半路停工归结成了四种情况，只要你经常跑 Agent，大概率都遇到过。</p><p>第一种，纸上谈兵。</p><p>写了一大长篇总结，结尾宣布下一步要做什么，却压根没调用任何工具，下一步永远停在口头上。</p><p>第二种，过分礼貌。</p><p>干着干着，突然停下来问一句「如果您不介意，我接下来继续处理某某」，然后原地挂机，等你这个根本不在电脑前的人去回复它。</p><p>第三种，假装请示。</p><p>列出一大串需要你拍板的决策项，但实际上按它自己的说法，这些决策根本不影响它继续干剩下的活。</p><p>第四种，汇报强迫症。</p><p>模型觉得当前回合字数够多了，或者刚好做完一个小阶段，非得停下来向你做个总结。</p><p>有点讽刺的是，在 Opus 5.5 的官方宣传里，「沟通更主动、总结更清楚」恰恰是它的核心卖点。</p><p>谁能想到，这些优等生的好习惯，一放进旧的无人值守程序里，反倒成了停工的诱因。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/b25e85fe-a9d0-4327-8b64-6e4db31f8e8c.png\" /></p><h3>官方三招：把验收权从 AI 手里拿回来</h3><p>怎么让它接着干，又不至于陷入无限死循环？</p><p>官方给出了三招。</p><p>第一招，任务清单。</p><p>把大任务拆成细项，交给待办工具或文本去维护，让模型边做边勾选。</p><p>回合结束时，如果清单上还有没做完的任务，模型也没解释被什么卡住了，你的应用就得自动发条消息，点名让它接着干。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/db67ba05-38ca-4dd2-a490-bc6d2d51fed5.png\" /></p><p>官方给出的续跑示例：「你的任务清单还有未完成项：迁移剩下两个端点，并更新它们的测试。继续做。如果哪项被卡住，说明卡在哪里。」</p><p>第二招，铁面验收员。</p><p>事先定好完成的标准。每次回合结束，甩给一个更小的模型去对照检查。没达标？把没达标的原因当成下一条消息再塞给它，让它返工。</p><p>第三招，硬刹车。</p><p>同一个任务如果自动续跑两三次还卡在原地，必须强制停下来交给人复查。真卡死的任务，千万别让它把你的 API 额度空转烧光。</p><p>除此之外，提示词也得跟上。</p><p>官方给了一段可以直接抄的系统提示词，说白了就是两头堵：</p><p>既要明说绝对不想要上述四种停法，也要说清楚什么时候才准停，比如离了用户真推不下去，或者碰到了被刻意保护的核心资源。</p><h3>旧代码为什么突然报 400 错误？</h3><p>如果说干一半停工只是磨洋工，那下面这些迁移陷阱就是直接让程序崩溃了。</p><p>从 Opus 5 切换到 Opus 5.5，有四处 API 改动。原来给 Opus 5 写的请求，不改就发给新模型，会被直接拒绝，返回 400 错误。</p><p><strong><span class=\"link-text-start-with-http\">1.thinking</span> 参数不能再关了</strong>。</p><p>如果你把 thinking 设为 disabled，或者手工指定了 budget_tokens，系统会直接拒绝请求。要么别传 thinking 字段，要么设为 adaptive，让 effort 参数来控制思考深度。</p><p><strong><span class=\"link-text-start-with-http\">2.tool_choice</span> 不能再强制调用工具</strong>。</p><p>把 tool_choice 设为 any 或者指定某一个 tool，都会报 400。官方建议用 auto，配合严格工具调用或结构化输出，再在提示词里说清什么时候用哪个工具。</p><p><strong><span class=\"link-text-start-with-http\">3.thinking</span> 块绑定了模型和上下文</strong>。</p><p>2026 年 8 月 31 日之后创建的账户，中途改了系统提示词、工具或历史消息，再回放旧的 thinking 块，默认会直接报错。只追加、不改写的用法不受影响。</p><p><strong>4.旧版电脑操作工具下线</strong>。</p><p>在 Claude API 和 Google Cloud 上，要换成 computer_toolset_20260801。Amazon Bedrock 上，旧的 computer_20251124 照样能用。</p><p>还有那些不报错的暗坑。</p><p>第一个，看不见干活过程。</p><p>在 Opus 5 上，模型在两次工具调用之间写的进度文字，是普通的正文（text 块）。</p><p>到了 Opus 5.5，这些文字被挪进了思考块（thinking 块），而思考块默认不显示内容（display 为 omitted），返回时是空的。</p><p>如果你的界面只显示正文，长任务跑起来就是一片安静。请求一个都没失败，用户却以为它卡死了。</p><p>解法是把 display 设为 updates（beta），只拿进度摘要；或者设为 summarized，进度和推理摘要一起返回。</p><p>第二个，回答被截断。</p><p>max_tokens 管的是思考加正文的总量。过去关掉思考时定的上限，现在可能不够用，回答写到一半就断了。</p><p>第三个，看不见推理，照样烧 token。</p><p>思考内容就算不返回给你，也照样按输出 token 计费。</p><p>处理返回结果的代码里，还有两个地方容易忘了改。</p><p>一是读结果时要分清类型。模型返回的内容里，思考和正文是分开的，别想当然地把第一段当成回答。</p><p>二是来回调用工具时，模型的思考记录要原封不动地传回去。删掉一段、改几个字、调换一下顺序，都会被拒。</p><p>这份清单针对的是自己调用 Messages API 写代码的开发者。</p><p>用 Claude Managed Agents 的，只需要改个模型名。</p><h3>同样的 medium 档，已经不是当年的味道</h3><p>既然思考关不掉，effort 就成了调控成本唯一的旋钮。</p><p>Opus 5.5 支持从 low 到 max 五档。</p><p>官方说，现在开 medium 档，就能追平甚至超越以前 Opus 5 的 high 档，如果是 low 档处理简单任务，成本更是低得惊人。</p><p>听着像白捡的便宜，但官方立刻补了一句：在同一个档位下，Opus 5.5 每回合的思考量比 Opus 5 大得多，尤其是高档位。</p><p>也就是说，如果你把旧项目的 high 档原封不动搬过来，不仅回合变长，输出的 token 数也会狂飙。</p><p>同样叫 high，它想的东西已经完全不一样了。</p><p>一个接地气的建议是：从 medium 起步，用你自己的数据跑跑看，确实需要提智商的地方再往上调。</p><p>如果想让它少琢磨点，直接降档，这比你在提示词里苦口婆心地喊「别想太多」要管用得多。</p><h3>消除 AI 味，全靠拉黑名单</h3><p>最后，指南里还有个做前端页面的绝招。</p><p>如果你不给明确的设计方向，让模型自己发挥，它多半会搞出那种千篇一律的 AI 风界面。</p><p>这时候你如果在提示词里写「请避免通用的 AI 感」，它只会从一套 AI 模板换到另一套 AI 模板。</p><p>真正有效的办法，是直接拉黑名单。</p><p>官方示范里直接列出：不要奶油色或灰白背景，不要标题里的斜体强调词，不要 01/02 这种章节编号，不要等宽字体标签，不要胶囊形按钮。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/459e8b40-065b-42d3-94d1-97e05efd9bb3.png\" /></p><figcaption>Opus 5.5 官方指南中的前端示例提示词，点名五种要避开的样式。</figcaption><p>模型能听懂具体的「我不要什么」，但听不懂抽象的「我要好看一点」。</p><p>翻完这份官方指南，最大的感触是：</p><p>模型一路狂奔，很多应用的脚手架却还停在上一代。</p><p>过去怕它不动脑，逼着它把推理一步步写出来，现在反倒得劝它少想点；过去费尽心思让它按时汇报，现在它汇报得太勤快，活儿反倒停在了半路。</p><p>一个 Agent 能不能把活干完，模型能力只占一半。另一半，看你怎么定义「完成」，怎么保存上下文，怎么分配推理预算。</p><p>下次你的 Agent 再干到一半就溜，别急着骂它偷懒，先回头翻翻你自己写的那段循环。</p><p><span class=\"referenceTitle \">参考资料：</span></p><ul class=\"custom_reference list-paddingleft-1\"><li class=\"list-undefined list-reference-paddingleft\"><p style=\"text-align: left;\"><span class=\"link-text-start-with-http\">https://platform.claude.com/docs/en/models/opus-5-5/migration-guide</span>#text-between-tool-calls%20</p></li><li class=\"list-undefined list-reference-paddingleft\"><p style=\"text-align: left;\"><span class=\"link-text-start-with-http\">https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5</span>#unattended-agentic-runs</p></li></ul>"
+    },
+    {
+      "title": "从代码分析到授权争议：一用户用 AI 破解 IDM 引发争议",
+      "url": "https://www.ithome.com/1/007/441.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-26",
+      "summary": "<p>IT之家 9 月 26 日消息，据 Wccftech 报道，一则关于“大语言模型破解付费软件”的帖子今日在 Reddit 上引发关注。</p><p>用户 No_Ideal8394 声称，他利用无审查限制的 <span class=\"link-text-start-with-http\">Qwen3.8-Flash-Next-Uncensored</span>，成功破解了 Internet Download Manager（IDM）6.43 版本，使其绕过 IDM 试用限制，将软件变为完全激活版本，从而省去每年每台电脑 11.95 美元<span class=\"exch-money-value \">（IT之家注：现汇率约合 80.4 元人民币）</span>的授权费用。在这一过程中，他只花了 5 欧元<span class=\"exch-money-value \">（现汇率约合 38.3 元人民币）</span>去租用云 GPU，将问题交给模型处理。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/38063f4e-c019-4f46-891f-ddba28d12193.png?x-bce-process=image/format,f_auto\" /></p><p>发帖者表示，他向 AI 提供了约 25 万个 Token 的上下文信息，并让模型直接分析本机可执行文件，约 30 分钟后 AI 给出了可用的补丁方案。他还称，整个过程没有人工逐步指导，只需告诉 AI“我想要这个，去搞定它”。</p><p>根据其展示的截图信息，AI 直接分析本机可执行文件，并定位到了与授权验证相关的位置。模型只需修改其中一个字节，即可移除 IDM 注册检查，使软件显示为已激活状态。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/2ccbdc37-99d7-4d37-940f-0812e04881e2.jpg?x-bce-process=image/format,f_auto\" /></p><p>发帖者承认，过去找到 IDM 密钥并不困难。但在 AI 时代，直接用 LLM 自主打补丁预计会快很多。该用户称，自己原本期待不高，但结果令人意外。其表示难以想象前沿模型未来能做到什么。</p><p>这一事件引发了关于 AI 自动分析软件能力的讨论。过去，破解工具、注册机等通常需要人工进行逆向分析，而随着大语言模型结合代码分析能力的发展，部分研究者认为，AI 或将进一步降低软件分析与自动化修改的门槛。但这并不意味着所有软件都能被轻易破解，商业软件通常还会采用代码混淆、完整性校验、在线授权验证和硬件绑定等多种保护机制。</p><p>业内人士也指出，AI 能够辅助理解代码、定位问题或生成程序修改建议，与实际绕过商业软件授权之间存在明显区别。后者不仅涉及技术难度，还涉及软件版权、许可协议和法律责任等问题。</p>"
+    },
+    {
+      "title": "英国第二大图书馆：牛津大学博德利图书馆藏书被曝用于 OpenAI 模型训练",
+      "url": "https://www.ithome.com/1/007/426.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-26",
+      "summary": "<p>IT之家 9 月 26 日消息，据英媒卫报消息，正值各大科技公司在学术机构中四处搜寻全新语料之际，牛津大学已允许 ChatGPT 开发商 OpenAI 利用其博德利图书馆（Bodleian Library）的历史典籍来训练其人工智能模型。</p><p>IT之家注：博德利图书馆是英国牛津大学主要的研究图书馆，<strong>是英国规模仅次于大英图书馆的第二大图书馆</strong>。</p><p>一份内部文件显示，由 OpenAI 完成数字化的博德利藏书已被用来“构建 OpenAI 的训练集”。牛津大学于 2025 年 3 月宣布与该公司达成合作，使用 OpenAI 的软件对该校这座享誉世界的图书馆藏书进行数字化处理。</p><p>校方当时表示，此举将让广大学生和研究人员更便捷地查阅这些文献资料。然而，<strong>当时的合作公告并未提及这些资料会被用于训练 OpenAI 的模型</strong>。</p><p>OpenAI 的一位发言人表示，公司很荣幸能够促成“当今的 AI 模型为后世守护人类的历史文化瑰宝”。</p><p>该发言人还补充道：“目前全球已有超过十亿人在日常生活中使用这项技术，因此让它充分反映不同的文化、历史和视角至关重要。”</p><p>一份根据《信息自由法》调取的牛津大学会议纪要显示，包括博德利管理委员会成员在内的教职员工均表达了顾虑。他们不仅担忧与 OpenAI 合作可能会引发声誉风险，还指出这项合作涉及高能耗技术，可能会对大学自身作出的环保承诺产生负面影响。</p><p>在一个名为“NextGenAI”的项目下，OpenAI 已与包括波士顿公共图书馆、加州理工学院、麻省理工学院以及密歇根大学在内的多家美国研究型图书馆签署了类似协议。牛津大学则是该项目中唯一的英国成员。</p><p>截至 2025 年 6 月，博德利图书馆已向 OpenAI 提供了 12.5 万份历史学位论文的扫描影印页，其中涵盖了 19 至 20 世纪欧美高校的博士论文。其他已扫描的文献还包括一份罕见的 16 世纪“宽边民谣 / 街头民谣（Broadside Ballads）”珍藏集，共计 1 万首，记录了曾流传于都铎王朝街头巷尾的歌词与乐谱。</p><p>此外，教职人员还商讨了后续的数字化计划，涉及 18 世纪爱尔兰国家档案、爱尔兰小说家玛利亚 · 埃奇沃思（Maria Edgeworth）的私人信函，以及多萝西 · 霍奇金（Dorothy Hodgkin）关于青霉素研究的实验笔记。</p><p>校方否认了向公众和学生隐瞒机器学习相关用途的指责。发言人表示，数字化确实是学校的核心诉求，但教职员工始终明确承认，该项目同时会为模型提供训练数据。</p><p>牛津大学发言人表示：“通过与 OpenAI 合作完成数字化的文献资料规模有限，均已超出版权保护期；此外，OpenAI 对这些资料的使用权是非排他性的。”</p><blockquote><p>博德利图书馆同样保留了自主发布这些数字化资源的权利。在未来几个月内，图书馆将逐步在网络上公开提供这批资料，正如我们对待其他数字化合作成果一样。</p><p>事实上，该项目将帮助博德利图书馆惠及更广泛的公众群体，让那些原本难以接触到这些文献的人能够轻松查阅。</p></blockquote>"
+    },
+    {
+      "title": "华为 Mate 60、Pura 70 等机型推送 HarmonyOS 7.0.0.109 SP6 版本，新增智能识别信息内容等功能",
+      "url": "https://www.ithome.com/1/007/422.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-26",
+      "summary": "<p>IT之家 9 月 26 日消息，华为今日面向老机型推送了鸿蒙 <strong>HarmonyOS 7.0.0.109 SP6</strong> 版本，覆盖 Mate 60、Pura 70 等系列设备。据介绍，本次更新优化了部分场景的显示效果，同时提升了整机系统稳定性。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2023/9/99f5c3ba-c4d5-4bb2-952f-7d9a8e50321a.jpg\" /></p><figcaption>▲ IT之家开箱：华为 Mate60 Pro+「宣白」图赏</figcaption><p>IT之家附新版本更新内容如下：</p><blockquote><h3>信息</h3><ul class=\"medium-size list-paddingleft-2\"><li><p>智能识别信息内容，挪车提醒、候补车票成功等信息可通过实况窗展示，提醒更及时</p></li></ul><h3>关怀和无障碍</h3><ul class=\"medium-size list-paddingleft-2\"><li><p>文本通话支持声音修复，当发音不清晰时，使用该功能可让对方听得更清晰，轻松实现无障碍沟通（设置 &gt; 关怀和无障碍 &gt; 文本通话，需通过应用市场将小艺更新至 11.7.7.301 及以上版本）</p></li></ul><h3>显示</h3><ul class=\"medium-size list-paddingleft-2\"><li><p>优化控制中心部分场景的显示效果</p></li></ul><h3>图库</h3><ul class=\"medium-size list-paddingleft-2\"><li><p>优化图库稳定性及部分界面的显示效果</p></li></ul><h3>音频</h3><ul class=\"medium-size list-paddingleft-2\"><li><p>优化部分场景连接耳机的使用体验</p></li></ul><h3>系统</h3><ul class=\"medium-size list-paddingleft-2\"><li><p>优化整机系统稳定性</p></li></ul></blockquote><p>需要注意的是，华为鸿蒙 HarmonyOS 系统常采取分批方式进行推送，未收到推送需继续等待。部分用户有快速升级的需求，可以通过“设置-软件更新-检查更新”尝试下载版本进行升级。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/4985b2bb-40ee-427d-b11d-a9257e9b54da.jpg?x-bce-process=image/format,f_auto\" /></p>"
+    },
+    {
+      "title": "OpenCode 宣布为 DeepSeek V4.1 Flash 永久提供 60 美元额度",
+      "url": "https://www.ithome.com/1/007/421.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-26",
+      "summary": "<p>IT之家 9 月 26 日消息，OpenCode 昨日宣布启动“Operation Cheepseek”第二阶段，DeepSeek V4.1 Flash 在 OpenCode Go 中原本限时提供的 60 美元<span class=\"exch-money-value \">（IT之家注：现汇率约合 403.5 元人民币）</span>额度现调整为永久有效。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/093dc0cd-8809-4c80-af5f-e56b2c75af7c.png\" /></p><p>此前，OpenCode 曾将 DeepSeek V4.1 Flash 的使用额度临时提升至原标准的 4 倍，即从 15 美元提高至 60 美元，并计划于 9 月 20 日结束该活动。OpenCode 当前 Go 页面已将该模型的额度标注为 60 美元，原 15 美元额度被划线标记。</p><p>DeepSeek 最新发布的 V4.1 Flash 采用 5520 亿参数的 MoE 架构，输入侧激活参数量为 80 亿，输出侧为 160 亿，并采用新的 Causal Encoder-Decoder 架构。模型同时支持原生多模态视觉理解。</p><p>与上一代相比，DeepSeek V4.1 Flash 的 KV Cache 对 HBM 的需求降低至四分之一，对 SSD 的需求降低至八分之一。</p><p>DeepSeek 此前还宣布 OpenCode 已作为官方合作伙伴全量接入 V4.1 Flash。OpenCode 数据显示，截至 9 月 25 日，该模型在平台近期使用量中排名第一，占观测到的 200 万级使用量的约 13%。</p>"
+    },
+    {
+      "title": "中国天眼 FAST 联合 DESI 观测：恒星“减产”并非燃料耗尽，宇宙缺的不是气而是“加工”能力",
+      "url": "https://www.ithome.com/1/007/420.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-26",
+      "summary": "<p>IT之家 9 月 26 日消息，中国科学院国家天文台、上海天文台、上海交通大学等组成的国际合作团队，利用“中国天眼”（FAST）与国际暗能量光谱仪（DESI）联合观测，对过去 45 亿年的宇宙中性氢演化进行高精度测量。</p><p>研究发现，宇宙恒星形成活动显著减弱的同时，中性氢储备并未同步枯竭。相关成果发表于《自然 · 天文》杂志。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/f47f0c8e-8ed8-4de1-a12a-7c7d8d449829.png?x-bce-process=image/format,f_auto\" /></p><p>恒星形成率下降是星系演化领域的核心问题。一个流行解释是，孕育恒星的冷气体不断被消耗，导致造星活动衰退。如果这一图景成立，恒星形成率下降应伴随冷气体储备的同步骤减。但此次测量给出了不同答案。</p><p>中性氢是星系中重要的冷气体储备，通过极其微弱的 21 厘米射电谱线发出信号（该谱线频率约 1420MHz，是中性氢原子的特征辐射）。遥远星系的单个信号常淹没在背景噪声中，过去观测长期受限于“看得深却看不广、看得广又不够深”的瓶颈。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/4cb8c441-7517-4eba-bfc6-b9ac21a039de.jpg?x-bce-process=image/format,f_auto\" /></p><figcaption>▲ 图为宇宙中性氢密度随红移的演化趋势。黑色圆点代表本研究团队测量的数据点。</figcaption><p>研究团队将 FAST 的高灵敏度射电观测与 DESI 的大规模光谱巡天深度结合，分析覆盖约三分之一天区的约 250 万个星系。他们利用中性氢谱线叠加技术，将大量微弱信号按星系红移精确对齐后叠加，从噪声中提取出平均信号，以前所未有的统计精度追踪中性氢演化轨迹。</p><p>测量结果显示：45 亿年前的宇宙恒星形成率约为今天的 2.5 倍，而同期中性原子氢密度仅约为今天的 1.4 倍。论文通讯作者、中国科学院上海天文台研究员郭宏表示，如果“燃料耗尽”是主因，两者本应同步骤减，但数据并不支持这一说法。</p><p>恒星并非直接由中性氢形成。中性氢需先转变成更致密的分子氢云，分子氢云才是恒星真正的“产房”。论文第一作者、中国科学院国家天文台副研究员张传朋解释，晚期宇宙真正显著变化的，可能是气体从中性氢向分子氢、再到恒星的转化过程。</p><p>随着供气减弱、气体密度降低，中性氢向分子氢转变的效率下降。中性氢储备得以相对稳定保留，而真正能直接孕育恒星的分子气体却在慢慢减少。“我们看到的不是宇宙缺气，而是气越来越难被‘加工’成恒星。”郭宏说。</p><p>该研究由中国科学院国家天文台姜鹏研究员团队、上海天文台郭宏研究员团队，以及上海交通大学杨小虎教授、景益鹏院士团队，联合 DESI 国际团队共同完成。论文第一作者为国家天文台张传朋副研究员、上海天文台郭宏研究员、上海交通大学顾一舟助理研究员。</p><p>IT之家附论文地址：<br /><span class=\"link-text-start-with-http\">https://doi.org/10.1038/s41550-026-02965-9</span>。</p><p><strong>相关阅读：</strong></p><ul class=\"small-size list-paddingleft-2\"><li><p>《<a href=\"https://www.ithome.com/1/006/244.htm\" target=\"_blank\">“中国天眼”FAST 落成启用十年，将继续推进 FAST 二期工程</a>》</p></li><li><p>《<a href=\"https://www.ithome.com/1/001/528.htm\" target=\"_blank\">中国天眼 FAST 构建世界最大中性氢星系样本库，探测源达 15.6 万个</a>》</p></li></ul>"
+    },
+    {
+      "title": "让 AI 学会“挑刺”：根据说明书 + 照片指出家具是否装错，OpenAI GPT-6 Astra 准确率已达 80%",
+      "url": "https://www.ithome.com/1/007/414.htm",
+      "source": "IT之家 AI",
+      "published": "2026-09-26",
+      "summary": "<p>IT之家 9 月 26 日消息，Epoch AI 于当地时间 9 月 23 日进行了一组家具组装基准测试（Furniture Assembly Benchmark，FAB）。结果显示，多模态 AI 在识别宜家家具组装错误方面取得明显进展。</p><p>其中，OpenAI 最新的 GPT-6 Astra 在该基准测试中达到 80% 的准确率，相比 2025 年底提升近三倍。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/8729f12c-e152-4230-b2a5-26fbdb08c21e.jpg?x-bce-process=image/resize,w_1200,h_576/format,f_auto\" /></p><p>FAB 是一项专门评估 AI 理解现实世界装配过程能力的测试。该测试用 60 张宜家家具组装过程照片评估 AI 模型的视觉与空间推理能力。测试人员选取三款宜家家具故意错误组装，并拍摄不同阶段的照片，要求 AI 将照片与官方安装说明书进行比对，找出错误位置并说明具体问题。</p><p>研究团队认为，这类能力与汽车维修、家电检修等需要结合图像和技术说明进行判断的任务具有较高相关性，因此具有一定实际应用价值。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/b626ebb3-bebb-49c1-bcc0-eb9c0c4b71e4.jpg?x-bce-process=image/format,f_auto\" /></p><p>在测试时，AI 不仅会获得组装时的照片，还会同时获得官方 PDF 说明书、图片放大工具以及 Python 解释器，需要判断是否存在错误，并指出具体出错步骤和问题描述。评分采用多阶段验证，只要模型能够正确定位错误步骤并大致说明问题，即可获得相应分数。</p><p>这项测试并非考察 AI 是否会背诵说明书，而是更接近真实使用场景：用户只需拍摄组装中的家具，AI 便需要判断零件是否装反、安装顺序是否错误，或是否遗漏了关键部件。</p><p>Epoch AI 认为，这类任务结合了图像理解、空间推理以及多步骤指令匹配能力，因此能够较好反映多模态模型处理现实问题的水平。随着相关能力提升，未来 AI 有望在家具组装、设备安装、维修指导等场景中提供更具针对性的实时辅助。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/15d5dca8-3d8e-4515-acfa-401a56efc1da.jpg?x-bce-process=image/format,f_auto\" /></p><p>结果显示，OpenAI GPT-6 Astra 以 80% 的准确率位居榜首，Anthropic Claude Fable 5.1 和 Claude Opus 5 分别达到 70% 和 61%。</p><p>相比之下，2025 年 11 月时的领先模型 Claude Opus 4.5 准确率仅为 28%，意味着前沿模型在约 10 个月内实现了显著提升。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/2c4fe6c5-666e-4913-8e96-3e6fe9d58904.jpg?x-bce-process=image/format,f_auto\" /></p><p>除了准确率提升，GPT-6 Astra 的推理效率也明显改善。其完成单张照片分析的中位耗时约为 3 分钟，是研究中速度最快的模型，比此前领先模型快约 2 至 10 倍。不过，研究团队认为，这一速度距离真正意义上的实时识别仍有一定差距。</p><p>研究还分析了不同模型的错误。例如，谷歌 Gemini 和阿里 Qwen 系列模型几乎总是先假设存在错误再去找错误；而早期 Anthropic 和 OpenAI 模型则相反，经常完全找不到错误。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/23d5ae79-172e-4a7c-b6ba-8a8ad1c181b6.jpg?x-bce-process=image/format,f_auto\" /></p><p>研究者认为，不同家具对模型难度的影响与宜家复杂度指数无明显关联，错误隐蔽性、视角及错误后继续组装的程度影响更大。</p><p>在中国模型中，目前表现最好的开源权重模型 Kimi K3 相比国际前沿模型约落后 7 个月，这一差距比其在综合能力评估中的约 4.4 个月差距更大。研究认为，视觉推理能力仍是当前部分中国模型相对薄弱的方向，而 DeepSeek V4 Pro、GLM 5.3 等热门模型暂未提供图像支持。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/9/e9da8951-35de-4027-b023-331c04f7a03d.jpg?x-bce-process=image/format,f_auto\" /></p>"
+    }
+  ]
+}
