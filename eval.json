@@ -1,0 +1,938 @@
+{
+  "updated": "2026-10-10T17:04:03.257914",
+  "leaderboards": {
+    "LMArena": [
+      {
+        "rank": 1,
+        "model": "gemini-4-argon-high",
+        "score": "1525±9Preliminary",
+        "org": "",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+        "votes": "4,892",
+        "price": "$2 / $10",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "claude-opus-5.5-high",
+        "score": "1507±8",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/claude-opus-5-5",
+        "votes": "6,272",
+        "price": "$4 / $20",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "claude-opus-4-6-high",
+        "score": "1504±3",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-6",
+        "votes": "79,415",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "claude-fable-5-high",
+        "score": "1504±4",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        "votes": "40,026",
+        "price": "$10 / $50",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "claude-opus-4-7-high",
+        "score": "1501±4",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-7",
+        "votes": "65,192",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "claude-fable-5.1-max",
+        "score": "1501±6",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "votes": "13,063",
+        "price": "$10 / $50",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "claude-opus-4-6",
+        "score": "1498±3",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-6",
+        "votes": "84,095",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "gemini-3.8-flash-high",
+        "score": "1497±5Preliminary",
+        "org": "",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+        "votes": "31,437",
+        "price": "$0.75 / $3.75",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "muse-spark-1.3-max",
+        "score": "1494±6",
+        "org": "Meta",
+        "url": "https://developer.meta.com/ai/models/muse-spark/",
+        "votes": "14,694",
+        "price": "$1.25 / $4.25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "claude-opus-4-7",
+        "score": "1494±4",
+        "org": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-opus-4-7",
+        "votes": "66,315",
+        "price": "$5 / $25",
+        "context": "1M",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "Artificial Analysis": [
+      {
+        "rank": 1,
+        "model": "Claude Opus 5.5 (max with fallback)",
+        "score": "58",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$5.98",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "Claude Sonnet 5.5 (max with fallback)",
+        "score": "56",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$5.46",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "Claude Opus 5.5 (xhigh with fallback)",
+        "score": "56",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$3.46",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "Claude Opus 5.5 (high with fallback)",
+        "score": "54",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$1.82",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Claude Fable 5.1 (max with fallback)",
+        "score": "53",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$7.63",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "Claude Fable 5.1 (xhigh with fallback)",
+        "score": "53",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$5.98",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "GPT-6 Astra (max)",
+        "score": "53",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$3.26",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "Gemini 4 Argon (high)",
+        "score": "53",
+        "org": "Google",
+        "url": "",
+        "votes": "",
+        "price": "$1.99",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "GPT-6 Astra (xhigh)",
+        "score": "52",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$2.31",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "Claude Sonnet 5.5 (xhigh with fallback)",
+        "score": "52",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$2.01",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "LiveBench": [],
+    "Open LLM Leaderboard": [
+      {
+        "rank": 1,
+        "model": "CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "score": "46.8",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "score": "45.7",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑",
+        "score": "44.2",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 72.706,
+        "license": "other",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "Aryanne/QwentileSwap  📑",
+        "score": "43.9",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/Aryanne/QwentileSwap  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Cran-May/tempmotacilla-cinerea-0308  📑",
+        "score": "43.6",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/Cran-May/tempmotacilla-cinerea-0308  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.766,
+        "license": "",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "Daemontatox/Llama3.3-70B-CogniLink  📑",
+        "score": "42.8",
+        "org": "LlamaForCausalLM",
+        "url": "https://huggingface.co/Daemontatox/Llama3.3-70B-CogniLink  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 70.554,
+        "license": "apache-2.0",
+        "arch": "LlamaForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑",
+        "score": "42.3",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 72.7,
+        "license": "",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "1024m/QWEN-14B-B100  📑",
+        "score": "41.9",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/1024m/QWEN-14B-B100  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "score": "41.8",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "score": "41.5",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      }
+    ],
+    "OpenCompass 司南": [
+      {
+        "rank": 1,
+        "model": "[Claude Opus 5 (high)](https://www.anthropic.com/claude/opus)",
+        "score": "83.3",
+        "org": "Anthropic",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "94.1",
+          "knowledge": "68.4",
+          "reasoning": "77.3",
+          "math": "93.3",
+          "coding": "",
+          "agent": ""
+        },
+        "params": "N/A",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "[GPT-5.6-Sol (high)](https://platform.openai.com/docs/models)",
+        "score": "80.8",
+        "org": "OpenAI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "88.5",
+          "knowledge": "66.8",
+          "reasoning": "71.4",
+          "math": "96.3",
+          "coding": "",
+          "agent": ""
+        },
+        "params": "N/A",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "[Qwen3.8-Max](https://qwen.ai/blog)",
+        "score": "80.6",
+        "org": "Alibaba",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "86.8",
+          "knowledge": "65.2",
+          "reasoning": "75",
+          "math": "95.5",
+          "coding": "",
+          "agent": ""
+        },
+        "params": "2.4T",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "[GPT-5.5 (high)](https://platform.openai.com/docs/models)",
+        "score": "80.6",
+        "org": "OpenAI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "87.7",
+          "knowledge": "66.9",
+          "reasoning": "71.4",
+          "math": "96.5",
+          "coding": "",
+          "agent": ""
+        },
+        "params": "N/A",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "[Gemini-3.7-Flash](https://ai.google.dev/gemini-api/docs/models)",
+        "score": "80.5",
+        "org": "Google",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "94",
+          "knowledge": "62.1",
+          "reasoning": "76.8",
+          "math": "89.3",
+          "coding": "",
+          "agent": ""
+        },
+        "params": "N/A",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "[Doubao-Seed-2.1-Pro-260628 (high)](https://www.volcengine.com/product/doubao)",
+        "score": "80.5",
+        "org": "ByteDance",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "91.4",
+          "knowledge": "64.9",
+          "reasoning": "74.9",
+          "math": "90.8",
+          "coding": "",
+          "agent": ""
+        },
+        "params": "N/A",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "[Kimi-K3 (high)](https://www.kimi.com/en/blog/kimi-k3)",
+        "score": "79.1",
+        "org": "Moonshot",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "90.3",
+          "knowledge": "63.9",
+          "reasoning": "74.1",
+          "math": "88",
+          "coding": "",
+          "agent": ""
+        },
+        "params": "2.8T",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "[Grok-4.6 (high)](https://x.ai/news/grok-4-6)",
+        "score": "78",
+        "org": "xAI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "93.8",
+          "knowledge": "60",
+          "reasoning": "73",
+          "math": "85",
+          "coding": "",
+          "agent": ""
+        },
+        "params": "N/A",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "[DeepSeek-V4-Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)",
+        "score": "77.5",
+        "org": "DeepSeek",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "92.5",
+          "knowledge": "55.5",
+          "reasoning": "71.2",
+          "math": "91",
+          "coding": "",
+          "agent": ""
+        },
+        "params": "1.6T",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "[Kimi-K2.6 (high)](https://huggingface.co/moonshotai/Kimi-K2.6)",
+        "score": "75.7",
+        "org": "Moonshot",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "89.8",
+          "knowledge": "62.9",
+          "reasoning": "75.7",
+          "math": "74.5",
+          "coding": "",
+          "agent": ""
+        },
+        "params": "1T",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ]
+  },
+  "news": [
+    {
+      "title": "Introducing trusted-access models to the Artificial Analysis Cyber Index",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "Announcing Harvey LAB-AA v1.1: adding hallucination checks to raise the bar for agentic legal work",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6 Sol (Daybreak Blue, max)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "Anthropic has released Claude Haiku 5.5",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "Claude Haiku 5.5 (High)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "Claude Haiku 5.5 (Low)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "Claude Haiku 5.5 (Medium)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "Claude Haiku 5.5 (Max)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "Claude Haiku 5.5 (Xhigh)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "Mistral has released Mistral Large 4, making France home to the most intelligent model outside the US and China",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "Mistral Large 4 Preview",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "Ling 3.1 Flash",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-10",
+      "summary": ""
+    },
+    {
+      "title": "The Download: AI’s refusal problem and weight-loss drug side effects",
+      "url": "https://www.technologyreview.com/2026/10/09/1146250/the-download-ai-refusal-problem-weight-loss-drug-side-effects/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-09",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. We’re putting too much faith in AI’s ability to say no Today’s AI models are trained to refuse a vast number of prompts. If you ask your chatbot how to poison&#8230;"
+    },
+    {
+      "title": "We’re putting too much faith in AI’s ability to say no",
+      "url": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-09",
+      "summary": "Ever since people first seriously contemplated giving machines an intelligence modeled on our own, there has never been any question that they would, like us, be able to say no. The sci-fi canon is full of stories of robotic disobedience. Most of these capers are, of course, cautionary.&#160; But recently, the idea that AI shouldn’t&#8230;"
+    },
+    {
+      "title": "Job titles of the future: Delivery drone air traffic controller",
+      "url": "https://www.technologyreview.com/2026/10/09/1145737/job-titles-delivery-drone-air-traffic-controller-trevor-wischnewsky/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-09",
+      "summary": "The moment Trevor Wischnewsky heard that drones were delivering pizza and sushi around his Texas neighborhood, his mind was made up. “It was super fascinating,” he says. “I just immediately wanted to be a part of it.” Wischnewsky is now an RPIC, or “remote pilot in command,” at a company called FlyTrex. An RPIC is&#8230;"
+    },
+    {
+      "title": "Roundtables: A Conversation With the Creator of AI-Designed Viruses",
+      "url": "https://www.technologyreview.com/2026/10/08/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-09",
+      "summary": "Friday, October 16, 2026 Can AI design new life forms? In 2025, Stanford University PhD student Samuel King came up with a preliminary answer when he used a generative AI model to propose genetic blueprints for microscopic viruses. It isn’t yet an example of AI-generated life, but that could be next. Join senior AI reporter&#8230;"
+    },
+    {
+      "title": "The Download: AI roadblocks for humanoids and portable rubber dams",
+      "url": "https://www.technologyreview.com/2026/10/08/1146045/the-download-ai-roadblocks-humanoids-portable-rubber-dams/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-08",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. AI breakthroughs in robotics won’t change your life any time soon The hype around humanoid robots is reaching fever pitch. Much of it comes from the idea that the same AI&#8230;"
+    },
+    {
+      "title": "AI breakthroughs in robotics won’t change your life any time soon",
+      "url": "https://www.technologyreview.com/2026/10/08/1145923/ai-breakthroughs-in-robotics-wont-change-your-life-any-time-soon/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-08",
+      "summary": "The story is a collaboration between MIT Technology Review and Aventine, a non-profit research foundation that creates and supports content about how technology and science are changing the way we live. A robot shaped like a human—white with a black head and torso—has been popping up on video feeds. Perhaps you’ve seen it dance or&#8230;"
+    },
+    {
+      "title": "Building a safer path to autonomous industrial AI",
+      "url": "https://www.technologyreview.com/2026/10/08/1144020/building-a-safer-path-to-autonomous-industrial-ai/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-08",
+      "summary": "Industrial AI is entering a new phase. After decades of predictive analytics and other specialized applications, advances in foundation models, physical AI, and agentic AI are making it possible to automate more complex tasks across industrial environments. But unlike AI that operates purely in the digital world, industrial AI can interact directly with physical systems,&#8230;"
+    },
+    {
+      "title": "Anthropic’s AI gave Philadelphia police a fake tip about an unsolved homicide",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip",
+      "source": "The Verge AI",
+      "published": "2026-10-09",
+      "summary": "An Anthropic AI model provided false information about an unsolved homicide to a Philadelphia Police Department (PPD) tipline, according to a report from 6abc. In a statement released on Friday, the PPD said the AI model sent the tip through PhillyUnsolvedMurders.com on July 18th, but the investigators never reviewed it because it was marked as [&#8230;]"
+    },
+    {
+      "title": "&#8216;Pure insanity&#8217;: Mathematicians will need years to make sense of OpenAI&#8217;s latest drop",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1008726/openai-mathematics-solutions-chaos",
+      "source": "The Verge AI",
+      "published": "2026-10-09",
+      "summary": "\"Staggering.\" \"Overwhelming.\" \"Unprecedented.\" \"Surreal.\" \"Pure insanity.\" Those were among the descriptions more than three dozen mathematicians reached for in conversations with The Verge as they tried to make sense of the flood of mathematical results OpenAI abruptly dropped on the field this week. Amid the awe, excitement, and uncertainty over the sheer scale of the [&#8230;]"
+    },
+    {
+      "title": "Nikon microscopic video competition winner disqualified for using generative AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1008930/nikon-small-world-in-motion-winner-ai",
+      "source": "The Verge AI",
+      "published": "2026-10-09",
+      "summary": "Nikon says the video that originally won first place in its Small World in Motion contest \"did not comply with the competition rules regarding generative AI.\" BBC reports that the original first place video from Dr. Ning Xu claimed to show \"tiny, hair-like structures called cilia moving in the airway of a child with the [&#8230;]"
+    },
+    {
+      "title": "Trump’s attempt to rename AI is looking awfully artificial",
+      "url": "https://www.theverge.com/policy/1008677/trump-super-intelligence-ai-rebranding",
+      "source": "The Verge AI",
+      "published": "2026-10-09",
+      "summary": "President Donald Trump has a knack for turning words against his enemies. His first successful presidential run was built on monikers like \"Little Marco\" and \"Crooked Hillary\"; he changed \"fake news\" from a phrase describing scammy media outlets to a derogatory term for the press at large. Over the past few weeks, he's clearly decided [&#8230;]"
+    },
+    {
+      "title": "Instinct was the buzziest AI agent around — can it survive Muse?",
+      "url": "https://www.theverge.com/tech/1008254/instinct-agent-ai-hands-on-muse-dots",
+      "source": "The Verge AI",
+      "published": "2026-10-09",
+      "summary": "Before there were cute little guys, there was Instinct. In August, the startup got its AI agent to market with an unusual playbook: invite-only, no marketing, and barely so much as a website. And yet, Instinct quickly became the buzziest thing in AI, garnering praise for its straightforward, text message-based interface and its ability to [&#8230;]"
+    },
+    {
+      "title": "OpenAI doubles down on decision to fire three AI safety researchers",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1008604/openai-defends-decision-fire-safety-researchers",
+      "source": "The Verge AI",
+      "published": "2026-10-09",
+      "summary": "OpenAI is standing firm on its decision to fire three safety researchers after an investigation found they committed \"a significant breach of trust.\" In a post on X on Friday, the company said Jasmine Wang, Tomek Korbak and Mikita &#8288;Balesni were dismissed for violating \"clear policies on handling sensitive information.\" It insisted the decision was [&#8230;]"
+    },
+    {
+      "title": "Anthropic launches free AI security scans for open-source projects",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner",
+      "source": "The Verge AI",
+      "published": "2026-10-08",
+      "summary": "Anthropic's offering to help open-source projects track down security vulnerabilities with a new service called OSS Scanner. It says open-source projects that opt-in will get \"thorough, periodic security scans by our strongest models at no cost.\" That could mean open-source projects get alerted about possible security issues sooner, but the trade-off is that OSS Scanner's [&#8230;]"
+    },
+    {
+      "title": "USA Today becomes the latest publisher to sue OpenAI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1008198/usa-today-openai-copyright-lawsuit",
+      "source": "The Verge AI",
+      "published": "2026-10-08",
+      "summary": "USA Today Co., along with the several local newspapers it owns, is suing OpenAI over claims that the company copied \"hundreds of thousands\" of articles to train its AI models, as reported earlier by Reuters. In a filing on Thursday, the publisher asks for damages of more than $250 million, alleging OpenAI's unauthorized use of [&#8230;]"
+    },
+    {
+      "title": "SpaceXAI backs Omarchy, the controversial Linux distro, with $1.5 million in compute",
+      "url": "https://www.theverge.com/tech/1008148/spacexai-omarchy-grok-david-heinemeier-hansson",
+      "source": "The Verge AI",
+      "published": "2026-10-08",
+      "summary": "If Elon Musk and SpaceXAI were going to back any Linux distro, it seems obvious they'd back Omarchy. Today it was announced that SpaceXAI would be joining the Omacom Foundation, which oversees Omarchy, as a Founding Corporate Patron and donating $1.5 million worth of Grok tokens to David Heinemeier Hansson's Linux project. According to Hansson's [&#8230;]"
+    },
+    {
+      "title": "联想天禧自研代码智能体TianxiCode斩获SWE-bench-Live全球第一",
+      "url": "https://www.qbitai.com/2026/10/502422.html",
+      "source": "量子位",
+      "published": "2026-10-09",
+      "summary": "联想天禧AI自主研发的专业代码智能体框架TianxiCode 以71%的问题解决率登顶全球第一名"
+    },
+    {
+      "title": "0.2秒急停、秒级重规划！因果智能走进真实世界",
+      "url": "https://www.qbitai.com/2026/10/502411.html",
+      "source": "量子位",
+      "published": "2026-10-09",
+      "summary": "这是一台机器人正在关闭微波炉门时，因人手突然插进来而紧急悬停的时间"
+    },
+    {
+      "title": "字节找到了DeepSeek时强时弱的原因",
+      "url": "https://www.qbitai.com/2026/10/502364.html",
+      "source": "量子位",
+      "published": "2026-10-09",
+      "summary": "答不答得对，得看Token站位"
+    },
+    {
+      "title": "《柳叶刀》研究表明：AI 有望改善医患关系",
+      "url": "https://www.qbitai.com/2026/10/502359.html",
+      "source": "量子位",
+      "published": "2026-10-09",
+      "summary": "Google 研究成果首次登上《柳叶刀》主刊"
+    },
+    {
+      "title": "清华具身模型登顶全球第一！突围GPT-6、英伟达，不靠外挂和额外数据",
+      "url": "https://www.qbitai.com/2026/10/502125.html",
+      "source": "量子位",
+      "published": "2026-10-09",
+      "summary": "星动纪元选择将视频预测与动作学习分阶段训练，重点不是「视频、动作一锅炖」，而是把两者「解耦」，重新「排序」。"
+    },
+    {
+      "title": "openJiuwen发布并开源企业级AgentOS，加速智能体规模落地企业",
+      "url": "https://www.qbitai.com/2026/10/502106.html",
+      "source": "量子位",
+      "published": "2026-10-09",
+      "summary": "多Agent协同还能自我进化"
+    },
+    {
+      "title": "腾讯元器将于 11 月 9 日停止服务，所创建智能体将不再可用",
+      "url": "https://www.ithome.com/1/011/530.htm",
+      "source": "IT之家 AI",
+      "published": "2026-10-10",
+      "summary": "<p>IT之家 10 月 10 日消息，腾讯元器 10 月 8 日发布《关于元器平台停止服务通知》，因业务调整，元器平台将于 2026 年 11 月 9 日停止服务。在正式停止服务前，用户仍可正常登录并使用现有智能体；停服生效后，所创建智能体将不再可用，建议用户尽快完成数据导出与业务迁移。</p><p>从 2026 年 10 月 29 日起，停止创建新的智能体、API key 分发功能。现有存量智能体在正式停止服务前，仍可继续正常使用。</p><p>正式停止服务时间： 2026 年 11 月 9 日。届时，<strong>元器平台将关闭应用访问、数据读写、API 调用、控制台使用等所有面向公众的服务</strong>，元器平台将不支持用户访问，元器智能体页面将不支持显示。通过元器平台发布到其他渠道（包括公众号、服务号、微信客服等）的智能体将不支持响应用户对话。</p><p>自公告发布期至产品停服，用户可通过元器平台的导出工具，将智能体配置、工作流、对话记录等数据备份至本地，除此之外，为便于用户完成数据导出相关事宜办理，将为用户设置一段数据保留过渡期，过渡期截至【2027 年 1 月 9 日】。</p><p><strong>具体安排如下：</strong></p><ul class=\" list-paddingleft-2\"><li><p>停服前（即日起至 2026 年 11 月 9 日）：元器平台数据导出功能可正常使用，用户可随时导出并下载备份；</p></li><li><p>停服后（ 2026 年 11 月 9 日至 2027 年 1 月 9 日）：平台功能停止使用，用户仍可登录元器数据导出控制台下载备份数据；</p></li><li><p>数据删除：2027 年 1 月 9 日起，除法律法规规定须留存的日志等记录外，平台将依法删除全部用户数据，请用户在此前完成备份。</p></li></ul><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/e4a18759-f06d-4140-9aa1-bac1703c4f07.png\" /></p><p>IT之家注意到，在 2024 年 5 月 17 日举办的腾讯云生成式 AI 产业应用峰会上，腾讯发布了新推出的智能体产品“腾讯元器”，腾讯称之为“一站式智能体创造与分发平台”。</p><p>据腾讯官方介绍，腾讯元器有如下特点：</p><ul class=\"medium-size list-paddingleft-2\"><li><p>具有智能体商店：可以在商店中选择并使用自己需要的智能体，以满足不同的需求</p></li><li><p>低门槛创建智能体：通过提示词、插件、工作流、AI 辅助创建等能力，无需代码，低门槛创建智能体</p></li><li><p>丰富的插件与知识库：预集成腾讯生态特色插件、知识库资源，将开放第三方能力，为创作者提供开箱即用的工具。</p></li><li><p>腾讯全域分发：率先支持腾讯全域分发渠道，如 QQ、微信客服、腾讯云、搜索等。</p></li></ul>"
+    },
+    {
+      "title": "铭凡首款无风扇全闪 AI NAS 机型 S5 将于 10 月中下旬国行开售",
+      "url": "https://www.ithome.com/1/011/521.htm",
+      "source": "IT之家 AI",
+      "published": "2026-10-10",
+      "summary": "<p>IT之家 10 月 10 日消息，MINISFORUM（铭凡）今日确认，其首款无风扇全闪 AI NAS 机型 <strong>S5 将于 10 月中下旬在国行渠道发售</strong>。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/ea108f4f-1e0a-4b36-9c6f-367685a8173e.jpg?x-bce-process=image/format,f_auto\" /></p><p>S5 由铝合金机身与鳍片组实现纯被动散热设计，质量 1.8kg。其基于英特尔酷睿 3 处理器 304，<strong>提供 5 个 PCIe Gen4 ×1 的 M.2 2280 SSD 盘位</strong>。</p><p>这款设备充分利用了 \"Wildcat Lake\" 的扩展性，拥有 Wi-Fi 7、<strong>10GbE RJ-45</strong>、2.5GbE RJ-45、<strong>2 个 USB-C 40Gbps</strong> 在内的一系列 I/O。</p>"
+    }
+  ]
+}
