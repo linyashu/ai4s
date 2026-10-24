@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI4S 每日进展看板</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin:0; background:#f6f7f9; color:#222; line-height:1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+header { text-align:center; padding: 32px 0 12px; }
+h1 { margin:0; font-size:1.9em; }
+.sub { color:#666; font-size:.92em; }
+.nav { margin-top:10px; }
+.nav a { color:#1a73e8; text-decoration:none; font-size:.9em; }
+.nav a:hover { text-decoration:underline; }
+.digest { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:20px 24px; margin:20px 0; }
+.digest h2 { margin:0 0 4px; font-size:1.25em; }
+.digest-date { color:#888; font-size:.85em; margin-bottom:16px; }
+.digest-item { border-top:1px solid #eef0f3; padding:14px 0; }
+.digest-item-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.digest-rank { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#1a73e8; color:#fff; font-size:.78em; font-weight:700; flex:none; }
+.digest-source { color:#666; font-size:.82em; }
+.digest-title { margin:0 0 6px; font-size:1.02em; line-height:1.45; }
+.digest-title a { color:#1a0dab; text-decoration:none; }
+.digest-title a:hover { text-decoration:underline; }
+.digest-impact, .digest-why { margin:3px 0; color:#333; font-size:.92em; }
+.digest-why { color:#555; }
+.digest-impact strong, .digest-why strong { color:#1a73e8; font-weight:600; margin-right:2px; }
+.digest-trend { border-top:2px solid #eef0f3; margin-top:10px; padding-top:14px; }
+.digest-trend h3 { margin:0 0 6px; font-size:1em; color:#b26a00; }
+.digest-trend p { margin:0; color:#555; font-size:.94em; }
+.section-title { display:flex; align-items:center; gap:10px; margin:32px 0 12px; }
+.count { color:#888; font-size:.85em; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:14px; }
+.card { background:#fff; border:1px solid #e3e6ea; border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; }
+.card h3 { margin:8px 0 6px; font-size:1em; }
+.card h3 a { color:#1a0dab; text-decoration:none; }
+.card h3 a:hover { text-decoration:underline; }
+.card-head { display:flex; align-items:center; gap:8px; font-size:.8em; }
+.badge { color:#fff; padding:2px 8px; border-radius:999px; font-size:.75em; font-weight:600; white-space:nowrap; }
+.date { color:#888; }
+.source { color:#666; }
+.summary { color:#444; font-size:.86em; margin:4px 0; overflow-wrap:anywhere; }
+.card-foot { margin-top:auto; padding-top:8px; display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+.authors { color:#888; font-size:.8em; flex:1; min-width:100px; }
+.tag { background:#eef1f5; border-radius:4px; padding:2px 6px; font-size:.72em; color:#555; }
+footer { text-align:center; color:#999; font-size:.8em; margin-top:32px; }
+@media (prefers-color-scheme: dark) {
+  body { background:#14171c; color:#e8eaed; }
+  .digest, .card { background:#1e232b; border-color:#2b313b; }
+  .summary { color:#c9cdd3; }
+  .card h3 a { color:#8ab4f8; }
+  .tag { background:#2b313b; color:#b8bec8; }
+  .sub { color:#9aa0a6; }
+  .digest-date { color:#9aa0a6; }
+  .digest-item { border-top-color:#2b313b; }
+  .digest-impact { color:#e0e3e8; }
+  .digest-why { color:#c0c4cc; }
+  .digest-trend { border-top-color:#2b313b; }
+  .digest-trend p { color:#c0c4cc; }
+  .digest-title a { color:#8ab4f8; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🧪 AI4S 每日进展看板</h1>
+    <div class="sub">AI for Science 每日聚合 · arXiv / 期刊 / 中文媒体 / HuggingFace</div>
+    <div class="nav"><a href="eval.html">📊 AI 大模型测评看板 →</a></div>
+  </header>
+  
+  <section class="section">
+  <h2 class="section-title"><span class="badge" style="background:#b31b1b">arXiv</span><span class="count">76 条</span></h2>
+  <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31667v1" target="_blank" rel="noopener">Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning</a></h3>
+  <p class="summary">Test-time scaling has emerged as a key inference strategy for reasoning models, where a model generates a large number of candidate solutions in the hope of finding at least one correct solution. Running all candidate solutions to completion can be computationally demanding, so recent work prunes th…</p>
+  <div class="card-foot">
+    <span class="authors">Mahdi Salmani，Adel Javanmard，Devansh Gupta，Meisam Razaviyayn</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31657v1" target="_blank" rel="noopener">Cost-Aware Abstention for LLM-Based IT Ticket Classification</a></h3>
+  <p class="summary">Wrong automatic routing of an IT support ticket can cost more than human triage. We evaluate cost-aware abstention as an offline, cost-conditional readiness assessment: select a routing policy on calibration data under explicit costs, then evaluate that frozen policy once on held-out test data. On a…</p>
+  <div class="card-foot">
+    <span class="authors">Sachin Gupta</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31656v1" target="_blank" rel="noopener">METTA: Memory-Enhanced Test-Time Adaptation for Meta-Reinforcement Learning</a></h3>
+  <p class="summary">Meta-reinforcement learning aims to train agents that adapt quickly to unseen tasks from limited interaction, but this requires representing task evidence over long interaction histories. Classical recurrent agents compress experience into hidden states, while transformer-based agents retrieve from…</p>
+  <div class="card-foot">
+    <span class="authors">Ali Najar，Hosein Hasani，Amir Kooshan Fattah，Yasamin Rajabi</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31650v1" target="_blank" rel="noopener">EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence</a></h3>
+  <p class="summary">Tool-using language model agents rely on environmental facts to decide whether an action is permitted. When a tool response omits a safety-relevant fact, an agent may carry out a prohibited action even though the user request is benign and every returned statement is true. We introduce \bench{}, an…</p>
+  <div class="card-foot">
+    <span class="authors">Qijin Zhang，Hanzhen Wang，Yuehan Zhao，Haoyu Dai</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31646v1" target="_blank" rel="noopener">Low-Bit N-Gram Embeddings for Language Models</a></h3>
+  <p class="summary">Many recent open-weight language models use n-gram embedding tables to improve performance. These tables store learned representations of short token sequences, such as pairs or triples of consecutive tokens, which the model retrieves during processing. However, they can require substantial memory:…</p>
+  <div class="card-foot">
+    <span class="authors">Stephen Chung，Wenyu Du</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31639v1" target="_blank" rel="noopener">Causal Chain of Thought: Mitigating Attention Leakage via Context Isolation</a></h3>
+  <p class="summary">Chain-of-thought (CoT) prompting elicits step-by-step rationales that appear to explain model predictions, but there is no guarantee these steps causally drive the final answer. In standard autoregressive generation, dense attention allows each reasoning step to attend to the full context, enabling…</p>
+  <div class="card-foot">
+    <span class="authors">Gabriele Dominici，Teague McMillan，Fazl Barez，Marc Langheinrich</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31624v1" target="_blank" rel="noopener">Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3</a></h3>
+  <p class="summary">Instrumental convergence is often invoked as a general reason to expect capable agents to acquire or express power-seeking subgoals: self-preservation, resource acquisition, deception, or resistance to oversight which poses an important threat to the society. For LLMs, reinforcement learning is the…</p>
+  <div class="card-foot">
+    <span class="authors">Barış Alparslan，Sandy Tanwisuth，Caleb Petterson</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31606v1" target="_blank" rel="noopener">How Ground Truth Shapes Retrieval Scores: Evidence-Aware Evaluation of a Retrieval-Augmented Generation System for Breast Lesions</a></h3>
+  <p class="summary">Purpose: To describe an evidence-aware retrieval evaluation protocol for a clinical retrieval-augmented generation (RAG) system over breast lesion management literature, addressing the dependence of retrieval scores on annotation coverage. Methods: An 18-document corpus and an 18-query development b…</p>
+  <div class="card-foot">
+    <span class="authors">Miguel Mochizuki Silva，Samuel Ismael，Mateus C. Dias，Thaís Gaudêncio</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31593v1" target="_blank" rel="noopener">Simulated Control Evals</a></h3>
+  <p class="summary">Control evaluations measure whether safeguards can prevent an AI model from causing undesired outcomes even when it is intentionally trying to do so. These evaluations typically use purpose-built control settings and extrapolate their results to a model&#x27;s deployment. However, the effectiveness of sa…</p>
+  <div class="card-foot">
+    <span class="authors">Jeffrey Olmo，David Zhang，Tyler Tracy</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31588v1" target="_blank" rel="noopener">VERA: A Responsible AI Dashboard for Assessing LLM Deployments in Light of the EU AI Act</a></h3>
+  <p class="summary">Institutions that deploy large language models in regulated settings often need technical evidence of responsible AI practices before approving a deployment. COMPL-AI provides a technical interpretation of the EU AI Act that organises this evidence under six principle groups and eighteen technical r…</p>
+  <div class="card-foot">
+    <span class="authors">Robin Quériaux，Solveig Bachellery，Léa Déléris，Saurabhsingh Rajput</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.SE&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31579v1" target="_blank" rel="noopener">Who Is Sycophantic to Whom? Confident LLMs, Human Deference, and the Collapse of Trust Calibration</a></h3>
+  <p class="summary">Research on sycophancy asks whether large language models (LLMs) bend towards what their users want to hear. We ask the reverse question: when an LLM is confident, consistent, and wrong, do users bend towards it? In a within-subjects experiment, 32 participants learned up to five science topics by c…</p>
+  <div class="card-foot">
+    <span class="authors">Deepthika S，Pawni Yadav，B. Sankar</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.HC&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31576v1" target="_blank" rel="noopener">What Makes a Good Unmasking Policy? A Controlled Study of Learned Unmasking in Diffusion Language Models</a></h3>
+  <p class="summary">Masked diffusion language models generate tokens in parallel, but their efficiency depends on which predictions are committed. Learned unmasking policies improve the speed--accuracy trade-off, yet differ in supervision, inputs, and capacity, obscuring which choices matter. We view supervised policie…</p>
+  <div class="card-foot">
+    <span class="authors">Jinya Sakurai，Xun Xu，Jaehong Yoon</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 研究进展 (cs.AI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31573v1" target="_blank" rel="noopener">Social-HUMINT: An LLM-Augmented Unified Framework for Measuring Social Media Exposure</a></h3>
+  <p class="summary">In the post-API landscape, social-media profiling has become inexpensive and automated: Large Language Models (LLMs) can extract structured information from unstructured content and deduce attributes users never disclosed. A person&#x27;s true exposure is not what they post but what can be inferred from…</p>
+  <div class="card-foot">
+    <span class="authors">Pellegrino Casoria，Simon Pietro Romano</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.SI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31639v1" target="_blank" rel="noopener">Causal Chain of Thought: Mitigating Attention Leakage via Context Isolation</a></h3>
+  <p class="summary">Chain-of-thought (CoT) prompting elicits step-by-step rationales that appear to explain model predictions, but there is no guarantee these steps causally drive the final answer. In standard autoregressive generation, dense attention allows each reasoning step to attend to the full context, enabling…</p>
+  <div class="card-foot">
+    <span class="authors">Gabriele Dominici，Teague McMillan，Fazl Barez，Marc Langheinrich</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31624v1" target="_blank" rel="noopener">Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3</a></h3>
+  <p class="summary">Instrumental convergence is often invoked as a general reason to expect capable agents to acquire or express power-seeking subgoals: self-preservation, resource acquisition, deception, or resistance to oversight which poses an important threat to the society. For LLMs, reinforcement learning is the…</p>
+  <div class="card-foot">
+    <span class="authors">Barış Alparslan，Sandy Tanwisuth，Caleb Petterson</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31585v1" target="_blank" rel="noopener">Action Learning for Scientific Simulations</a></h3>
+  <p class="summary">Understanding and controlling how systems evolve is central to science and engineering, where many problems require reasoning about complete trajectories. Existing approaches typically learn local dynamics or generate trajectories, but objectives constructed from individual transitions can miss depe…</p>
+  <div class="card-foot">
+    <span class="authors">Sarah Liaw，Yuanqi Du，Yilun Du</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31478v1" target="_blank" rel="noopener">MoG-VLM: Efficient Video Anomaly Detection through Motion-Guided Vision-Language Models</a></h3>
+  <p class="summary">Vision-Language Models (VLMs) have shown strong potential for video anomaly detection, but dense frame-level inference makes them impractical for real-time deployment. Existing acceleration commonly relies on uniform sampling, which ignores content dynamics and can either waste computation on static…</p>
+  <div class="card-foot">
+    <span class="authors">Khaled Waleed Dawoud，Muhammad Zaigham Zaheer，Khan Muhammad，Muhammad Haris Khan</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CV&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31421v1" target="_blank" rel="noopener">How Depth Growth and Looping Shape In-Context Learning in Language Models</a></h3>
+  <p class="summary">Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities. Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retenti…</p>
+  <div class="card-foot">
+    <span class="authors">Ferdinand Kapl，Kaitlin Maile，Stefan Bauer，Johannes von Oswald</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31148v1" target="_blank" rel="noopener">Prompt Sensitivity in Tool-Augmented Model Comparisons</a></h3>
+  <p class="summary">Language models are compared on question-answering benchmarks that pose each question in one wording, and a reworded question can change which of two models scores higher. We ask whether giving the models tools makes such comparisons more stable. An accuracy gain cannot answer this, because tools ch…</p>
+  <div class="card-foot">
+    <span class="authors">Mateusz Modrzejewski，Tomasz Radzikowski</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31147v1" target="_blank" rel="noopener">PriMa-Causa: Causal Prescriptive Maintenance</a></h3>
+  <p class="summary">Automated manufacturing requires data-driven decisions under uncertainty and sparse observational records, and unplanned downtime is a dominant cost of getting them wrong. Prescriptive maintenance recommends a maintenance action against an impending failure rather than merely predicting it. Establis…</p>
+  <div class="card-foot">
+    <span class="authors">Felix Saretzky</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;eess.SY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31089v1" target="_blank" rel="noopener">Transformers with CoT Discover Heavy-Ball Acceleration Through Training</a></h3>
+  <p class="summary">Modern transformers often solve complex tasks by generating and refining intermediate reasoning steps. To develop a theoretical understanding of chain-of-thought (CoT) reasoning, a notable recent study by Huang et al. (2025) viewed transformers as algorithm executors, and showed that when transforme…</p>
+  <div class="card-foot">
+    <span class="authors">Yuxuan Cai，Yuan Cao</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;stat.ML&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30963v1" target="_blank" rel="noopener">ReDence: A Hybrid Agentic and Decision-Model Framework for Rapid, Evidence-Grounded Detection of Modern Social Engineering Scams</a></h3>
+  <p class="summary">Detecting online social engineering (SE) scams often requires examining website workflows, verifying claims against external sources, and connecting evidence across multiple pages. Existing detectors provide limited support for these investigations, leaving analysts to manually gather and validate e…</p>
+  <div class="card-foot">
+    <span class="authors">Jaishnoor Kaur，Josef Horáček，Ian Waskom，Sayak Saha Roy</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30882v1" target="_blank" rel="noopener">Inherited, Not Invented: Tracing the Provenance of Wait in Reasoning Models</a></h3>
+  <p class="summary">Reinforcement learning (RL) is credited with teaching reasoning models to write {wait} before reconsidering a step, yet large RL accuracy gains do not require the word. This view can confuse what RL discovers with what a model inherits from its training data. We trace the word through open models&#x27; t…</p>
+  <div class="card-foot">
+    <span class="authors">Zhizhuo Kou，Sizai Hou，Long Chen，Jian Yang</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30880v1" target="_blank" rel="noopener">One Teacher, Many Views: Reducing Reference Sensitivity in On-Policy Self-Distillation</a></h3>
+  <p class="summary">On-policy self-distillation (OPSD) improves reasoning by training a model on its own trajectories with dense token-level supervision from a privileged copy conditioned on a reference solution. Existing methods typically use a single teacher distribution conditioned on the complete reference. We iden…</p>
+  <div class="card-foot">
+    <span class="authors">Khouloud Saadi，Di Wang</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30873v1" target="_blank" rel="noopener">MOER: Mix-Policy Optimization under Expert Prefix Guidance with Selective Rollback</a></h3>
+  <p class="summary">Mix-policy optimization incorporates off-policy expert data into the reinforcement learning (RL) loop to transcend the capability boundary of on-policy RL. However, existing methods either provide static full-trace guidance that suppresses self-exploration, or adopt expert prefix guidance without co…</p>
+  <div class="card-foot">
+    <span class="authors">Xuyang Zhong，Jiuding Yang，Yiwen Guo，Chen Liu</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30796v1" target="_blank" rel="noopener">GIFT: Gradient Informed Filtering for Distillation Augmented Reasoning RL</a></h3>
+  <p class="summary">Training large language models for complex reasoning tasks relies on two complementary signals: sparse, outcome-grounded reinforcement learning (RL) for correctness, and dense, token-level distillation for guidance. However, complementarity in supervision does not guarantee compatibility in optimiza…</p>
+  <div class="card-foot">
+    <span class="authors">Shijie Li，Yilin Gao，Tieyuan Chen，Yun Luo</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">机器学习进展 (cs.LG)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30630v1" target="_blank" rel="noopener">Interpreting Model Reasoning through Behavioral Counterfactuals</a></h3>
+  <p class="summary">Faithfully understanding the internal process that occurs as models form their chain of thought is an important problem with the rise in model capabilities. However, this remains challenging due to the variance in sampled responses, making it difficult to isolate the effects of interventions and com…</p>
+  <div class="card-foot">
+    <span class="authors">Shawn Im，James Oldfield，Adel Bibi，Sharon Li</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31636v1" target="_blank" rel="noopener">Can an Agent Debug a Web Corpus? Agentic Auditing of Slovak FineWeb2</a></h3>
+  <p class="summary">Multilingual pipelines such as FineWeb2 apply one recipe across a thousand languages, leaving the failure modes of individual languages unanticipated. We use an LLM once, as a corpus debugger rather than a classifier: a tool-using agent explores the corpus through a read-only, budgeted API and compi…</p>
+  <div class="card-foot">
+    <span class="authors">Marek Šuppa，Ivan Vykopal，Jaroslav Kopčan</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31366v1" target="_blank" rel="noopener">AfterDeleteBench: Auditing Post-Deletion Information Persistence in LLM Agents</a></h3>
+  <p class="summary">Many LLM agents maintain external persistent memory and derive additional state from past interactions, such as summaries. Deleting an original memory record therefore need not remove information carried by its descendants. We introduce AfterDeleteBench, a controlled behavioral audit for this failur…</p>
+  <div class="card-foot">
+    <span class="authors">Ehsan Saleh，Roozbeh Nahavandi，Sama Salarian，Raef Bassily</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31303v1" target="_blank" rel="noopener">The Value of Memory in Language Agents</a></h3>
+  <p class="summary">Memory enables language agents to carry useful distinctions from past experience into future decisions. Its value depends on which distinctions survive, whether a bounded agent can use them, and what can be recovered or revised as demands evolve. We develop a decision-theoretic framework that follow…</p>
+  <div class="card-foot">
+    <span class="authors">Zehao Lin，Erenkai Zhu，Helan Hu，Xixuan Hao</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31277v1" target="_blank" rel="noopener">CoWriter: Guiding Methodological and Synergetic Human-LLM Co-Authoring</a></h3>
+  <p class="summary">While LLMs have transformed text generation, standard chat-and-canvas interfaces often reduce human authoring to quite passive supervision, causing review fatigue, over-reliance on AI, and the sidelining of the human role in long-form, source-grounded writing. Prior systems typically address isolate…</p>
+  <div class="card-foot">
+    <span class="authors">Shmuel Amar，Benjamin Lieber，Ori Shapira，Debanjana Kar</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.HC&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31158v1" target="_blank" rel="noopener">Beyond Watching and Searching: Benchmarking Agents for Video-centered Deep Research Reports</a></h3>
+  <p class="summary">Deep research agents synthesize open-web evidence into long reports, but current benchmarks do not evaluate research centered on a source video. We introduce Video-Centered Deep Research Report Generation. Given a video and user request, an agent identifies research questions, retrieves external mul…</p>
+  <div class="card-foot">
+    <span class="authors">Jiahao Meng，Qize Yang，Yuxuan Wang，Yunfei Chu</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CV&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31107v1" target="_blank" rel="noopener">Learning What to Ask for Tomorrow: Active Preference Acquisition for Long-Term Personalized Web Agents</a></h3>
+  <p class="summary">Web agents increasingly serve the same user across repeated online tasks such as booking travel, shopping, and scheduling, so their long-term usefulness depends on how well they know the user&#x27;s preferences. Passive memory and personalization methods cannot obtain preferences the user never reveals,…</p>
+  <div class="card-foot">
+    <span class="authors">Yiqi Wang，Zizhi Zeng，Jiaqi Zhang，Yiqun Duan</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31062v1" target="_blank" rel="noopener">SCOPE: Compiling Natural-Language Policies into Neurosymbolic Predicate Programs</a></h3>
+  <p class="summary">Policy enforcement for LLM agents has shifted from single-turn content moderation to compound, application-specific policies evaluated over multi-turn transcripts and tool-call trajectories. Fine-tuned guardrail models are efficient but degrade on compound policies, and while LLM-as-a-judge approach…</p>
+  <div class="card-foot">
+    <span class="authors">Arnon Mazza，Elad Levi</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30989v1" target="_blank" rel="noopener">ColaBench: Evaluating Memory-Guided Knowledge Acquisition in Personal Agents</a></h3>
+  <p class="summary">Personal agents need to draw on long-term interaction history to retrieve and apply external knowledge suited to a user&#x27;s current request. Even an answer grounded in relevant documents can be unsuitable when it overlooks the user&#x27;s circumstances. This creates two connected challenges: using historic…</p>
+  <div class="card-foot">
+    <span class="authors">Wenjie Zhang，Zhichao Shi，Xuhui Jiang，Xiaojun Wu</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30949v1" target="_blank" rel="noopener">IQuest-Q1: Advancing Foundation Capabilities for Agentic CLI Systems</a></h3>
+  <p class="summary">We present IQuest-Q1, a sparse Mixture-of-Experts (MoE) agentic foundation model with 320B total parameters (15B activated). IQuest-Q1 is developed through a three-stage process: (1) stable and efficient pre-training, combining Stable SplitNorm, Muon, and muP with a two-stage curriculum whose second…</p>
+  <div class="card-foot">
+    <span class="authors">A. Jian Yang，An Huang，Bo Dan，Chen Mu</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30933v1" target="_blank" rel="noopener">ReflectPO: Reflection-Guided Policy Optimization for Long-Horizon LLM Agents</a></h3>
+  <p class="summary">With external tools, large language models (LLMs) can tackle complex tasks through sustained environmental interaction. LLM-based agents are therefore increasingly used to tackle complex long-horizon tasks in real-world environments. However, these tasks involve sequential, interdependent decisions…</p>
+  <div class="card-foot">
+    <span class="authors">Rumei Li，Xunliang Cai</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30742v1" target="_blank" rel="noopener">UniGuard: Multi-View Guardrail Learning for Cross-Interface Safety Generalization</a></h3>
+  <p class="summary">Guardrail models are increasingly used as safety layers for LLMs and agentic systems, but most are trained on fixed prompt or response interfaces and become unreliable when the same safety case appears as a conversation, agent trajectory, multi-agent trace, or policy-conditioned input. We propose Un…</p>
+  <div class="card-foot">
+    <span class="authors">Viet-Thanh Pham，Thuy-Trang Vu，Junae Kim，Rollin Omari</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30705v1" target="_blank" rel="noopener">ULME: Predictive Coupling for Mutually Reinforcing Embedding and Language Modeling</a></h3>
+  <p class="summary">Text embedding and text generation are two of the most useful capabilities of modern large language models, yet they are typically provided by separate specialized models (an embedder and a generator) trained with incompatible objectives and deployed side by side in retrieval-augmented generation an…</p>
+  <div class="card-foot">
+    <span class="authors">Yang Liu，Zhiqiang Yuan，Shu-Dong Huang，Jiancheng Lv</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30635v1" target="_blank" rel="noopener">What the Specification Did Not Say: Specification-Oracle Gaps in Test-Graded Coding-Agent Benchmarks</a></h3>
+  <p class="summary">Coding-agent benchmarks often describe a task in natural language but grade it with tests taken from the upstream project. Passing those tests can require information the description never states: a constant&#x27;s name, a module path, an exact message. We call this a specification-oracle gap: where it e…</p>
+  <div class="card-foot">
+    <span class="authors">Fei Ding</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30557v1" target="_blank" rel="noopener">Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core</a></h3>
+  <p class="summary">LLM agents that act on live Web data must combine heterogeneous evidence, remember what they have done and improve from outcomes without weakening their own safeguards. We study this problem in autonomous investing, where every action is irreversible and based on untrusted Web content. We present St…</p>
+  <div class="card-foot">
+    <span class="authors">Yebo Feng，Jingyang Dai，Liangrui Pan，Nelson Lau</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.MA&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;q-fin.PM&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-21</span>
+    <span class="source">大模型与智能体 (cs.CL)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30533v1" target="_blank" rel="noopener">IFC-MCQ: Automatically Generating Multiple-Choice Benchmarks for Evaluating LLM Agents on IFC Data Retrieval</a></h3>
+  <p class="summary">Industry Foundation Classes (IFC), the standard for building information exchange in architecture, engineering, and construction (AEC), is increasingly queried through large language models (LLMs) using natural language. Evaluating these systems at scale is difficult because free-text answers requir…</p>
+  <div class="card-foot">
+    <span class="authors">Rabindra Lamsal，Sisi Zlatanova，Xuesong Shen</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31588v1" target="_blank" rel="noopener">VERA: A Responsible AI Dashboard for Assessing LLM Deployments in Light of the EU AI Act</a></h3>
+  <p class="summary">Institutions that deploy large language models in regulated settings often need technical evidence of responsible AI practices before approving a deployment. COMPL-AI provides a technical interpretation of the EU AI Act that organises this evidence under six principle groups and eighteen technical r…</p>
+  <div class="card-foot">
+    <span class="authors">Robin Quériaux，Solveig Bachellery，Léa Déléris，Saurabhsingh Rajput</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.SE&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31354v1" target="_blank" rel="noopener">ClinGuard: a governance framework for reliable, transparent, and auditable clinical coordination</a></h3>
+  <p class="summary">ClinGuard is a model-agnostic governance framework that treats clinical coordination as patient-scoped, policy-bound transactions rather than free text. An independent sentinel layer validates and governs agent-proposed actions, escalates when needed, and executes approved actions through limited-pr…</p>
+  <div class="card-foot">
+    <span class="authors">Kaiyuan Wu，Aditya Nagori，Nicoleta J. Economou，Robert M. Califf</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31344v1" target="_blank" rel="noopener">Making Generative AI Workable at Work: Accountability, Localization, and Representation in Kenyan and Nigerian Small Businesses</a></h3>
+  <p class="summary">Generative AI is widely framed as democratizing skilled work by lowering the barrier to producing professional output. Drawing on 21 semi-structured interviews with 27 workers across 21 small and medium-sized businesses (SMBs) in Kenya and Nigeria (July to October 2023), we find that availability al…</p>
+  <div class="card-foot">
+    <span class="authors">Najeeb Gambo Abdulhamid，Stephanie Nyairo，Liz Ankrah，Jacki O&#x27;Neill</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.HC&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31335v1" target="_blank" rel="noopener">What the submission does not show: Complexifying cognitive offloading in students&#x27; mathematical work with LLMs</a></h3>
+  <p class="summary">A common concern is that using large language models (LLMs) lets students offload mathematical work that tasks are designed to elicit. Yet such claims often rest on outcomes (e.g., submitted solutions), rather than on evidence of students&#x27; work with LLMs. We followed 23 first-year linear algebra stu…</p>
+  <div class="card-foot">
+    <span class="authors">Igor&#x27; Kontorovich，Miriam N. Wallach</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;math.HO&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31165v1" target="_blank" rel="noopener">Network topology shapes consensus and vulnerability in LLM populations</a></h3>
+  <p class="summary">As large language models (LLMs) are deployed in interacting populations, their collective behaviour depends not only on the models but also on who interacts with whom. Studies of convention formation in LLM populations have mainly tested well-mixed interactions. We place policies extracted from four…</p>
+  <div class="card-foot">
+    <span class="authors">Roberto Passaro，Ariel Flint，Romualdo Pastor-Satorras，Andrea Baronchelli</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;physics.soc-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31159v1" target="_blank" rel="noopener">Beyond city pairs: Higher-order information in urban growth across borders</a></h3>
+  <p class="summary">We apply higher-order information measures to urban growth across borders and spatial units. We analyse 8,808 functional urban areas using gridded GDP estimates allocated from national accounts. Negative estimated O-information occurs in 29.93% of cross-border triplets and 2.00% of domestic triplets…</p>
+  <div class="card-foot">
+    <span class="authors">Cillian Hourican，Debraj Roy</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;physics.soc-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;econ.GN&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31116v1" target="_blank" rel="noopener">A Grammar of French Civil Cassation: A Ground-Level Dataset and Tool</a></h3>
+  <p class="summary">This paper presents a dataset of 121,536 ground-reasons pairs across 86,464 rulings of the five civil chambers of the French Court of Cassation (2016-2025). An appeal on points of law cannot itself be appealed and often decides a case for good. Understanding how the Court rules is thus crucial and c…</p>
+  <div class="card-foot">
+    <span class="authors">Avrile Floro，Tamara Dhorasoo，Nils Holzenberger，Thomas Le Goff</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30900v1" target="_blank" rel="noopener">Silicon Samples Match the Answers but Not the Respondents</a></h3>
+  <p class="summary">Silicon sampling generates survey respondents by having a large language model (LLM) answer a survey as a person with given demographic attributes, and the resulting synthetic populations are increasingly used in place of human ones. Existing evaluations focus on individual-answer accuracy, per-ques…</p>
+  <div class="card-foot">
+    <span class="authors">Yusuke Kumagae，Masahiro Kaneko</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30886v1" target="_blank" rel="noopener">The Reaction of Financial Markets to the Releases of DeepSeek R1 and Kimi K3: A Critical Analysis</a></h3>
+  <p class="summary">This paper compares financial-market reactions to the releases of DeepSeek R1 in January 2025 and Kimi K3 in July 2026. Both AI models were presented as credible Chinese competitors near the capability frontier, but their releases conveyed different economic information. DeepSeek R1 combined open we…</p>
+  <div class="card-foot">
+    <span class="authors">Marco Taboga</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;econ.GN&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30858v1" target="_blank" rel="noopener">Joules-to-GDP: How Much Economic Value Do AI Systems Produce per Unit of Energy?</a></h3>
+  <p class="summary">An AI system can produce more economically valuable work while delivering less value for the energy it consumes. We therefore ask: How much economic value does an AI system create per unit of energy consumed? We formalize economic value in two ways: (1) net dollar value, the output&#x27;s dollar value mi…</p>
+  <div class="card-foot">
+    <span class="authors">Amirreza Zeinali，Jon Saad-Falcon，Avanika Narayan，Mersad Abbasi</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;econ.GN&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30803v1" target="_blank" rel="noopener">What Lies Beyond Perception: A Partition Theory of the Limits of AI Evaluation and Oversight</a></h3>
+  <p class="summary">Replacing the judge can move a benchmark score, and models can be trained to hide capabilities. Both put the evaluator in question: what can it certify? We develop a partition theory of evaluation from one principle: judgement is bounded by perception. An agent&#x27;s discrimination is the partition of i…</p>
+  <div class="card-foot">
+    <span class="authors">Ahmed M. Mahran</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 与社会科学 (cs.CY + econ.GN)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30785v1" target="_blank" rel="noopener">Invisibilization as a Source of Probability Bias in Language Models</a></h3>
+  <p class="summary">Language models are aligned to avoid using protected attributes such as race, ethnicity, and gender to inform their responses. Therefore, they increasingly refuse or hedge when such attributes appear in a prompt. However, if a system must decide how much to learn from what people tell it, it is cost…</p>
+  <div class="card-foot">
+    <span class="authors">Christian Arnold，Ernesto Calvo，Guadalupe Gonzalez，Sebastián Vallejo Vera</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-18</span>
+    <span class="source">AI 与计算社会 (cs.SI)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.25113v2" target="_blank" rel="noopener">Self-organizing reinforcement learning: a learner-free swarm approaches the explore-exploit optimum</a></h3>
+  <p class="summary">The explore/exploit trade-off is the core problem of reinforcement learning (RL). We show that a minimal foraging swarm approaches its optimum - the ideal-free / Nash allocation of a multi-agent resource-sharing game (an equilibrium, not a return maximum) - with no learner and no reward signal. Agen…</p>
+  <div class="card-foot">
+    <span class="authors">Galen J. Wilkerson</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.SI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;math-ph&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31404v1" target="_blank" rel="noopener">AgentPhishing: A Benchmark of LLM Email Agents Under Adaptive Attack</a></h3>
+  <p class="summary">Computer-use agents increasingly handle private information and act on users&#x27; behalf across desktop and web applications, including email. Phishing therefore poses privacy and security risks that depend not only on whether agents recognize malicious messages, but also on how they respond. Existing p…</p>
+  <div class="card-foot">
+    <span class="authors">Justin Tan，Miao Li，Ding Zhao</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31211v1" target="_blank" rel="noopener">Evolving Federated Density Peak Clustering with Shuffler-Based Anonymization</a></h3>
+  <p class="summary">In this paper, we present a novel one-shot federated clustering approach based on evolving fuzzy clustering and shuffler-based anonymization. In federated clustering, each round reveals additional model information to the server and can increase the opportunity to infer properties of local datasets,…</p>
+  <div class="card-foot">
+    <span class="authors">Miha Ožbot，Seiichi Ozawa，Igor Škrjanc</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.DC&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;eess.SY&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31152v1" target="_blank" rel="noopener">WildFakeToolBench: Benchmarking AI-Generated Image Detectors with Web-Sourced Image Processing</a></h3>
+  <p class="summary">As AI generated images are getting popular these days, discussions on such generations are widely existed in current public forums, software repositories, and photography tutorials. Moreover, with the help of LLM-assisted code translation, malicious actors can adopt such information to evade detecto…</p>
+  <div class="card-foot">
+    <span class="authors">Mingjie Li，Yukun Jiang，Yicong Tan，Yang Zhang</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CV&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.31000v1" target="_blank" rel="noopener">SecLog-Bench: A Scalable Benchmark for Cybersecurity Log Reasoning with Scaffolded Evidence</a></h3>
+  <p class="summary">Large language models (LLMs) have shown strong potential for cybersecurity, leading to growing interest in LLM-based automated cybersecurity log analysis. However, current datasets (1) are limited in scale; (2) rely mainly on single-source evidence; and (3) have only binary or multi-class attack lab…</p>
+  <div class="card-foot">
+    <span class="authors">Yifan Wang，Dongliang Xu，Xiaoyong Li，Jing Li</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30914v1" target="_blank" rel="noopener">MIG-COW: Transferable Adversarial Attacks on Deepfake Detectors via Gradient Decomposition</a></h3>
+  <p class="summary">Despite recent advances, deepfake detectors remain vulnerable to adversarial examples, particularly in diverse, real-world settings. We propose MIG-COW, a novel adversarial attack framework that generates highly generalizable and visually imperceptible adversarial examples. By combining momentum-int…</p>
+  <div class="card-foot">
+    <span class="authors">Wonjune Seo，Joonhyuk Baek，Yeseong Jung，Saerom Park</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-22</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30576v1" target="_blank" rel="noopener">Bridging the Closed-World Gap: Interpretable Anomaly Detection via a Hybrid TSK-FCM Ensemble on the BETH Dataset</a></h3>
+  <p class="summary">A fundamental paradox plagues the deployment of Machine Learning in cybersecurity: supervised models generalize poorly to novel, Out-of-Distribution (OoD) attacks, whereas unsupervised models often suffer from poor separability, leading to unmanageable false-alarm rates. This challenge is exemplifie…</p>
+  <div class="card-foot">
+    <span class="authors">Lohith Srikanth Pentapalli，Josette Riep，Justin Ouwerkerk，Kelly Cohen</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-21</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30439v1" target="_blank" rel="noopener">Not Where You Think: Protecting Location Privacy Against Reasoning-Based Geolocation</a></h3>
+  <p class="summary">Recent large reasoning models can infer where ordinary photos were taken using only visual information, creating a serious location privacy risk even when metadata and obvious geographic identifiers are removed. To understand the mechanism behind such fine-grained localization, we develop GeoTrace,…</p>
+  <div class="card-foot">
+    <span class="authors">Shanghao Shi，Jian Xiao，Hao Li，Yuanhaur Chang</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-21</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30226v1" target="_blank" rel="noopener">PhishGen: Understanding LLM Capabilities in Automated Phishing Website Generation</a></h3>
+  <p class="summary">Phishing relies on visual deception, traditionally requiring web-development skills or pre-built kits. LLMs erode this barrier by generating functional websites from natural-language prompts, yet prior work does not answer how far LLM-driven generation actually reaches: functionality is assessed by…</p>
+  <div class="card-foot">
+    <span class="authors">Fujiao Ji，Yerim Kim，Yena Cho，Seonhye Park</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-21</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30090v1" target="_blank" rel="noopener">VX-One: Typed, Calibrated Decision Heads for Real-Time Perimeter Triage - An empirical study of unknown-attack honesty, cascade gray zones, and calibration under drift</a></h3>
+  <p class="summary">Perimeter triage faces a latency/semantics trade-off: signature engines are fast and format-safe but blind to unseen attacks, while generative models are semantic but slow and produce unparseable output. In late 2026 a class of commercial System One decision models (TypeSafe Jev; Microsoft-Decision-…</p>
+  <div class="card-foot">
+    <span class="authors">Juan S. Santillana</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.NI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-21</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.29566v1" target="_blank" rel="noopener">VMSpec: A Decompiler-based Approach against Virtual Machine Obfuscation</a></h3>
+  <p class="summary">Malicious actors frequently obfuscate their code to hinder investigative reverse engineering efforts. Among the most formidable techniques is virtual machine (VM) obfuscation: programs are translated into bytecode for a custom VM, often with a randomized virtual instruction set and distributed along…</p>
+  <div class="card-foot">
+    <span class="authors">Fabian Kilger，Leonard Auer，Manuel Andreas</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-21</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.30202v1" target="_blank" rel="noopener">MPIDetector: Detecting Multi-modal Prompt Injection via LLM-based Reasoning</a></h3>
+  <p class="summary">With the rapid integration of Multi-modal Large Language Models (MLLMs) into real-world applications, Prompt Injection (PI) has emerged as a critical security threat. Attackers can conceal malicious instructions within textual narratives or visual inputs to bypass safety alignment. Existing approach…</p>
+  <div class="card-foot">
+    <span class="authors">Yiheng Li，Jingyue Li</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-21</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.29225v1" target="_blank" rel="noopener">Beyond Binary Labels: Diagnostic Evaluation of LLM Safety with Prompt-Level Rubrics</a></h3>
+  <p class="summary">Current LLM safety benchmarks predominantly rely on binary safe or unsafe labels, lacking explanatory depth and suffering from low consistency across automated judges. To address this, we introduce DiagSafe, a diagnostic evaluation framework that moves beyond binary classification by employing promp…</p>
+  <div class="card-foot">
+    <span class="authors">Hongyu Li，Xinlong Huang，Zhan Yu，Jing Zhao</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CL&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-21</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.29196v1" target="_blank" rel="noopener">A Unified Evaluation Framework of Physical Adversarial Robustness in the Edge VLM Era</a></h3>
+  <p class="summary">Recent advancements in Vision-Language Models (VLMs) enable end-to-end visual grounding via language prompts and generative decoding, demonstrating largely improved zero-shot and open-vocabulary detection capabilities. As a result, VLMs are rapidly being deployed at the edge in safety-critical real-…</p>
+  <div class="card-foot">
+    <span class="authors">Eric Liang，Alan Luo，Kaiwen Yuan</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CV&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-21</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.29175v1" target="_blank" rel="noopener">Regular Syndrome Decoding Is Easier Than Previously Estimated</a></h3>
+  <p class="summary">The Regular Syndrome Decoding (RSD) problem is a structured variant of classical Syndrome Decoding and underlies a growing number of efficient cryptographic constructions, including zero knowledge protocols, pseudorandom correlation generators, and MPC in the Head signatures. Although RSD is general…</p>
+  <div class="card-foot">
+    <span class="authors">Jiseung Kim，Minkyu Kim，Changmin Lee，Hochang Lee</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#b31b1b">arXiv</span>
+    <span class="date">2026-10-20</span>
+    <span class="source">AI 安全与评测 (cs.CR)</span>
+  </div>
+  <h3><a href="https://arxiv.org/abs/2610.28989v1" target="_blank" rel="noopener">AgentPolicyForge: From Executable Environments to Policy Benchmarks and Adaptive Guards</a></h3>
+  <p class="summary">Customized agent deployments define policies over tools, resources, and execution conditions. Providing these policies in the task agent&#x27;s prompt does not reliably prevent violations. Training a guard requires examples of tool calls that comply with or violate those policies. We introduce AgentPolic…</p>
+  <div class="card-foot">
+    <span class="authors">Chao Shang，Wanyu Du，Yi Zhang，Sandesh Swamy</span>
+    <span class="tag">{&#x27;term&#x27;: &#x27;cs.AI&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.CR&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span><span class="tag">{&#x27;term&#x27;: &#x27;cs.LG&#x27;, &#x27;scheme&#x27;: &#x27;http://arxiv.org/schemas/atom&#x27;, &#x27;label&#x27;: None}</span>
+  </div>
+</article></div>
+</section><section class="section">
+  <h2 class="section-title"><span class="badge" style="background:#e65100">中文媒体</span><span class="count">35 条</span></h2>
+  <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">2 家来源 · 同花顺财经</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE95dWFNbklQTllXTS1GU2t5MEhmcDVDU2JGYndIVWdGZ2VrNFR0TGVnQWVxZmhwd3ZBaFQ1dDFDTjlSbmtITG1FV0hOX2YyWm90YTEzM3k2SlhJNlNZRXc?oc=5" target="_blank" rel="noopener">CCF HPC 2026-AI4S论坛召开：共议Token基座与科研范式变革 - 同花顺财经</a></h3>
+  <p class="summary">CCF HPC 2026-AI4S论坛召开：共议Token基座与科研范式变革  同花顺财经</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">智源社区</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFBuOElaNXFuZExhLU05RWRMaDVBVFY1LVU5ZU5keGN4NHJtenZDcWVzVmxyaXBqNTdWYWdRNGJWM1VQNjVYZDZGQw?oc=5" target="_blank" rel="noopener">中国经济时报｜梁正：要处理好AI治理与技术进步之间的配速 - 智源社区</a></h3>
+  <p class="summary">中国经济时报｜梁正：要处理好AI治理与技术进步之间的配速  智源社区</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">搜狐网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPaUFfSFhqU0FGSEVqd2RIaG5kSVgyQlR2S01oTjhHc21iVjZjSmZIbUlESWdZZVZ3N2ZSVmk4b2ZMVDdmZ3lOMm45SXRUNkFBcGJKa2x6QkRBQ1F0WGhEVnJ5a0VIbDh5eDFtaXE4ZG1qNy1zQ0VIZmJaejJwdWFNZGgxRFU2allTTFZhQw?oc=5" target="_blank" rel="noopener">Anthropic研究实锤：AI还做不出真正的科研 - 搜狐网</a></h3>
+  <p class="summary">Anthropic研究实锤：AI还做不出真正的科研  搜狐网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">3 家来源 · 财联社、Unite.AI、cnBeta.COM</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxQTG15SHAzd3IzNEU4UWNEelNXbmhjTXEybU84WmdVUXFpVTlfRVlaVElXTWFBRVBSVndKLXVZblFmai1ybzlNRTdaRGRTcWlRQU1hZW9TR2x6THlKdmh5X3hlT0NZWFJtTFU0dTR1TkJUWHQ4WTRLUnJxTnhHU0pZSW1xOWFLeDVScGdkTl8waGRpS0o3dFNZ?oc=5" target="_blank" rel="noopener">OpenAI、Anthropic齐参与！全球首个AI生物安全实验室将问世 - 财联社</a></h3>
+  <p class="summary">英国成立由 OpenAI 和 Anthropic 支持的 AI 生物安全实验室  Unite.AI</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">中国甘肃网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9OeV9WX1FNeWQ1QlRERGNqb0E5eXloaG8wcmUySWd4bGdNSGtWWUtDTkItSWNzQi1Cek9LcEtPM0N5WEZvVERVejhrMlNwdlllNUtaR2wycmhzNXpLcFI5NXF4S1FaRjkzZmc?oc=5" target="_blank" rel="noopener">新能源、新智造：“十大科技前瞻”聚焦未来_国内要闻 - 中国甘肃网</a></h3>
+  <p class="summary">新能源、新智造：“十大科技前瞻”聚焦未来_国内要闻  中国甘肃网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">科学网—新闻</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1kLURKQjhzemZPbmptaGxWNU5KZi0zek5qbG1yb2VWU0JpeXMtWlBLZnE5MmQwcWNHaTlENTY5SU9kVTMzUzBzMXVtY3drSDUyNTBmTHFxamdjNzZMcHRqX1cxbTBMUQ?oc=5" target="_blank" rel="noopener">当AI开始写代码，还需要什么样的程序员？ - 科学网—新闻</a></h3>
+  <p class="summary">当AI开始写代码，还需要什么样的程序员？  科学网—新闻</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">发现报告</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFAxa0gyRXlveHd6MWxGWHNoN093Zm43Mm53WlRNdWxRU2dPTFVNTTVnaHVWd3ZPQ2t3LVlrdl8zYkRabmluWUdKSk8zdjM5RUxx?oc=5" target="_blank" rel="noopener">GEP:《人工智能在采购中的可实现未来｜投资分析》 - 发现报告</a></h3>
+  <p class="summary">GEP:《人工智能在采购中的可实现未来｜投资分析》  发现报告</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE13dFNkYkZmLW5hbFp6UGN4UTdDOVNRcWFjcEdSNFFGcFhVNXc0NkpxZkg4cFdVWHNITHFWV2l6NHV4MG9mdG5BZDU5ZFd6VGZPajA1VU5GTkJlcHdIVVVGYVdjMnp2LWxxOHZDdHR0QWNIMEl1UEJWSGJWeE4tZDQ?oc=5" target="_blank" rel="noopener">第四届虚无主义论坛“AI与哲学人类学的复兴”会议纪要 - 新浪网</a></h3>
+  <p class="summary">第四届虚无主义论坛“AI与哲学人类学的复兴”会议纪要  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">虎嗅网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE5fRzNUdHQ2VG9HM3drcWxWQlhVSFV0S2drM3FmWUNZM2Q2NC1ocnp0bXZVN1J3dXpmMHhmS1hESFBiZ0VhendQZ1dFalJDSXo1dWhDVQ?oc=5" target="_blank" rel="noopener">复旦学者李志远谈OpenAI发布722篇数学手稿：AI冲击基础数学，但数学不会不存在 - 虎嗅网</a></h3>
+  <p class="summary">复旦学者李志远谈OpenAI发布722篇数学手稿：AI冲击基础数学，但数学不会不存在  虎嗅网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">2 家来源 · 财联社</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9IZTl0ZTkza2l5WlZBVkFUbXY4TnkyTzAyLTJSQjd0eVk5b05WSUJ6Sm1rNTg0ZmRFaXl5NTZIdlQ4eTBKYklWNw?oc=5" target="_blank" rel="noopener">又一AI医药“卖水人”股价新高：干湿闭环后 产业迈向下一命题 - 财联社</a></h3>
+  <p class="summary">又一AI医药“卖水人”股价新高：干湿闭环后 产业迈向下一命题  财联社</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">PANews</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxPTURVYUZ3RERpckdydjdwNkxBZUxHSm5LbDRYTjFZZHNCd08tb2taY0VWMUtkV1FUMDN5dEFuOVgtQ1R6RkJKNG1MbGRkbVhHLXAyV196SFgzMXZTbjZQX29aWHJNNDQtcXZiY2ZLZkJPWDRpUjhWd3hMeExQVVVSVV9UdjJYUQ?oc=5" target="_blank" rel="noopener">Meta AI主管Alexandr Wang最新访谈：揭秘Muse爆红背后的“疯狂”策略 - PANews</a></h3>
+  <p class="summary">Meta AI主管Alexandr Wang最新访谈：揭秘Muse爆红背后的“疯狂”策略  PANews</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">虎嗅网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE1iendvYWpQQllobFJqVUdQRnc4MUN5M0NQX0tWOXFLM1c2WWtSY2pLZ3ltS2xZSkN6WXNQOWRqSDZ2b3h4RVNMTnl6OF9OTHo4R01GTA?oc=5" target="_blank" rel="noopener">佛蒙特大学研究提出本质度量学，称语言组织更依赖力量、危险与秩序而非情绪维度 - 虎嗅网</a></h3>
+  <p class="summary">佛蒙特大学研究提出本质度量学，称语言组织更依赖力量、危险与秩序而非情绪维度  虎嗅网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">哈通社</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5MdUltZmVtUUNkX0RScS1XWU5NYTRpa3JCcWRZb2xsZFItQnItcXBrLTh3eVpzelpzWlZ5NjRWQnAycUJDVElKY3ZMN3M1WFVSeHpUam5Yd2w0VFhTXzFNLVBzOG9feEpndFVwTExGbWdsQzjSAXNBVV95cUxOTHVJbWZlbVFDZF9EUnEtV1lOTWE0aWtyQnFkWW9sbGRSLUJyLXFway04d3lac3pac1pWeTY0VkJwMnFCQ1RJSmN2TDdzNVhVUnh6VGpuWHdsNFRYU18xTS1QczhvX3hKZ3RVcExMRm1nbEM4?oc=5" target="_blank" rel="noopener">奥赛成绩能为孩子的未来带来什么？哈萨克斯坦专家谈人才培养 - 哈通社</a></h3>
+  <p class="summary">奥赛成绩能为孩子的未来带来什么？哈萨克斯坦专家谈人才培养  哈通社</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-23</span>
+    <span class="source">2 家来源 · 虎嗅网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE5BZkYwR0NzZDFGRlg0X3hPdDlsUEk0eUNvQ0dRNXlQNTg1TUR2RVYwRkFCd2djZTFZbGtjcy1oU0drOXpqSXo2SlN6WWFuOTZFRzBrcA?oc=5" target="_blank" rel="noopener">OpenAI收购Orchestra Bio，全球大厂加速布局AI制药与AI4S - 虎嗅网</a></h3>
+  <p class="summary">OpenAI收购Orchestra Bio，全球大厂加速布局AI制药与AI4S  虎嗅网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-23</span>
+    <span class="source">新浪网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPVlliVEFQeUZTTENRX05TSEV1QVZKNkd0ZnBmNHJ4UU04TXBvc2xaN2xfbUJtZHV4TkdwYW80b1RPS0x4Rm9nNE1XYWF2ZC1BUm40enlCVVo1X0ZCcXRleHIzcC0xZTQwYWVTNWk5dFlmMWtwdk1NQU9IcnAtZzlvQjk0cw?oc=5" target="_blank" rel="noopener">重磅！Nature、Cell接连发文：世界模型，正在改变AI做科学的方式 - 新浪网</a></h3>
+  <p class="summary">重磅！Nature、Cell接连发文：世界模型，正在改变AI做科学的方式  新浪网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">温州新闻</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE02clFjanNPY0FLSERpWktxbHVWaFlQVGg0ZVF1TjlmemdCRDBZOTRmRm9YZjJHYXRpalRUMW5ZcVpKRE55eGxCRlhSN0xVeE1jSDJGMHc3TmJCaDdwUThZT3BfMWF6c1JfRHZfeA?oc=5" target="_blank" rel="noopener">塞萨尔·德·拉富恩特：用AI破解“耐药危机” - 温州新闻</a></h3>
+  <p class="summary">塞萨尔·德·拉富恩特：用AI破解“耐药危机”  温州新闻</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">长江网</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE16Q1ZUa2NzcjZqV25lVEVmSmlZQVZBOGlOaHduZjVRLVlhZ1pnc2dCcVFGb2hMaDkxdWpsaVZlYnd2MmlrZm1PS0J5Ql8zZTFUeXA2MXBGS2VUSi16VHBCbEF3?oc=5" target="_blank" rel="noopener">5年后，你用的滴眼药可能是AI研制的 - 长江网</a></h3>
+  <p class="summary">5年后，你用的滴眼药可能是AI研制的  长江网</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">e南洋</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9Ib0hMWEV3aTY5MHpLOWZSNlI3T1FoaFhzbnY5bF95Y0RuUjNnSW9iLWF2SDA2UExlay1rc3pxd2ZOT0c3WXhyWXlNaEpjR0pxWklqa1pJZGw4RzBJdk1YMEpqb1VDakZvLUNJ?oc=5" target="_blank" rel="noopener">中国药企AI制抗老药 生理年龄有望逆转6岁 - e南洋</a></h3>
+  <p class="summary">中国药企AI制抗老药 生理年龄有望逆转6岁  e南洋</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-23</span>
+    <span class="source">36氪</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE5PTy02M0phV25xSXpRbzRzbWZJT3Y1Ul80elNTdHdUeWc1bDlreHV2MUJ5SkxrdlMzTWxVLWJYenRsNFFrNnEyQ0hoM3hWQQ?oc=5" target="_blank" rel="noopener">世界模型走向生命科学：AI开始预演生命的未来 - 36氪</a></h3>
+  <p class="summary">世界模型走向生命科学：AI开始预演生命的未来  36氪</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-23</span>
+    <span class="source">证券之星</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE40enE1UExOYmJtSWdnWk4tLWFvN1lpRTY5RjFBd28yX0xYQ3NVU01fMzVjMllFVkk3Z19LamFlTjhxV3cwVk9CNEI2NFNRbllyWlNaYUNLSzlReWFmWTNXZzgzTW1PdmktTTRv?oc=5" target="_blank" rel="noopener">百诚医药: 关于与关联方共同投资设立合资公司暨关联交易的公告_公司公告_每日必读 - 证券之星</a></h3>
+  <p class="summary">百诚医药: 关于与关联方共同投资设立合资公司暨关联交易的公告_公司公告_每日必读  证券之星</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">e南洋</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFB3QXlTekZtZkxMRF9qRlBRQkxmVmJMVHI3TlA2OFh1RVV1ZEkwOHJWWmxmcG56bVd4dVNJRVlwdWt4MTZ3R2drNDlTM2tsMzVjYTBpVHNnb2YtektNXzc0WV9NYw?oc=5" target="_blank" rel="noopener">DeepSeek和MiniMax 完成AI模型出海登记 - e南洋</a></h3>
+  <p class="summary">DeepSeek和MiniMax 完成AI模型出海登记  e南洋</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">e南洋</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFBuVnlWRDRIWkJvNTFPcTcwUFZmQzZtcHpUMDRfR01rMWE0RjY0a29hckdMZGZNNktEN20zV19KZExLZHBsWHpCY1FlNXktRU40T3ZDaEpOUU9ETnJfbjFMcHVyUQ?oc=5" target="_blank" rel="noopener">科技股失血债券ETF吸金580亿美元 华尔街喊“AI没泡沫”也难安人心 - e南洋</a></h3>
+  <p class="summary">科技股失血债券ETF吸金580亿美元 华尔街喊“AI没泡沫”也难安人心  e南洋</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#e65100">中文媒体</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">新浪军事</span>
+  </div>
+  <h3><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9NOTlsT1JhMmtkclZ2YVFZZEpKRWx6YlNVYzRKZldzT1huZ3JJVVFqOFNtQlZZWHRPODAxMm5KMHhLTDMxZ2s3UlJXZWhhdWR5VjJYQXZPSmxIQWtFWk9vTWt0VVVzLWY2SFFYT1pXeVRqTEk?oc=5" target="_blank" rel="noopener">让中国创新与欧洲转型相互成就 - 新浪军事</a></h3>
+  <p class="summary">让中国创新与欧洲转型相互成就  新浪军事</p>
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article></div>
+</section><section class="section">
+  <h2 class="section-title"><span class="badge" style="background:#ffd21e">HuggingFace</span><span class="count">15 条</span></h2>
+  <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/lillyai1987/backup" target="_blank" rel="noopener">lillyai1987/backup</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/khazic/gemma4-e2b-mala8langs-abl-ngram4" target="_blank" rel="noopener">khazic/gemma4-e2b-mala8langs-abl-ngram4</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/hnhung/viexdp-bartpho-syllable-base-tgt-5e-05-20261024151653" target="_blank" rel="noopener">hnhung/viexdp-bartpho-syllable-base-tgt-5e-05-20261024151653</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/khazic/gemma4-e2b-mala8langs-abl-ngram2" target="_blank" rel="noopener">khazic/gemma4-e2b-mala8langs-abl-ngram2</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/elomira-geoai-2026/Elomira-GeoAI" target="_blank" rel="noopener">elomira-geoai-2026/Elomira-GeoAI</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/khazic/gemma4-e2b-mala8langs-abl-frozenbase" target="_blank" rel="noopener">khazic/gemma4-e2b-mala8langs-abl-frozenbase</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/WinderBYZ/MyAwesomeModel-TestRepo" target="_blank" rel="noopener">WinderBYZ/MyAwesomeModel-TestRepo</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    <span class="tag">feature-extraction</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/mradermacher/Qwen2.5-14B-1M-YOYO-V3-GGUF" target="_blank" rel="noopener">mradermacher/Qwen2.5-14B-1M-YOYO-V3-GGUF</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/kmy17518/pi05-isg1020-multitask5-gbs256-s0" target="_blank" rel="noopener">kmy17518/pi05-isg1020-multitask5-gbs256-s0</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/syvb/head-nla-qwen3-8b-l24-std-rl-ckpts" target="_blank" rel="noopener">syvb/head-nla-qwen3-8b-l24-std-rl-ckpts</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Jeetu456/decider-2b-GGUF" target="_blank" rel="noopener">Jeetu456/decider-2b-GGUF</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    <span class="tag">text-classification</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/syvb/head-nla-qwen3-8b-l24-mtry-rl-ckpts" target="_blank" rel="noopener">syvb/head-nla-qwen3-8b-l24-mtry-rl-ckpts</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/Papatpong/Walker" target="_blank" rel="noopener">Papatpong/Walker</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    <span class="tag">text-generation</span>
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/khazic/gemma4-e2b-mala8langs-abl-control" target="_blank" rel="noopener">khazic/gemma4-e2b-mala8langs-abl-control</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#ffd21e">HuggingFace</span>
+    <span class="date">2026-10-24</span>
+    <span class="source">HuggingFace 热门模型</span>
+  </div>
+  <h3><a href="https://huggingface.co/duy95/uav-search-checkpoints" target="_blank" rel="noopener">duy95/uav-search-checkpoints</a></h3>
+  
+  <div class="card-foot">
+    <span class="authors"></span>
+    
+  </div>
+</article></div>
+</section>
+  <footer>更新时间：2026-10-24 15:31 · 共 126 条</footer>
+</div>
+</body>
+</html>
