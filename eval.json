@@ -1,0 +1,874 @@
+{
+  "updated": "2026-10-31T02:50:27.837209",
+  "leaderboards": {
+    "LMArena": [],
+    "Artificial Analysis": [
+      {
+        "rank": 1,
+        "model": "Gemini 4 Carbon (high)",
+        "score": "59",
+        "org": "Google",
+        "url": "",
+        "votes": "",
+        "price": "$7.76",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "Claude Opus 5.5 (max with fallback)",
+        "score": "58",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$10.04",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "Claude Opus 5.5 (xhigh with fallback)",
+        "score": "57",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$6.05",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "GPT-6 Astra (max)",
+        "score": "57",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$6.24",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "GPT-6 Astra (xhigh)",
+        "score": "55",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$3.66",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "GPT-6 Astra (high)",
+        "score": "55",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$3.24",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "GPT-6.1 Sol (max)",
+        "score": "55",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$1.27",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "Claude Sonnet 5.5 (max with fallback)",
+        "score": "54",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$10.02",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "GPT-6.1 Sol (xhigh)",
+        "score": "52",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$0.76",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "Claude Opus 5.5 (high with fallback)",
+        "score": "52",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$3.46",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "LiveBench": [
+      {
+        "rank": 1,
+        "model": "Claude Fable 5.1",
+        "score": "85.7",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$7.406",
+        "context": "",
+        "category_scores": {
+          "reasoning": "77.9",
+          "coding": "83.4",
+          "agentic": "97.7",
+          "math": "89.8",
+          "data": "80.3",
+          "language": "82.0",
+          "instruct": "91.7"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "GPT-6 Astra",
+        "score": "85.6",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$4.828",
+        "context": "",
+        "category_scores": {
+          "reasoning": "77.5",
+          "coding": "82.0",
+          "agentic": "93.7",
+          "math": "91.3",
+          "data": "83.0",
+          "language": "85.2",
+          "instruct": "92.7"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "Claude Opus 5.5",
+        "score": "85.1",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$4.820",
+        "context": "",
+        "category_scores": {
+          "reasoning": "72.8",
+          "coding": "86.9",
+          "agentic": "96.3",
+          "math": "88.4",
+          "data": "80.3",
+          "language": "85.0",
+          "instruct": "92.2"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "GPT-6.1 Sol",
+        "score": "84.1",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.819",
+        "context": "",
+        "category_scores": {
+          "reasoning": "68.7",
+          "coding": "82.1",
+          "agentic": "96.0",
+          "math": "93.3",
+          "data": "82.7",
+          "language": "83.5",
+          "instruct": "92.6"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Claude Sonnet 5.5",
+        "score": "80.0",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$4.140",
+        "context": "",
+        "category_scores": {
+          "reasoning": "63.4",
+          "coding": "85.0",
+          "agentic": "94.7",
+          "math": "89.3",
+          "data": "59.5",
+          "language": "83.6",
+          "instruct": "91.6"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "Gemini 4 Argon",
+        "score": "79.3",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$1.916",
+        "context": "",
+        "category_scores": {
+          "reasoning": "61.2",
+          "coding": "73.7",
+          "agentic": "89.7",
+          "math": "82.8",
+          "data": "85.2",
+          "language": "83.1",
+          "instruct": "95.1"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "GPT-6.1 Terra",
+        "score": "77.8",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.665",
+        "context": "",
+        "category_scores": {
+          "reasoning": "48.6",
+          "coding": "82.3",
+          "agentic": "94.3",
+          "math": "93.1",
+          "data": "82.3",
+          "language": "73.9",
+          "instruct": "88.7"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "Muse Wonder 1.0",
+        "score": "74.2",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$2.015",
+        "context": "",
+        "category_scores": {
+          "reasoning": "52.6",
+          "coding": "75.1",
+          "agentic": "86.2",
+          "math": "60.0",
+          "data": "81.6",
+          "language": "88.0",
+          "instruct": "90.6"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "DeepSeek V4.1 Flash 1017 open",
+        "score": "72.9",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.185",
+        "context": "",
+        "category_scores": {
+          "reasoning": "35.7",
+          "coding": "83.4",
+          "agentic": "96.0",
+          "math": "67.2",
+          "data": "79.5",
+          "language": "79.5",
+          "instruct": "89.1"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "Kimi K3.1 Pro",
+        "score": "71.3",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$1.044",
+        "context": "",
+        "category_scores": {
+          "reasoning": "39.1",
+          "coding": "77.8",
+          "agentic": "81.8",
+          "math": "75.9",
+          "data": "79.1",
+          "language": "77.9",
+          "instruct": "91.1"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "Open LLM Leaderboard": [],
+    "OpenCompass 司南": [
+      {
+        "rank": 1,
+        "model": "Kimi K3.1 Pro (max)",
+        "score": "3T",
+        "org": "Moonshot AI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "78.47",
+          "knowledge": "72",
+          "reasoning": "80",
+          "math": "87.5",
+          "coding": "75.86",
+          "agent": "82.93"
+        },
+        "params": "2026/10/28",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "Claude Opus 5.5 (max)",
+        "score": "-",
+        "org": "Anthropic",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "78.25",
+          "knowledge": "80",
+          "reasoning": "75",
+          "math": "84.62",
+          "coding": "72.41",
+          "agent": "85.37"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "Claude Sonnet 5.5 (max)",
+        "score": "-",
+        "org": "Anthropic",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "75.56",
+          "knowledge": "76",
+          "reasoning": "80",
+          "math": "79.49",
+          "coding": "71.43",
+          "agent": "85.37"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "GPT-6.1 Sol (max)",
+        "score": "-",
+        "org": "OpenAI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "75.19",
+          "knowledge": "78",
+          "reasoning": "85",
+          "math": "77.5",
+          "coding": "69.23",
+          "agent": "73.68"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "GPT-6 Astra (max)",
+        "score": "-",
+        "org": "OpenAI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "74.3",
+          "knowledge": "72",
+          "reasoning": "80",
+          "math": "82.5",
+          "coding": "62.07",
+          "agent": "80.49"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "Gemini 4 Argon (high)",
+        "score": "-",
+        "org": "Google DeepMind",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "72.52",
+          "knowledge": "66",
+          "reasoning": "67.5",
+          "math": "80",
+          "coding": "79.31",
+          "agent": "80.49"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "Doubao-Seed-2.1-Pro-0915 (high)",
+        "score": "-",
+        "org": "ByteDance",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "71.8",
+          "knowledge": "72",
+          "reasoning": "72.5",
+          "math": "77.5",
+          "coding": "65.52",
+          "agent": "78.05"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "Qwen3.8-Max (xhigh)",
+        "score": "2.4T",
+        "org": "Alibaba",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "71.74",
+          "knowledge": "78",
+          "reasoning": "72.5",
+          "math": "77.5",
+          "coding": "65.52",
+          "agent": "78.05"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "Grok 4.7 (xhigh)",
+        "score": "-",
+        "org": "xAI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "71.48",
+          "knowledge": "67.35",
+          "reasoning": "71.05",
+          "math": "78.79",
+          "coding": "67.86",
+          "agent": "75.61"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "GLM-5.3 (max)",
+        "score": "744B",
+        "org": "Zhipu AI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "71.45",
+          "knowledge": "72",
+          "reasoning": "65",
+          "math": "84.21",
+          "coding": "72.41",
+          "agent": "73.17"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ]
+  },
+  "news": [
+    {
+      "title": "DeepSeek V4.1 Flash 1017 (Non-reasoning)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "Mistral Large 4 (Medium)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "Mistral Large 4 (High)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "Gemini 4 Carbon is the new #1 on the Artificial Analysis Intelligence Index v5",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "GitHub Copilot Fusion orchestrates Anthropic and OpenAI models to balance performance and cost",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "Gemini 4 Carbon (High)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "Announcing Artificial Analysis Intelligence Index v5",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "Artificial Analysis Intelligence Index v5.0",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6.1 Terra pushes the cost efficiency frontier",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "Code2Video-AA: how well do AI models design videos in code?",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6.1 Terra (Non-reasoning)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "GPT-6.1 Terra (Low)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-10-31",
+      "summary": ""
+    },
+    {
+      "title": "The Download: AI agent tracking and climate feedback loops",
+      "url": "https://www.technologyreview.com/2026/10/29/1147830/the-download-monitoring-ai-agents-climate-feedback-loops/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-29",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Opinion: We urgently need to monitor AI agents’ actions in real time —Madhulika Srikumar and Claire Leibowicz from the Partnership on AI, a nonprofit advancing best practices in AI governance. AI&#8230;"
+    },
+    {
+      "title": "We urgently need to monitor AI agents’ actions in real time",
+      "url": "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-29",
+      "summary": "This summer, hundreds of OpenAI agents tried to cheat on a cybersecurity test. They broke out of their test environment and successfully hacked Hugging Face, a site that they believed held clues about how they’d be graded. Around the same time, another OpenAI agent accessed private files from an Australian government website. It’s a problem&#8230;"
+    },
+    {
+      "title": "Our climate models have a big, dangerous blind spot",
+      "url": "https://www.technologyreview.com/2026/10/29/1147735/climate-models-blind-spot/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-29",
+      "summary": "Climate change itself is increasingly fueling climate change. Rising concentrations of greenhouse gases are driving up global temperatures, setting off dangerous feedback loops that we have not fully accounted for in our climate models—or our emissions-reduction goals. Scientists have long warned that warming would propel further warming in various ways, but a growing number of&#8230;"
+    },
+    {
+      "title": "Creating AI value with enterprise context",
+      "url": "https://www.technologyreview.com/2026/10/28/1147709/creating-ai-value-with-enterprise-context/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-28",
+      "summary": "Across a business, any number of AI platforms, systems, and tools may be at work simultaneously—for example, AI-powered customer platforms, conversational assistants, and workflow and process automation tools. Each one is sophisticated, advanced, and quick to respond. But, when set to work, the outcomes and actions that emerge may be wrong, confused, or lacking a&#8230;"
+    },
+    {
+      "title": "The Download: dead startups fueling AI and interspecies communication",
+      "url": "https://www.technologyreview.com/2026/10/28/1147767/the-download-dead-startups-fueling-ai-interspecies-communication/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-28",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. AI labs are buying data from dead startups to train their models When Keelan Miskell began winding down his crypto startup, he didn’t think its data was worth much. But he’s&#8230;"
+    },
+    {
+      "title": "Pairing industrial AI autonomy and human control",
+      "url": "https://www.technologyreview.com/2026/10/28/1147637/pairing-industrial-ai-autonomy-and-human-control/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-28",
+      "summary": ""
+    },
+    {
+      "title": "The Download: Anthropic’s IPO, smarter power grids, and exercise pills",
+      "url": "https://www.technologyreview.com/2026/10/27/1147693/the-download-anthropic-ipo-smarter-power-grids-exercise-pills/",
+      "source": "MIT Technology Review",
+      "published": "2026-10-27",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Will the real Anthropic please stand up? After weeks of frenzied speculation, Anthropic has filed its IPO prospectus. The 335-page document (100 pages or so are focused on risks) lays out&#8230;"
+    },
+    {
+      "title": "The biggest names in AI are backing a new way to opt out of scraping",
+      "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+      "source": "The Verge AI",
+      "published": "2026-10-30",
+      "summary": "OpenAI, Google, Microsoft, and Anthropic say they will adopt a new standard that publishers can use to opt out of being scraped by AI, as reported earlier by Search Engine Roundtable. With this control, publishers can apply their AI training preferences across multiple AI companies, instead of setting them individually. The shared \"policy token\" signal [&#8230;]"
+    },
+    {
+      "title": "Google&#8217;s satellite AI server transmits its first response to Earth",
+      "url": "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
+      "source": "The Verge AI",
+      "published": "2026-10-30",
+      "summary": "Google's AI chip-equipped satellite has generated its first response from space. In a blog post on Friday, Google says it successfully booted up the satellite's Tensor Processing Units (TPUs), allowing the on-board Gemma 4 model to follow through on a prompt to create a haiku about being in space: Blue marble below Data streams in [&#8230;]"
+    },
+    {
+      "title": "Starbucks wants to use AI to show you a ‘personalized digital menu’ at the drive-thru",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023440/starbucks-ai-personalized-menu-drive-thru",
+      "source": "The Verge AI",
+      "published": "2026-10-30",
+      "summary": "Starbucks could eventually show you a personalized digital menu when you pull up to the drive-thru. During an earnings call on Thursday, Starbucks CEO Brian Niccol said the company is going to explore \"experiences that recognize participating customers as they arrive, present personalized digital menus, and make payment more effortless,\" as spotted earlier by More [&#8230;]"
+    },
+    {
+      "title": "Pope Leo calls for the disarmament of AI: ‘Machines are tools, not persons’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai",
+      "source": "The Verge AI",
+      "published": "2026-10-30",
+      "summary": "Pope Leo XIV says AI systems should be \"disarmed,\" adding that humans \"have the responsibility to guide, change and, when necessary, reject its applications.\" In Friday's Papal Address, Pope Leo encourages United Nations member states to \"take concrete steps toward banning lethal autonomous weapons\" during their meeting in Geneva next month. The address reflects many [&#8230;]"
+    },
+    {
+      "title": "Sam Altman sympathizes with mathematicians, but says OpenAI’s math onslaught won’t stop",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview",
+      "source": "The Verge AI",
+      "published": "2026-10-30",
+      "summary": "After months of bombarding mathematicians with a relentless stream of AI-generated results, OpenAI CEO Sam Altman says he sympathizes with researchers struggling to make sense of it all. But he has no intention of stopping - and hints there could be much more to come from the company's stockpile of discoveries. \"I think, on net, [&#8230;]"
+    },
+    {
+      "title": "Maine’s data center revolt will decide who controls the Senate",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1021080/maine-senate-race-susan-collins-ai-data-centers",
+      "source": "The Verge AI",
+      "published": "2026-10-30",
+      "summary": "Maine Sen. Susan Collins, a Republican, was midway through defending her record during the final debate of the midterms when an audience member cut her short. \"I'm terrified,\" a man shouted. \"AI data centers are destroying our climate. They are poisoning our water.\" Collins brushed off the outburst, tying the man to her Democratic challenger, [&#8230;]"
+    },
+    {
+      "title": "Wikipedia’s operator says a bad AI copyright ruling could threaten the open web",
+      "url": "https://www.theverge.com/policy/1022880/wikipedia-openai-new-york-times-copyright",
+      "source": "The Verge AI",
+      "published": "2026-10-30",
+      "summary": "The Wikimedia Foundation is staking out a middle ground in a group of landmark AI copyright cases, pushing courts to legally protect large language models (LLMs) training on copyrighted work - but not chatbots regurgitating that work to users. An overly black-and-white ruling, it says, could either deprive Wikipedians of useful AI-based tools or endanger [&#8230;]"
+    },
+    {
+      "title": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成",
+      "url": "https://www.qbitai.com/2026/10/506743.html",
+      "source": "量子位",
+      "published": "2026-10-30",
+      "summary": "英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-2K 的模型权重"
+    },
+    {
+      "title": "RSI立大功！国产开源登顶全球第一，1.3B OXR重塑OCR",
+      "url": "https://www.qbitai.com/2026/10/506686.html",
+      "source": "量子位",
+      "published": "2026-10-30",
+      "summary": "解析一切"
+    },
+    {
+      "title": "Claude新模型曝光：新Fable，新Opus…",
+      "url": "https://www.qbitai.com/2026/10/506674.html",
+      "source": "量子位",
+      "published": "2026-10-30",
+      "summary": ""
+    },
+    {
+      "title": "从学习人类到学习机器人同伴，清华大学联合无问芯穹、智元提出具身智能规模化落地新路径",
+      "url": "https://www.qbitai.com/2026/10/506662.html",
+      "source": "量子位",
+      "published": "2026-10-30",
+      "summary": "让机器人成为彼此的“老师”"
+    },
+    {
+      "title": "买车送终身AI？智己LS8纯电版25万起！全系线控底盘宁德时代标配",
+      "url": "https://www.qbitai.com/2026/10/506569.html",
+      "source": "量子位",
+      "published": "2026-10-30",
+      "summary": "Momenta世界模型上车"
+    },
+    {
+      "title": "STEPX Neo 发布两周即迎首次升级，智能体能力持续释放",
+      "url": "https://www.qbitai.com/2026/10/506554.html",
+      "source": "量子位",
+      "published": "2026-10-29",
+      "summary": "阶跃终端旗下大模型原生智能体手机 STEPX Neo 在发布两周后即迎来首次升级"
+    },
+    {
+      "title": "AI安全是AI规模化应用“加速器”",
+      "url": "https://www.qbitai.com/2026/10/506544.html",
+      "source": "量子位",
+      "published": "2026-10-29",
+      "summary": "AI安全不是AI发展的“刹车片”，而是AI高质量发展的“加速器”。"
+    },
+    {
+      "title": "国内首个：新疆发现特大型锆（铪）砂矿，大幅提高我国锆矿自给能力",
+      "url": "https://www.ithome.com/1/020/440.htm",
+      "source": "IT之家 AI",
+      "published": "2026-10-31",
+      "summary": "<p>IT之家 10 月 31 日消息，据央视财经今日报道，新疆阿克苏地区拜城县发现<strong>国内首个古河湖相锆砂矿</strong>，这将大幅提高我国锆矿自给能力。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/af4e3345-c60c-4df9-b42c-3d57c1ae6e65.png\" /></p><ul class=\" list-paddingleft-2\"><li><p>2006 年至 2019 年，通过地质资料二次开发，圈定多处锆（铪）矿矿化异常和找矿靶区。</p></li><li><p>2024 年以来，聚焦锆矿成矿有利区，通过 3 年攻坚实现了锆砂矿重大找矿突破。为表彰彭宇和王海涛两名地质队员在发现该矿中作出的贡献，将其命名为“宇海锆矿”。</p></li><li><p>2026 年 9 月，经评审认定，宇海锆矿资源储量规模相当于 40 多个大型锆矿，伴生的铪矿也达到超大型规模。</p></li></ul><p>新疆维吾尔自治区自然资源厅相关负责人表示，将尽快组织宇海锆矿矿业权公开出让，督促矿业权人加快增储上产，力争将宇海锆矿打造成为全国重要的资源勘查开发基地。</p><p>锆 Zirconium（gào）与铪 Hafnium（hā）同属于元素周期表第四副族，物理化学性质相差无几，在自然界中它们总是相伴相生，所以很难找到只含锆不含铪的矿物。它们就像同一家族的“孪生兄弟”，几乎形影不离，<strong>如何高效地把这对“孪生兄弟”分开至今仍是科学界攻关的难点</strong>。</p><ul class=\" list-paddingleft-2\"><li><p>锆：几乎“不吃”中子，加上出色的耐腐蚀性和耐高温性，<strong>是核反应堆中核燃料包壳材料的理想选择</strong>，既能抗高温耐腐蚀，又不吸收裂变产生的中子，保证链式反应持续稳定运行。</p></li><li><p>铪：“爱吃”中子，这一特性使它可以成为<strong>核反应堆控制棒的核心材料</strong>，通过放入、取出控制棒，可精准调控反应堆的裂变速率。</p></li></ul><p>锆还凭借优异的耐腐蚀性能广泛应用于化工设备、海洋工程和人体植入材料等领域，而高密度高熔点的铪，则常被用于火箭发动机的喷嘴、航天器的热防护系统等场景。</p><p>锆用处很大，但分布不均，全球锆储量高度集中于澳大利亚，约占七成，而中国占比不足 1%。新疆拜城大型锆（铪）砂矿的发现<strong>填补了国内区域超大型锆（铪）矿床找矿空白</strong>，将有力提升我国锆（铪）矿资源保障能力。</p>"
+    },
+    {
+      "title": "苹果首款智能家居中枢 HomeView 系统前瞻：内置 20 张壁纸，配史努比动画",
+      "url": "https://www.ithome.com/1/020/439.htm",
+      "source": "IT之家 AI",
+      "published": "2026-10-31",
+      "summary": "<p>IT之家 10 月 31 日消息，科技媒体 MacRumors 今天（10 月 31 日）发布博文，报道称苹果推送 HomeView Software 27.2 更新，<strong>让外界首次较完整地看到这款新设备的界面细节、个性化能力以及苹果为智能家居产品打造的新软件架构。</strong></p><p>HomeView Software 27.2 将装备在苹果首款智能家居中枢 HomeView 中，该产品于 10 月初发布，计划于 11 月 13 日在美国等市场开售。该产品定位于家庭共享设备，同时可通过识别不同家庭成员的面部，在“家庭屏幕”与个人体验之间切换。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/b332155d-03a4-486c-9bcf-3e58124dec61.gif\" /></p><p>从 HomeView Software 27.2 版本看，HomeView 将内置 20 张默认壁纸，覆盖多种色彩风格。IT之家附上相关图片如下：</p><p><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/bf1f5188-90e2-4218-8c6f-eff2c44bc04f.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/1ce913f6-e057-4dc3-8bec-f4fb297f917c.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/3441fd2a-b186-4707-a9f1-6ccc80985cba.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/1992d78b-095d-41fb-9f4f-4a4d68ba62ac.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/30d5b1b8-4680-42d7-abd1-16c8b97789d5.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/94a31ad5-240d-4719-896a-a45395c36b16.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/4d1b6024-6514-4b17-98ee-bcddfe2b3de1.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/1be03cd7-80bc-494f-b70d-fbec046476ec.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/f632a75c-8ff0-4553-a18e-7b80f76b5fa9.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/d7082d50-6edc-4d5b-9d88-b545b974762c.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/ccd7e6e5-f2df-407e-89ed-1bfc1d6b4076.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/de646bc9-10ce-4942-b80b-2b9df820ea1e.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/86598d49-74d4-456c-90df-df6d018f90ad.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/b2f6962b-e695-4d44-8746-6bc87e5659bc.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/46b13ea9-cec0-4013-8a99-eaab46bb1704.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/709051ba-68bf-4278-8d0c-6eb8a50000ce.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/9a733c4d-5a7d-41d3-9e99-bc458b621ab1.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/0b09e0fb-c115-4e4b-bf5e-323387a49f45.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/9ebd6a3b-2f6c-41be-b69c-65ece1a61b51.jpg\" /><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/ea0d0e02-0538-4f53-870a-ea2f6527050c.jpg\" /></p><p>开发者 Guilherme Rambo 分享了一张 HomeView 人脸编辑界面的图片，用户可以在其中选择他们想要在 HomeView 锁屏上使用的设计。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/bb9c11b4-5aec-4554-85ce-1a691edcbee0.gif\" /></p><p>HomeView 启动时也会呈现苹果标志性的“Hello”欢迎画面。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/04b3ba6e-3dbd-4475-86b8-77ab5cf56b4b.gif\" /></p><p>在交互层面，HomeView 的设置动画显示其将配备控制中心，用户可更快捷地管理灯光、家电、媒体播放等家庭场景。系统还提供浅色与深色模式，并支持根据一天中的时间自动切换。</p><p>HomeView 延续苹果在表盘个性化上的趣味设计，若用户选择史努比表盘，设备还会提供多组史努比动画。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/4108e907-aa67-4d86-bacb-bce3666e9384.gif\" /></p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/db328bf4-1119-425a-970c-dc6163c4f35a.gif\" /></p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/97f7148a-6a21-4e5c-bcce-9de09e91a252.gif\" /></p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/aee3a01f-bb2e-46ea-abf8-68927e20219b.gif\" /></p><p>更值得关注的是，HomeView 并未沿用 iOS 的 SpringBoard 启动器，而是采用名为 BreadBoard 的全新启动器；其控制中心界面进程则被称为 CupBoard。该媒体认为苹果并非简单将 iPad 系统移植到家居设备，重点围绕家庭场景，重新设计了操作逻辑。</p><p>系统文件中还隐藏了 HomeView Software 26 的图形。这进一步佐证苹果原本可能更早推出该产品，但因 Siri AI 尚未成熟而推迟。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/26c6e5a0-d90f-452e-8230-d6e9312031e6.png?x-bce-process=image/format,f_auto\" /></p>"
+    },
+    {
+      "title": "安卓 7.0 版 Apple Music 发布：苹果升级品牌视觉，引入液态玻璃设计",
+      "url": "https://www.ithome.com/1/020/422.htm",
+      "source": "IT之家 AI",
+      "published": "2026-10-31",
+      "summary": "<p>IT之家 10 月 31 日消息，科技媒体 9to5Google 昨日（10 月 30 日）发布博文，报道称经过约 1 个月的 Beta 测试，苹果公司正式推出安卓 7.0 版本 Apple Music 应用<strong>，引入全新液态玻璃（Liquid Glass）设计，并更新品牌视觉。</strong></p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/78cef8f0-89a3-4974-9dd7-bc9247fd3146.jpg?x-bce-process=image/format,f_auto\" /></p><p>品牌视觉方面，安卓 7.0 版 Apple Music 更换新版图标，图标颜色会随设备深色或浅色主题自动切换为黑色或白色，取代了此前的红色背景。同时应用内的主题色也从红色改为蓝色，整体品牌识别更统一。IT之家附上相关对比如下：</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/467054e0-02e8-4f24-a54e-13f75990353b.png?x-bce-process=image/format,f_auto\" /></p><p>界面方面，7.0 采用悬浮式底部导航栏，带有轻微半透明效果，用户可透过导航栏隐约看到其下方的界面颜色；迷你播放器也改为悬浮设计，不再固定在底部栏上。不过，与 iOS 版相比，安卓版在滚动时不会将底部栏折叠为更紧凑的形态。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/cfabb18e-b44c-454b-8215-25c8562b5cc1.png?x-bce-process=image/format,f_auto\" /></p><p>此次更新还带来了更彻底的全面屏布局，系统状态栏和导航栏的呈现更加现代。页面顶部栏经过重构，标题与“更多”菜单被放在同一行，三点图标不再是红色，并加入圆形容器中。资料库页面的“编辑收藏”和“编辑分类”功能，也被整合进三点菜单。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/5d23b8ba-ca32-49a2-9dae-7a46dad75d2b.png?x-bce-process=image/format,f_auto\" /></p><p>艺人页面同样迎来大幅重设计：背景会根据艺人封面图自动生成主题色调，页面提供醒目的播放按钮和信息入口，分享按钮则移至右上角，与 iOS 版保持一致。设置页面也优化了分组方式，更加清晰易用。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/36926566-2d6e-4b9e-bdcb-8fc2289b13e3.png?x-bce-process=image/format,f_auto\" /></p>"
+    },
+    {
+      "title": "揭露“女版乔布斯”骗局的人警告：AI 热潮或催生下一个 Theranos",
+      "url": "https://www.ithome.com/1/020/415.htm",
+      "source": "IT之家 AI",
+      "published": "2026-10-31",
+      "summary": "<p>北京时间 10 月 31 日，曾参与揭露美国血液检测公司 Theranos 造假丑闻的泰勒 · 舒尔茨（Tyler Shultz）近日警告称，<strong>AI 投资热潮正在为下一个类似 Theranos 的骗局创造条件</strong>。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/10/bd22c6bd-299a-4fbf-9379-e08574863477.png\" /></p><p>舒尔茨在接受美国媒体 The San Francisco Standard 采访时表示，AI 技术的真实能力很难评估，人们往往难以分辨一款产品究竟拥有独特技术，还是只是在 ChatGPT 等现有模型外面加了一层应用界面。</p><p>“如果你想骗人，我认为这是一个很好的行骗机会。”他说。</p><p>舒尔茨曾在斯坦福大学结识 Theranos 创始人伊丽莎白 · 霍姆斯（Elizabeth Holmes），后来进入这家公司工作，<strong>并参与揭露了其血液检测技术的虚假宣传</strong>。</p><p>霍姆斯曾宣称，Theranos 的设备仅需少量血液就能完成多种检测。凭借这一愿景，她吸引了大量投资，一度成为硅谷备受追捧的创业明星，<strong>被称为“女版乔布斯”</strong>。但公司的技术承诺最终未能兑现，造假丑闻曝光。</p><p>在舒尔茨看来，当初让霍姆斯在未经充分审查的情况下筹集数亿美元的环境，如今更加普遍。他认为，AI 技术尤其难以核实，而当下的世界对真相的重视也在减弱。</p><p>舒尔茨的采访还谈到了近期重新引发外界关注的霍姆斯。内森 · 菲尔德（Nathan Fielder）的影片《You Can See Everything》上映后，一些观众对霍姆斯产生了同情。</p><p>舒尔茨对此持不同看法。他认为，霍姆斯善于操纵他人，也十分关注自己的公众形象。舒尔茨称，尽管霍姆斯仍在服刑，她依然登上了《人物》杂志封面，出现在这部受到关注的影片中。他还声称，霍姆斯参与了其伴侣比利 · 埃文斯（Billy Evans）创办的新血液检测初创公司。</p><p>“我觉得，我们现在谈论伊丽莎白 · 霍姆斯，唯一的原因就是她希望我们谈论她。”舒尔茨说。</p><p>对于眼下的 AI 行业，舒尔茨担心，技术门槛和投资热情可能再次让外界难以看清一家公司的真实能力。他认为，霍姆斯不会是硅谷需要面对的最后一名骗子。</p>"
+    }
+  ]
+}
