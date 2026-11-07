@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 大模型测评看板</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin:0; background:#f6f7f9; color:#222; line-height:1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+header { text-align:center; padding: 28px 0 12px; }
+h1 { margin:0; font-size:1.8em; }
+.sub { color:#666; font-size:.92em; }
+.nav { text-align:center; margin:8px 0 16px; }
+.nav a { color:#1a73e8; text-decoration:none; font-size:.9em; }
+.nav a:hover { text-decoration:underline; }
+.section { margin-top:28px; }
+.section-title { display:flex; align-items:center; gap:10px; margin:0 0 12px; font-size:1.2em; }
+.table-wrap { overflow-x:auto; background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:8px 16px; }
+table { border-collapse:collapse; width:100%; font-size:.9em; }
+th, td { padding:9px 10px; text-align:left; border-bottom:1px solid #eef0f3; }
+th { color:#666; font-weight:600; font-size:.85em; }
+.rank { font-weight:700; color:#1a73e8; width:36px; }
+.model { font-weight:600; }
+.model a { color:#1a0dab; text-decoration:none; }
+.model a:hover { text-decoration:underline; }
+.org { display:block; color:#888; font-size:.78em; font-weight:400; }
+.score { font-weight:600; }
+.votes, .price, .ctx { color:#555; font-size:.88em; }
+.empty-cell { color:#999; text-align:center; padding:16px; }
+.table-note { color:#999; font-size:.8em; margin:8px 0 12px; }
+.source-link { color:#1a73e8; text-decoration:none; font-weight:600; }
+.source-link:hover { text-decoration:underline; }
+.tabs { margin-bottom:8px; }
+.tab-bar { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+.tab { background:#fff; border:1px solid #d5dbe2; border-radius:999px; padding:7px 16px; font-size:.88em; cursor:pointer; color:#444; transition:all .15s; }
+.tab:hover { border-color:#1a73e8; color:#1a73e8; }
+.tab.active { background:#1a73e8; border-color:#1a73e8; color:#fff; }
+.tab-count { opacity:.75; font-size:.82em; margin-left:4px; }
+.tab-panel { display:none; }
+.tab-panel.active { display:block; }
+.digest { background:#fff; border:1px solid #e3e6ea; border-radius:12px; padding:20px 24px; margin:20px 0; }
+.digest h2 { margin:0 0 4px; font-size:1.25em; }
+.digest-date { color:#888; font-size:.85em; margin-bottom:16px; }
+.digest-item { border-top:1px solid #eef0f3; padding:14px 0; }
+.digest-item-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.digest-rank { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#1a73e8; color:#fff; font-size:.78em; font-weight:700; flex:none; }
+.digest-source { color:#666; font-size:.82em; }
+.digest-title { margin:0 0 6px; font-size:1.02em; line-height:1.45; }
+.digest-title a { color:#1a0dab; text-decoration:none; }
+.digest-title a:hover { text-decoration:underline; }
+.digest-impact, .digest-why { margin:3px 0; color:#333; font-size:.92em; }
+.digest-why { color:#555; }
+.digest-impact strong, .digest-why strong { color:#1a73e8; font-weight:600; margin-right:2px; }
+.digest-trend { border-top:2px solid #eef0f3; margin-top:10px; padding-top:14px; }
+.digest-trend h3 { margin:0 0 6px; font-size:1em; color:#b26a00; }
+.digest-trend p { margin:0; color:#555; font-size:.94em; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:14px; }
+.card { background:#fff; border:1px solid #e3e6ea; border-radius:10px; padding:14px 16px; }
+.card h3 { margin:8px 0 6px; font-size:.98em; }
+.card h3 a { color:#1a0dab; text-decoration:none; }
+.card h3 a:hover { text-decoration:underline; }
+.card-head { display:flex; align-items:center; gap:8px; font-size:.8em; }
+.badge { color:#fff; padding:2px 8px; border-radius:999px; font-size:.72em; font-weight:600; white-space:nowrap; }
+.date { color:#888; }
+.summary { color:#444; font-size:.86em; margin:4px 0; }
+.empty { color:#888; padding:20px; background:#fff; border:1px solid #e3e6ea; border-radius:10px; }
+footer { text-align:center; color:#999; font-size:.8em; margin-top:32px; }
+@media (prefers-color-scheme: dark) {
+  body { background:#14171c; color:#e8eaed; }
+  .table-wrap, .card, .empty, .digest { background:#1e232b; border-color:#2b313b; }
+  th, td { border-bottom-color:#2b313b; }
+  th, .org, .date, .table-note, .votes, .price, .ctx, .digest-date { color:#9aa0a6; }
+  .model a, .card h3 a, .digest-title a { color:#8ab4f8; }
+  .summary, .digest-impact { color:#c9cdd3; }
+  .digest-why, .digest-trend p { color:#c0c4cc; }
+  .digest-item, .digest-trend { border-top-color:#2b313b; }
+  .tab { background:#1e232b; border-color:#2b313b; color:#c9cdd3; }
+  .sub { color:#9aa0a6; }
+  .source-link { color:#8ab4f8; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📊 AI 大模型测评看板</h1>
+    <div class="sub">四大权威排行榜 · 全文深度分析 · 权威媒体测评新闻</div>
+    <div class="nav"><a href="index.html">← 返回 AI4S 进展看板</a></div>
+  </header>
+
+  
+
+  <section class="section">
+    <h2 class="section-title">🏆 权威基准排行榜（点击标签切换）</h2>
+    <div class="tabs">
+<div class="tab-bar" role="tablist">
+<button class="tab active" data-tab="0" role="tab" aria-selected="true">LMArena <span class="tab-count">0</span></button><button class="tab" data-tab="1" role="tab" aria-selected="false">Artificial Analysis <span class="tab-count">10</span></button><button class="tab" data-tab="2" role="tab" aria-selected="false">LiveBench <span class="tab-count">10</span></button><button class="tab" data-tab="3" role="tab" aria-selected="false">Open LLM Leaderboard <span class="tab-count">10</span></button><button class="tab" data-tab="4" role="tab" aria-selected="false">OpenCompass 司南 <span class="tab-count">10</span></button>
+</div>
+<div class="tab-panel active" id="panel-0" role="tabpanel">
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>模型</th><th>Score (Elo)</th><th>投票</th><th>价格 $/M</th><th>上下文</th></tr></thead>
+<tbody><tr><td colspan="6" class="empty-cell">暂无数据</td></tr></tbody>
+</table>
+<p class="table-note">数据来源：LMArena Text Arena · 人工盲测 Elo 排行榜 · <a href="https://lmarena.ai/leaderboard/text" target="_blank" rel="noopener" class="source-link">查看原始来源 ↗</a></p>
+</div>
+</div><div class="tab-panel" id="panel-1" role="tabpanel">
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>模型</th><th>Intelligence Index</th><th>Cost/Task</th></tr></thead>
+<tbody><tr>
+  <td class="rank">1</td>
+  <td class="model">Gemini 4 Carbon (high)<span class="org">Google</span></td>
+  <td class="score">60</td>
+  <td class="price">$7.76</td>
+</tr>
+<tr>
+  <td class="rank">2</td>
+  <td class="model">Claude Opus 5.5 (max)<span class="org">Anthropic</span></td>
+  <td class="score">59</td>
+  <td class="price">$10.04</td>
+</tr>
+<tr>
+  <td class="rank">3</td>
+  <td class="model">Gemini 4 Carbon (medium)<span class="org">Google</span></td>
+  <td class="score">58</td>
+  <td class="price">$6.59</td>
+</tr>
+<tr>
+  <td class="rank">4</td>
+  <td class="model">Claude Opus 5.5 (xhigh)<span class="org">Anthropic</span></td>
+  <td class="score">57</td>
+  <td class="price">$6.05</td>
+</tr>
+<tr>
+  <td class="rank">5</td>
+  <td class="model">GPT-6 Astra (max)<span class="org">OpenAI</span></td>
+  <td class="score">57</td>
+  <td class="price">$6.24</td>
+</tr>
+<tr>
+  <td class="rank">6</td>
+  <td class="model">GPT-6 Astra (xhigh)<span class="org">OpenAI</span></td>
+  <td class="score">55</td>
+  <td class="price">$3.66</td>
+</tr>
+<tr>
+  <td class="rank">7</td>
+  <td class="model">GPT-6 Astra (high)<span class="org">OpenAI</span></td>
+  <td class="score">55</td>
+  <td class="price">$3.24</td>
+</tr>
+<tr>
+  <td class="rank">8</td>
+  <td class="model">GPT-6.1 Sol (max)<span class="org">OpenAI</span></td>
+  <td class="score">55</td>
+  <td class="price">$1.27</td>
+</tr>
+<tr>
+  <td class="rank">9</td>
+  <td class="model">Claude Sonnet 5.5 (max)<span class="org">Anthropic</span></td>
+  <td class="score">55</td>
+  <td class="price">$10.02</td>
+</tr>
+<tr>
+  <td class="rank">10</td>
+  <td class="model">Gemini 4 Carbon (low)<span class="org">Google</span></td>
+  <td class="score">54</td>
+  <td class="price">$7.19</td>
+</tr></tbody>
+</table>
+<p class="table-note">数据来源：Artificial Analysis Intelligence Index · <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener" class="source-link">查看原始来源 ↗</a></p>
+</div>
+</div><div class="tab-panel" id="panel-2" role="tabpanel">
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>模型</th><th>Overall</th><th>推理</th><th>编码</th><th>数学</th><th>语言</th><th>Cost</th></tr></thead>
+<tbody><tr>
+  <td class="rank">1</td>
+  <td class="model">Claude Fable 5.1</td>
+  <td class="score">85.7</td>
+  <td class="votes">77.9</td>
+  <td class="votes">83.4</td>
+  <td class="votes">89.8</td>
+  <td class="votes">82.0</td>
+  <td class="price">$7.406</td>
+</tr>
+<tr>
+  <td class="rank">2</td>
+  <td class="model">GPT-6 Astra</td>
+  <td class="score">85.6</td>
+  <td class="votes">77.5</td>
+  <td class="votes">82.0</td>
+  <td class="votes">91.3</td>
+  <td class="votes">85.2</td>
+  <td class="price">$4.828</td>
+</tr>
+<tr>
+  <td class="rank">3</td>
+  <td class="model">Claude Opus 5.5</td>
+  <td class="score">85.1</td>
+  <td class="votes">72.8</td>
+  <td class="votes">86.9</td>
+  <td class="votes">88.4</td>
+  <td class="votes">85.0</td>
+  <td class="price">$4.820</td>
+</tr>
+<tr>
+  <td class="rank">4</td>
+  <td class="model">GPT-6.1 Sol</td>
+  <td class="score">84.1</td>
+  <td class="votes">68.7</td>
+  <td class="votes">82.1</td>
+  <td class="votes">93.3</td>
+  <td class="votes">83.5</td>
+  <td class="price">$0.819</td>
+</tr>
+<tr>
+  <td class="rank">5</td>
+  <td class="model">Claude Sonnet 5.5</td>
+  <td class="score">80.0</td>
+  <td class="votes">63.4</td>
+  <td class="votes">85.0</td>
+  <td class="votes">89.3</td>
+  <td class="votes">83.6</td>
+  <td class="price">$4.140</td>
+</tr>
+<tr>
+  <td class="rank">6</td>
+  <td class="model">Gemini 4 Argon</td>
+  <td class="score">79.3</td>
+  <td class="votes">61.2</td>
+  <td class="votes">73.7</td>
+  <td class="votes">82.8</td>
+  <td class="votes">83.1</td>
+  <td class="price">$1.916</td>
+</tr>
+<tr>
+  <td class="rank">7</td>
+  <td class="model">GPT-6.1 Terra</td>
+  <td class="score">77.8</td>
+  <td class="votes">48.6</td>
+  <td class="votes">82.3</td>
+  <td class="votes">93.1</td>
+  <td class="votes">73.9</td>
+  <td class="price">$0.665</td>
+</tr>
+<tr>
+  <td class="rank">8</td>
+  <td class="model">Muse Wonder 1.0</td>
+  <td class="score">74.2</td>
+  <td class="votes">52.6</td>
+  <td class="votes">75.1</td>
+  <td class="votes">60.0</td>
+  <td class="votes">88.0</td>
+  <td class="price">$2.015</td>
+</tr>
+<tr>
+  <td class="rank">9</td>
+  <td class="model">DeepSeek V4.1 Flash 1017 open</td>
+  <td class="score">72.9</td>
+  <td class="votes">35.7</td>
+  <td class="votes">83.4</td>
+  <td class="votes">67.2</td>
+  <td class="votes">79.5</td>
+  <td class="price">$0.185</td>
+</tr>
+<tr>
+  <td class="rank">10</td>
+  <td class="model">Kimi K3.1 Pro</td>
+  <td class="score">71.3</td>
+  <td class="votes">39.1</td>
+  <td class="votes">77.8</td>
+  <td class="votes">75.9</td>
+  <td class="votes">77.9</td>
+  <td class="price">$1.044</td>
+</tr></tbody>
+</table>
+<p class="table-note">数据来源：LiveBench · 抗污染客观评测 · <a href="https://livebench.ai/" target="_blank" rel="noopener" class="source-link">查看原始来源 ↗</a></p>
+</div>
+</div><div class="tab-panel" id="panel-3" role="tabpanel">
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>模型</th><th>Average</th><th>参数量</th><th>架构</th></tr></thead>
+<tbody><tr>
+  <td class="rank">1</td>
+  <td class="model"><a href="https://huggingface.co/CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑" target="_blank" rel="noopener">CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">46.8</td>
+  <td class="price">32.764B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">2</td>
+  <td class="model"><a href="https://huggingface.co/CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑" target="_blank" rel="noopener">CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">45.7</td>
+  <td class="price">32.764B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">3</td>
+  <td class="model"><a href="https://huggingface.co/EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑" target="_blank" rel="noopener">EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑</a><span class="org">other</span></td>
+  <td class="score">44.2</td>
+  <td class="price">72.706B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">4</td>
+  <td class="model"><a href="https://huggingface.co/Aryanne/QwentileSwap  📑" target="_blank" rel="noopener">Aryanne/QwentileSwap  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">43.9</td>
+  <td class="price">32.764B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">5</td>
+  <td class="model"><a href="https://huggingface.co/Cran-May/tempmotacilla-cinerea-0308  📑" target="_blank" rel="noopener">Cran-May/tempmotacilla-cinerea-0308  📑</a><span class="org"></span></td>
+  <td class="score">43.6</td>
+  <td class="price">14.766B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">6</td>
+  <td class="model"><a href="https://huggingface.co/Daemontatox/Llama3.3-70B-CogniLink  📑" target="_blank" rel="noopener">Daemontatox/Llama3.3-70B-CogniLink  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">42.8</td>
+  <td class="price">70.554B</td>
+  <td class="ctx">LlamaForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">7</td>
+  <td class="model"><a href="https://huggingface.co/BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑" target="_blank" rel="noopener">BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑</a><span class="org"></span></td>
+  <td class="score">42.3</td>
+  <td class="price">72.7B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">8</td>
+  <td class="model"><a href="https://huggingface.co/1024m/QWEN-14B-B100  📑" target="_blank" rel="noopener">1024m/QWEN-14B-B100  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">41.9</td>
+  <td class="price">14.77B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">9</td>
+  <td class="model"><a href="https://huggingface.co/CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑" target="_blank" rel="noopener">CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">41.8</td>
+  <td class="price">14.77B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr>
+<tr>
+  <td class="rank">10</td>
+  <td class="model"><a href="https://huggingface.co/CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑" target="_blank" rel="noopener">CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑</a><span class="org">apache-2.0</span></td>
+  <td class="score">41.5</td>
+  <td class="price">14.77B</td>
+  <td class="ctx">Qwen2ForCausalLM</td>
+</tr></tbody>
+</table>
+<p class="table-note">数据来源：HuggingFace Open LLM Leaderboard v2 · 开源模型 · <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" class="source-link">查看原始来源 ↗</a></p>
+</div>
+</div><div class="tab-panel" id="panel-4" role="tabpanel">
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>模型</th><th>均分</th><th>参数量</th><th>语言</th><th>知识</th><th>推理</th><th>数学</th><th>代码</th><th>智能体</th></tr></thead>
+<tbody><tr>
+  <td class="rank">1</td>
+  <td class="model"><span class="plain-model">Kimi K3.1 Pro (max)</span><span class="org">Moonshot AI</span></td>
+  <td class="score">3T</td>
+  <td class="price">2026/10/28</td>
+  <td class="votes">78.47</td>
+  <td class="votes">72</td>
+  <td class="votes">80</td>
+  <td class="votes">87.5</td>
+  <td class="votes">75.86</td>
+  <td class="votes">82.93</td>
+</tr>
+<tr>
+  <td class="rank">2</td>
+  <td class="model"><span class="plain-model">Claude Opus 5.5 (max)</span><span class="org">Anthropic</span></td>
+  <td class="score">-</td>
+  <td class="price">2026/10/23</td>
+  <td class="votes">78.25</td>
+  <td class="votes">80</td>
+  <td class="votes">75</td>
+  <td class="votes">84.62</td>
+  <td class="votes">72.41</td>
+  <td class="votes">85.37</td>
+</tr>
+<tr>
+  <td class="rank">3</td>
+  <td class="model"><span class="plain-model">Claude Sonnet 5.5 (max)</span><span class="org">Anthropic</span></td>
+  <td class="score">-</td>
+  <td class="price">2026/10/23</td>
+  <td class="votes">75.56</td>
+  <td class="votes">76</td>
+  <td class="votes">80</td>
+  <td class="votes">79.49</td>
+  <td class="votes">71.43</td>
+  <td class="votes">85.37</td>
+</tr>
+<tr>
+  <td class="rank">4</td>
+  <td class="model"><span class="plain-model">GPT-6.1 Sol (max)</span><span class="org">OpenAI</span></td>
+  <td class="score">-</td>
+  <td class="price">2026/10/23</td>
+  <td class="votes">75.19</td>
+  <td class="votes">78</td>
+  <td class="votes">85</td>
+  <td class="votes">77.5</td>
+  <td class="votes">69.23</td>
+  <td class="votes">73.68</td>
+</tr>
+<tr>
+  <td class="rank">5</td>
+  <td class="model"><span class="plain-model">GPT-6 Astra (max)</span><span class="org">OpenAI</span></td>
+  <td class="score">-</td>
+  <td class="price">2026/10/23</td>
+  <td class="votes">74.3</td>
+  <td class="votes">72</td>
+  <td class="votes">80</td>
+  <td class="votes">82.5</td>
+  <td class="votes">62.07</td>
+  <td class="votes">80.49</td>
+</tr>
+<tr>
+  <td class="rank">6</td>
+  <td class="model"><span class="plain-model">Gemini 4 Argon (high)</span><span class="org">Google DeepMind</span></td>
+  <td class="score">-</td>
+  <td class="price">2026/10/23</td>
+  <td class="votes">72.52</td>
+  <td class="votes">66</td>
+  <td class="votes">67.5</td>
+  <td class="votes">80</td>
+  <td class="votes">79.31</td>
+  <td class="votes">80.49</td>
+</tr>
+<tr>
+  <td class="rank">7</td>
+  <td class="model"><span class="plain-model">Doubao-Seed-2.1-Pro-0915 (high)</span><span class="org">ByteDance</span></td>
+  <td class="score">-</td>
+  <td class="price">2026/10/23</td>
+  <td class="votes">71.8</td>
+  <td class="votes">72</td>
+  <td class="votes">72.5</td>
+  <td class="votes">77.5</td>
+  <td class="votes">65.52</td>
+  <td class="votes">78.05</td>
+</tr>
+<tr>
+  <td class="rank">8</td>
+  <td class="model"><span class="plain-model">Qwen3.8-Max (xhigh)</span><span class="org">Alibaba</span></td>
+  <td class="score">2.4T</td>
+  <td class="price">2026/10/23</td>
+  <td class="votes">71.74</td>
+  <td class="votes">78</td>
+  <td class="votes">72.5</td>
+  <td class="votes">77.5</td>
+  <td class="votes">65.52</td>
+  <td class="votes">78.05</td>
+</tr>
+<tr>
+  <td class="rank">9</td>
+  <td class="model"><span class="plain-model">Grok 4.7 (xhigh)</span><span class="org">xAI</span></td>
+  <td class="score">-</td>
+  <td class="price">2026/10/23</td>
+  <td class="votes">71.48</td>
+  <td class="votes">67.35</td>
+  <td class="votes">71.05</td>
+  <td class="votes">78.79</td>
+  <td class="votes">67.86</td>
+  <td class="votes">75.61</td>
+</tr>
+<tr>
+  <td class="rank">10</td>
+  <td class="model"><span class="plain-model">GLM-5.3 (max)</span><span class="org">Zhipu AI</span></td>
+  <td class="score">744B</td>
+  <td class="price">2026/10/23</td>
+  <td class="votes">71.45</td>
+  <td class="votes">72</td>
+  <td class="votes">65</td>
+  <td class="votes">84.21</td>
+  <td class="votes">72.41</td>
+  <td class="votes">73.17</td>
+</tr></tbody>
+</table>
+<p class="table-note">数据来源：OpenCompass 司南 · 上海人工智能实验室官方评测榜 · <a href="https://rank.opencompass.org.cn/home" target="_blank" rel="noopener" class="source-link">查看原始来源 ↗</a></p>
+</div>
+</div>
+</div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">📰 模型测评动态与新闻</h2>
+    <div class="grid"><article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">DeepSeek V4.1 Flash 1017 (High)</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Gemini 4 Carbon (Medium)</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Nanbeige4.3-33B</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Gemini 4 Carbon (Low)</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Artificial Analysis Intelligence Index v5.0.1</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Artificial Analysis Performance Benchmarking v3.0.0</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Tencent Hy4</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Muse Wonder (High)</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Inkling 2 Small</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Artificial Analysis Endpoint Accuracy Index v1.1</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Nanbeige has released Nanbeige4.3-33B scoring 20 on the Intelligence Index</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#1a73e8">Artificial Analysis</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://artificialanalysis.ai/changelog" target="_blank" rel="noopener">Thinking Machines Inkling 2 Small: the highest scoring open weights model outside of China pending weights release</a></h3>
+  
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://www.ithome.com/1/023/650.htm" target="_blank" rel="noopener">AI 热潮撞上资源争议，微软荷兰在建数据中心遭抗议</a></h3>
+  <p class="summary">IT之家 11 月 7 日消息，路透社最新发布博文，报道称荷兰当地时间昨日（11 月 6 日）百余名活动人士聚集并闯入微软在建的数据中心工地，抗议 AI 基建扩张。报道称百余名活动人士在现场集结，随后进入施工区域，部分人爬上起重机、悬挂气球并展示抗议标语。抗议者主要关注大型数据中心的电力、水资源消耗及环境影响，要求暂停大规模新建项目。组织方“Stop Dirty Data Centres”表示，环保与数字权利团体计划于 11 月 6 日…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://www.ithome.com/1/023/649.htm" target="_blank" rel="noopener">小米汽车 × 四川美术学院 CMF 校企合作成果 11 月 11 日发布：当传统民艺遇见当代汽车设计</a></h3>
+  <p class="summary">IT之家 11 月 7 日消息，小米汽车 × 四川美术学院 CMF 校企合作成果发布会将于 11 月 11 日 14:00 举行，地点位于四川美术学院虎溪校区。当传统民艺，遇见当代汽车设计，会碰撞出怎样的灵感？从西南在地文化中汲取灵感，探索色彩、材料与工艺的更多可能。IT之家注意到，今年 3 月 22 日，小米汽车与四川美术学院共同启动“民艺新生：在地美学与汽车 CMF 的当代融合”校企合作项目。据此前公布信息，本次校企合作采用“CMF…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://www.ithome.com/1/023/647.htm" target="_blank" rel="noopener">神舟二十四号载人飞行任务标识发布，首次中外航天员联合飞行</a></h3>
+  <p class="summary">IT之家 11 月 7 日消息，据央视新闻报道，今天，神舟二十四号载人飞行任务标识正式发布。据介绍，标识以地球为视觉背景，主体显示神舟二十四号载人飞船与空间站交会对接场景，上下双色半圆构建对称格局，上方湛蓝色背景半圆环象征无垠苍穹与航天梦想，下方红色半圆环象征建设航天强国的炽热情怀与坚定信念。下方半圆环内嵌入中国古代龙纹玉璜造型，寓意将传统文化与现代科技深度融合，展现航天人传承创新、逐梦星海的坚定步伐。地球两侧点缀繁星，体现宇宙深邃感。…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://www.ithome.com/1/023/640.htm" target="_blank" rel="noopener">“史上最大 IPO”遇挑战：Anthropic 上市估值存分歧，1.5 万亿美元仍被嫌贵</a></h3>
+  <p class="summary">IT之家 11 月 7 日消息，路透社昨日（11 月 6 日）发布博文，报道称 AI 公司 Anthropic 的首次公开募股（IPO）计划面临投资者估值质疑，部分投资者认为 1.5 万亿美元（现汇率约合 10.03 万亿元人民币）估值依然偏高。Anthropic 拒绝就相关疑虑置评。报道指出在冲击“史上最大 IPO”的道路上，Anthropic 的公司估值预期不断下调。Anthropic 公司原计划于 11 月 9 日当周启动路演、次…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://www.ithome.com/1/023/636.htm" target="_blank" rel="noopener">宇树科技联合巨星传奇发布首款消费级收藏机器狗 UNI-DOGGIE，首发价 43900 元</a></h3>
+  <p class="summary">IT之家 11 月 7 日消息，11 月 6 日，巨星传奇在第九届进博会上首发与宇树科技联合开发的 UNI-DOGGIE 机器狗，售价 43900 元。IT之家从官方介绍获悉，UNI-DOGGIE 是巨星传奇与宇树科技联合打造的赛博朋克潮流艺术机器狗，兼备陪伴功能与社交属性，同时也是宇树科技第一只消费级收藏机器狗。产品融合“明星 IP× 潮玩 × 科技”，在硬核技术底座之上，更注重 IP 形象、情感连接、互动体验的趣味性与生活场景的广泛…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#2f6fed">IT之家 AI</span>
+    <span class="date">2026-11-07</span>
+  </div>
+  <h3><a href="https://www.ithome.com/1/023/631.htm" target="_blank" rel="noopener">又一项重要成果，我国牵头制定脑机接口参考架构国际标准正式发布</a></h3>
+  <p class="summary">IT之家 11 月 7 日消息，据央视新闻报道，记者 6 日从国家标准委了解到，一项由我国牵头制定的脑机接口参考架构国际标准近日正式发布，这是我国在脑机接口国际标准化领域取得的又一项重要成果。报道称，该标准围绕“脑机接口是什么、怎么用、有什么功能、如何实现”四个核心问题，系统梳理了典型实现模式，形成包括概念、应用、功能和实现的完整技术框架。脑机接口参考架构国际标准起草人潘纲介绍，现在大家对脑机接口的定义，也在逐步地发展过程当中，早期脑机…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation" target="_blank" rel="noopener">OpenAI valued at $1.25 trillion, as rival Anthropic nears its IPO</a></h3>
+  <p class="summary">OpenAI is now valued at $1.25 trillion in a new round of funding that has raised another $11 billion, according to Bloomberg. That would make it one of the world&#x27;s most valuable companies, not long after raising $122 bil…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy" target="_blank" rel="noopener">China reportedly recruited AI exec to spy on Jensen Huang</a></h3>
+  <p class="summary">China&#x27;s intelligence agency recruited Megaspeed executive Alice Huang to spy on Nvidia CEO Jensen Huang, according to The New York Times. The Ministry of State Security (MSS) enlisted her to glean information about Ameri…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/11/508184.html" target="_blank" rel="noopener">A\三大内部模型曝光！领先Opus5.5三个月，RSI缩短80%实验时间</a></h3>
+  <p class="summary">Dario刚喊减速…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy" target="_blank" rel="noopener">All the latest updates on AI data centers</a></h3>
+  <p class="summary">Massive new data centers are the physical foundation for tech companies’ hopes and dreams for AI. But the rush to expand warehouses full of energy-hungry servers has also kicked up fights across the world over their impa…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.theverge.com/tech/1028871/meta-muse-ai-spaces" target="_blank" rel="noopener">Meta&amp;#8217;s Muse AI can create custom &amp;#8216;spaces&amp;#8217; for the version of the app you need right now</a></h3>
+  <p class="summary">Meta will now allow you to build customized, app-like experiences within Muse. The new feature, called &quot;spaces,&quot; allows its AI assistant to build things like a shopping hub, school dashboard, music tracker, trivia game,…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#0d9488">MIT Technology Review</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.technologyreview.com/2026/11/06/1148154/the-download-humanoid-robot-cleaner-samsung-ai-chip-boom/" target="_blank" rel="noopener">The Download: a humanoid cleans house and Samsung builds for the AI boom</a></h3>
+  <p class="summary">This is today&amp;#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&amp;#8217;s going on in the world of technology. I watched a humanoid robot clean my apartment. It felt like a taste of…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity" target="_blank" rel="noopener">AI is the new dating dealbreaker</a></h3>
+  <p class="summary">When Irene moved to San Francisco last year, she started using dating apps as a way to meet new people, get to know her new city, and connect with others who care about the things she does. After the 25-year-old analyst…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.theverge.com/tech/1028720/vibe-coding-open-source-inmusic-akai" target="_blank" rel="noopener">How Akai and Moog are embracing vibe-coded mods</a></h3>
+  <p class="summary">inMusic, the parent company of Akai, Moog, Native Instruments, and more, has decided to embrace the modding community. In an interview with The Verge, inMusic CEO Jack O&#x27;Donnell said, &quot;We&#x27;re going to provide a toolbox to…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/11/508170.html" target="_blank" rel="noopener">阶跃终端 STEPX Neo 智能体手机亮相进博会高通展台，软硬模一体打造智能体新体验</a></h3>
+  <p class="summary">阶跃终端旗下 STEPX Neo 智能体手机首次亮相</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/11/508165.html" target="_blank" rel="noopener">阿里巴巴发布《2026 AI向善行动报告》 AI数据中心可持续发展成年度亮点</a></h3>
+  <p class="summary">11月5日，阿里巴巴发布《2026 AI向善行动报告》</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/11/508155.html" target="_blank" rel="noopener">DeepSeek带火稀疏计算，国产芯片公司加速突围：这家公司又融近10亿</a></h3>
+  <p class="summary">Q3营收实现数倍增长</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/11/508118.html" target="_blank" rel="noopener">一边赛博修仙，一边卖家电！AI短剧开始冲双11业绩了？</a></h3>
+  <p class="summary">挑战商业视频的高难度场景</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/11/508143.html" target="_blank" rel="noopener">从RSI、Agent、Physical AI到整个系统栈，2026 奇点智能技术大会最新日程公布！</a></h3>
+  <p class="summary">11 月 20—21 日，2026 奇点智能技术大会将在北京万达文华酒店举行。</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/11/508107.html" target="_blank" rel="noopener">99.4%登顶全球第一！这个中国AI师承世界冠军</a></h3>
+  <p class="summary">一举刷新「AI安全世界杯」CyberGym世界纪录</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/11/507988.html" target="_blank" rel="noopener">香港金融科技周 x StartmeupHK 2026主论坛：以「金融+」、「AI+」及全球拓展开拓新机遇</a></h3>
+  <p class="summary">香港金融科技周 x StartmeupHK 2026踏入第11届</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#00a854">量子位</span>
+    <span class="date">2026-11-06</span>
+  </div>
+  <h3><a href="https://www.qbitai.com/2026/11/507972.html" target="_blank" rel="noopener">AI短剧门槛降降降！实测即梦短剧工作室：剧本分镜预演一条龙，伙伴计划长期护航</a></h3>
+  <p class="summary">Seedance 2.5 单秒低至0.15元</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#dc2626">The Verge AI</span>
+    <span class="date">2026-11-05</span>
+  </div>
+  <h3><a href="https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda" target="_blank" rel="noopener">OpenAI is stepping back from NDAs for data center projects</a></h3>
+  <p class="summary">Following this week&#x27;s midterms where voters resoundingly voiced their opposition to data center expansion, OpenAI today announced new commitments to communities where it is working on data center projects, including that…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#0d9488">MIT Technology Review</span>
+    <span class="date">2026-11-05</span>
+  </div>
+  <h3><a href="https://www.technologyreview.com/2026/11/05/1144908/the-download-texas-fragile-ai-boom-us-energy-policy/" target="_blank" rel="noopener">The Download: Texas’s fragile AI boom and energy policy shifts</a></h3>
+  <p class="summary">This is today&amp;#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&amp;#8217;s going on in the world of technology. Texas was the new epicenter of the AI data center buildout. That might…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#0d9488">MIT Technology Review</span>
+    <span class="date">2026-11-04</span>
+  </div>
+  <h3><a href="https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/" target="_blank" rel="noopener">Texas was the new epicenter of the AI data center buildout. That might be kaput.</a></h3>
+  <p class="summary">Texas is the fastest-growing data center market in the US and ground zero for Big Tech&amp;#8217;s largest AI buildouts. But the blue wave that swept the Lone Star State may jeopardize that position. Democrat James Talarico…</p>
+</article>
+<article class="card">
+  <div class="card-head">
+    <span class="badge" style="background:#0d9488">MIT Technology Review</span>
+    <span class="date">2026-11-03</span>
+  </div>
+  <h3><a href="https://www.technologyreview.com/2026/11/03/1147940/the-download-controlling-ai-agents-trump-super-intelligence/" target="_blank" rel="noopener">The Download: controlling AI agents and “Super Intelligence” loyalty tests</a></h3>
+  <p class="summary">This is today&amp;#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&amp;#8217;s going on in the world of technology. How “reverse game theory” could keep AI agents in check A new approach…</p>
+</article></div>
+  </section>
+
+  <footer>更新时间：2026-11-07 03:20 · LMArena / Artificial Analysis / LiveBench / Open LLM Leaderboard / MIT TR / The Verge</footer>
+</div>
+<script>
+document.querySelectorAll('.tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    var idx = tab.dataset.tab;
+    document.querySelectorAll('.tab').forEach(function(t) {
+      t.classList.remove('active'); t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('active'); tab.setAttribute('aria-selected', 'true');
+    document.querySelectorAll('.tab-panel').forEach(function(p) {
+      p.classList.toggle('active', p.id === 'panel-' + idx);
+    });
+  });
+});
+</script>
+</body>
+</html>
