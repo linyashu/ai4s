@@ -1,0 +1,990 @@
+{
+  "updated": "2026-11-14T03:41:42.789126",
+  "leaderboards": {
+    "LMArena": [],
+    "Artificial Analysis": [
+      {
+        "rank": 1,
+        "model": "Claude Fable 5.2 (max)",
+        "score": "65",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$26.54",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "Claude Fable 5.2 (xhigh)",
+        "score": "62",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$14.83",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "Claude Fable 5.2 (high)",
+        "score": "62",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$9.08",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "Gemini 4 Carbon (high)",
+        "score": "60",
+        "org": "Google",
+        "url": "",
+        "votes": "",
+        "price": "$5.48",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Claude Opus 5.5 (max)",
+        "score": "59",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$10.04",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "Gemini 4 Carbon (medium)",
+        "score": "58",
+        "org": "Google",
+        "url": "",
+        "votes": "",
+        "price": "$4.68",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "Claude Opus 5.5 (xhigh)",
+        "score": "57",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$6.05",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "GPT-6 Astra (max)",
+        "score": "57",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$6.24",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "Claude Fable 5.2 (medium)",
+        "score": "56",
+        "org": "Anthropic",
+        "url": "",
+        "votes": "",
+        "price": "$3.80",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "GPT-6 Astra (xhigh)",
+        "score": "55",
+        "org": "OpenAI",
+        "url": "",
+        "votes": "",
+        "price": "$3.66",
+        "context": "",
+        "category_scores": {},
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "LiveBench": [
+      {
+        "rank": 1,
+        "model": "Claude Fable 5.2 (xhigh)",
+        "score": "84.9",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$9.850",
+        "context": "",
+        "category_scores": {
+          "reasoning": "82.9",
+          "coding": "85.1",
+          "agentic": "79.2",
+          "math": "86.9",
+          "data": "81.5",
+          "language": "94.5",
+          "instruct": "88.8"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "GPT-6 Astra",
+        "score": "84.5",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$5.318",
+        "context": "",
+        "category_scores": {
+          "reasoning": "75.6",
+          "coding": "80.0",
+          "agentic": "87.5",
+          "math": "91.3",
+          "data": "83.0",
+          "language": "90.6",
+          "instruct": "92.7"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "Claude Fable 5.1",
+        "score": "84.0",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$8.364",
+        "context": "",
+        "category_scores": {
+          "reasoning": "74.2",
+          "coding": "81.6",
+          "agentic": "89.7",
+          "math": "89.8",
+          "data": "80.3",
+          "language": "88.5",
+          "instruct": "91.7"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "Gemini 4 Carbon",
+        "score": "83.5",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$2.024",
+        "context": "",
+        "category_scores": {
+          "reasoning": "72.7",
+          "coding": "80.2",
+          "agentic": "91.0",
+          "math": "80.0",
+          "data": "86.5",
+          "language": "92.5",
+          "instruct": "90.6"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Claude Opus 5.5",
+        "score": "83.4",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$6.723",
+        "context": "",
+        "category_scores": {
+          "reasoning": "72.8",
+          "coding": "83.3",
+          "agentic": "87.1",
+          "math": "88.4",
+          "data": "80.3",
+          "language": "88.9",
+          "instruct": "92.2"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "GPT-6.1 Sol",
+        "score": "81.4",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.823",
+        "context": "",
+        "category_scores": {
+          "reasoning": "65.6",
+          "coding": "79.6",
+          "agentic": "82.1",
+          "math": "93.3",
+          "data": "82.7",
+          "language": "90.0",
+          "instruct": "92.6"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "GPT-6.1 Terra",
+        "score": "78.8",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$0.673",
+        "context": "",
+        "category_scores": {
+          "reasoning": "56.2",
+          "coding": "79.7",
+          "agentic": "89.2",
+          "math": "93.1",
+          "data": "82.3",
+          "language": "79.1",
+          "instruct": "88.7"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "Gemini 4 Argon",
+        "score": "77.7",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$1.822",
+        "context": "",
+        "category_scores": {
+          "reasoning": "58.5",
+          "coding": "69.2",
+          "agentic": "85.7",
+          "math": "82.8",
+          "data": "85.2",
+          "language": "86.8",
+          "instruct": "95.1"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "Gemini 4 Hydrogen",
+        "score": "77.0",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$1.924",
+        "context": "",
+        "category_scores": {
+          "reasoning": "61.8",
+          "coding": "77.3",
+          "agentic": "78.5",
+          "math": "77.1",
+          "data": "83.2",
+          "language": "86.8",
+          "instruct": "88.6"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "Claude Sonnet 5.5",
+        "score": "77.0",
+        "org": "",
+        "url": "",
+        "votes": "",
+        "price": "$5.803",
+        "context": "",
+        "category_scores": {
+          "reasoning": "63.4",
+          "coding": "81.3",
+          "agentic": "77.2",
+          "math": "89.3",
+          "data": "59.5",
+          "language": "88.0",
+          "instruct": "91.6"
+        },
+        "params": "",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ],
+    "Open LLM Leaderboard": [
+      {
+        "rank": 1,
+        "model": "CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "score": "46.8",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "score": "45.7",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑",
+        "score": "44.2",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 72.706,
+        "license": "other",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "Aryanne/QwentileSwap  📑",
+        "score": "43.9",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/Aryanne/QwentileSwap  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Cran-May/tempmotacilla-cinerea-0308  📑",
+        "score": "43.6",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/Cran-May/tempmotacilla-cinerea-0308  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.766,
+        "license": "",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "Daemontatox/Llama3.3-70B-CogniLink  📑",
+        "score": "42.8",
+        "org": "LlamaForCausalLM",
+        "url": "https://huggingface.co/Daemontatox/Llama3.3-70B-CogniLink  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 70.554,
+        "license": "apache-2.0",
+        "arch": "LlamaForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑",
+        "score": "42.3",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 72.7,
+        "license": "",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "1024m/QWEN-14B-B100  📑",
+        "score": "41.9",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/1024m/QWEN-14B-B100  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "score": "41.8",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "score": "41.5",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      }
+    ],
+    "OpenCompass 司南": [
+      {
+        "rank": 1,
+        "model": "Kimi K3.1 Pro (max)",
+        "score": "3T",
+        "org": "Moonshot AI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "78.47",
+          "knowledge": "72",
+          "reasoning": "80",
+          "math": "87.5",
+          "coding": "75.86",
+          "agent": "82.93"
+        },
+        "params": "2026/10/28",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "Claude Opus 5.5 (max)",
+        "score": "-",
+        "org": "Anthropic",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "78.25",
+          "knowledge": "80",
+          "reasoning": "75",
+          "math": "84.62",
+          "coding": "72.41",
+          "agent": "85.37"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "Claude Sonnet 5.5 (max)",
+        "score": "-",
+        "org": "Anthropic",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "75.56",
+          "knowledge": "76",
+          "reasoning": "80",
+          "math": "79.49",
+          "coding": "71.43",
+          "agent": "85.37"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "GPT-6.1 Sol (max)",
+        "score": "-",
+        "org": "OpenAI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "75.19",
+          "knowledge": "78",
+          "reasoning": "85",
+          "math": "77.5",
+          "coding": "69.23",
+          "agent": "73.68"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "GPT-6 Astra (max)",
+        "score": "-",
+        "org": "OpenAI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "74.3",
+          "knowledge": "72",
+          "reasoning": "80",
+          "math": "82.5",
+          "coding": "62.07",
+          "agent": "80.49"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "Gemini 4 Argon (high)",
+        "score": "-",
+        "org": "Google DeepMind",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "72.52",
+          "knowledge": "66",
+          "reasoning": "67.5",
+          "math": "80",
+          "coding": "79.31",
+          "agent": "80.49"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "Doubao-Seed-2.1-Pro-0915 (high)",
+        "score": "-",
+        "org": "ByteDance",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "71.8",
+          "knowledge": "72",
+          "reasoning": "72.5",
+          "math": "77.5",
+          "coding": "65.52",
+          "agent": "78.05"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "Qwen3.8-Max (xhigh)",
+        "score": "2.4T",
+        "org": "Alibaba",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "71.74",
+          "knowledge": "78",
+          "reasoning": "72.5",
+          "math": "77.5",
+          "coding": "65.52",
+          "agent": "78.05"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "Grok 4.7 (xhigh)",
+        "score": "-",
+        "org": "xAI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "71.48",
+          "knowledge": "67.35",
+          "reasoning": "71.05",
+          "math": "78.79",
+          "coding": "67.86",
+          "agent": "75.61"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "GLM-5.3 (max)",
+        "score": "744B",
+        "org": "Zhipu AI",
+        "url": "https://rank.opencompass.org.cn/home",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {
+          "language": "71.45",
+          "knowledge": "72",
+          "reasoning": "65",
+          "math": "84.21",
+          "coding": "72.41",
+          "agent": "73.17"
+        },
+        "params": "2026/10/23",
+        "license": "",
+        "arch": "",
+        "extra": {}
+      }
+    ]
+  },
+  "news": [
+    {
+      "title": "Gemini 4 Argon (Medium)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "DeepSeek V4 Pro 0813 (High)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "Gemini 4 Hydrogen (Low)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "Gemini 4 Hydrogen (Medium)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "Gemini 4 Hydrogen (High)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "Gemini 4 Hydrogen (Xhigh)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "JT-4.1 Flash 236B A21B",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "Multimodal Knowledge Agent (MKA) benchmark: testing knowledge work capabilities with complex visual files",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "Endpoint Accuracy Index v1.1: Tighter long context intervals and expanded model coverage",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "Meta's Muse Ember is the cheapest model scoring 36 on the Intelligence Index",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "Claude Fable 5.2 (Max, Default Fallback)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "Claude Fable 5.2 (Low, Default Fallback)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-14",
+      "summary": ""
+    },
+    {
+      "title": "More autonomy, fewer NDAs: Volunteers have new requests for brain implant trials",
+      "url": "https://www.technologyreview.com/2026/11/13/1148474/more-autonomy-fewer-ndas-volunteers-have-new-requests-for-brain-implant-trials/",
+      "source": "MIT Technology Review",
+      "published": "2026-11-13",
+      "summary": "Scientists have been working on ways to decode brain activity for decades. Teams have developed brain implants that can be used to control robotic limbs and computers, and even to “speak.” The people who volunteer for trials of those devices play a vital role in that research, and they ought to be recognized for their&#8230;"
+    },
+    {
+      "title": "Silicon Valley claims to know the future. So why did it get the midterms so wrong?",
+      "url": "https://www.technologyreview.com/2026/11/13/1148498/silicon-valley-claims-to-know-the-future-so-why-did-it-get-the-midterms-so-wrong/",
+      "source": "MIT Technology Review",
+      "published": "2026-11-13",
+      "summary": "The self-styled visionaries of Silicon Valley, leaders like OpenAI chief executive Sam Altman and SpaceX boss Elon Musk, have built careers claiming to see the future. Long-term vision is currency: Meta’s Mark Zuckerberg built a 10-year road map for Facebook in 2016, and Google famously told investors before its public offering that it was unconcerned&#8230;"
+    },
+    {
+      "title": "The Download: preserving minds and weighing open AI risks",
+      "url": "https://www.technologyreview.com/2026/11/11/1148424/the-download-preserving-minds-open-ai-risks/",
+      "source": "MIT Technology Review",
+      "published": "2026-11-11",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Six wild ideas for perpetuating your mind As we age, we forget most of what we’ve experienced, yet there’s still undeniable continuity: At 30, or 50, or 70, you will still&#8230;"
+    },
+    {
+      "title": "The Download: Pelosi’s successor targets AI and data centers face power woes",
+      "url": "https://www.technologyreview.com/2026/11/10/1148150/the-download-pelosi-successor-ai-regulation-data-center-backlash/",
+      "source": "MIT Technology Review",
+      "published": "2026-11-10",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Nancy Pelosi’s replacement is ready to regulate AI —Grace Huckins As a California state senator, Scott Wiener authored legislation aimed at curbing the risks of advanced AI. Now, after winning a&#8230;"
+    },
+    {
+      "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
+      "source": "The Verge AI",
+      "published": "2026-11-13",
+      "summary": "After launching its Dots AI agents platform earlier this year, OpenAI is launching a wallet for the agents. ChatGPT Wallet is rolling out starting today for ChatGPT Pro subscribers in the US aged 18 and older using a US billing address and \"eligible US-issued American Express, Chase, Mastercard and Visa cards.\" After adding a card [&#8230;]"
+    },
+    {
+      "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+      "source": "The Verge AI",
+      "published": "2026-11-13",
+      "summary": "Normally, the products I test don't offer to help me write up my experience with them. Duet is different. Claude Duet is Anthropic's AI agent for consumers, the latest attempt by an AI company to try to convince us that agents can be useful for people who don't write code. It's been an interesting couple [&#8230;]"
+    },
+    {
+      "title": "Let’s talk about Jensen Huang’s many affairs!",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032339/lets-talk-about-the-nvidia-shitshow",
+      "source": "The Verge AI",
+      "published": "2026-11-13",
+      "summary": "Usually, we'd be offering to answer your questions about a news event, but honestly we don't really have any answers about what the hell is going on over at Nvidia. I can't speak for Nilay but at the rate Jensen Huang's new mistresses are dropping, I am concerned we are approaching an affair Singularity. If [&#8230;]"
+    },
+    {
+      "title": "Google’s new Gemini model is better at understanding complicated questions",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+      "source": "The Verge AI",
+      "published": "2026-11-12",
+      "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search, the Gemini app, all tiers of Google [&#8230;]"
+    },
+    {
+      "title": "No, AI agents did not discover a previously unknown Maya site",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032125/ai-agents-maya-site-archeology-discovery",
+      "source": "The Verge AI",
+      "published": "2026-11-12",
+      "summary": "Armed with a team of AI agents, Google researcher Pietro Miotti claimed earlier this week to have discovered a potentially unmapped Maya site in Mexico. There was just one problem: The site had already been discovered and was published in an academic journal last year. The incident, which sparked criticism among archeologists online, underscores a [&#8230;]"
+    },
+    {
+      "title": "AI chatbots are recommending fake retail websites, study finds",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
+      "source": "The Verge AI",
+      "published": "2026-11-12",
+      "summary": "Shoppers using AI chatbots to research products or find places to buy items could be directed to imposters and other risky websites, a new study found. The study conducted by IP protection firm Podqi and shared exclusively with The Verge prompted ChatGPT, Gemini, and Perplexity with a handful of shopping-related questions involving a selection of [&#8230;]"
+    },
+    {
+      "title": "MEET2027含金量再加码：AI4S/量子计算/AI Infra…第二批嘉宾强势来袭！",
+      "url": "https://www.qbitai.com/2026/11/509827.html",
+      "source": "量子位",
+      "published": "2026-11-13",
+      "summary": "12.9 北京，来MEET2027现场"
+    },
+    {
+      "title": "中国AI突破复杂肺癌诊疗！中美医疗圈集体坐不住了",
+      "url": "https://www.qbitai.com/2026/11/509796.html",
+      "source": "量子位",
+      "published": "2026-11-13",
+      "summary": "250名国内顶尖三甲医院医生联合评测"
+    },
+    {
+      "title": "从仰望极速新纪录和鼎曜全球发布 看比亚迪的国际化与高端化之路",
+      "url": "https://www.qbitai.com/2026/11/509716.html",
+      "source": "量子位",
+      "published": "2026-11-13",
+      "summary": "比亚迪正在把规模优势转化为技术与品牌价值"
+    },
+    {
+      "title": "高难盲测超越GPT-6-Astra与Opus-5！无界前沿开源Fx-Bio-1031，把RSI带进生命科学",
+      "url": "https://www.qbitai.com/2026/11/509663.html",
+      "source": "量子位",
+      "published": "2026-11-13",
+      "summary": "数据不出域、本地可部署"
+    },
+    {
+      "title": "openJiuwen发布RSI原生AgentOS，让Agent自由变身，持续迭代！",
+      "url": "https://www.qbitai.com/2026/11/509653.html",
+      "source": "量子位",
+      "published": "2026-11-13",
+      "summary": "想要什么功能，让Agent自己开发"
+    },
+    {
+      "title": "“苹果最暗产品”：苹果首款智能家居中枢 HomeView 屏幕最低仅 0.3 尼特",
+      "url": "https://www.ithome.com/1/027/066.htm",
+      "source": "IT之家 AI",
+      "published": "2026-11-14",
+      "summary": "<p>IT之家 11 月 14 日消息，昨日（11 月 13 日）在接受 TechRadar 采访时，苹果硬件工程副总裁 Matthew Costello 表示，<strong>苹果首款智能家居中枢 HomeView 屏幕最低仅 0.3 尼特，高管笑称是“最暗的苹果产品”。</strong></p><p>IT之家翻译 Costello 采访时回应内容如下：</p><blockquote><p>我非常喜欢 HomeView，这是我们迄今为止设计的产品中最暗的产品，最低亮度降至 0.3 尼特。</p><p>所以官方来说，我打造的是苹果公司有史以来最暗的产品。我不知道这是好事还是坏事，但我对此非常自豪。</p></blockquote><p style=\"text-align: center;\"><img class=\"nowebp no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/400469da-8209-4ef6-8e2e-255bf63ce572.png\" /></p><p class=\"my-2 [&amp;+p]:mt-4 [&amp;_strong:has(+br)]:inline-block [&amp;_strong:has(+br)]:align-top\" style=\"text-align: start;\">尼特（nit）是描述屏幕亮度的单位，1 尼特等于 1 坎德拉／平方米。数值越小，意味着在相同测量条件下，屏幕表面朝观看方向发出的光越弱。</p><p>对于调暗屏幕亮度，Costello 表示由于 HomeView 需要摆在床边，在夜间点亮后如果太亮，可能会影响用户的睡眠，因此需要降低暗光环境中的存在感。</p><p style=\"text-align: center;\"></p><p style=\"text-align: center;\"></p>"
+    },
+    {
+      "title": "苹果推送 tvOS 27.2.1 更新，第二 / 第三代 Apple TV 4K 新增 Siri AI 支持",
+      "url": "https://www.ithome.com/1/027/052.htm",
+      "source": "IT之家 AI",
+      "published": "2026-11-14",
+      "summary": "<p>IT之家 11 月 14 日消息，科技媒体 MacRumors 今天（11 月 14 日）发布博文，报道称苹果已推送 tvOS 27.2.1 以及 HomePod Software 27.2.1，内部开发代号均为 24K157。</p><p>本次 tvOS 27.2.1 更新最大的亮点，<a href=\"https://www.ithome.com/1/012/573.htm\" target=\"_blank\">是苹果面向第二代和第三代 Apple TV 4K 推送 Siri AI 支持</a>。对这些设备的用户而言，无须更换新款硬件，即可获得此次语音助手升级。</p><p>IT之家附上更新日志内容如下：</p><blockquote><p>此次更新为 Apple TV 4K 带来了更强大且更具对话性的 Siri AI。它还增加了最多四个 HomePod 扬声器连接到 Apple TV 4K（第四代）的功能，并提供了漏洞修复和安全更新。</p><p><strong>Siri AI</strong></p><ul class=\"medium-size list-paddingleft-2\"><li><p>一个更强大、更能对话的 Siri 版本，帮助你找到所需内容并完成更多事情。</p></li><li><p>改进的搜索功能帮助你在 Apple TV 应用中发现完美的电影或电视剧，带来全新丰富、全屏的体验。</p></li><li><p>个人情境理解借助你支持苹果智能的 iPhone，帮你找到想要的东西。</p></li><li><p>广博的世界知识让你几乎可以就任何话题提问，并获得详细的答案。</p></li><li><p>屏幕上的意识功能会回答你在 Apple TV 上看什么的疑问，所以在你最喜欢的剧集播放时，你可以问下一季什么时候播出。</p></li><li><p>Apple TV 4K 上的 Siri AI 提供英文版本，需要支持苹果智能功能的 iPhone 或 iPad 来设置。</p></li></ul><p><strong>Home 家庭影院</strong></p><ul class=\"medium-size list-paddingleft-2\"><li><p>家庭影院环绕声支持连接四个 HomePod 扬声器，带来沉浸式、多维度的聆听体验。</p></li><li><p>Whole Room Audio 将声音均匀分布到四个扬声器，非常适合派对或比赛日。</p></li><li><p>需要 Apple TV 4K（第四代）以及前后配对的 HomePod mini 2 或 HomePod（第二代）。</p></li></ul></blockquote><p>消息源相比之下，HomePod 27.2.1 的更新内容较为有限。苹果发布说明仅表示，本次更新提供错误修复，并未加入 Siri AI。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/1322bc9f-6f19-46c2-954b-2a9b0b9124a4.png?x-bce-process=image/format,f_auto\" /></p>"
+    },
+    {
+      "title": "实现“躺平式办公”：Mac 版 Perplexity 上线“AI 队友”，组建你的全天候数字员工",
+      "url": "https://www.ithome.com/1/027/050.htm",
+      "source": "IT之家 AI",
+      "published": "2026-11-14",
+      "summary": "<p>IT之家 11 月 14 日消息，Perplexity 今天（11 月 14 日）发布公告，邀请付费 Max 订阅用户，在 Mac 平台版 Perplexity 应用上体验 AI 智能体功能“队友”（Teammates）。<strong>该功能此前仅支持 iOS 和网页端，如今进一步覆盖桌面办公场景。</strong></p><p style=\"text-align: center;\"><img class=\"nowebp no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/f7c609bf-2e3d-4fd8-9f56-c6f37e27825a.png\" /></p><p>Teammates 可以理解为一组各有分工的“AI 队友”。与需要用户反复提问、逐步下达指令的聊天方式不同，它主打围绕一项职责持续推进工作。用户交代任务后，AI 会规划执行步骤，并跟进至结果可供用户审阅。IT之家附上相关介绍视频如下：</p><p style=\"text-align: center;\"></p><p>根据 Perplexity 的介绍，用户可以让这些“队友”管理增长营销活动、分类处理新收到的软件错误报告、跟踪业务指标，或开展新市场研究。</p><p>任务规模扩大时，系统还可引入更多 AI 智能体协作。官方列举的应用场景包括质量保证、客户服务、研究和增长营销，既支持单个智能体工作，也支持多个“队友”配合。</p><p>此次更新建立在 Perplexity 现有的 AI 编排系统之上，重点是让 AI 从“回答问题”进一步转向“持续负责一项工作”。不过，上述能力属于官方功能介绍，报道未提供独立实测结果，也未披露具体使用额度、Mac 系统版本要求等细节。</p><p style=\"text-align: center;\"><img class=\"nowebp no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/6ebdf90b-8c32-4040-8b8d-71ff6410d09a.jpg\" /></p><p style=\"text-align: center;\"><img class=\"nowebp no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/eeb79238-46d1-428c-86ab-b8c79162b9bb.jpg\" /></p><p style=\"text-align: center;\"><img class=\"nowebp no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/77390924-63b2-4ee2-9af0-63644de1c68b.jpg\" /></p><p style=\"text-align: center;\"><img class=\"nowebp no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/6d87d72d-bfed-4e69-b970-6ed077656477.jpg\" /></p><p><strong>相关阅读：</strong></p><ul class=\"small-size list-paddingleft-2\"><li><p>《<a href=\"https://www.ithome.com/1/023/335.htm\" target=\"_blank\">Perplexity 推出 Teammate 功能：可执行持续性复杂工作的智能体</a>》</p></li></ul>"
+    },
+    {
+      "title": "苹果首款智能家居中枢 HomeView 开售：戴墨镜可能认不出你",
+      "url": "https://www.ithome.com/1/027/043.htm",
+      "source": "IT之家 AI",
+      "published": "2026-11-14",
+      "summary": "<p>IT之家 11 月 14 日消息，苹果首款智能家居中枢 HomeView 昨日（11 月 13 日）在美国等市场发售后，官方随后更新了多份支持文档，详细披露了该产品的诸多日常使用细节，<strong>涵盖照镜子、睡眠定时、访客权限及个人信息保护等功能。</strong></p><h3>1、识别功能</h3><p>苹果表示，如果你戴着遮盖的脸，包括戴着墨镜，HomeView 很可能无法识别你。如果 HomeView 无法识别你，苹果建议移除所有阻碍摄像头看到你脸部的内容。</p><p>HomeView 的屏幕需要朝向你的脸部，如果周围有其他人，你必须处于画面中心并靠近摄像头，而且 HomeView 不能被悬垂的架子和橱柜挡住。苹果表示 HomeView 需要正面且均匀的光线。</p><h3>2、镜子功能</h3><p>HomeView 控制中心里有一个“镜子”，可以用摄像头看到自己。游戏中有一个选项可以开启边缘灯来照明面部，同时还有 1 倍和 2 倍变焦。</p><h3>3、访客控制</h3><p>针对家庭共用场景，机主可管理访客使用 Safari、Siri 及播放含露骨内容的权限，也能指定未识别用户使用的 Apple Music 订阅：</p><ul class=\"medium-size list-paddingleft-2\"><li><p>机主可以设置开启或者关闭 Safari 浏览器，也可以设置屏蔽成人网站。</p></li><li><p>默认情况下，宾客可以使用 Siri 进行常识、写作帮助和数学辅导，但机主可以关闭 Siri 功能。</p></li><li><p>露骨内容可以开启或关闭。</p></li><li><p>有一个选项可以选择哪个 Apple Music 订阅为未识别的用户提供音乐。</p></li></ul><h3>4、Wi-Fi / 蜂窝网络</h3><p>HomeView 通过人脸识别和确保 iOS 设备在附近、最近解锁且与 HomeView 在同一 Wi-Fi 网络上来认证用户。如果发生 Wi-Fi 中断，苹果表示，只要内容在同一地点且最近上过 Wi-Fi 网络，蜂窝网络也可以用来解锁。</p><h3>5、睡眠计时器</h3><p>用户可以在 HomeView 设置睡眠定时器，在定时器响时暂停正在播放的媒体。</p><h3>6、没有按钮</h3><p>没有按钮可以开关 HomeView 或重启它。可以通过设置应用重启，或者短暂拔掉电源。</p><h3>7、登录</h3><p>用户可以像 Apple TV 一样，用 iPhone 登录网站和应用。</p><h3>8、通知</h3><p>HomeView 仅有电话和家庭设备的通知，并可切换关键通知。没有其他通知设置或选项。</p><h3>9、液态玻璃</h3><p>Liquid Glass 界面的透明度可以像 iPhone、iPad 和 Mac 一样从透明调节到不透明。</p><h3>10、个人数据</h3><p>如果有人反复尝试访问 HomeView 上的个人内容需要身份验证，摄像头的面部识别功能将被禁用，你需要用注册设备证明身份。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/03a9d257-108c-4e6f-adee-653fd96bad9b.png?x-bce-process=image/format,f_auto\" /></p>"
+    },
+    {
+      "title": "DeepSeek 前端代码出现“额度耗尽”提示，开发者猜测将首次推出 C 端付费方案",
+      "url": "https://www.ithome.com/1/027/038.htm",
+      "source": "IT之家 AI",
+      "published": "2026-11-14",
+      "summary": "<p>IT之家 11 月 14 日消息，<span>有开发者在 </span><span><span class=\"link-text-start-with-http\">chat.deepseek.com</span></span><span> 的前端代码中发现了一整套额度管理逻辑，提示文案包括“使用额度已达上限，请额度恢复后再试”。</span></p><p><span>此外，其代码还包含额度耗尽后的错误处理分支，以及“分享对话后继续聊”场景下对 </span><code>quotas</code><span> 数组中 </span><code>is_exhausted</code><span> 状态的检查</span><span>。</span></p><p><span>根据开发者们挖出的信息，最新前端 commit 已经支持「额度状态轮询」：页面可见时每 5 分钟同步各模型额度、禁言状态与服务端文案。当</span>额度耗尽时，DeepSeek 输入框上方会直接出提示条，首页欢迎区也改为服务端下发的额度说明。</p><p style=\"text-align: center;\"><img class=\"nowebp no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/9a703aeb-3844-409f-89d2-ccc59a9bdd68.png\" /></p><p><span>这套前端体系涵盖剩余额度实时同步、额度耗尽即时提醒、额度恢复通知以及服务端用量限额预警，指向一个名为“Coding Plan”的专属套餐</span><span>。有网友认为，深度求索将会在<span class=\"css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3\"> </span><span class=\"css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3 r-b88u0q\">DeepSeek</span><span class=\"css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3\"> V4.1 Pro 上线的同时推出其首个 C 端付费方案。</span></span></p><p><span>不过，截至IT之家发稿时，DeepSeek 官方尚未公布任何订阅方案的价格、层级或上线日期，相关消息均为社区用户推测</span><span>。</span></p><p style=\"text-align: justify;\"><span>在此之前，DeepSeek 唯一直接向个人收费的入口是开放平台的 API，按 Token 用量计费，与“开会员多聊天”是两套逻辑</span><span>。</span></p><p style=\"text-align: justify;\"><span>2026 年 10 月，DeepSeek 将 Harness 团队与 Web、App、Platform 三个团队整合为产品部，由原 Harness 负责人崔添翼统筹全部产品、设计和研发工作</span><span>。同期数据显示，DeepSeek 月活跃用户约 1.30 亿，年化营收突破 10 亿美元几乎全部来自 API，C 端仍未向用户直接收费，且月活在前三中唯一出现同比缩水</span><span>。</span></p><p><strong>相关阅读：</strong></p><ul class=\"small-size list-paddingleft-2\"><li><p>《<a href=\"https://www.ithome.com/1/026/960.htm\" target=\"_blank\">DeepSeek 发布全家桶应用 API：开发者将能 1:1 复刻完整 DeepSeek App</a>》</p></li><li><p>《<a href=\"https://www.ithome.com/1/023/758.htm\" target=\"_blank\">DeepSeek 网页 / API 服务恢复正常，今天下午一度中断 45 分钟</a>》</p></li><li><p>《<a href=\"https://www.ithome.com/1/023/697.htm\" target=\"_blank\">（更新：已恢复）DeepSeek 网页 / API 服务突发部分中断，提示“服务器暂时不可用”</a>》</p></li><li><p>《<a href=\"https://www.ithome.com/1/023/011.htm\" target=\"_blank\">DeepSeek Harness：日活跃用户达 154 万、日消耗 Token 约 92 万亿，将建设官方插件市场</a>》</p></li><li><p>《<a href=\"https://www.ithome.com/1/021/648.htm\" target=\"_blank\">DeepSeek 网页 / API 服务出现部分中断，官方正在排查</a>》</p></li></ul>"
+    }
+  ]
+}
