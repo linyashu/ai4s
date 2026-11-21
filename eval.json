@@ -1,0 +1,408 @@
+{
+  "updated": "2026-11-21T18:47:09.766444",
+  "leaderboards": {
+    "LMArena": [],
+    "Artificial Analysis": [],
+    "LiveBench": [],
+    "Open LLM Leaderboard": [
+      {
+        "rank": 1,
+        "model": "CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "score": "46.8",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/zetasepic-abliteratedV2-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 2,
+        "model": "CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "score": "45.7",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/huihui-ai-abliterated-Qwen2.5-32B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 3,
+        "model": "EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑",
+        "score": "44.2",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/EVA-UNIT-01/EVA-Qwen2.5-72B-v0.2  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 72.706,
+        "license": "other",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 4,
+        "model": "Aryanne/QwentileSwap  📑",
+        "score": "43.9",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/Aryanne/QwentileSwap  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 32.764,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 5,
+        "model": "Cran-May/tempmotacilla-cinerea-0308  📑",
+        "score": "43.6",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/Cran-May/tempmotacilla-cinerea-0308  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.766,
+        "license": "",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 6,
+        "model": "Daemontatox/Llama3.3-70B-CogniLink  📑",
+        "score": "42.8",
+        "org": "LlamaForCausalLM",
+        "url": "https://huggingface.co/Daemontatox/Llama3.3-70B-CogniLink  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 70.554,
+        "license": "apache-2.0",
+        "arch": "LlamaForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 7,
+        "model": "BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑",
+        "score": "42.3",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/BenevolenceMessiah/Qwen2.5-72B-2x-Instruct-TIES-v1.0  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 72.7,
+        "license": "",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 8,
+        "model": "1024m/QWEN-14B-B100  📑",
+        "score": "41.9",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/1024m/QWEN-14B-B100  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 9,
+        "model": "CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "score": "41.8",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/Josiefied-abliteratedV4-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      },
+      {
+        "rank": 10,
+        "model": "CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "score": "41.5",
+        "org": "Qwen2ForCausalLM",
+        "url": "https://huggingface.co/CombinHorizon/huihui-ai-abliteratedV2-Qwen2.5-14B-Inst-BaseMerge-TIES  📑",
+        "votes": "",
+        "price": "",
+        "context": "",
+        "category_scores": {},
+        "params": 14.77,
+        "license": "apache-2.0",
+        "arch": "Qwen2ForCausalLM",
+        "extra": {}
+      }
+    ],
+    "OpenCompass 司南": []
+  },
+  "news": [
+    {
+      "title": "Thinking Machines has released Inkling 2 Mini, an open weights looped transformer",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "Inkling 2 Mini",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "Google continues to accelerate its release cadence with Gemini 4 Neon",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "Gemini 4 Neon (Low)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "Gemini 4 Neon (Medium)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "Gemini 4 Neon (High)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "Gemini 4 Neon (Xhigh)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "K2 Horizon 32B",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "OpenAI has the #2 model in the Intelligence Index with the release of GPT-6.2 Astra and GPT-6.2 Sol",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "JoyAI-VL-Preview",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "Inkling (High)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "Inkling Small (High)",
+      "url": "https://artificialanalysis.ai/changelog",
+      "source": "Artificial Analysis",
+      "published": "2026-11-21",
+      "summary": ""
+    },
+    {
+      "title": "The most misunderstood graph in AI just got a major update",
+      "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+      "source": "MIT Technology Review",
+      "published": "2026-11-20",
+      "summary": "A new report from the AI evaluation nonprofit METR finds that some AI capabilities are continuing to improve along an exponential trajectory—but it also indicates that models aren’t quite as good at tasks that require judgment as they are at coding.  The report is an update to the organization’s time horizon plot, which was widely&#8230;"
+    },
+    {
+      "title": "The Download: a living liver, a billion-dollar battery deal, and AI hype",
+      "url": "https://www.technologyreview.com/2026/11/19/1148979/the-download-liver-kept-alive-sila-battery-deal-ai-hype/",
+      "source": "MIT Technology Review",
+      "published": "2026-11-19",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. A human liver has been kept alive outside the body for a record seven weeks Researchers in Australia claim they’ve kept a human liver alive on life support outside the body&#8230;"
+    },
+    {
+      "title": "The AI Hype Index: AI is everywhere",
+      "url": "https://www.technologyreview.com/2026/11/18/1148650/ai-hype-index-ai-is-everywhere/",
+      "source": "MIT Technology Review",
+      "published": "2026-11-18",
+      "summary": "Like a nasty rash, AI seems to spread everywhere. Google crams AI Overviews down your throat even though it costs the company billions of dollars in lost ad revenue. Leave your apartment, and you might pass two people heaving an AI-powered humanoid robot up the stairs to clean someone’s rooms. Go to the supermarket, and&#8230;"
+    },
+    {
+      "title": "The Download: AI learns to smell and hydropower struggles",
+      "url": "https://www.technologyreview.com/2026/11/18/1148845/the-download-ai-learns-to-smell-hydropower-struggles/",
+      "source": "MIT Technology Review",
+      "published": "2026-11-18",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. This smell startup says its AI nose is as good as a human’s In a New Jersey lab, researchers are trying to sniff every odor on Earth. Their careful notes—“nutty,” “peachy,”&#8230;"
+    },
+    {
+      "title": "This smell startup says its AI nose is as good as a human’s",
+      "url": "https://www.technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans/",
+      "source": "MIT Technology Review",
+      "published": "2026-11-18",
+      "summary": "In a lab near Newark Airport in New Jersey, a team of around 30 experienced human sniffers are slowly working their way through every odor on Earth. Their careful notes—“nutty,” “peachy,” “marine”—are cross-referenced with a chemical analysis to create a rich set of training data for what AI startup Osmo calls the world’s first foundation&#8230;"
+    },
+    {
+      "title": "Can Anthropic afford to put safety first?",
+      "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+      "source": "The Verge AI",
+      "published": "2026-11-21",
+      "summary": "Today, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the Anthropic IPO for the third and final episode in our series about AI in real life. The AI lab behind Claude went public on the Nasdaq last Thursday. The numbers are gigantic, but not really that important for this conversation, except to [&#8230;]"
+    },
+    {
+      "title": "Trump threatens ‘tremendous tax’ for moving AI data centers outside the US",
+      "url": "https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax",
+      "source": "The Verge AI",
+      "published": "2026-11-20",
+      "summary": "President Donald Trump promised to put a \"tremendous tax\" on companies that build data centers outside of the US, even as states and cities around the country are placing restrictions on new applications to build them. \"We're not going to allow our companies to build data centers outside of our country,\" Trump said at a [&#8230;]"
+    },
+    {
+      "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+      "source": "The Verge AI",
+      "published": "2026-11-20",
+      "summary": "Anthropic mathematician Levent Alp&#246;ge claims he has proved the Riemann hypothesis, one of mathematics's most notoriously difficult problems, with the help of Claude, cracking a puzzle that has eluded some of the world's best mathematicians for decades. If verified, it would mark yet another seismic achievement for AI in mathematics and add to the upheaval [&#8230;]"
+    },
+    {
+      "title": "Signal is blocking Gemini and Siri AI from reading your screen",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+      "source": "The Verge AI",
+      "published": "2026-11-20",
+      "summary": "Signal is restricting the ability to take screenshots on Android and iOS devices in an effort to prevent AI agents from reading users' messages and other data. The agentic AI capabilities built into operating systems that analyze on-screen information to learn more about the user are \"undermining Signal's ability to independently guarantee privacy,\" Signal president [&#8230;]"
+    },
+    {
+      "title": "Apple is hiring engineers to build its own AI agent",
+      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+      "source": "The Verge AI",
+      "published": "2026-11-19",
+      "summary": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services. That's according to a now-removed job listing spotted by Bloomberg, which said Apple is looking for an engineer to lead the creation of an agentic AI [&#8230;]"
+    },
+    {
+      "title": "Meta’s Muse Charm might cost $300",
+      "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+      "source": "The Verge AI",
+      "published": "2026-11-19",
+      "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]"
+    },
+    {
+      "title": "Google is putting AI chats right on the homepage",
+      "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
+      "source": "The Verge AI",
+      "published": "2026-11-19",
+      "summary": "Google is updating its homepage to include AI searches. In a post on X, Google's vice president of product, Robby Stein, shows how you can now open a collapsible sidebar to view and continue your AI chats. Based on the GIF shared by Stein, it looks like you can open the sidebar by clicking the [&#8230;]"
+    },
+    {
+      "title": "GPT-6.2 Astra再次暴击具身模型：16项任务成功率较GPT-6 Astra翻倍",
+      "url": "https://www.qbitai.com/2026/11/511779.html",
+      "source": "量子位",
+      "published": "2026-11-21",
+      "summary": "还实现可变形物体操控全球首通"
+    },
+    {
+      "title": "刚刚，DeepSeek V1作者创业项目曝光：开源Agent",
+      "url": "https://www.qbitai.com/2026/11/511570.html",
+      "source": "量子位",
+      "published": "2026-11-21",
+      "summary": "专为本地部署而生"
+    },
+    {
+      "title": "姚顺雨和混元团队上Reddit答网友，Hy小模型已进路线图",
+      "url": "https://www.qbitai.com/2026/11/511757.html",
+      "source": "量子位",
+      "published": "2026-11-21",
+      "summary": "还透露了不少训练背后的秘诀"
+    },
+    {
+      "title": "黎曼猜想被证明？！Claude加持，34岁数学家放出Lean证明",
+      "url": "https://www.qbitai.com/2026/11/511727.html",
+      "source": "量子位",
+      "published": "2026-11-20",
+      "summary": ""
+    },
+    {
+      "title": "美国AI音乐巨头进军视频生成，底层模型来自中国MiniMax",
+      "url": "https://www.qbitai.com/2026/11/511722.html",
+      "source": "量子位",
+      "published": "2026-11-20",
+      "summary": "美国AI音乐平台Suno宣布推出视觉创作工具Visuals"
+    },
+    {
+      "title": "昇腾算力训出了双榜SOTA的具身世界模型，华为云这次想把整套底座开放出来",
+      "url": "https://www.qbitai.com/2026/11/511610.html",
+      "source": "量子位",
+      "published": "2026-11-20",
+      "summary": "国产算力的成熟，把具身竞争维度从「芯片有多强」，拉入了一个比拼训练效率、数据规模、部署成本和场景落地速度的多维战场。"
+    },
+    {
+      "title": "新浪新闻·2026探索大会在京举行 虚实交融共探智能时代共生新图景",
+      "url": "https://www.qbitai.com/2026/11/511603.html",
+      "source": "量子位",
+      "published": "2026-11-20",
+      "summary": "11月19日，由微博与新浪新闻联合主办的“新浪新闻·2026探索大会”在北京举办。"
+    },
+    {
+      "title": "韩国总统李在明：速度在 AI 竞赛中至关重要",
+      "url": "https://www.ithome.com/1/030/506.htm",
+      "source": "IT之家 AI",
+      "published": "2026-11-21",
+      "summary": "<p>IT之家 11 月 21 日消息，据路透社报道，当地时间 21 日，韩国总统李在明前往韩国东南部城市蔚山，视察当地一座在建数据中心，并敦促韩国加快在全球 AI 竞赛中的步伐。“<strong>全世界都在竞相角逐，速度至关重要</strong>。”</p><p>数据中心是芯片需求的重要来源。李在明希望，SK 建设的蔚山项目能够取得成功，进而吸引全球 AI 企业加大投资。</p><p>蔚山数据中心由 SK 集团与亚马逊云科技共同开发。韩国科学技术信息通信部去年公布的估算显示，项目到 2029 年的总投资额预计为 7 万亿韩元<span class=\"exch-money-value\">（IT之家注：现汇率约合 351.26 亿元人民币）</span>，计划于 2027 年下半年投入运营。</p><p>SK 集团会长崔泰源 9 月介绍，在建数据中心首期容量<strong>预计到 2029 年达到 103MW</strong>，未来还计划在此基础上<strong>扩容近 900MW</strong>。随着项目推进，SK 也计划与全球科技公司建立更多合作。</p><p>李在明指出，AI 投资此前主要集中在首尔一带，蔚山项目则说明其他地区同样具备增长空间。得知现场约有 900 人参与施工后，他还提到，高端设施建设面临建筑工人短缺，各部委需要考虑如何培养建设数据中心和 AI 基础设施所需的工人。</p>"
+    },
+    {
+      "title": "中创新航通过大众汽车电池测试中心认证，已具备为奥迪、保时捷、兰博基尼等品牌电池包开展测试的能力",
+      "url": "https://www.ithome.com/1/030/477.htm",
+      "source": "IT之家 AI",
+      "published": "2026-11-21",
+      "summary": "<p>IT之家 11 月 21 日消息，11 月 19 日，中创新航研究院实验室正式通过大众汽车集团电池测试中心认证，获得大众官方认可证书，<strong>具备为大众集团电芯、电池包产品开展合规检测、验证的专业能力</strong>。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/facdae76-d569-4c62-8fbd-8b5eeffc5a49.png?x-bce-process=image/format,f_auto\" /></p><p>官方表示，该资质落地后，<strong>中创新航可在研究院实验室内部完成大众电芯、电池包相关验证试验</strong>，减少样品外送和跨机构对接环节，实现测试与研发同步联动，加快电池方案迭代速度，同时保障测试数据可控、可追溯，稳定输出符合大众高标准的动力电池产品。</p><p>IT之家从官方新闻稿获悉，中创新航已搭建覆盖电芯、模组、电池包全层级，涵盖环境箱、冲击、挤压、热失控、电性能等项目的测试平台，建立标准化测试流程和数据闭环管理体系。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/114eb7d9-2332-44be-9966-30471fc7cdb5.jpg?x-bce-process=image/format,f_auto\" /></p><p>据介绍，凭借此次认证，中创新航实验室对大众集团旗下多品牌电池包的测试服务范围进一步拓展，<strong>已具备为奥迪、保时捷、兰博基尼、斯堪尼亚等品牌电池包开展测试的能力</strong>，为后续多品牌项目协同提供了更高效的验证支撑。</p>"
+    },
+    {
+      "title": "荣耀林林展示超级快充双口充电器 GaN Max 120W，11 月 23 日发布",
+      "url": "https://www.ithome.com/1/030/470.htm",
+      "source": "IT之家 AI",
+      "published": "2026-11-21",
+      "summary": "<p>IT之家 11 月 21 日消息，荣耀中国区智慧生活业务部部长林林昨天下午展示了一款荣耀品牌的新款充电器，重约 103.9g。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/901da710-6d43-4d2b-89b3-2fbba8195ff7.jpg?x-bce-process=image/format,f_auto\" /></p><p>林林今日表示，这款新品将于 11 月 23 日与荣耀 700 系列手机一同发布。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/7d123ced-70c4-44f3-a297-4c4397efecc8.jpg?x-bce-process=image/format,f_auto\" /></p><p>商品包装显示，这款新品名称为荣耀超级快充双口充电器 GaN（Max 120W），采用可收纳折叠插脚，附赠 1 米 C 口数据线，支持苹果 AVS 动态快充 60W Max，支持 65W 充电脑，单口快充随意插 120W Max。</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/1ed362d8-500c-4351-b699-7a0d82545d4d.jpg?x-bce-process=image/format,f_auto\" /></p><p>IT之家附产品规格：</p><blockquote><p><strong>输入：200-240V～50/60Hz，2.5A</strong></p><ul class=\" list-paddingleft-2\"><li><p>单口 C1/C2 输出：</p></li><ul class=\" list-paddingleft-2\"><li><p>PDO：5V 3A 或 9V 3A 或 12V 3A 或 15V 3A 或 20V 3.25A Max</p></li><li><p>SCP：（5.5-20）V 6A Max</p></li><li><p>UFCS：（5.5-20）V 6A Max</p></li><li><p>PPS：（5-20）V 5A Max</p></li></ul><li><p>双口 C1+C2 输出：</p></li><ul class=\" list-paddingleft-2\"><li><p>SCP/PPS/UFCS：100W Max + 20W</p></li><li><p>PDO：45W Max + 20W</p></li></ul></ul><p><strong>输入：100-130V～50/60Hz，2.5A</strong></p><ul class=\" list-paddingleft-2\"><li><p>单口 C1/C2 输出：</p></li><ul class=\" list-paddingleft-2\"><li><p>5V 3A 或 9V 3A Max 或 11V 4.1A Max 或 12V 3A Max 或 15V 3A Max 或 20V 3A Max</p></li></ul><li><p>双口 C1+C2 输出：</p></li><ul class=\" list-paddingleft-2\"><li><p>20W + 20W</p></li></ul></ul></blockquote><p class=\"j_iframe_show ithome-content-placeholder\" style=\"text-align: center;\"></p>"
+    },
+    {
+      "title": "前英特尔 CEO 基辛格：随着 AI 需要“一万倍的效率飞跃”，渐进式芯片性能提升无法满足",
+      "url": "https://www.ithome.com/1/030/464.htm",
+      "source": "IT之家 AI",
+      "published": "2026-11-21",
+      "summary": "<p>IT之家 11 月 21 日消息，据 Wccftech 报道，前英特尔首席执行官帕特 · 基辛格（Pat Gelsinger）表示，随着人工智能需要“<strong>10,000 倍的效率飞跃</strong>”，渐进式的芯片增益将无法满足需求，他同时否认了摩尔定律已走向终结。</p><p>在 2026 年 COSM 科技峰会上，帕特 · 基辛格出席了一场题为“现实检验：超越芯片（Reality Check: Beyond Chips）”的炉边谈话。</p><p>基辛格在谈话中反驳了半导体微缩已触及物理极限的观点，<strong>他认为 AI 需要的不是常规的代际升级，而是计算效率实现激进的 10,000 倍跃升</strong>。他还指出，摩尔定律（Moore’s Law）能否重焕生机，取决于五大核心工程领域（IT之家注：光学、供电、散热、材料和封装）的根本性突破。</p><p>峰会结束后，帕特 · 基辛格在 X 上写道：“<strong>摩尔定律已死？我说现在是唤醒它的时候了</strong>！”尽管一些行业观察人士可能会认为传统的摩尔定律微缩已经结束，但基辛格坚持认为半导体工程正在进入一个多学科创新的新时代，他表示：“在半导体行业工作 40 多年后，我相信我们最伟大的创新仍在前方！”</p><p style=\"text-align: center;\"><img class=\"no-alt-img\" src=\"https://img.ithome.com/newsuploadfiles/2026/11/1eb446a4-34ce-4122-9480-ef1ce1a86585.jpg?x-bce-process=image/format,f_auto\" /></p><p>自 2025 年 3 月以普通合伙人身份加入风险投资机构 Playground Global 以来，基辛格一直在积极支持针对这些硬件瓶颈的初创企业，其中包括获得美国政府支持的光刻初创企业 xLight（该公司目标突破阿斯麦 ASML 的 13.5 纳米极紫外 EUV 波长壁垒），以及核能产能公司 Alva Energy。</p><p>除了光刻与发电领域，基辛格的技术路线图还瞄准了光互连与硅光子技术，旨在用光信号替代传统的铜线来传输数据。</p><p><strong>相关阅读：</strong></p><ul class=\"small-size list-paddingleft-2\"><li><p>《<a href=\"https://www.ithome.com/1/012/922.htm\" target=\"_blank\">前英特尔 CEO 基辛格称 HBM 是“糟糕的内存”</a>》</p></li><li><p>《<a href=\"https://www.ithome.com/1/018/887.htm\" target=\"_blank\">前英特尔 CEO 基辛格押注新 AI 内存：Z2RAM 拟绕开 EUV 光刻，4 年内送样</a>》</p></li></ul>"
+    }
+  ]
+}
